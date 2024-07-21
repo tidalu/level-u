@@ -1,31 +1,24 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import { ThemeProvider } from "@/components/theme-provider";
+import Context from '@/components/context';
+import Footer from '@/components/footer';
+import Header from '@/components/header';
+import { ThemeProvider } from '@/components/theme-provider';
 
-
-const LandingLayout = async ({
-  children
-}: {
-  children: React.ReactNode;
-}) => {
-
+const LandingLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
-    <main >
+    <main>
       <div>
         <div className="mx-auto  h-full w-full">
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-          >
-            <Header />
-            {children}
-            <Footer />
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Context>
+              <Header />
+              {children}
+              <Footer />
+            </Context>
           </ThemeProvider>
         </div>
       </div>
     </main>
   );
-}
+};
 
 export default LandingLayout;
