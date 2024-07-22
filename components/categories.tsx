@@ -142,12 +142,12 @@ const Categories = () => {
                 </div>
             </div>
 
-            <div className="flex justify-center lg:mt-10">
+            {/* <div className="flex justify-center lg:mt-10">
                 <Button variant="primaryGreen" className="w-full dark:text-black sm:w-auto rounded-full text-sm 2xl:text-lg px-8">
                     <img src="/schedulicon.svg" className="w-5 grayscale mr-2" alt="" />
                     <Link href="/schedule">See the schedule</Link>
                 </Button>
-            </div>
+            </div> */}
         </div>
     )
 }
