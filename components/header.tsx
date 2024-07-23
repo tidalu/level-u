@@ -4,9 +4,11 @@ import { ChevronDown, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from './ui/button';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from './theme-toggle';
+import { Globe } from 'lucide-react';
 import {
   Select,
   SelectContent,
@@ -15,6 +17,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const routes = [
   {
@@ -39,10 +47,37 @@ const routes = [
   },
 ];
 
+type Langs = {
+  [key: string]: {
+    label: string;
+    icon: string;
+    circleIcon: string;
+  };
+};
+
+const langs: Langs = {
+  en: {
+    label: 'English',
+    icon: '/english-flag-icon-rect.svg',
+    circleIcon: '/english-flag-icon.svg',
+  },
+  uz: {
+    label: 'Uzbek',
+    icon: '/uzbekistan-flag-rect-circle-icon.svg',
+    circleIcon: '/uzbekistan-flag-round-circle-icon.svg',
+  },
+  ru: {
+    label: 'Russian',
+    icon: '/russia-flag-icon-rect.svg',
+    circleIcon: '/russia-flag-round-circle-icon.svg',
+  },
+};
+
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const pathName = usePathname();
+  const [currentLang, setCurrentLang] = useState('uz');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -103,7 +138,7 @@ const Header = () => {
             />
           </Link>
 
-          <Link
+          {/* <Link
             href="/cluby-fitness"
             className={cn(
               ' absolute md:relative top-2 md:top-auto right-10 md:right-auto left-10 md:left-auto md:w-auto border-2 border-[#6cce4033] text-sm 2xl:text-lg rounded-full py-2 px-6 flex gap-1 justify-center items-center hover:underline',
@@ -113,7 +148,7 @@ const Header = () => {
           >
             Choose a center
             <ChevronDown size={16} className="text-[#6cce40]" />
-          </Link>
+          </Link> */}
 
           <ul
             className={cn(
@@ -149,18 +184,56 @@ const Header = () => {
           <div className="flex gap-x-2 md:gap-x-4">
             <ThemeToggle />
 
-            <Select>
-              <SelectTrigger className="w-[130px] 2xl:py-5 2xl:text-lg bg-transparent dark:bg-transparent outline-none rounded-full border-2 border-[#6cce40] foucs:ring-offset-0 focus:ring-0">
-                <SelectValue placeholder="Language" />
-              </SelectTrigger>
-              <SelectContent align="end">
-                <SelectGroup>
-                  <SelectItem value="apple">English</SelectItem>
-                  <SelectItem value="banana">Uzbek</SelectItem>
-                  <SelectItem value="blueberry">Russian</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger>
+                <Image
+                  src={langs[currentLang].circleIcon}
+                  alt={langs[currentLang].label}
+                  width={40}
+                  height={40}
+                  className="rounded-full 2xl:w-12 2xl:h-12"
+                />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="pointer" align="end">
+                <DropdownMenuItem
+                  className="flex flex-row gap-[7px] cursor-pointer"
+                  onClick={() => setCurrentLang('en')}
+                >
+                  <Image
+                    src={langs['en'].icon}
+                    alt="English"
+                    width={30}
+                    height={20}
+                  />
+                  English
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  className="flex flex-row gap-[7px] cursor-pointer"
+                  onClick={() => setCurrentLang('uz')}
+                >
+                  <Image
+                    src={langs['uz'].icon}
+                    alt="Uzbek"
+                    width={30}
+                    height={20}
+                  />
+                  Uzbek
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  className="flex flex-row gap-[7px] cursor-pointer"
+                  onClick={() => setCurrentLang('ru')}
+                >
+                  <Image
+                    src={langs['ru'].icon}
+                    alt="Russian"
+                    width={30}
+                    height={20}
+                  />
+                  Russian
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             <Button
               onClick={() => setOpen(!open)}
