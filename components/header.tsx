@@ -105,7 +105,8 @@ const Header = () => {
     pathName === '/about' ||
     pathName.startsWith('/blogs') ||
     pathName.startsWith('/classess') ||
-    pathName === '/files-to-download';
+    pathName === '/files-to-download' ||
+    pathName === '/careers';
 
   return (
     <header
