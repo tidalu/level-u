@@ -112,7 +112,7 @@ const Header = () => {
       className={cn(
         'fixed top-0 left-0 w-full z-30',
         isVisible &&
-          'bg-white dark:bg-[#020817] shadow-xl dark:shadow-slate-900 '
+          'bg-white dark:bg-[#020817] shadow-xl dark:shadow-slate-900  rounded-2xl' 
       )}
     >
       <div
@@ -183,7 +183,6 @@ const Header = () => {
 
           <div className="flex gap-x-2 md:gap-x-4">
             <ThemeToggle />
-
 
             <DropdownMenu>
               <DropdownMenuTrigger>
