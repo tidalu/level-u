@@ -31,7 +31,7 @@ const routes = [
   },
   {
     label: 'Careers',
-    href: '/work',
+    href: '/careers',
   },
   {
     label: 'Contact',
@@ -43,7 +43,7 @@ const routes = [
   //   },
   {
     label: 'About',
-    href: '/schedule',
+    href: '/about',
   },
 ];
 
@@ -102,7 +102,7 @@ const Header = () => {
   const urls =
     pathName === '/cluby-fitness' ||
     pathName === '/contact' ||
-    pathName === '/schedule' ||
+    pathName === '/about' ||
     pathName.startsWith('/blogs') ||
     pathName.startsWith('/classess') ||
     pathName === '/files-to-download';
@@ -112,7 +112,7 @@ const Header = () => {
       className={cn(
         'fixed top-0 left-0 w-full z-30',
         isVisible &&
-          'bg-white dark:bg-[#020817] shadow-xl dark:shadow-slate-900  rounded-2xl' 
+          'bg-white dark:bg-[#020817] shadow-xl dark:shadow-slate-900  rounded-b-2xl'
       )}
     >
       <div
