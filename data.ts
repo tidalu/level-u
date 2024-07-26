@@ -1,4 +1,5 @@
 export const data = {
+  about: `Welcome to LEVEL Educational Center!We are a cutting-edge educational center founded to provide everyone with high-quality and affordable education, as well as opportunities to study abroad. Our team comprises individuals who have studied abroad and are eager to apply their invaluable experience and methodologies for your benefit.The concept of a hybrid educational center that combines learning with assistance in selecting and applying to universities is not new and is widely practiced globally. However, we are currently the first of its kind in Uzbekistan, with no equivalents. Furthermore, we make education accessible to all and offer unlimited opportunities by providing modern teaching methods and top-notch service. If you are ready to acquire new knowledge and study at prestigious universities worldwide, we are here to help you achieve your goals. We are committed to providing you with the best education and support you in your journey to success. `,
   landingAdd: {
     img: "https://fitfabric.pl/uploads/media/height-696/06/7686-desktop.webp",
     topText: "SUMMER IN GOOD SHAPE",
