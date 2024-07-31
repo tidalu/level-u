@@ -111,7 +111,7 @@ const Header = () => {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 w-full z-30',
+        'fixed top-0 left-0 w-full z-30 ',
         isVisible &&
           'bg-white dark:bg-[#020817] shadow-xl dark:shadow-slate-900  rounded-b-2xl'
       )}

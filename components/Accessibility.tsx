@@ -15,10 +15,8 @@ import {
   Eye,
   RotateCcw,
 } from 'lucide-react';
-import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
 
-// import { useColorMode } from "@/context/ColorModeProvider"
 function Accessibility() {
   const [state, setState] = useState({
     zoom: 100, // default zoom level
@@ -27,11 +25,24 @@ function Accessibility() {
     negativeContrast: false,
   });
 
+  const [clicks, setClicks] = useState({
+    zoomIn: 0,
+    zoomOut: 0,
+    grayscale: 0,
+    contrast: 0,
+    negativeContrast: 0,
+    reset: 0,
+  });
+
   // text zoom in
   function textZoomIn() {
     setState((prevState) => ({
       ...prevState,
-      zoom: prevState.zoom + 10,
+      zoom: prevState.zoom + 2,
+    }));
+    setClicks((prevState) => ({
+      ...prevState,
+      zoomIn: Math.min(prevState.zoomIn + 1, 10),
     }));
   }
 
@@ -39,37 +50,63 @@ function Accessibility() {
   function textZoomOut() {
     setState((prevState) => ({
       ...prevState,
-      zoom: prevState.zoom - 10,
+      zoom: prevState.zoom - 2,
+    }));
+    setClicks((prevState) => ({
+      ...prevState,
+      zoomIn: Math.max(prevState.zoomIn - 1, -3),
     }));
   }
-  // grayscale
 
+  // grayscale
   function grayscale() {
     setState((prevState) => ({
       ...prevState,
       grayscale: !prevState.grayscale,
+      contrast: false,
+      negativeContrast: false,
+    }));
+    setClicks((prevState) => ({
+      ...prevState,
+      grayscale: prevState.grayscale === 1 ? 0 : 1,
+      contrast: 0,
+      negativeContrast: 0,
     }));
   }
-  // contrast
 
+  // contrast
   function contrast() {
     setState((prevState) => ({
       ...prevState,
       contrast: !prevState.contrast,
+      grayscale: false,
+      negativeContrast: false,
+    }));
+    setClicks((prevState) => ({
+      ...prevState,
+      grayscale: 0,
+      contrast: prevState.contrast === 1 ? 0 : 1,
+      negativeContrast: 0,
     }));
   }
 
   // negative contrast
-
   function negativeContrast() {
     setState((prevState) => ({
       ...prevState,
       negativeContrast: !prevState.negativeContrast,
+      grayscale: false,
+      contrast: false,
+    }));
+    setClicks((prevState) => ({
+      ...prevState,
+      grayscale: 0,
+      contrast: 0,
+      negativeContrast: prevState.negativeContrast === 1 ? 0 : 1,
     }));
   }
 
   // reset
-
   function reset() {
     setState({
       zoom: 100,
@@ -77,22 +114,31 @@ function Accessibility() {
       contrast: false,
       negativeContrast: false,
     });
-
-    useEffect(() => {
-      document.querySelector('body')!.style.fontSize = `${state.zoom}%`;
-      document.querySelector('body')!.style.filter = state.grayscale
-        ? 'grayscale(100%)'
-        : 'none';
-      document.querySelector('body')!.style.filter = state.contrast
-        ? 'contrast(200%)'
-        : 'none';
-      document.querySelector('body')!.style.filter = state.negativeContrast
-        ? 'contrast(0%)'
-        : 'none';
-    }, [state.zoom, state.grayscale, state.contrast, state.negativeContrast]);
+    setClicks({
+      grayscale: 0,
+      contrast: 0,
+      negativeContrast: 0,
+      zoomIn: 0,
+      zoomOut: 0,
+      reset: 0,
+    });
   }
+
+  useEffect(() => {
+    document.documentElement!.style.fontSize = `${state.zoom}%`;
+    console.log(clicks, 'out');
+
+    let filters = [];
+    if (state.grayscale) filters.push('grayscale(100%)');
+    if (state.contrast) filters.push('contrast(1.75)');
+    if (state.negativeContrast) filters.push('invert(100%)');
+
+    document.documentElement!.style.filter = filters.join(' ');
+  }, [state.zoom, state.grayscale, state.contrast, state.negativeContrast]);
+
   const buttonStyle =
-    'w-full flex  px-2 py-1 text-left hover:bg-[#e7e9e7] dark:hover:bg-gray-700 rounded-lg text-sm dark:text-white dark:bg-gray-800 text-gray-900';
+    'w-full flex px-2 py-1 text-left hover:bg-[#e7e9e7] dark:hover:bg-gray-700 rounded-lg text-sm dark:text-white dark:bg-gray-800 text-gray-900';
+
   return (
     <div
       className="
@@ -120,25 +166,22 @@ function Accessibility() {
         <PopoverTrigger className="flex justify-center items-center w-full h-full">
           <PersonStanding className="w-[30px] h-[30px]" />
         </PopoverTrigger>
-        <PopoverContent
-          className="mt-1 mr-1  w-[150px] lg:w-[200px]  bg-[#F8FFE5] dark:bg-gray-800 dark:text-white text-gray-900 rounded-lg shadow-md py-2 pr-1 px-2
-        "
-        >
-          <div className=" border-red-400 w-full h-full">
-            <h2
-              className=" font-medium text-base  w-full
-              border-b
-             border-b-gray-500 dark:border-b-slate-200 my-[2px]
-            "
-            >
+        <PopoverContent className="mt-1 mr-1 w-[150px] lg:w-[200px] bg-[#F8FFE5] dark:bg-gray-800 dark:text-white text-gray-900 rounded-lg shadow-md py-2 pr-1 px-2">
+          <div className="border-red-400 w-full h-full">
+            <h2 className="font-medium text-base w-full border-b border-b-gray-500 dark:border-b-slate-200 my-[2px]">
               Accessibility
             </h2>
             <ul className="w-full flex flex-col">
               {/* text zoom in */}
               <li>
                 <button
-                  className={cn(buttonStyle)}
-                  onClick={() => textZoomIn()}
+                  className={cn(
+                    buttonStyle,
+                    clicks.zoomIn > 0
+                      ? 'bg-[#00ff006a]'
+                      : 'bg-[#F8FFE5] dark:bg-gray-800'
+                  )}
+                  onClick={textZoomIn}
                 >
                   <ZoomIn className="w-5 h-5 mr-2" />
                   Enlarge text
@@ -147,7 +190,15 @@ function Accessibility() {
 
               {/* text zoom out */}
               <li>
-                <button className={cn(buttonStyle)} onClick={textZoomOut}>
+                <button
+                  className={cn(
+                    buttonStyle,
+                    clicks.zoomIn < 0
+                      ? 'bg-[#00ff006a]'
+                      : 'bg-[#F8FFE5] dark:bg-gray-800'
+                  )}
+                  onClick={textZoomOut}
+                >
                   <ZoomOut className="w-5 h-5 mr-2" />
                   Reduce text
                 </button>
@@ -155,7 +206,15 @@ function Accessibility() {
 
               {/* Grayscale */}
               <li>
-                <button className={cn(buttonStyle)} onClick={grayscale}>
+                <button
+                  className={cn(
+                    buttonStyle,
+                    clicks.grayscale !== 0
+                      ? 'bg-[#00ff006a]'
+                      : 'bg-[#F8FFE5] dark:bg-gray-800'
+                  )}
+                  onClick={grayscale}
+                >
                   <Pipette className="w-5 h-5 mr-2" />
                   Grayscale
                 </button>
@@ -163,24 +222,48 @@ function Accessibility() {
 
               {/* Contrast */}
               <li>
-                <button className={cn(buttonStyle)}>
+                <button
+                  className={cn(
+                    buttonStyle,
+                    clicks.contrast !== 0
+                      ? 'bg-[#00ff006a]'
+                      : 'bg-[#F8FFE5] dark:bg-gray-800'
+                  )}
+                  onClick={contrast}
+                >
                   <Contrast className="w-5 h-5 mr-2" />
                   High Contrast
                 </button>
               </li>
 
-              {/* High contrast */}
+              {/* Negative contrast */}
               <li>
-                <button className={cn(buttonStyle)}>
+                <button
+                  className={cn(
+                    buttonStyle,
+                    clicks.negativeContrast !== 0
+                      ? 'bg-[#00ff006a]'
+                      : 'bg-[#F8FFE5] dark:bg-gray-800'
+                  )}
+                  onClick={negativeContrast}
+                >
                   <Eye className="w-5 h-5 mr-2" />
-                  Negative contrast
+                  Negative Contrast
                 </button>
               </li>
 
-              {/*  reset  */}
+              {/* reset */}
               <hr className="h-[1px] w-full border-gray-500 dark:bg-slate-100 my-1" />
               <li>
-                <button className={cn(buttonStyle)}>
+                <button
+                  className={cn(
+                    buttonStyle,
+                    clicks.reset !== 0
+                      ? 'bg-[#00ff006a]'
+                      : 'bg-[#F8FFE5] dark:bg-gray-800'
+                  )}
+                  onClick={reset}
+                >
                   <RotateCcw className="w-5 h-5 mr-2" />
                   Reset
                 </button>
