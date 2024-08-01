@@ -150,14 +150,10 @@ function Accessibility() {
         dark:text-white
         text-black
         h-[40px]
-        lg:h-[50px]
+        lg:h-[48px]
         w-[40px]
-        lg:w-[50px]
-        rounded-xl
-        z-50
-        fixed
-        right-1
-        bottom-1/2
+        lg:w-[48px]
+        rounded-full
         flex 
         justify-center
         items-center
@@ -229,7 +225,7 @@ function Accessibility() {
                     buttonStyle,
                     clicks.contrast !== 0
                       ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
-                      : 'bg-[#040403] dark:bg-gray-800'
+                      : 'bg-[#F8FFE5] dark:bg-gray-800'
                   )}
                   onClick={contrast}
                 >
