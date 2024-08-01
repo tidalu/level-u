@@ -1,15 +1,28 @@
-import type { Metadata } from "next";
-import {  Montserrat } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Montserrat } from 'next/font/google';
+import './globals.css';
+import localFont from 'next/font/local';
 
+// load fonts
+const introFriday = localFont({
+  src: './fonts/IntroFriday.woff2',
+  display: 'swap',
+  variable: '--font-intro-friday',
+});
+
+const helvetica = localFont({
+  src: './fonts/helveticaneue-medium.woff2',
+  display: 'swap',
+  variable: '--font-intro-friday',
+});
 const inter = Montserrat({
   subsets: ['latin', 'cyrillic'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata: Metadata = {
-  title: "fitfabric",
-  description: "your fitness club",
+  title: 'fitfabric',
+  description: 'your fitness club',
 };
 
 export default function RootLayout({
@@ -19,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={helvetica.className}>{children}</body>
     </html>
   );
 }

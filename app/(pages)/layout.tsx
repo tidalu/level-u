@@ -1,4 +1,3 @@
-import Accessibility from '@/components/Accessibility';
 import Context from '@/components/context';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
@@ -13,7 +12,7 @@ const LandingLayout = async ({ children }: { children: React.ReactNode }) => {
             <Context>
               <Header />
               {children}
-              <Accessibility />
+
               <Footer />
             </Context>
           </ThemeProvider>
