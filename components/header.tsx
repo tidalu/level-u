@@ -17,6 +17,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import Accessibility from '@/components/Accessibility';
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -111,7 +113,7 @@ const Header = () => {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 w-full z-30 ',
+        'fixed top-0 left-0 w-full z-30 header-main',
         isVisible &&
           'bg-white dark:bg-[#020817] shadow-xl dark:shadow-slate-900  rounded-b-2xl'
       )}
@@ -184,6 +186,7 @@ const Header = () => {
 
           <div className="flex gap-x-2 md:gap-x-4">
             <ThemeToggle />
+            <Accessibility />
 
             <DropdownMenu>
               <DropdownMenuTrigger>
