@@ -16,8 +16,10 @@ import {
   RotateCcw,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useTheme } from 'next-themes';
 
 function Accessibility() {
+  const { setTheme } = useTheme();
   const [state, setState] = useState({
     zoom: 100, // default zoom level
     grayscale: false,
@@ -171,14 +173,14 @@ function Accessibility() {
             <h2 className="font-medium text-base w-full border-b border-b-gray-500 dark:border-b-slate-200 my-[2px]">
               Accessibility
             </h2>
-            <ul className="w-full flex flex-col">
+            <ul className="w-full flex flex-col gap-1 p-1">
               {/* text zoom in */}
               <li>
                 <button
                   className={cn(
                     buttonStyle,
                     clicks.zoomIn > 0
-                      ? 'bg-[#00ff006a]'
+                      ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
                       : 'bg-[#F8FFE5] dark:bg-gray-800'
                   )}
                   onClick={textZoomIn}
@@ -194,7 +196,7 @@ function Accessibility() {
                   className={cn(
                     buttonStyle,
                     clicks.zoomIn < 0
-                      ? 'bg-[#00ff006a]'
+                      ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
                       : 'bg-[#F8FFE5] dark:bg-gray-800'
                   )}
                   onClick={textZoomOut}
@@ -210,7 +212,7 @@ function Accessibility() {
                   className={cn(
                     buttonStyle,
                     clicks.grayscale !== 0
-                      ? 'bg-[#00ff006a]'
+                      ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
                       : 'bg-[#F8FFE5] dark:bg-gray-800'
                   )}
                   onClick={grayscale}
@@ -226,8 +228,8 @@ function Accessibility() {
                   className={cn(
                     buttonStyle,
                     clicks.contrast !== 0
-                      ? 'bg-[#00ff006a]'
-                      : 'bg-[#F8FFE5] dark:bg-gray-800'
+                      ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
+                      : 'bg-[#040403] dark:bg-gray-800'
                   )}
                   onClick={contrast}
                 >
@@ -242,7 +244,7 @@ function Accessibility() {
                   className={cn(
                     buttonStyle,
                     clicks.negativeContrast !== 0
-                      ? 'bg-[#00ff006a]'
+                      ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
                       : 'bg-[#F8FFE5] dark:bg-gray-800'
                   )}
                   onClick={negativeContrast}
@@ -259,7 +261,7 @@ function Accessibility() {
                   className={cn(
                     buttonStyle,
                     clicks.reset !== 0
-                      ? 'bg-[#00ff006a]'
+                      ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
                       : 'bg-[#F8FFE5] dark:bg-gray-800'
                   )}
                   onClick={reset}
