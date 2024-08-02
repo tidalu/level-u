@@ -1,6 +1,5 @@
 'use client';
 
-import { ChevronDown, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from './ui/button';
@@ -8,17 +7,8 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from './theme-toggle';
-import { Globe } from 'lucide-react';
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
 import Accessibility from '@/components/Accessibility';
-
+import { Logs, X } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -155,17 +145,17 @@ const Header = () => {
 
           <ul
             className={cn(
-              'lg:text-sm hidden lg:flex gap-16',
+              'lg:text-sm hidden lg:flex gap-16 transition-all duration-500',
               open &&
-                ' fixed top-0 bottom-0 left-0 right-0 bg-white dark:bg-[#020817] text-black dark:text-white flex justify-center z-40 items-center text-2xl flex-col gap-8 font-semibold'
+                ' fixed top-0 bottom-0 left-0 right-0 bg-white dark:bg-[#020817] text-black dark:text-white flex justify-center z-40 items-center text-2xl flex-col gap-8 font-semibold tilt-in-fwd-tr'
             )}
           >
             <li className="lg:hidden ">
               <Button
                 onClick={() => setOpen(!open)}
-                className="radial-bg-green rounded-full p-0 w-10 fixed top-5 right-5 border-0 shadow-xl"
+                className="radial-bg-green rounded-full p-0 w-10 fixed top-5 right-5 border-0 shadow-xl "
               >
-                <X size={30} className=" text-gray-700" />
+                <X />
               </Button>
             </li>
             {routes.map((route) => (
@@ -184,7 +174,7 @@ const Header = () => {
             ))}
           </ul>
 
-          <div className="flex gap-x-2 md:gap-x-4">
+          <div className="flex gap-x-2 md:gap-x-4 ">
             <ThemeToggle />
             <Accessibility />
 
@@ -198,9 +188,12 @@ const Header = () => {
                   className="rounded-full 2xl:w-12 2xl:h-12"
                 />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="pointer" align="end">
+              <DropdownMenuContent
+                className="pointer bg-[#F8FFE5] dark:bg-gray-800"
+                align="end"
+              >
                 <DropdownMenuItem
-                  className="flex flex-row gap-[7px] cursor-pointer"
+                  className="flex flex-row gap-[7px] cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720] rounded-xl"
                   onClick={() => setCurrentLang('en')}
                 >
                   <Image
@@ -212,7 +205,7 @@ const Header = () => {
                   English
                 </DropdownMenuItem>
                 <DropdownMenuItem
-                  className="flex flex-row gap-[7px] cursor-pointer"
+                  className="flex flex-row gap-[7px] cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720] rounded-xl"
                   onClick={() => setCurrentLang('uz')}
                 >
                   <Image
@@ -224,7 +217,7 @@ const Header = () => {
                   Uzbek
                 </DropdownMenuItem>
                 <DropdownMenuItem
-                  className="flex flex-row gap-[7px] cursor-pointer"
+                  className="flex flex-row gap-[7px] cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720] rounded-xl"
                   onClick={() => setCurrentLang('ru')}
                 >
                   <Image
@@ -240,9 +233,9 @@ const Header = () => {
 
             <Button
               onClick={() => setOpen(!open)}
-              className="bg-transparent  hover:bg-transparent text-[#6cce40] rounded-full border-2 lg:hidden border-[#6cce40] px-1.5"
+              className="bg-transparent hover:bg-transparent text-[#6cce40] rounded-full border-2 lg:hidden border-[#6cce40]  h-[40px] w-[40px] flex justify-center items-center "
             >
-              <Menu />
+              <Logs className=" w-[30px] h-[30px]" />
             </Button>
           </div>
         </div>
