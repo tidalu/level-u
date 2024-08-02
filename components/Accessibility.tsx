@@ -150,9 +150,9 @@ function Accessibility() {
         dark:text-white
         text-black
         h-[40px]
-        lg:h-[48px]
+        2xl:h-[48px]
         w-[40px]
-        lg:w-[48px]
+        2xl:w-[48px]
         rounded-full
         flex 
         justify-center
