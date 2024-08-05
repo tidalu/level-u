@@ -85,26 +85,26 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => (
-            <li
-              className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 dark:border-slate-700 border-[#edf8ce] shadow-sm px-8 py-6 md:w-[450px] bg-[#F8FFE5] dark:bg-slate-800  "
-              key={item.question}
-            >
-              <blockquote>
-                <div
-                  aria-hidden="true"
-                  className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-                ></div>
+          <li
+            className="w-[300px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 dark:border-slate-700 border-[#edf8ce] shadow-sm px-8 py-6 md:w-[450px] bg-[#F8FFE5] dark:bg-slate-800  "
+            key={item.question}
+          >
+            <blockquote>
+              <div
+                aria-hidden="true"
+                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+              ></div>
 
-                <div className="relative z-20 my-4  items-center">
-                  <span className=" text-lg text-slate-800 leading-[1.6] dark:text-slate-200  font-semibold">
-                    {item.question}
-                  </span>
-                </div>
-                <span className=" relative z-20 text-sm  leading-[1.6] dark:text-gray-100 text-gray-600 font-normal">
-                  {item.answer}
+              <div className="relative z-20 my-4  items-center">
+                <span className=" text-lg text-slate-800 leading-[1.6] dark:text-slate-200  font-semibold">
+                  {item.question}
                 </span>
-              </blockquote>
-            </li>
+              </div>
+              <span className=" relative z-20 text-sm  leading-[1.6] dark:text-gray-100 text-gray-600 font-normal">
+                {item.answer}
+              </span>
+            </blockquote>
+          </li>
         ))}
       </ul>
     </div>
