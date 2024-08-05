@@ -6,10 +6,10 @@ import PopulaActivities from '@/components/popula-activities';
 
 const LandingPage = () => {
   return (
-    <div className="h-full max-w-[1920px]   mx-auto">
+    <div className="h-full max-w-[1920px] max-w-sc  mx-auto">
       {/* landing banner */}
       <LandingBanner />
-      <div className="h-full max-w-[1600px] mx-auto">
+      <div className=" max-w-[1600px] mx-auto ">
         {/* offer */}
         <Offer />
         {/* available clubs */}
