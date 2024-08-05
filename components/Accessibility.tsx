@@ -26,6 +26,7 @@ function Accessibility() {
     contrast: false,
     negativeContrast: false,
   });
+  const [limit, setLimit] = useState(0);
 
   const [clicks, setClicks] = useState({
     zoomIn: 0,
@@ -38,6 +39,7 @@ function Accessibility() {
 
   // text zoom in
   function textZoomIn() {
+    if (limit >= 5) return;
     setState((prevState) => ({
       ...prevState,
       zoom: prevState.zoom + 2,
@@ -46,10 +48,12 @@ function Accessibility() {
       ...prevState,
       zoomIn: Math.min(prevState.zoomIn + 1, 10),
     }));
+    setLimit((limit) => limit + 1);
   }
 
   // text zoom out
   function textZoomOut() {
+    if (limit <= -3) return;
     setState((prevState) => ({
       ...prevState,
       zoom: prevState.zoom - 2,
@@ -58,6 +62,7 @@ function Accessibility() {
       ...prevState,
       zoomIn: Math.max(prevState.zoomIn - 1, -3),
     }));
+    setLimit((limit) => limit - 1);
   }
 
   // grayscale
@@ -177,7 +182,8 @@ function Accessibility() {
                     buttonStyle,
                     clicks.zoomIn > 0
                       ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
-                      : 'bg-[#F8FFE5] dark:bg-gray-800'
+                      : 'bg-[#F8FFE5] dark:bg-gray-800',
+                    limit >= 5 && 'opacity-50 cursor-not-allowed'
                   )}
                   onClick={textZoomIn}
                 >
@@ -193,7 +199,8 @@ function Accessibility() {
                     buttonStyle,
                     clicks.zoomIn < 0
                       ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
-                      : 'bg-[#F8FFE5] dark:bg-gray-800'
+                      : 'bg-[#F8FFE5] dark:bg-gray-800',
+                    limit <= -3 && 'opacity-50 cursor-not-allowed'
                   )}
                   onClick={textZoomOut}
                 >
