@@ -51,10 +51,16 @@ const LandingBanner = () => {
           <div className="h-[30px]"></div>
         </div>
 
-        <div className="bg-[url('/desk_home-banner.webp')] md:h-[100%] scale-110 bg-no-repeat bg-cover relative -top-[26px] -right-6 hidden md:block md:col-span-7"></div>
+        <div className="bg-[url('/desk_home-banner.webp')] md:h-[100%] scale-y-110   bg-no-repeat bg-cover relative -right-6   -bottom-2 hidden md:block md:col-span-7 -mb-8"></div>
 
-        <div className=" col-span-12 md:hidden">
-          <img src="/mobile_home-banner.webp" />
+        <div className=" col-span-12 md:hidden ">
+          <img
+            src="/mobile_home-banner.webp"
+            style={{
+              scale: 1.4,
+              marginLeft: '-75px',
+            }}
+          />
         </div>
       </div>
 
