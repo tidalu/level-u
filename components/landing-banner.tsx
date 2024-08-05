@@ -48,7 +48,7 @@ const LandingBanner = () => {
               </p>
             </div>
           </div>
-          <div className="h-[50px]"></div>
+          <div className="h-[30px]"></div>
         </div>
 
         <div className="bg-[url('/desk_home-banner.webp')] md:h-[100%] scale-110 bg-no-repeat bg-cover relative -top-[26px] -right-6 hidden md:block md:col-span-7"></div>
