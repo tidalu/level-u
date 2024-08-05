@@ -15,6 +15,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { FlipWords } from './ui/flip-words';
 
 const routes = [
   {
@@ -122,13 +123,34 @@ const Header = () => {
           )}
         >
           <Link href="/" className=" flex-shrink-0">
-            <img
-              src={urls ? '/logo.svg' : isVisible ? '/logo.svg' : '/logo.svg'}
-              className=" w-auto h-8 md:h-10 lg:h-14 2xl:h-16"
-              width={100}
-              height={50}
-              alt="logo"
-            />
+            <div className="flex flex-row gap-2 ">
+              <img
+                src={urls ? '/logo.svg' : isVisible ? '/logo.svg' : '/logo.svg'}
+                className=" w-auto h-8 md:h-10 lg:h-12 2xl:h-14"
+                width={80}
+                height={40}
+                alt="logo"
+              />
+              <div className=" w-[3px] bg-white rounded-lg "></div>
+              <span
+                className="
+    flex flex-col items-center 
+    text-wrap
+    text-sm
+    align-middle 
+    md:text-base
+    lg:text-lg
+    2xl:text-2xl
+    3xl:text-3xl
+    justify-center
+    font-normal
+    apply-font-o
+  "
+              >
+                O'quv
+                <FlipWords words={['центр', 'center', 'markaz']} />
+              </span>
+            </div>
           </Link>
 
           {/* <Link
