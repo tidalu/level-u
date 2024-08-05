@@ -18,31 +18,30 @@ export const data = {
     btnText: "I'm buying",
     btnLink: '/contact',
   },
-  reasons: {
-    reason1: {
+  reasons: [
+    {
       question:
         'For our students with excellent academic performance, we submit applications to foreign universities for free, both on a scholarship and paid basis',
       answer:
         'You no longer need to search for universities yourself. Our specialists will do it for you: they will select a university that suits your skills and achievements, and help prepare the entire package of documents for university application and visa processing. Please note that to apply to a university on a scholarship basis, your previous grades must be above average, and you need a language proficiency certificate at a certain level',
     },
-    reason2: {
+    {
       question:
         'Free education or discounts on courses for students of our learning center',
-      answer:
-        'Free education is possible! Our learning center is the only one of its kind in Uzbekistan. Students of our learning center can study for free if they meet the following requirements:a. Show excellent academic performance.b. Achieve the highest scores of 99+ on exams and tests.We also offer discounts on education in our learning center (corporate, friend referral, and others)',
+      answer: `Free education is possible! Our learning center is the only one of its kind in Uzbekistan. Students of our learning center can study for free if they meet the following requirements:  a) Show excellent academic performance.        b) Achieve the highest scores of 99+ on exams and tests.We also offer discounts on education in our learning center (corporate, friend referral, and others)`,
     },
-    reason3: {
+    {
       question:
         'All our teachers are certified and are either students or graduates of world-renowned universities',
       answer:
         'Members of our team hold official certificates that confirm their level of foreign language proficiency, issued by government institutions and consulates. The knowledge they gained abroad is applied in their teaching methods, which positively impacts the quality of education',
     },
-    reason4: {
+    {
       question: 'Offering online classes',
       answer:
         'Online classes are more relevant than ever. Their advantage is the flexibility that adapts to your schedule. Teachers located abroad effectively use this method regardless of their geographic location, allowing them to convey the latest trends and up-to-date knowledge',
     },
-  },
+  ],
   blogs: [
     {
       thumbImg: 'https://picsum.photos/200/200',
