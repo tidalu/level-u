@@ -147,7 +147,7 @@ const Header = () => {
     apply-font-o
   "
               >
-                O'quv
+                O&apos;quv
                 <FlipWords words={['центр', 'center', 'markaz']} />
               </span>
             </div>
