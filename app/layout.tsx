@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
+import { Montserrat, Londrina_Outline } from 'next/font/google';
 import './globals.css';
 import localFont from 'next/font/local';
 
@@ -8,6 +8,12 @@ const introFriday = localFont({
   src: './fonts/IntroFriday.woff2',
   display: 'swap',
   variable: '--font-intro-friday',
+});
+
+const londriaSketch = Londrina_Outline({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-londrina-sketch',
 });
 
 const helvetica = localFont({
