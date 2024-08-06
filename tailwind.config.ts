@@ -26,6 +26,16 @@ const config = {
     },
 
     extend: {
+      fontFamily: {
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        serif: ['Merriweather', ...defaultTheme.fontFamily.serif],
+        mono: ['Fira Code', ...defaultTheme.fontFamily.mono],
+        basic: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+        'basic-sans': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+        'londrina-sketch': ['var(--font-londrina-sketch)'],
+        'intro-friday': ['IntroFriday', 'cursive'],
+      },
+
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
