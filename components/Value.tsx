@@ -23,7 +23,7 @@ function Value({
           {title}
         </p>
       </div>
-      <span className="max-w-2xl flex-1 text-base text-black xl:text-lg">
+      <span className="max-w-2xl flex-1 text-base text-black dark:text-gray-300 xl:text-lg">
         {description}
       </span>
     </div>
