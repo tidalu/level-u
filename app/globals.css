@@ -308,3 +308,80 @@ button[data-state='active'].schedule {
     url('https://db.onlinewebfonts.com/t/40febe1ecb4b531fb4be59d3115652b7.svg#Neometric Alt Heavy Italic')
       format('svg');
 }
+
+.jello-diagonal-1 {
+  -webkit-animation: jello-diagonal-1 0.8s both;
+  animation: jello-diagonal-1 0.8s both;
+}
+
+@-webkit-keyframes jello-diagonal-1 {
+  0% {
+    -webkit-transform: skew(0deg 0deg);
+    transform: skew(0deg 0deg);
+  }
+  30% {
+    -webkit-transform: skew(25deg 25deg);
+    transform: skew(25deg 25deg);
+  }
+  40% {
+    -webkit-transform: skew(-15deg, -15deg);
+    transform: skew(-15deg, -15deg);
+  }
+  50% {
+    -webkit-transform: skew(15deg, 15deg);
+    transform: skew(15deg, 15deg);
+  }
+  65% {
+    -webkit-transform: skew(-5deg, -5deg);
+    transform: skew(-5deg, -5deg);
+  }
+  75% {
+    -webkit-transform: skew(5deg, 5deg);
+    transform: skew(5deg, 5deg);
+  }
+  100% {
+    -webkit-transform: skew(0deg 0deg);
+    transform: skew(0deg 0deg);
+  }
+}
+@keyframes jello-diagonal-1 {
+  0% {
+    -webkit-transform: skew(0deg 0deg);
+    transform: skew(0deg 0deg);
+  }
+  30% {
+    -webkit-transform: skew(25deg 25deg);
+    transform: skew(25deg 25deg);
+  }
+  40% {
+    -webkit-transform: skew(-15deg, -15deg);
+    transform: skew(-15deg, -15deg);
+  }
+  50% {
+    -webkit-transform: skew(15deg, 15deg);
+    transform: skew(15deg, 15deg);
+  }
+  65% {
+    -webkit-transform: skew(-5deg, -5deg);
+    transform: skew(-5deg, -5deg);
+  }
+  75% {
+    -webkit-transform: skew(5deg, 5deg);
+    transform: skew(5deg, 5deg);
+  }
+  100% {
+    -webkit-transform: skew(0deg 0deg);
+    transform: skew(0deg 0deg);
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
