@@ -148,7 +148,10 @@ const Header = () => {
   "
               >
                 O&apos;quv
-                <FlipWords words={['центр', 'center', 'markaz']} />
+                <FlipWords
+                  words={['центр', 'center', 'markaz']}
+                  className="text-inherit"
+                />
               </span>
             </div>
           </Link>
