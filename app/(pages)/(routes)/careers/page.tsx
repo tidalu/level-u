@@ -45,7 +45,7 @@ function Careers() {
               </div>
             </div>
             <div className="order-1 md:order-2 mb-6 md:mb-0 text-lg md:text-2xl max-w-full w-[420px] text-gray-900">
-              If you're as obsessed with design and tech as we are, you've come
+              If you&apos;re as obsessed with design and tech as we are, you&apos;ve come
               to the right place.
             </div>
           </div>
@@ -378,11 +378,11 @@ function Careers() {
                                 05
                               </span>
                               <br />
-                              Now you're one of us!
+                              Now you&apos;re one of us!
                             </p>
                           </div>
                           <p className="mt-4 text-center text-sm text-gray-400 sm:text-base lg:text-left xl:text-lg">
-                            Once we've made a decision, we will give you final
+                            Once we&apos;ve made a decision, we will give you final
                             feedback and invite you to work with us or keep you
                             on file for further opportunities.
                           </p>
@@ -405,7 +405,7 @@ function Careers() {
         >
           <div className="mb-8" style={{ opacity: 1, transform: 'none' }}>
             <h2 className="text-3xl md:text-4xl text-center mb-4 text-gray-800 dark:text-white">
-              We're big on Values
+              We&apos;re big on Values
             </h2>
             <hr className="h-[3px] w-[80px] border-0 bg-gray-800 mx-auto" />
           </div>
