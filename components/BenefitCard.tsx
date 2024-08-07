@@ -10,7 +10,7 @@ function BenefitCard({
   hoverImage: string;
 }) {
   return (
-    <div className="relative border-gray-800 border rounded-xl w-auto h-auto mt-2 p-2 cursor-pointer">
+    <div className="relative border-gray-800 border-box dark:border-gray-200 border rounded-xl w-auto h-auto mt-2 p-4 cursor-pointer">
       <div className="absolute inset-0 transition-opacity duration-300 opacity-0 hover:opacity-100">
         <img
           src={hoverImage}
@@ -52,7 +52,7 @@ function BenefitCard({
             ></path>
           </svg>
         </div>
-        <p className="mt-6 text-center text-sm text-black lg:text-base">
+        <p className="mt-6 text-center text-sm text-black dark:text-white lg:text-base">
           {title || 'Flexible working hours'}
         </p>
       </div>
