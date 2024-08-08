@@ -16,7 +16,11 @@ const AboutPage = () => {
     console.log(reasons);
   }, [reasons]);
 
-  useScrollReveal();
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      useScrollReveal();
+    }
+  }, []);
   return (
     <div className="h-full max-w-[1900px] mx-auto">
       <div className="min-h-[800px] flex flex-col items-center  justify-center pt-32 pb-12 rounded-b-3xl px-3 lg:px-16 border-red-700">

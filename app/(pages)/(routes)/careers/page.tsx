@@ -3,7 +3,7 @@ import useScrollReveal from '@/app/hooks/useScrollReveal';
 import BenefitCard from '@/components/BenefitCard';
 import HorizontalScroll from '@/components/ScrollHorizontal';
 import Value from '@/components/Value';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Careers() {
   const data = [
@@ -37,7 +37,11 @@ function Careers() {
     },
   ];
 
-  useScrollReveal();
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      useScrollReveal();
+    }
+  }, []);
   return (
     <>
       <div className="h-full max-w-[1900px] mx-auto mt-36">

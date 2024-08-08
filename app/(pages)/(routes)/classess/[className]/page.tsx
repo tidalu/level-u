@@ -7,13 +7,18 @@ import { cn } from '@/lib/utils';
 import { X } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const ClassesDataPage = () => {
   const pathName = usePathname();
   const [showModal, setShowModal] = useState(false);
   const [videoUrl, setVideoUrl] = useState('');
-  useScrollReveal();
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      useScrollReveal();
+    }
+  }, []);
 
   const handleModal = (url: string) => {
     setVideoUrl(url);

@@ -4,7 +4,7 @@ import { data } from '@/data';
 import Categories from '@/components/categories';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import useScrollReveal from '@/app/hooks/useScrollReveal';
 
 const ClassesPage = () => {
@@ -17,7 +17,11 @@ const ClassesPage = () => {
       videoRef.current.muted = !isMuted;
     }
   };
-  useScrollReveal();
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      useScrollReveal();
+    }
+  }, []);
 
   return (
     <div className="h-full max-w-[1900px] mx-auto ">

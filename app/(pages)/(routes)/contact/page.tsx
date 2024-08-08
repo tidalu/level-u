@@ -4,7 +4,7 @@ import useScrollReveal from '@/app/hooks/useScrollReveal';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const ContactPage = () => {
   const [showReadmore, setShowReadmore] = useState(false);
@@ -35,7 +35,11 @@ const ContactPage = () => {
     window.location.href = mailtoLink;
   };
 
-  useScrollReveal();
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      useScrollReveal();
+    }
+  }, []);
 
   return (
     <div className="h-full max-w-[1900px] mx-auto">
