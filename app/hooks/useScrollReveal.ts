@@ -1,11 +1,14 @@
-// hooks/useScrollReveal.js
 import { useEffect } from 'react';
-import ScrollReveal from 'scrollreveal';
 
-export default function useScrollReveal() {
+const useScrollReveal = () => {
   useEffect(() => {
+    // Check if `window` is available
     if (typeof window !== 'undefined') {
-      ScrollReveal().reveal('.reveal', {
+      // Your scroll reveal logic here
+      // For example:
+      const scrollReveal = require('scrollreveal'); // Example of dynamic import
+      scrollReveal().reveal('.reveal', {
+        // Your scroll reveal configuration
         distance: '50px',
         duration: 800,
         easing: 'ease-in-out',
@@ -14,4 +17,6 @@ export default function useScrollReveal() {
       });
     }
   }, []);
-}
+};
+
+export default useScrollReveal;

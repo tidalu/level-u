@@ -5,11 +5,11 @@ import Categories from '@/components/categories';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
-import useScrollReveal from '@/app/hooks/useScrollReveal';
 
 const ClassesPage = () => {
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
+  
 
   const toggleMute = () => {
     setIsMuted((prev) => !prev);
@@ -17,11 +17,6 @@ const ClassesPage = () => {
       videoRef.current.muted = !isMuted;
     }
   };
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      useScrollReveal();
-    }
-  }, []);
 
   return (
     <div className="h-full max-w-[1900px] mx-auto ">

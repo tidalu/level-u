@@ -3,14 +3,10 @@ import { Button } from '@/components/ui/button';
 import { data } from '@/data';
 import React, { useEffect } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import useScrollReveal from '@/app/hooks/useScrollReveal';
 
 const BlogPage = () => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      useScrollReveal();
-    }
-  }, []);
+  
+
   return (
     <div className="h-full max-w-[1900px] max-w-sc mx-auto">
       <div className=" reveal pt-32 pb-12 rounded-b-3xl px-3 lg:px-16">

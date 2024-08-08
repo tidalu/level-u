@@ -1,6 +1,5 @@
 'use client';
 
-import useScrollReveal from '@/app/hooks/useScrollReveal';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
@@ -34,12 +33,6 @@ const ContactPage = () => {
     )}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
   };
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      useScrollReveal();
-    }
-  }, []);
 
   return (
     <div className="h-full max-w-[1900px] mx-auto">

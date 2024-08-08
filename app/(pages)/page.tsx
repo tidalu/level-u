@@ -4,15 +4,8 @@ import YesMove from '@/components/yes-move';
 import LandingBanner from '@/components/landing-banner';
 import Offer from '@/components/offer';
 import PopulaActivities from '@/components/popula-activities';
-import useScrollReveal from '../hooks/useScrollReveal';
-import { useEffect } from 'react';
 
 const LandingPage = () => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      useScrollReveal();
-    }
-  }, []);
   return (
     <div className="h-full max-w-[1920px] max-w-sc  mx-auto ">
       {/* landing banner */}

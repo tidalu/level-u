@@ -1,6 +1,5 @@
 'use client';
 
-import useScrollReveal from '@/app/hooks/useScrollReveal';
 import { Button } from '@/components/ui/button';
 import { data } from '@/data';
 import { cn } from '@/lib/utils';
@@ -13,12 +12,8 @@ const ClassesDataPage = () => {
   const pathName = usePathname();
   const [showModal, setShowModal] = useState(false);
   const [videoUrl, setVideoUrl] = useState('');
+  
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      useScrollReveal();
-    }
-  }, []);
 
   const handleModal = (url: string) => {
     setVideoUrl(url);

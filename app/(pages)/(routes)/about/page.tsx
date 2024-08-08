@@ -1,5 +1,5 @@
 'use client';
-
+import dynamic from 'next/dynamic';
 import { data } from '@/data';
 import Image from 'next/image';
 import ExpandableText from '@/components/ExpandableText';
@@ -8,19 +8,14 @@ import React, { useEffect } from 'react';
 
 import aboutImg from '@/public/about-main.jpeg';
 import { InfiniteMovingCards } from '@/components/InfiniteMovingCards';
-import useScrollReveal from '@/app/hooks/useScrollReveal';
 
 const AboutPage = () => {
   const reasons = Object.values(data.reasons);
+
   useEffect(() => {
     console.log(reasons);
   }, [reasons]);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      useScrollReveal();
-    }
-  }, []);
   return (
     <div className="h-full max-w-[1900px] mx-auto">
       <div className="min-h-[800px] flex flex-col items-center  justify-center pt-32 pb-12 rounded-b-3xl px-3 lg:px-16 border-red-700">
