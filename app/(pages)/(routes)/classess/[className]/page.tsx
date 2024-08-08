@@ -13,6 +13,7 @@ const ClassesDataPage = () => {
   const pathName = usePathname();
   const [showModal, setShowModal] = useState(false);
   const [videoUrl, setVideoUrl] = useState('');
+  useScrollReveal();
 
   const handleModal = (url: string) => {
     setVideoUrl(url);
@@ -39,7 +40,6 @@ const ClassesDataPage = () => {
   }
 
   const intensityValue = classInfo?.match.intensity || 0.25;
-  useScrollReveal();
   return (
     <div className=" h-full max-w-[1900px] mx-auto">
       <div className="pt-32 pb-12 px-3 lg:px-16 mb-20">
