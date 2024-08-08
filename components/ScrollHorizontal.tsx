@@ -40,10 +40,10 @@ const HorizontalScroll: React.FC = () => {
     <div className="homeBanner overflow-hidden w-screen mt-6">
       <div
         ref={scrollContainerRef}
-        className="flex space-x-8 overflow-x-auto scrollbar-hide scroll-smooth w-full h-auto py-4 items-center "
+        className="flex space-x-8 reveal overflow-x-auto scrollbar-hide scroll-smooth w-full h-auto py-4 items-center "
       >
         {images.map((image, index) => (
-          <div key={index} className="flex-shrink-0">
+          <div key={index} className="flex-shrink-0 ">
             <img
               src={image}
               alt={`Image ${index + 1}`}

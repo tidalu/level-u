@@ -1,5 +1,6 @@
 'use client';
 
+import useScrollReveal from '@/app/hooks/useScrollReveal';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
@@ -14,14 +15,16 @@ const ContactPage = () => {
     message: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setUserData({
       ...userData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     const { email, name, phone, message } = userData;
     const subject = 'I am connecting regarding the course';
@@ -32,9 +35,11 @@ const ContactPage = () => {
     window.location.href = mailtoLink;
   };
 
+  useScrollReveal();
+
   return (
     <div className="h-full max-w-[1900px] mx-auto">
-      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-3 pt-32 pb-12 px-3 lg:px-16 mb-16">
+      <div className=" grid grid-cols-1 reveal lg:grid-cols-2 gap-3 pt-32 pb-12 px-3 lg:px-16 mb-16">
         <div>
           <div className=" grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className=" bg-[#b8df4b1a] dark:bg-[#86868517] rounded-2xl py-10 px-6 text-center flex flex-col gap-3 text-sm justify-center">

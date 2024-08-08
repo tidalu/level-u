@@ -31,9 +31,9 @@ const FooterLinks = () => {
   };
 
   return (
-    <div className="grid grid-cols-12 gap-4 mt-5 md:mt-0">
+    <div className="grid grid-cols-12 gap-4 mt-5 md:mt-0 reveal">
       <div
-        className="col-span-12 md:col-span-3 lg:col-span-2 px-6 md:px-3 py-2"
+        className="col-span-12 md:col-span-3 lg:col-span-2  px-6 md:px-3 py-2"
         onClick={() => toggleSection('information')}
       >
         <h3 className="cursor-pointer md:cursor-default flex justify-between items-center font-bold">

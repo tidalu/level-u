@@ -1,4 +1,5 @@
 'use client';
+import useScrollReveal from '@/app/hooks/useScrollReveal';
 import BenefitCard from '@/components/BenefitCard';
 import HorizontalScroll from '@/components/ScrollHorizontal';
 import Value from '@/components/Value';
@@ -35,10 +36,12 @@ function Careers() {
       stepVideo: '/video/rec-4.mp4',
     },
   ];
+
+  useScrollReveal();
   return (
     <>
       <div className="h-full max-w-[1900px] mx-auto mt-36">
-        <section className="container px-4 sm:px-10 m-auto my-10 md:my-16 lg:my-18">
+        <section className="reveal container px-4 sm:px-10 m-auto my-10 md:my-16 lg:my-18">
           <h1 className="text-6xl md:text-[60px] my-6">Careers</h1>
         </section>
       </div>
@@ -47,7 +50,7 @@ function Careers() {
         <div className=" scroll-smooth ">
           <section className="container px-4 sm:px-10 m-auto my-10 md:my-16 lg:my-18">
             <div className="mt-8 flex flex-col md:flex-row justify-between">
-              <div className="order-2 md:order-1 ">
+              <div className="order-2 md:order-1 reveal">
                 <div className="text-md text-gray-700 darl:text-gray-300">
                   Contents
                 </div>
@@ -82,7 +85,7 @@ function Careers() {
                   </a>
                 </div>
               </div>
-              <div className="order-1 md:order-2 mb-6 md:mb-0 text-lg md:text-2xl dark:text-white max-w-full w-[420px] text-gray-900">
+              <div className="order-1 reveal md:order-2 mb-6 md:mb-0 text-lg md:text-2xl dark:text-white max-w-full w-[420px] text-gray-900">
                 If you&apos;re as obsessed with design and tech as we are,
                 you&apos;ve come to the right place.
               </div>
@@ -92,14 +95,16 @@ function Careers() {
             id="open-positions"
             className="container px-4 sm:px-10 m-auto my-10 md:my-16 lg:my-18 scroll-mt-[100px]"
           >
-            <div className="mb-8" style={{ opacity: 1, transform: 'none' }}>
-              <h2 className="text-3xl md:text-4xl mb-4">Open positions</h2>{' '}
-              <hr className="h-[3px] w-[80px] border-0 bg-tdbGrey1 bg-black" />
+            <div className="mb-8 " style={{ opacity: 1, transform: 'none' }}>
+              <h2 className="text-3xl md:text-4xl mb-4 reveal">
+                Open positions
+              </h2>{' '}
+              <hr className="reveal h-[3px] w-[80px] border-0 bg-tdbGrey1 bg-black dark:bg-white" />
             </div>
             <div className="grid grid-cols-1 gap-4 md:mt-8 md:grid-cols-2 md:gap-12 lg:grid-cols-2">
               <span style={{ opacity: 1, transform: 'none' }}>
                 <a
-                  className="flex cursor-pointer items-center justify-between group careers_posting__ypMs4"
+                  className="reveal flex cursor-pointer items-center justify-between group careers_posting__ypMs4"
                   href="/job/react-developer"
                 >
                   <div>
@@ -126,7 +131,7 @@ function Careers() {
               </span>
               <span style={{ opacity: 1, transform: 'none' }}>
                 <a
-                  className="flex cursor-pointer items-center justify-between careers_posting__ypMs4"
+                  className="reveal flex cursor-pointer items-center justify-between careers_posting__ypMs4"
                   href="/job/ux-ui-designer"
                 >
                   <div>
@@ -151,7 +156,7 @@ function Careers() {
               </span>
               <span style={{ opacity: 1, transform: 'none' }}>
                 <a
-                  className="flex cursor-pointer items-center justify-between careers_posting__ypMs4"
+                  className="reveal flex cursor-pointer items-center justify-between careers_posting__ypMs4"
                   href="/job/node-developer"
                 >
                   <div>
@@ -178,7 +183,7 @@ function Careers() {
               </span>
               <span style={{ opacity: 1, transform: 'none' }}>
                 <a
-                  className="flex cursor-pointer items-center justify-between careers_posting__ypMs4"
+                  className="reveal flex cursor-pointer items-center justify-between careers_posting__ypMs4"
                   href="/job/art-director"
                 >
                   <div>
@@ -203,7 +208,7 @@ function Careers() {
               </span>
               <span style={{ opacity: 1, transform: 'none' }}>
                 <a
-                  className="flex cursor-pointer items-center justify-between careers_posting__ypMs4"
+                  className="reveal flex cursor-pointer items-center justify-between careers_posting__ypMs4"
                   href="/job/3d-archiviz-artist-mid-senior"
                 >
                   <div>
@@ -230,7 +235,7 @@ function Careers() {
               </span>
               <span style={{ opacity: 1, transform: 'none' }}>
                 <a
-                  className="flex cursor-pointer items-center justify-between careers_posting__ypMs4"
+                  className="reveal flex cursor-pointer items-center justify-between careers_posting__ypMs4"
                   href="/job/3d-modeler"
                 >
                   <div>
@@ -255,7 +260,7 @@ function Careers() {
               </span>
               <span style={{ opacity: 1, transform: 'none' }}>
                 <a
-                  className="flex cursor-pointer items-center justify-between careers_posting__ypMs4"
+                  className="reveal flex cursor-pointer items-center justify-between careers_posting__ypMs4"
                   href="/job/3d-modeler-mexico"
                 >
                   <div>
@@ -279,7 +284,7 @@ function Careers() {
                 </a>
               </span>
             </div>
-            <div className="m-auto mt-12 max-w-6xl justify-center">
+            <div className="m-auto mt-12 max-w-6xl justify-center reveal">
               <h2 className="text-center font-basic-sans text-2xl font-semibold">
                 Got other ideas?
               </h2>
@@ -291,7 +296,7 @@ function Careers() {
               </p>
             </div>
           </section>
-          <section className="my-10 md:my-16 lg:my-18 relative bg-gray-900">
+          <section className="my-10 reveal md:my-16 lg:my-18 relative bg-gray-900">
             <img
               alt="company-banner"
               loading="lazy"
@@ -328,13 +333,16 @@ function Careers() {
             className="container px-4 sm:px-10 m-auto my-10 md:my-16 lg:my-18 scroll-mt-24"
             id="benefits"
           >
-            <div className="mb-8" style={{ opacity: 1, transform: 'none' }}>
+            <div
+              className="mb-8 reveal"
+              style={{ opacity: 1, transform: 'none' }}
+            >
               <h2 className="text-3xl md:text-4xl text-center mb-4">
                 Benefits
               </h2>
               <hr className="h-[3px] w-[80px] border-0 bg-gray-800 mx-auto" />
             </div>
-            <div className="container  mx-auto px-16 mt-6 flex lg:mt-12 flex-wrap flex-row gap-4 justify-evenly">
+            <div className="container reveal  mx-auto px-16 mt-6 flex lg:mt-12 flex-wrap flex-row gap-4 justify-evenly">
               <BenefitCard hoverImage="/fit1.webp" />
               <BenefitCard hoverImage="/fit1.webp" />
               <BenefitCard hoverImage="/fit1.webp" />
@@ -354,9 +362,6 @@ function Careers() {
             id="recruitment-process"
           >
             <div className="mb-8" style={{ opacity: 1, transform: 'none' }}>
-              <h2 className="text-3xl md:text-4xl text-center mb-4">
-                Recruitment process
-              </h2>
               <hr className="h-[3px] w-[80px] border-0 bg-tdbGrey1 mx-auto bg-gray-800" />
             </div>
             <RecruitmentProcess data={data} />
@@ -368,13 +373,16 @@ function Careers() {
             className="container px-4 sm:px-10 m-auto my-10 md:my-16 lg:my-18 text-white scroll-mt-24"
             id="values"
           >
-            <div className="mb-8" style={{ opacity: 1, transform: 'none' }}>
+            <div
+              className="mb-8 reveal"
+              style={{ opacity: 1, transform: 'none' }}
+            >
               <h2 className="text-3xl md:text-4xl text-center mb-4 text-gray-800 dark:text-white">
                 We&apos;re big on Values
               </h2>
               <hr className="h-[3px] w-[80px] border-0 bg-gray-800 mx-auto" />
             </div>
-            <div className="mx-auto max-w-2xl text-center text-base text-black lg:text-lg dark:text-white">
+            <div className="mx-auto max-w-2xl reveal text-center text-base text-black lg:text-lg dark:text-white">
               An aligned team is the cornerstone of amazing company culture. It
               helps us do the work well and keep the precious work-life balance.
             </div>
@@ -441,7 +449,7 @@ function RecruitmentProcess({
   };
   return (
     <div className="flex flex-col-reverse lg:flex-row  gap-10 lg:gap-4  mx-auto px-5">
-      <div className="rounded-xl flex flex-col basis-1/2 mx-5 border-gray-900 dark:border-gray-200  border">
+      <div className="rounded-xl reveal flex flex-col basis-1/2 mx-5 border-gray-900 dark:border-gray-200  border">
         <div className="basis-1/2">
           <video
             src={currentOnScreen.stepVideo}
@@ -458,7 +466,7 @@ function RecruitmentProcess({
         </div>
       </div>
       <div className="basis-1/2 flex flex-col gap-6 justify-center">
-        <h1 className="text-6xl md:text-[60px] my-6 align-start">
+        <h1 className="text-6xl reveal md:text-[60px] my-6 align-start">
           Recruitment <br /> process
         </h1>
         <div className="flex flex-col gap-3">
@@ -468,7 +476,7 @@ function RecruitmentProcess({
                 key={index}
                 onClick={() => handleClick(index)}
                 className="px-10 py-6 rounded-full hover:bg-gray-800 hover:text-white focus:bg-gray-800 focus:text-white text-gray-800 dark:text-white dark:hover:bg-white dark:hover:text-gray-800 cursor-pointer border border-gray-800 dark:border-white flex gap-4
-                dark:focus:bg-white dark:focus:text-gray-800"
+                dark:focus:bg-white dark:focus:text-gray-800 reveal"
               >
                 <p className="text-xl font-bold">0{step.stepIndex}</p>
                 <p className="text-xl ">{step.stepTitle}</p>
