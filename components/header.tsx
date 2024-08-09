@@ -8,7 +8,8 @@ import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from './theme-toggle';
 import Accessibility from '@/components/Accessibility';
-import { Logs, X } from 'lucide-react';
+import { RxTextAlignCenter } from 'react-icons/rx';
+import { X } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -180,7 +181,7 @@ const Header = () => {
                 onClick={() => setOpen(!open)}
                 className="radial-bg-green rounded-full p-0 w-10 fixed top-5 right-5 border-0 shadow-xl "
               >
-                <X />
+                <X className="hover:-rotate-90 transition-all delay-75 ease-linear" />
               </Button>
             </li>
             {routes.map((route) => (
@@ -258,9 +259,9 @@ const Header = () => {
 
             <Button
               onClick={() => setOpen(!open)}
-              className="bg-transparent hover:bg-transparent text-[#6cce40] rounded-full border-2 lg:hidden border-[#6cce40]  h-[40px] w-[40px] flex justify-center items-center "
+              className="bg-transparent p-0 m-0 text-[#6cce40] rounded-full  w-[40px] [h-40px] border-2 lg:hidden border-[#6cce40] flex justify-center items-center hover-none"
             >
-              <Logs className=" w-[30px] h-[30px]" />
+              <RxTextAlignCenter className="w-[25px] hover:-rotate-90 transition-all delay-75 ease-linear h-[25px]" />
             </Button>
           </div>
         </div>
