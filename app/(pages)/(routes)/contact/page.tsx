@@ -1,9 +1,12 @@
 'use client';
 
+import MapComponent from '@/components/MapComponent';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import { data } from '@/data';
+import Schedule from '@/components/schedule';
 
 const ContactPage = () => {
   const [showReadmore, setShowReadmore] = useState(false);
@@ -36,7 +39,7 @@ const ContactPage = () => {
 
   return (
     <div className="h-full max-w-[1900px] mx-auto">
-      <div className=" grid grid-cols-1 reveal lg:grid-cols-2 gap-3 pt-32 pb-12 px-3 lg:px-16 mb-16">
+      <div className=" grid grid-cols-1 reveal lg:grid-cols-2 gap-3 pt-[150px] pb-6 px-3 lg:px-16 mb-16">
         <div>
           <div className=" grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className=" bg-[#b8df4b1a] dark:bg-[#86868517] rounded-2xl py-10 px-6 text-center flex flex-col gap-3 text-sm justify-center">
@@ -191,6 +194,10 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
+      </div>
+      <hr className="w-full" />
+      <div className="pt-16 pb-12 px-3 lg:px-16 mb-16">
+        <Schedule />
       </div>
     </div>
   );
