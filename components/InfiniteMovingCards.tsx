@@ -10,10 +10,7 @@ export const InfiniteMovingCards = ({
   pauseOnHover = true,
   className,
 }: {
-  items: {
-    answer: string;
-    question: string;
-  }[];
+  items: { answer: string; question: string }[];
   direction?: 'left' | 'right';
   speed?: 'fast' | 'normal' | 'slow';
   pauseOnHover?: boolean;
@@ -21,88 +18,59 @@ export const InfiniteMovingCards = ({
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
+  const [start, setStart] = useState(false);
 
   useEffect(() => {
-    addAnimation();
-  }, []);
-  const [start, setStart] = useState(false);
-  function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
-
       scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
+        scrollerRef.current?.appendChild(item.cloneNode(true));
       });
-
-      getDirection();
-      getSpeed();
       setStart(true);
     }
-  }
-  const getDirection = () => {
+  }, []);
+
+  useEffect(() => {
     if (containerRef.current) {
-      if (direction === 'left') {
-        containerRef.current.style.setProperty(
-          '--animation-direction',
-          'forwards'
-        );
-      } else {
-        containerRef.current.style.setProperty(
-          '--animation-direction',
-          'reverse'
-        );
-      }
+      containerRef.current.style.setProperty(
+        '--animation-direction',
+        direction === 'left' ? 'forwards' : 'reverse'
+      );
+      containerRef.current.style.setProperty(
+        '--animation-duration',
+        speed === 'fast' ? '20s' : speed === 'normal' ? '40s' : '80s'
+      );
     }
-  };
-  const getSpeed = () => {
-    if (containerRef.current) {
-      if (speed === 'fast') {
-        containerRef.current.style.setProperty('--animation-duration', '20s');
-      } else if (speed === 'normal') {
-        containerRef.current.style.setProperty('--animation-duration', '40s');
-      } else {
-        containerRef.current.style.setProperty('--animation-duration', '80s');
-      }
-    }
-  };
+  }, [direction, speed]);
+
   return (
     <div
       ref={containerRef}
       className={cn(
-        'scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]',
+        'scroller relative max-w-full overflow-hidden md:[mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]',
         className
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          ' flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap',
-          start && 'animate-scroll ',
+          'flex min-w-full gap-4 py-4 w-max',
+          start && 'animate-scroll',
           pauseOnHover && 'hover:[animation-play-state:paused]'
         )}
       >
-        {items.map((item, idx) => (
+        {items.map((item) => (
           <li
-            className="w-[300px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 dark:border-slate-700 border-[#edf8ce] shadow-sm px-8 py-6 md:w-[450px] bg-[#F8FFE5] dark:bg-slate-800  "
             key={item.question}
+            className="w-[250px] md:w-[300px] flex-shrink-0 rounded-2xl border dark:border-slate-700 border-[#edf8ce] shadow-sm px-6 py-4 bg-[#F8FFE5] dark:bg-slate-800"
           >
             <blockquote>
-              <div
-                aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-              ></div>
-
-              <div className="relative z-20 my-4  items-center">
-                <span className=" text-lg text-slate-800 leading-[1.6] dark:text-slate-200  font-semibold">
-                  {item.question}
-                </span>
+              <div className="relative my-4 text-lg font-semibold text-slate-800 dark:text-slate-200">
+                {item.question}
               </div>
-              <span className=" relative z-20 text-sm  leading-[1.6] dark:text-gray-100 text-gray-600 font-normal">
+              <div className="text-sm text-gray-600 dark:text-gray-100">
                 {item.answer}
-              </span>
+              </div>
             </blockquote>
           </li>
         ))}
