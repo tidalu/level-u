@@ -52,12 +52,6 @@ export function ThemeToggle() {
         >
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => setTheme('system')}
-          className="rounded-xl cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720]"
-        >
-          System
-        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
