@@ -61,7 +61,7 @@ const AboutPage = () => {
         <div className="reveal  w-full h-auto px-10">
           <div className="w-full flex justify-center items-center my-4">
             <h2 className=" text-black dark:text-white font-extrabold text-2xl text-center">
-              Why you should study at LevelEdu!
+              Why you should study at Level learning center
             </h2>
           </div>
           <InfiniteMovingCards
