@@ -1,14 +1,17 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 const HorizontalScroll: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
 
   const scrollSpeed = 2;
 
   const handleScroll = (event: WheelEvent) => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollLeft += event.deltaY * scrollSpeed;
+      // Pause auto-scrolling when user scrolls manually
+      setIsAutoScrolling(false);
+      scrollContainerRef.current.scrollLeft += event.deltaY * scrollSpeed + 2;
     }
   };
 
@@ -22,6 +25,20 @@ const HorizontalScroll: React.FC = () => {
       }
     };
   }, []);
+
+  useEffect(() => {
+    if (!isAutoScrolling) return; // Skip auto-scrolling if user is manually scrolling
+
+    const intervalId = setInterval(() => {
+      if (scrollContainerRef.current) {
+        scrollContainerRef.current.scrollLeft += 2;
+      }
+    }, 50);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [isAutoScrolling]);
 
   const images = [
     'https://picsum.photos/id/237/300/600',
