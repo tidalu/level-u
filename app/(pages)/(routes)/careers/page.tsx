@@ -84,7 +84,7 @@ function Careers() {
                 </div>
               </div>
               <div className="order-1 reveal md:order-2 mb-6 md:mb-0 text-lg md:text-2xl dark:text-white max-w-full w-[420px] text-gray-900">
-                If you&apos;re as obsessed with design and tech as we are,
+                If you&apos;re as obsessed with teaching and tech as we are,
                 you&apos;ve come to the right place.
               </div>
             </div>
@@ -107,9 +107,9 @@ function Careers() {
                 >
                   <div>
                     <h2 className="text-lg md:text-2xl">
-                      Front-end Engineer (React)
+                      Instructor (English Language)
                     </h2>
-                    <p className="md:text-lg">Warsaw / Remote</p>
+                    <p className="md:text-lg">Tashkent / On-site</p>
                   </div>
                   <svg
                     viewBox="0 0 27 26"
@@ -133,8 +133,10 @@ function Careers() {
                   href="/job/ux-ui-designer"
                 >
                   <div>
-                    <h2 className="text-lg md:text-2xl">UX/UI Designer</h2>
-                    <p className="md:text-lg">Warsaw / Remote</p>
+                    <h2 className="text-lg md:text-2xl">
+                      Instructor (Korean Language)
+                    </h2>
+                    <p className="md:text-lg">Tashkent / On-site</p>
                   </div>
                   <svg
                     viewBox="0 0 27 26"
@@ -159,111 +161,9 @@ function Careers() {
                 >
                   <div>
                     <h2 className="text-lg md:text-2xl">
-                      Backend Engineer (Node)
+                      Front-desk receptionist
                     </h2>
-                    <p className="md:text-lg">Warsaw / Remote</p>
-                  </div>
-                  <svg
-                    viewBox="0 0 27 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5"
-                  >
-                    <path
-                      d="M2 23.135 25 2m0 0H4m21 0v21.135"
-                      stroke="#717174"
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </a>
-              </span>
-              <span style={{ opacity: 1, transform: 'none' }}>
-                <a
-                  className="reveal flex cursor-pointer items-center justify-between careers_posting__ypMs4"
-                  href="/job/art-director"
-                >
-                  <div>
-                    <h2 className="text-lg md:text-2xl">Art Director</h2>
-                    <p className="md:text-lg">Warsaw</p>
-                  </div>
-                  <svg
-                    viewBox="0 0 27 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5"
-                  >
-                    <path
-                      d="M2 23.135 25 2m0 0H4m21 0v21.135"
-                      stroke="#717174"
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </a>
-              </span>
-              <span style={{ opacity: 1, transform: 'none' }}>
-                <a
-                  className="reveal flex cursor-pointer items-center justify-between careers_posting__ypMs4"
-                  href="/job/3d-archiviz-artist-mid-senior"
-                >
-                  <div>
-                    <h2 className="text-lg md:text-2xl">
-                      3D Archiviz Artist mid/senior
-                    </h2>
-                    <p className="md:text-lg">Warsaw / Remote</p>
-                  </div>
-                  <svg
-                    viewBox="0 0 27 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5"
-                  >
-                    <path
-                      d="M2 23.135 25 2m0 0H4m21 0v21.135"
-                      stroke="#717174"
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </a>
-              </span>
-              <span style={{ opacity: 1, transform: 'none' }}>
-                <a
-                  className="reveal flex cursor-pointer items-center justify-between careers_posting__ypMs4"
-                  href="/job/3d-modeler"
-                >
-                  <div>
-                    <h2 className="text-lg md:text-2xl">3D Modeler</h2>
-                    <p className="md:text-lg">Warsaw / Remote</p>
-                  </div>
-                  <svg
-                    viewBox="0 0 27 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5"
-                  >
-                    <path
-                      d="M2 23.135 25 2m0 0H4m21 0v21.135"
-                      stroke="#717174"
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </a>
-              </span>
-              <span style={{ opacity: 1, transform: 'none' }}>
-                <a
-                  className="reveal flex cursor-pointer items-center justify-between careers_posting__ypMs4"
-                  href="/job/3d-modeler-mexico"
-                >
-                  <div>
-                    <h2 className="text-lg md:text-2xl">3D Modeler</h2>
-                    <p className="md:text-lg">Mexico / Remote</p>
+                    <p className="md:text-lg">Tashkent / On-site</p>
                   </div>
                   <svg
                     viewBox="0 0 27 26"
