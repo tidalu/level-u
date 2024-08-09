@@ -7,6 +7,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { data } from '@/data';
 import Schedule from '@/components/schedule';
+import ClientOnly from '@/components/ClientOnly';
 
 const ContactPage = () => {
   const [showReadmore, setShowReadmore] = useState(false);
@@ -34,6 +35,7 @@ const ContactPage = () => {
     const mailtoLink = `mailto:your-email@example.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
+
     window.location.href = mailtoLink;
   };
 
@@ -197,7 +199,9 @@ const ContactPage = () => {
       </div>
       <hr className="w-full" />
       <div className="pt-16 pb-12 px-3 lg:px-16 mb-16">
-        <Schedule />
+        <ClientOnly>
+          <Schedule />
+        </ClientOnly>
       </div>
     </div>
   );
