@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import { MapContainer, TileLayer } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import MapPin from "./pin";
+import { MapContainer, TileLayer } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import MapPin from './pin';
 
 interface MapComponentProps {
-  items: any
+  items: any;
 }
 
 const MapComponent = ({ items }: MapComponentProps) => {
   return (
     <MapContainer
-      center={[51.726608, 19.637289]}
-      zoom={10}
+      center={[41.30149, 69.25194]}
+      zoom={12}
       scrollWheelZoom={true}
       className="w-full rounded-3xl h-[60vh] z-20"
     >
