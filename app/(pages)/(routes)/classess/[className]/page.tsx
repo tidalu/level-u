@@ -12,8 +12,6 @@ const ClassesDataPage = () => {
   const pathName = usePathname();
   const [showModal, setShowModal] = useState(false);
   const [videoUrl, setVideoUrl] = useState('');
-  
-
 
   const handleModal = (url: string) => {
     setVideoUrl(url);
@@ -21,11 +19,13 @@ const ClassesDataPage = () => {
   };
 
   const str = pathName.split('/')[2].toLowerCase();
-  let result = str.replace(/%20/g, ' ');
 
+  let result = str.replace(/%20/g, ' ');
   const getClassByName = (className: string) => {
     for (const category of data.classPage.classList) {
-      const match = category.list.find((item) => item.name === className);
+      const match = category.list.find(
+        (item) => item.name.toLocaleLowerCase() === className
+      );
       if (match) {
         return { match, title: category.title };
       }
@@ -33,7 +33,7 @@ const ClassesDataPage = () => {
     return null;
   };
 
-  const classInfo = getClassByName(result.toUpperCase());
+  const classInfo = getClassByName(result.toLowerCase());
 
   if (!getClassByName) {
     return <div>Class not found</div>;
@@ -60,6 +60,16 @@ const ClassesDataPage = () => {
               <p className=" text-gray-500 dark:text-gray-400 mt-5 leading-6 text-[12px]">
                 {classInfo?.match.description}
               </p>
+
+              {/* cost  */}
+              <div className="flex items-center justify-between mt-5 p-6 border-2 rounded-xl ">
+                <div className=" text-gray-600 dark:text-gray-300 text-md lg:text-xl font-semibold">
+                  Cost
+                </div>
+                <div className=" text-[#6cce40] dark:text-[#6cce40] text-md lg:text-xl font-semibold ml-2">
+                  {classInfo?.match.cost}
+                </div>
+              </div>
 
               <div className=" flex flex-col sm:flex-row gap-4 items-center mt-5">
                 <Button
