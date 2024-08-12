@@ -10,6 +10,7 @@ interface MapComponentProps {
 
 const MapComponent = ({ items }: MapComponentProps) => {
   return (
+    
     <MapContainer
       center={[41.30149, 69.25194]}
       zoom={12}

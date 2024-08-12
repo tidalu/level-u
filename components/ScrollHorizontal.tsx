@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState, useRef } from 'react';
+import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 
 const HorizontalScroll: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -61,11 +62,13 @@ const HorizontalScroll: React.FC = () => {
       >
         {images.map((image, index) => (
           <div key={index} className="flex-shrink-0 ">
-            <img
-              src={image}
-              alt={`Image ${index + 1}`}
-              className=" rounded-lg"
-            />
+            <ScrollAnimateWrapper>
+              <img
+                src={image}
+                alt={`Image ${index + 1}`}
+                className=" rounded-lg"
+              />
+            </ScrollAnimateWrapper>
           </div>
         ))}
       </div>

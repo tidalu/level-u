@@ -14,6 +14,7 @@ import {
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useLocalizedData } from '@/lib/useLocalizedData';
+import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 
 export function ThemeToggle() {
   const { setTheme } = useTheme();
@@ -42,18 +43,20 @@ export function ThemeToggle() {
         align="end"
         className="bg-[#F8FFE5] dark:bg-gray-800 "
       >
-        <DropdownMenuItem
-          onClick={() => setTheme('light')}
-          className="rounded-xl  cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720]"
-        >
-          {data.header.theme.light}
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => setTheme('dark')}
-          className="rounded-xl  cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720]"
-        >
-          {data.header.theme.dark}
-        </DropdownMenuItem>
+        <ScrollAnimateWrapper>
+          <DropdownMenuItem
+            onClick={() => setTheme('light')}
+            className="rounded-xl  cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720]"
+          >
+            {data.header.theme.light}
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => setTheme('dark')}
+            className="rounded-xl  cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720]"
+          >
+            {data.header.theme.dark}
+          </DropdownMenuItem>
+        </ScrollAnimateWrapper>
       </DropdownMenuContent>
     </DropdownMenu>
   );

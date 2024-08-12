@@ -5,6 +5,7 @@ import LandingBanner from '@/components/landing-banner';
 import Offer from '@/components/offer';
 import PopulaActivities from '@/components/popula-activities';
 import Call from '@/components/Call';
+import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
 
 const LandingPage = () => {
   return (
@@ -19,10 +20,14 @@ const LandingPage = () => {
         <section>
           <div className="my-16 px-3 lg:px-16 mx-auto reveal">
             <h2 className="reveal text-black dark:text-white font-bold text-2xl 2xl:text-3xl text-center">
-              Classes available in our clubs
+              <ScrollAnimateWrapper>
+                Classes available in our clubs
+              </ScrollAnimateWrapper>
             </h2>
             <p className=" reveal text-[12px] 2xl:text-lg text-center text-gray-500  mt-4">
-              Choose your favorite activities and learn more
+              <ScrollAnimateWrapper>
+                Choose your favorite activities and learn more
+              </ScrollAnimateWrapper>
             </p>
 
             <Categories />

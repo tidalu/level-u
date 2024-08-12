@@ -7,6 +7,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ListChecks, MapPin } from 'lucide-react';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import ClientOnly from './ClientOnly';
+import { ScrollDownButton } from '@radix-ui/react-select';
+import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 const MapComponent = dynamic(() => import('@/components/MapComponent'), {
   ssr: false,
 });
@@ -151,13 +153,17 @@ const Schedule = () => {
         </TabsList>
       </div>
       <TabsContent value="map">
-        <ClientOnly>
-          <MapComponent items={filteredPlaces} />
-        </ClientOnly>
+        <ScrollAnimateWrapper>
+          <ClientOnly>
+            <MapComponent items={filteredPlaces} />
+          </ClientOnly>
+        </ScrollAnimateWrapper>
       </TabsContent>
       <TabsContent value="list">
         {filteredPlaces.map((item: placeInterface, index: number) => (
-          <ClubItem key={index} city={item.cityName} clubs={item.clubs} />
+          <ScrollAnimateWrapper key={index}>
+            <ClubItem key={index} city={item.cityName} clubs={item.clubs} />
+          </ScrollAnimateWrapper>
         ))}
       </TabsContent>
     </Tabs>

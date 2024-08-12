@@ -1,5 +1,6 @@
 'use client';
 
+import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
 import { Button } from '@/components/ui/button';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import { cn } from '@/lib/utils';
@@ -56,54 +57,61 @@ const ClassesDataPage = () => {
       <div className="pt-32 pb-12 px-3 lg:px-16 mb-20">
         <div className=" grid grid-cols-12 gap-5">
           <div className=" col-span-12 lg:col-span-5">
-            <div className="bg-[#b8df4b1a] reveal dark:bg-[#86868517] rounded-2xl relative p-4 md:p-10">
-              <div className="mb-3 md:mb-0 md:absolute top-4 left-4 md:top-6 md:left-auto md:right-6 flex gap-1">
-                <div className=" bg-white dark:bg-[#020817] rounded-xl p-2">
-                  <img src="/popularicon1.svg" width={16} className="" alt="" />
+            <ScrollAnimateWrapper>
+              <div className="bg-[#b8df4b1a] reveal dark:bg-[#86868517] rounded-2xl relative p-4 md:p-10">
+                <div className="mb-3 md:mb-0 md:absolute top-4 left-4 md:top-6 md:left-auto md:right-6 flex gap-1">
+                  <div className=" bg-white dark:bg-[#020817] rounded-xl p-2">
+                    <img
+                      src="/popularicon1.svg"
+                      width={16}
+                      className=""
+                      alt=""
+                    />
+                  </div>
                 </div>
-              </div>
-              <h3 className=" text-sm text-gray-500 dark:text-gray-400 font-semibold">
-                {classInfo?.title}
-              </h3>
+                <h3 className=" text-sm text-gray-500 dark:text-gray-400 font-semibold">
+                  {classInfo?.title}
+                </h3>
 
-              <h2 className=" text-xl font-bold">{classInfo?.match.name}</h2>
+                <h2 className=" text-xl font-bold">{classInfo?.match.name}</h2>
 
-              <p className=" text-gray-500 dark:text-gray-400 mt-5 leading-6 text-[12px]">
-                {classInfo?.match.description}
-              </p>
+                <p className=" text-gray-500 dark:text-gray-400 mt-5 leading-6 text-[12px]">
+                  {classInfo?.match.description}
+                </p>
 
-              {/* cost  */}
-              <div className="flex items-center justify-between mt-5 p-6 border-2 rounded-xl ">
-                <div className=" text-gray-600 dark:text-gray-300 text-md lg:text-xl font-semibold">
-                  Cost
+                {/* cost  */}
+                <div className="flex items-center justify-between mt-5 p-6 border-2 rounded-xl ">
+                  <div className=" text-gray-600 dark:text-gray-300 text-md lg:text-xl font-semibold">
+                    Cost
+                  </div>
+                  <div className=" text-[#6cce40] dark:text-[#6cce40] text-md lg:text-xl font-semibold ml-2">
+                    {classInfo?.match.cost}
+                  </div>
                 </div>
-                <div className=" text-[#6cce40] dark:text-[#6cce40] text-md lg:text-xl font-semibold ml-2">
-                  {classInfo?.match.cost}
-                </div>
-              </div>
 
-              <div className=" flex flex-col sm:flex-row gap-4 items-center mt-5">
-                <Button
-                  onClick={() => handleModal(classInfo?.match.video || '')}
-                  variant="primaryGreen"
-                  className="dark:text-black w-full sm:w-auto rounded-full px-6 text-sm"
-                >
-                  <img
-                    src="/play.svg"
-                    width={16}
-                    height={16}
-                    className=" rounded-xl mr-2"
-                    alt=""
-                  />
-                  See the video
-                </Button>
-                <Link href="/contact" className="w-full sm:w-auto">
-                  <Button className="dark:text-white w-full sm:w-auto rounded-full px-6 bg-transparent hover:bg-transparent text-black border-2 border-[#6cce40] text-sm">
-                    Buy a pass
+                <div className=" flex flex-col sm:flex-row gap-4 items-center mt-5">
+                  <Button
+                    onClick={() => handleModal(classInfo?.match.video || '')}
+                    variant="primaryGreen"
+                    className="dark:text-black w-full sm:w-auto rounded-full px-6 text-sm"
+                  >
+                    <img
+                      src="/play.svg"
+                      width={16}
+                      height={16}
+                      className=" rounded-xl mr-2"
+                      alt=""
+                    />
+                    See the video
                   </Button>
-                </Link>
+                  <Link href="/contact" className="w-full sm:w-auto">
+                    <Button className="dark:text-white w-full sm:w-auto rounded-full px-6 bg-transparent hover:bg-transparent text-black border-2 border-[#6cce40] text-sm">
+                      Buy a pass
+                    </Button>
+                  </Link>
+                </div>
               </div>
-            </div>
+            </ScrollAnimateWrapper>
           </div>
 
           <div className="  col-span-12 lg:col-span-7 shadow-2xl dark:shadow-slate-900 grid grid-cols-12 bg-[#a9aca41a] rounded-2xl overflow-hidden gap-0.5">

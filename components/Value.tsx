@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 
 function Value({
   index,
@@ -20,11 +21,11 @@ function Value({
             {index}
           </span>
           <br />
-          {title}
+          <ScrollAnimateWrapper>{title}</ScrollAnimateWrapper>
         </p>
       </div>
       <span className="max-w-2xl flex-1 text-base text-black dark:text-gray-300 xl:text-lg">
-        {description}
+        <ScrollAnimateWrapper>{description}</ScrollAnimateWrapper>
       </span>
     </div>
   );

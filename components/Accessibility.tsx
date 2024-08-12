@@ -18,6 +18,7 @@ import {
 import { cn } from '@/lib/utils';
 import { useTheme } from 'next-themes';
 import { useLocalizedData } from '@/lib/useLocalizedData';
+import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 
 function Accessibility() {
   const { setTheme } = useTheme();
@@ -172,111 +173,113 @@ function Accessibility() {
           <PersonStanding className="w-[30px] h-[30px]" />
         </PopoverTrigger>
         <PopoverContent className="mt-1 mr-1 w-[150px] lg:w-[200px] bg-[#F8FFE5] dark:bg-gray-800 dark:text-white text-gray-900 rounded-lg shadow-md py-2 pr-1 px-2">
-          <div className="border-red-400 w-full h-full">
-            <h2 className="font-medium text-base w-full border-b border-b-gray-500 dark:border-b-slate-200 my-[2px]">
-              {data.header.accessibility.title}
-            </h2>
-            <ul className="w-full flex flex-col gap-1 p-1">
-              {/* text zoom in */}
-              <li>
-                <button
-                  className={cn(
-                    buttonStyle,
-                    clicks.zoomIn > 0
-                      ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
-                      : 'bg-[#F8FFE5] dark:bg-gray-800',
-                    limit >= 5 && 'opacity-50 cursor-not-allowed'
-                  )}
-                  onClick={textZoomIn}
-                >
-                  <ZoomIn className="w-5 h-5 mr-2" />
-                  {data.header.accessibility.enlargeText}
-                </button>
-              </li>
+          <ScrollAnimateWrapper>
+            <div className="border-red-400 w-full h-full">
+              <h2 className="font-medium text-base w-full border-b border-b-gray-500 dark:border-b-slate-200 my-[2px]">
+                {data.header.accessibility.title}
+              </h2>
+              <ul className="w-full flex flex-col gap-1 p-1">
+                {/* text zoom in */}
+                <li>
+                  <button
+                    className={cn(
+                      buttonStyle,
+                      clicks.zoomIn > 0
+                        ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
+                        : 'bg-[#F8FFE5] dark:bg-gray-800',
+                      limit >= 5 && 'opacity-50 cursor-not-allowed'
+                    )}
+                    onClick={textZoomIn}
+                  >
+                    <ZoomIn className="w-5 h-5 mr-2" />
+                    {data.header.accessibility.enlargeText}
+                  </button>
+                </li>
 
-              {/* text zoom out */}
-              <li>
-                <button
-                  className={cn(
-                    buttonStyle,
-                    clicks.zoomIn < 0
-                      ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
-                      : 'bg-[#F8FFE5] dark:bg-gray-800',
-                    limit <= -3 && 'opacity-50 cursor-not-allowed'
-                  )}
-                  onClick={textZoomOut}
-                >
-                  <ZoomOut className="w-5 h-5 mr-2" />
-                  {data.header.accessibility.reduceText}
-                </button>
-              </li>
+                {/* text zoom out */}
+                <li>
+                  <button
+                    className={cn(
+                      buttonStyle,
+                      clicks.zoomIn < 0
+                        ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
+                        : 'bg-[#F8FFE5] dark:bg-gray-800',
+                      limit <= -3 && 'opacity-50 cursor-not-allowed'
+                    )}
+                    onClick={textZoomOut}
+                  >
+                    <ZoomOut className="w-5 h-5 mr-2" />
+                    {data.header.accessibility.reduceText}
+                  </button>
+                </li>
 
-              {/* Grayscale */}
-              <li>
-                <button
-                  className={cn(
-                    buttonStyle,
-                    clicks.grayscale !== 0
-                      ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
-                      : 'bg-[#F8FFE5] dark:bg-gray-800'
-                  )}
-                  onClick={grayscale}
-                >
-                  <Pipette className="w-5 h-5 mr-2" />
-                  {data.header.accessibility.grayscale}
-                </button>
-              </li>
+                {/* Grayscale */}
+                <li>
+                  <button
+                    className={cn(
+                      buttonStyle,
+                      clicks.grayscale !== 0
+                        ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
+                        : 'bg-[#F8FFE5] dark:bg-gray-800'
+                    )}
+                    onClick={grayscale}
+                  >
+                    <Pipette className="w-5 h-5 mr-2" />
+                    {data.header.accessibility.grayscale}
+                  </button>
+                </li>
 
-              {/* Contrast */}
-              <li>
-                <button
-                  className={cn(
-                    buttonStyle,
-                    clicks.contrast !== 0
-                      ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
-                      : 'bg-[#F8FFE5] dark:bg-gray-800'
-                  )}
-                  onClick={contrast}
-                >
-                  <Contrast className="w-5 h-5 mr-2" />
-                  {data.header.accessibility.highContrast}
-                </button>
-              </li>
+                {/* Contrast */}
+                <li>
+                  <button
+                    className={cn(
+                      buttonStyle,
+                      clicks.contrast !== 0
+                        ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
+                        : 'bg-[#F8FFE5] dark:bg-gray-800'
+                    )}
+                    onClick={contrast}
+                  >
+                    <Contrast className="w-5 h-5 mr-2" />
+                    {data.header.accessibility.highContrast}
+                  </button>
+                </li>
 
-              {/* Negative contrast */}
-              <li>
-                <button
-                  className={cn(
-                    buttonStyle,
-                    clicks.negativeContrast !== 0
-                      ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
-                      : 'bg-[#F8FFE5] dark:bg-gray-800'
-                  )}
-                  onClick={negativeContrast}
-                >
-                  <Eye className="w-5 h-5 mr-2" />
-                  {data.header.accessibility.negativeContrast}
-                </button>
-              </li>
+                {/* Negative contrast */}
+                <li>
+                  <button
+                    className={cn(
+                      buttonStyle,
+                      clicks.negativeContrast !== 0
+                        ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
+                        : 'bg-[#F8FFE5] dark:bg-gray-800'
+                    )}
+                    onClick={negativeContrast}
+                  >
+                    <Eye className="w-5 h-5 mr-2" />
+                    {data.header.accessibility.negativeContrast}
+                  </button>
+                </li>
 
-              {/* reset */}
-              <hr className="h-[1px] w-full border-gray-500 dark:bg-slate-100 my-1" />
-              <li>
-                <button
-                  className={cn(
-                    buttonStyle,
-                    clicks.reset !== 0
-                      ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
-                      : 'bg-[#F8FFE5] dark:bg-gray-800'
-                  )}
-                  onClick={reset}
-                >
-                  <RotateCcw className="w-5 h-5 mr-2" />
-                  {data.header.accessibility.reset}
-                </button>
-              </li>
-            </ul>
-          </div>
+                {/* reset */}
+                <hr className="h-[1px] w-full border-gray-500 dark:bg-slate-100 my-1" />
+                <li>
+                  <button
+                    className={cn(
+                      buttonStyle,
+                      clicks.reset !== 0
+                        ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
+                        : 'bg-[#F8FFE5] dark:bg-gray-800'
+                    )}
+                    onClick={reset}
+                  >
+                    <RotateCcw className="w-5 h-5 mr-2" />
+                    {data.header.accessibility.reset}
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </ScrollAnimateWrapper>
         </PopoverContent>
       </Popover>
     </div>

@@ -5,6 +5,7 @@ import { Button } from './ui/button';
 import { X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useLocalizedData } from '@/lib/useLocalizedData';
+import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 
 interface yesToMove {
   title: string;
@@ -27,16 +28,22 @@ const YesMove = () => {
   return (
     <section className=" text-center">
       <div className="my-16 px-3 sm:px-0 lg:px-16 max-w-6xl mx-auto">
-        <img
-          src="/yesmove.svg"
-          className=" reveal dark:invert mx-auto w-32"
-          alt=""
-        />
+        <ScrollAnimateWrapper>
+          <img
+            src="/yesmove.svg"
+            className=" reveal dark:invert mx-auto w-32"
+            alt=""
+          />
+        </ScrollAnimateWrapper>
         <p className="reveal text-[12px] 2xl:text-[15px] text-center text-gray-500  mt-6">
-          The largest training platform in Poland.{' '}
+          <ScrollAnimateWrapper>
+            The largest training platform in Poland.{' '}
+          </ScrollAnimateWrapper>
         </p>
         <p className="reveal text-[12px] 2xl:text-[15px] text-center text-gray-500  mt-2 mb-10">
-          Train. Where you want and when you want.
+          <ScrollAnimateWrapper>
+            Train. Where you want and when you want.
+          </ScrollAnimateWrapper>
         </p>
 
         <div className="flex md:inline scrollMobile">
@@ -49,48 +56,55 @@ const YesMove = () => {
                 i == 3 && 'md:ml-20 xl:ml-24 md:mt-4'
               )}
             >
-              <div className=" relative w-[240px] md:w-auto">
-                <img src={item.img} className=" rounded-xl" alt="" />
-                <Button
-                  variant="primaryGreen"
-                  onClick={() => handleModal(item.video)}
-                  className=" rounded-full px-2 shadow-xl h-auto absolute -bottom-4 left-3"
-                >
-                  <img
-                    src="/play.svg"
-                    width={18}
-                    className=" rounded-xl"
-                    alt=""
-                  />
-                </Button>
-              </div>
-
-              <div className=" text-black dark:text-white text-[11px] 2xl:text-[15px] font-bold mt-7 text-left">
-                {item.title}
-              </div>
-              <p className=" text-[11px] mt-1 font-semibold 2xl:text-[14px] text-gray-500 dark:text-gray-400  text-left">
-                {item.trainers}
-              </p>
-
-              <div className="flex gap-6 text-[10px] text-gray-600 dark:text-gray-400 mt-4">
-                <div className="flex gap-2">
-                  <img src="/duration.svg" width={14} height={14} alt="" />
-                  {item.duration}
+              <ScrollAnimateWrapper>
+                <div className=" relative w-[240px] md:w-auto">
+                  <img src={item.img} className=" rounded-xl" alt="" />
+                  <Button
+                    variant="primaryGreen"
+                    onClick={() => handleModal(item.video)}
+                    className=" rounded-full px-2 shadow-xl h-auto absolute -bottom-4 left-3"
+                  >
+                    <img
+                      src="/play.svg"
+                      width={18}
+                      className=" rounded-xl"
+                      alt=""
+                    />
+                  </Button>
                 </div>
-                <div className="flex gap-2">
-                  <img src="/intensity.svg" width={14} height={14} alt="" />
-                  {item.desc}
+
+                <div className=" text-black dark:text-white text-[11px] 2xl:text-[15px] font-bold mt-7 text-left">
+                  {item.title}
                 </div>
-              </div>
+                <p className=" text-[11px] mt-1 font-semibold 2xl:text-[14px] text-gray-500 dark:text-gray-400  text-left">
+                  {item.trainers}
+                </p>
+
+                <div className="flex gap-6 text-[10px] text-gray-600 dark:text-gray-400 mt-4">
+                  <div className="flex gap-2">
+                    <img src="/duration.svg" width={14} height={14} alt="" />
+                    {item.duration}
+                  </div>
+                  <div className="flex gap-2">
+                    <img src="/intensity.svg" width={14} height={14} alt="" />
+                    {item.desc}
+                  </div>
+                </div>
+              </ScrollAnimateWrapper>
             </div>
           ))}
         </div>
 
         <div className=" inline-block md:-mt-6 bg-[#b8df4b1a] dark:bg-[#86868517] align-top w-full md:w-[27rem] xl:w-[37rem] px-6 py-10 text-center rounded-2xl">
-          <div className="reveal text-6xl font-bold text-[#6cce40]">900</div>
+          {/* <ScrollAnimateWrapper> */}
+          <div className="reveal text-6xl font-bold text-[#6cce40]">
+            <ScrollAnimateWrapper>900</ScrollAnimateWrapper>
+          </div>
           <p className="reveal text-xl font-bold text-black dark:text-white">
-            A variety of workouts <br />
-            for everyone
+            <ScrollAnimateWrapper>
+              A variety of workouts <br />
+              for everyone
+            </ScrollAnimateWrapper>
           </p>
 
           <div className="flex reveal justify-center gap-5 mt-5">
@@ -98,12 +112,13 @@ const YesMove = () => {
               variant="primaryGreen"
               className=" rounded-full dark:text-black text-[12px]"
             >
-              Try it for 1 PLN
+              <ScrollAnimateWrapper>Try it for 1 PLN</ScrollAnimateWrapper>
             </Button>
             <Button className=" bg-transparent hover:bg-transparent text-[12px] text-black dark:text-white rounded-full border-2 border-[#6cce40]">
-              Find out more
+              <ScrollAnimateWrapper>Find out more</ScrollAnimateWrapper>
             </Button>
           </div>
+          {/* </ScrollAnimateWrapper> */}
         </div>
       </div>
 

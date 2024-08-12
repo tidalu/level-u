@@ -1,5 +1,6 @@
 'use client';
 import BenefitCard from '@/components/BenefitCard';
+import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
 import HorizontalScroll from '@/components/ScrollHorizontal';
 import Value from '@/components/Value';
 import { useEffect, useState } from 'react';
@@ -40,7 +41,9 @@ function Careers() {
     <>
       <div className="h-full max-w-[1900px] mx-auto mt-36">
         <section className="reveal container px-4 sm:px-10 m-auto my-10 md:my-16 lg:my-18">
-          <h1 className="text-6xl md:text-[60px] my-6">Careers</h1>
+          <ScrollAnimateWrapper>
+            <h1 className="text-6xl md:text-[60px] my-6">Careers</h1>
+          </ScrollAnimateWrapper>
         </section>
       </div>
       <HorizontalScroll />

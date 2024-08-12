@@ -19,6 +19,7 @@ import {
 import { FlipWords } from './ui/flip-words';
 import { useLanguage } from './LanguageContext';
 import { useLocalizedData } from '@/lib/useLocalizedData';
+import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -191,16 +192,18 @@ const Header = () => {
             </li>
             {routes.map((route) => (
               <li key={route.label}>
-                <Link
-                  className={cn(
-                    ' hover:underline  2xl:text-lg',
-                    pathName === route.href && ' text-[#6cce40] '
-                  )}
-                  onClick={() => setOpen(false)}
-                  href={route.href}
-                >
-                  {route.label}
-                </Link>
+                <ScrollAnimateWrapper>
+                  <Link
+                    className={cn(
+                      ' hover:underline  2xl:text-lg',
+                      pathName === route.href && ' text-[#6cce40] '
+                    )}
+                    onClick={() => setOpen(false)}
+                    href={route.href}
+                  >
+                    {route.label}
+                  </Link>
+                </ScrollAnimateWrapper>
               </li>
             ))}
           </ul>
