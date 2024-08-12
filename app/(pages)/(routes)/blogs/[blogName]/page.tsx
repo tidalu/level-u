@@ -15,7 +15,7 @@ const BlogPage = () => {
               {data.blogs[0].description}
             </h1>
             <ul className="text-[12px] reveal text-gray-600 my-3">
-              {data.blogs[0].bulletPoints.map((item, i) => (
+              {data.blogs[0].bulletPoints.map((item: string, i: number) => (
                 <li key={i} className="mb-3">
                   {' '}
                   - {item}

@@ -25,7 +25,17 @@ const ClassesDataPage = () => {
   const getClassByName = (className: string) => {
     for (const category of data.classPage.classList) {
       const match = category.list.find(
-        (item) => item.name.toLocaleLowerCase() === className
+        (item: {
+          name: string;
+          description: string;
+          intensity: number;
+          cost: string;
+          forWhom: string[];
+          duration: string;
+          purpose: string;
+          effects: string[];
+          video: string;
+        }) => item.name.toLocaleLowerCase() === className
       );
       if (match) {
         return { match, title: category.title };
@@ -102,7 +112,7 @@ const ClassesDataPage = () => {
                 For Whom
               </div>
               <div className=" leading-6 text-gray-500 dark:text-gray-400 mt-1 text-[12px]">
-                {classInfo?.match.forWhom.map((f, i) => (
+                {classInfo?.match.forWhom.map((f: string[], i: number) => (
                   <div className="" key={i}>
                     {f} /
                   </div>
@@ -156,7 +166,7 @@ const ClassesDataPage = () => {
                 Effects
               </div>
               <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
-                {classInfo?.match.effects.map((e, i) => (
+                {classInfo?.match.effects.map((e: string[], i: number) => (
                   <span key={i}>{e}, </span>
                 ))}
               </p>
