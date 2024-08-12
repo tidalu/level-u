@@ -4,12 +4,14 @@ import YesMove from '@/components/yes-move';
 import LandingBanner from '@/components/landing-banner';
 import Offer from '@/components/offer';
 import PopulaActivities from '@/components/popula-activities';
+import Call from '@/components/Call';
 
 const LandingPage = () => {
   return (
     <div className="h-full max-w-[1920px] max-w-sc  mx-auto ">
       {/* landing banner */}
       <LandingBanner />
+      <Call />
       <div className=" max-w-[1600px] mx-auto reveal">
         {/* offer */}
         <Offer />

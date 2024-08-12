@@ -4,7 +4,6 @@ import React from 'react';
 import HomeBlogList from './home-blogList';
 import { Button } from './ui/button';
 import { data } from '@/data';
-import Forms from './Forms';
 import { TextGenerateEffect } from './ui/text-generate-effect';
 import { Form } from './form';
 
