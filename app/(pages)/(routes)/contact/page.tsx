@@ -7,6 +7,8 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { data } from '@/data';
 import Schedule from '@/components/schedule';
+
+
 import ClientOnly from '@/components/ClientOnly';
 
 const ContactPage = () => {
