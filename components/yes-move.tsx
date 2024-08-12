@@ -4,11 +4,12 @@ import { useState } from 'react';
 import { Button } from './ui/button';
 import { X } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { data } from '@/data';
+import { useLocalizedData } from '@/lib/useLocalizedData';
 
 const YesMove = () => {
   const [showModal, setShowModal] = useState(false);
   const [videoUrl, setVideoUrl] = useState('');
+  const data = useLocalizedData();
 
   const handleModal = (url: string) => {
     setVideoUrl(url);

@@ -1,9 +1,8 @@
 'use client';
 import dynamic from 'next/dynamic';
-import { data } from '@/data';
 import Image from 'next/image';
 import ExpandableText from '@/components/ExpandableText';
-
+import { useLocalizedData } from '@/lib/useLocalizedData';
 import React, { useEffect, useState } from 'react';
 
 import logo from '/public/logo.svg';
@@ -12,6 +11,7 @@ import Particles from '@/components/magicui/particles';
 import { useTheme } from 'next-themes';
 
 const AboutPage = () => {
+  const data = useLocalizedData();
   const { theme } = useTheme();
   const [color, setColor] = useState('#ffffff');
   const reasons = Object.values(data.reasons);

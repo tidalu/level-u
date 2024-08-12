@@ -3,10 +3,11 @@
 import { ChevronRight } from 'lucide-react';
 import React from 'react';
 import { Button } from './ui/button';
-import { data } from '@/data';
+import { useLocalizedData } from '@/lib/useLocalizedData';
 import Link from 'next/link';
 
 const Categories = () => {
+  const data = useLocalizedData();
   return (
     <div>
       <div className="flex flex-col items-center gap-7 mt-6 md:flex-row flex-wrap justify-evenly">

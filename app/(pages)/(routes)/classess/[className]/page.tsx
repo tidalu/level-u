@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { data } from '@/data';
+import { useLocalizedData } from '@/lib/useLocalizedData';
 import { cn } from '@/lib/utils';
 import { X } from 'lucide-react';
 import Link from 'next/link';
@@ -12,6 +12,7 @@ const ClassesDataPage = () => {
   const pathName = usePathname();
   const [showModal, setShowModal] = useState(false);
   const [videoUrl, setVideoUrl] = useState('');
+  const data = useLocalizedData();
 
   const handleModal = (url: string) => {
     setVideoUrl(url);

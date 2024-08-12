@@ -5,6 +5,7 @@ import Context from '@/components/context';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import { ThemeProvider } from '@/components/theme-provider';
+import { LanguageProvider } from '@/components/LanguageContext';
 
 const LandingLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -12,11 +13,11 @@ const LandingLayout = ({ children }: { children: React.ReactNode }) => {
       <div>
         <div className="mx-auto h-full w-full">
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <Context>
+            <LanguageProvider>
               <Header />
               {children}
               <Footer />
-            </Context>
+            </LanguageProvider>
           </ThemeProvider>
         </div>
       </div>

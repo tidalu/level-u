@@ -17,61 +17,65 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { FlipWords } from './ui/flip-words';
-
-const routes = [
-  {
-    label: 'Courses',
-    href: '/classes',
-  },
-  {
-    label: 'Careers',
-    href: '/careers',
-  },
-  {
-    label: 'Contact',
-    href: '/contact',
-  },
-  //   {
-  //     label: 'Schedule',
-  //     href: '/schedule',
-  //   },
-  {
-    label: 'About',
-    href: '/about',
-  },
-];
-
-type Langs = {
-  [key: string]: {
-    label: string;
-    icon: string;
-    circleIcon: string;
-  };
-};
-
-const langs: Langs = {
-  en: {
-    label: 'English',
-    icon: '/english-flag-icon-rect.svg',
-    circleIcon: '/english-flag-icon.svg',
-  },
-  uz: {
-    label: 'Uzbek',
-    icon: '/uzbekistan-flag-rect-circle-icon.svg',
-    circleIcon: '/uzbekistan-flag-round-circle-icon.svg',
-  },
-  ru: {
-    label: 'Russian',
-    icon: '/russia-flag-icon-rect.svg',
-    circleIcon: '/russia-flag-round-circle-icon.svg',
-  },
-};
+import { useLanguage } from './LanguageContext';
+import { useLocalizedData } from '@/lib/useLocalizedData';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const pathName = usePathname();
   const [currentLang, setCurrentLang] = useState('uz');
+
+  const { switchLanguage } = useLanguage();
+  const data = useLocalizedData();
+  const routes = [
+    {
+      label: data.header.tabs.courses,
+      href: '/classes',
+    },
+    {
+      label: data.header.tabs.careers,
+      href: '/careers',
+    },
+    {
+      label: data.header.tabs.contact,
+      href: '/contact',
+    },
+    //   {
+    //     label: 'Schedule',
+    //     href: '/schedule',
+    //   },
+    {
+      label: data.header.tabs.about,
+      href: '/about',
+    },
+  ];
+
+  type Langs = {
+    [key: string]: {
+      label: string;
+      icon: string;
+      circleIcon: string;
+    };
+  };
+
+  const langs: Langs = {
+    en: {
+      label: 'English',
+      icon: '/english-flag-icon-rect.svg',
+      circleIcon: '/english-flag-icon.svg',
+    },
+    uz: {
+      label: 'Uzbek',
+      icon: '/uzbekistan-flag-rect-circle-icon.svg',
+      circleIcon: '/uzbekistan-flag-round-circle-icon.svg',
+    },
+    ru: {
+      label: 'Russian',
+      icon: '/russia-flag-icon-rect.svg',
+      circleIcon: '/russia-flag-round-circle-icon.svg',
+    },
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,6 +96,10 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    switchLanguage(currentLang);
+  }, [currentLang]);
 
   const urls =
     pathName === '/cluby-fitness' ||

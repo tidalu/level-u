@@ -3,11 +3,12 @@ import Link from 'next/link';
 import React from 'react';
 import HomeBlogList from './home-blogList';
 import { Button } from './ui/button';
-import { data } from '@/data';
+import { useLocalizedData } from '@/lib/useLocalizedData';
 import { TextGenerateEffect } from './ui/text-generate-effect';
 import { Form } from './form';
 
 const LandingBanner = () => {
+  const data = useLocalizedData();
   return (
     <div className=" reveal homeBanner pt-32 pb-12 rounded-b-3xl px-5 lg:px-16 relative overflow-hidden 3xl:mx-32  ">
       <div className=" relative rounded-2xl overflow-hidden   md:min-h-[450px] grid grid-cols-12 bg-[#6cce40] mx-auto">

@@ -1,12 +1,13 @@
 'use client';
 
-import { data } from '@/data';
+import { useLocalizedData } from '@/lib/useLocalizedData';
 import Categories from '@/components/categories';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
 
 const ClassesPage = () => {
+  const data = useLocalizedData();
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 

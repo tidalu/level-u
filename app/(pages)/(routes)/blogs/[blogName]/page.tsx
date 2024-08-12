@@ -1,12 +1,11 @@
 'use client';
 import { Button } from '@/components/ui/button';
-import { data } from '@/data';
+import { useLocalizedData } from '@/lib/useLocalizedData';
 import React, { useEffect } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const BlogPage = () => {
-  
-
+  const data = useLocalizedData();
   return (
     <div className="h-full max-w-[1900px] max-w-sc mx-auto">
       <div className=" reveal pt-32 pb-12 rounded-b-3xl px-3 lg:px-16">

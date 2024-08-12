@@ -5,9 +5,8 @@ import { Button } from '@/components/ui/button';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { data } from '@/data';
 import Schedule from '@/components/schedule';
-
+import { useLocalizedData } from '@/lib/useLocalizedData';
 
 import ClientOnly from '@/components/ClientOnly';
 
@@ -19,6 +18,7 @@ const ContactPage = () => {
     phone: '',
     message: '',
   });
+  const data = useLocalizedData();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

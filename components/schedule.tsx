@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ListChecks, MapPin } from 'lucide-react';
-import { data } from '@/data';
+import { useLocalizedData } from '@/lib/useLocalizedData';
 import ClientOnly from './ClientOnly';
 const MapComponent = dynamic(() => import('@/components/MapComponent'), {
   ssr: false,
@@ -23,6 +23,7 @@ interface ClubItemProps {
 }
 
 const ClubItem: React.FC<ClubItemProps> = ({ city, clubs }) => {
+  const data = useLocalizedData();
   return (
     <div className=" relative">
       <h2 className="text-sm mb-2 sm:mt-0 sm:absolute sm:left-5 sm:top-5 sm:h-10 flex items-center sm:w-40 font-bold">
@@ -89,6 +90,7 @@ const ClubItem: React.FC<ClubItemProps> = ({ city, clubs }) => {
 
 const Schedule = () => {
   const [selectedCity, setSelectedCity] = useState('');
+  const data = useLocalizedData();
 
   const handleCityChange = (event: any) => {
     setSelectedCity(event.target.value);
