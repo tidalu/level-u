@@ -2,13 +2,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { Marker, Popup } from 'react-leaflet';
+import googleMap from '../public/google-maps.svg';
+import yandexIcon from '../public/yandex.svg';
 
 interface MapPinProps {
   item: any;
 }
 
 const MapPin = ({ item }: MapPinProps) => {
-  const handleGetDirections = (long: number, lat: number) => {
+  const handleGetDirections = (long: number, lat: number, type: string) => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -16,10 +18,12 @@ const MapPin = ({ item }: MapPinProps) => {
           const userLong = position.coords.longitude;
 
           // Construct the Google Maps URL with the user's location as the origin
-          const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLong}&destination=${lat},${long}&travelmode=driving`;
+          const mapsUrlGoogle = `https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLong}&destination=${lat},${long}&travelmode=driving`;
+          const mapsUrlYandex = `https://yandex.ru/maps/?rtext=${userLat},${userLong}~${lat},${long}&rtt=auto`;
 
           // Redirect the user to the constructed URL
-          window.open(mapsUrl, '_blank');
+          if (type === 'yandex') window.open(mapsUrlYandex, '_blank');
+          else window.open(mapsUrlGoogle, '_blank');
         },
         (error) => {
           console.error('Error getting user location:', error);
@@ -98,15 +102,42 @@ const MapPin = ({ item }: MapPinProps) => {
                     />
                   ))}
                 </div>
-                <div>
+                <div className="flex flex-col">
                   <button
-                    className="text-[12px] text-[#1d75c7] font-semibold underline"
+                    className="text-[12px] text-[#1d75c7] font-semibold  flex justify-center items-center gap-1 border border-[#1d75c7] rounded-full py-1 px-2 mt-2"
                     onClick={() =>
-                      handleGetDirections(item.longitude, item.latitude)
+                      handleGetDirections(
+                        item.longitude,
+                        item.latitude,
+                        'google'
+                      )
                     }
                     formTarget="_blank"
                   >
-                    Get directions
+                    Get directions with{' '}
+                    <Image
+                      src={googleMap}
+                      alt="google map"
+                      className="w-[30px] "
+                    />
+                  </button>
+                  <button
+                    className="text-[12px] text-[#1d75c7] font-semibold flex justify-center items-center gap-1 border border-[#1d75c7] rounded-full py-2.5 px-2 mt-2 "
+                    onClick={() =>
+                      handleGetDirections(
+                        item.longitude,
+                        item.latitude,
+                        'yandex'
+                      )
+                    }
+                    formTarget="_blank"
+                  >
+                    Get directions with
+                    <Image
+                      src={yandexIcon}
+                      alt="yandex icon map"
+                      className="w-[40px] "
+                    />
                   </button>
                 </div>
               </div>
