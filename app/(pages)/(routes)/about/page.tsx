@@ -4,13 +4,21 @@ import { data } from '@/data';
 import Image from 'next/image';
 import ExpandableText from '@/components/ExpandableText';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-import aboutImg from '@/public/about-main.jpeg';
+import logo from '/public/logo.svg';
 import { InfiniteMovingCards } from '@/components/InfiniteMovingCards';
+import Particles from '@/components/magicui/particles';
+import { useTheme } from 'next-themes';
 
 const AboutPage = () => {
+  const { theme } = useTheme();
+  const [color, setColor] = useState('#ffffff');
   const reasons = Object.values(data.reasons);
+
+  useEffect(() => {
+    setColor(theme === 'dark' ? '#ffffff' : '#000000');
+  }, [theme]);
 
   useEffect(() => {
     console.log(reasons);
@@ -21,13 +29,23 @@ const AboutPage = () => {
       <div className="min-h-[800px] flex flex-col items-center  justify-center pt-32 pb-12 rounded-b-3xl px-3 lg:px-16 border-red-700">
         <div className=" relative rounded-2xl overflow-hidden  lg:h-[450px] grid grid-cols-12 bg-white  dark:bg-[#020817]  my-4 lg:my-10">
           <div className=" relative col-span-12 reveal lg:col-span-7 xl:col-span-8  flex xl:justify-end justify-center items-center overflow-hidden ">
-            <div className="rounded-xl bg-slate-50">
+            <div className="rounded-xl  bg-slate-50">
               <Image
-                src={aboutImg}
-                width={0}
-                height={0}
-                alt="about image"
-                className="object-contain rounded-xl "
+                src={logo}
+                className="rounded-xl w-[80%]  mx-auto"
+                alt="about"
+                layout="responsive"
+                placeholder="blur"
+                blurDataURL="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTI1cHgiIGhlaWdodD0iMTI1cHgiIHZpZXdCb3g9IjAgMCAxMjUgMTI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICA8cGF0aCBkPSJNMTI1LjQ5IDMwLjI1Yy0xLjI1LjI1LTMuMjUgMS4yNS01LjI1IDAtMS4yNS0uMjUtMS4yNS01LjI1IDAtMS4yNSAyLjI1LTIuMjUgNS4yNSAwIDEuMjUuMjUgMS4yNSAyLjI1IDAgMS4yNS0yLjI1IDEuMjUtNS4yNSAwIDEuMjUtLjI1IDEuMjUtMS4yNSAwLTEuMjUtMi4yNS0xLjI1LTUuMjUgMC0xLjI1LS"
+              />
+              <Particles
+                className="absolute inset-0"
+                quantity={500}
+                ease={80}
+                color={color}
+                refresh
+                staticity={60}
+                vy={0.5}
               />
             </div>
           </div>{' '}
