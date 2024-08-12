@@ -6,6 +6,14 @@ import { X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 
+interface yesToMove {
+  title: string;
+  img: string;
+  trainers: string;
+  duration: string;
+  desc: string;
+  video: string;
+}
 const YesMove = () => {
   const [showModal, setShowModal] = useState(false);
   const [videoUrl, setVideoUrl] = useState('');
@@ -32,7 +40,7 @@ const YesMove = () => {
         </p>
 
         <div className="flex md:inline scrollMobile">
-          {data.yes2MoveCourses.map((item, i) => (
+          {data.yes2MoveCourses.map((item: yesToMove, i: number) => (
             <div
               key={item.title}
               className={cn(

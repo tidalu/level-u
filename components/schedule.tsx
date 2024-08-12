@@ -14,7 +14,14 @@ const MapComponent = dynamic(() => import('@/components/MapComponent'), {
 interface Club {
   name: string;
   address: string;
+  latitude: number;
+  longitude: number;
+  image: string;
   benefits: string[];
+}
+interface placeInterface {
+  cityName: string;
+  clubs: Club[];
 }
 
 interface ClubItemProps {
@@ -97,7 +104,9 @@ const Schedule = () => {
   };
 
   const filteredPlaces = selectedCity
-    ? data.schedule.places.filter((item) => item.cityName === selectedCity)
+    ? data.schedule.places.filter(
+        (item: placeInterface) => item.cityName === selectedCity
+      )
     : data.schedule.places;
 
   return (
@@ -110,11 +119,19 @@ const Schedule = () => {
           onChange={handleCityChange}
         >
           <option value="">Place</option>
-          {data.schedule.places.map((item, index) => (
-            <option key={index} value={item.cityName}>
-              {item.cityName}
-            </option>
-          ))}
+          {data.schedule.places.map(
+            (
+              item: {
+                cityName: string;
+                clubs: Club[];
+              },
+              index: number
+            ) => (
+              <option key={index} value={item.cityName}>
+                {item.cityName}
+              </option>
+            )
+          )}
         </select>
         <TabsList className="rounded-full">
           <TabsTrigger
@@ -139,7 +156,7 @@ const Schedule = () => {
         </ClientOnly>
       </TabsContent>
       <TabsContent value="list">
-        {filteredPlaces.map((item, index) => (
+        {filteredPlaces.map((item: placeInterface, index: number) => (
           <ClubItem key={index} city={item.cityName} clubs={item.clubs} />
         ))}
       </TabsContent>
