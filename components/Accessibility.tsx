@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTheme } from 'next-themes';
+import { useLocalizedData } from '@/lib/useLocalizedData';
 
 function Accessibility() {
   const { setTheme } = useTheme();
@@ -36,6 +37,7 @@ function Accessibility() {
     negativeContrast: 0,
     reset: 0,
   });
+  const data = useLocalizedData();
 
   // text zoom in
   function textZoomIn() {
@@ -172,7 +174,7 @@ function Accessibility() {
         <PopoverContent className="mt-1 mr-1 w-[150px] lg:w-[200px] bg-[#F8FFE5] dark:bg-gray-800 dark:text-white text-gray-900 rounded-lg shadow-md py-2 pr-1 px-2">
           <div className="border-red-400 w-full h-full">
             <h2 className="font-medium text-base w-full border-b border-b-gray-500 dark:border-b-slate-200 my-[2px]">
-              Accessibility
+              {data.header.accessibility.title}
             </h2>
             <ul className="w-full flex flex-col gap-1 p-1">
               {/* text zoom in */}
@@ -188,7 +190,7 @@ function Accessibility() {
                   onClick={textZoomIn}
                 >
                   <ZoomIn className="w-5 h-5 mr-2" />
-                  Enlarge text
+                  {data.header.accessibility.enlargeText}
                 </button>
               </li>
 
@@ -205,7 +207,7 @@ function Accessibility() {
                   onClick={textZoomOut}
                 >
                   <ZoomOut className="w-5 h-5 mr-2" />
-                  Reduce text
+                  {data.header.accessibility.reduceText}
                 </button>
               </li>
 
@@ -221,7 +223,7 @@ function Accessibility() {
                   onClick={grayscale}
                 >
                   <Pipette className="w-5 h-5 mr-2" />
-                  Grayscale
+                  {data.header.accessibility.grayscale}
                 </button>
               </li>
 
@@ -237,7 +239,7 @@ function Accessibility() {
                   onClick={contrast}
                 >
                   <Contrast className="w-5 h-5 mr-2" />
-                  High Contrast
+                  {data.header.accessibility.highContrast}
                 </button>
               </li>
 
@@ -253,7 +255,7 @@ function Accessibility() {
                   onClick={negativeContrast}
                 >
                   <Eye className="w-5 h-5 mr-2" />
-                  Negative Contrast
+                  {data.header.accessibility.negativeContrast}
                 </button>
               </li>
 
@@ -270,7 +272,7 @@ function Accessibility() {
                   onClick={reset}
                 >
                   <RotateCcw className="w-5 h-5 mr-2" />
-                  Reset
+                  {data.header.accessibility.reset}
                 </button>
               </li>
             </ul>

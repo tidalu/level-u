@@ -16,7 +16,16 @@ export const data = {
     theme: {
       light: 'Light',
       dark: 'Dark',
-      system: 'System',
+    },
+    logoSideText: 'Study',
+    accessibility: {
+      title: 'Accessibility',
+      enlargeText: 'Enlarge Text',
+      reduceText: 'Reduce Text',
+      grayscale: 'Grayscale',
+      highContrast: 'High Contrast',
+      negativeContrast: 'Negative Contrast',
+      reset: 'Reset',
     },
   },
 

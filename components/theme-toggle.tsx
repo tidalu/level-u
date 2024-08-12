@@ -13,10 +13,12 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { useLocalizedData } from '@/lib/useLocalizedData';
 
 export function ThemeToggle() {
   const { setTheme } = useTheme();
   const pathName = usePathname();
+  const data = useLocalizedData();
 
   const urls = pathName === '/' || pathName === '/classes';
 
@@ -44,13 +46,13 @@ export function ThemeToggle() {
           onClick={() => setTheme('light')}
           className="rounded-xl  cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720]"
         >
-          Light
+          {data.header.theme.light}
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme('dark')}
           className="rounded-xl  cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720]"
         >
-          Dark
+          {data.header.theme.dark}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

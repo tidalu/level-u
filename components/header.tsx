@@ -142,10 +142,7 @@ const Header = () => {
               />
               <div className=" w-[3px] bg-white rounded-lg "></div>
               <span
-                className="
-    flex flex-col items-center 
-    text-wrap
-    text-sm
+                className="flex flex-col items-center  text-wrap text-sm
     align-middle 
     md:text-base
     lg:text-lg
@@ -156,7 +153,7 @@ const Header = () => {
     apply-font-o
   "
               >
-                O&apos;quv
+                {data.header.logoSideText}
                 <FlipWords
                   words={['центр', 'center', 'markaz']}
                   className="text-inherit"
@@ -236,7 +233,7 @@ const Header = () => {
                     width={30}
                     height={20}
                   />
-                  English
+                  {data.header.langs.eng}
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   className="flex flex-row gap-[7px] cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720] rounded-xl"
@@ -248,7 +245,7 @@ const Header = () => {
                     width={30}
                     height={20}
                   />
-                  Uzbek
+                  {data.header.langs.uzb}
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   className="flex flex-row gap-[7px] cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720] rounded-xl"
@@ -260,7 +257,7 @@ const Header = () => {
                     width={30}
                     height={20}
                   />
-                  Russian
+                  {data.header.langs.rus}
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
