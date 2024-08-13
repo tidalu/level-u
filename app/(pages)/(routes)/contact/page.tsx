@@ -44,9 +44,9 @@ const ContactPage = () => {
 
   return (
     <div className="h-full max-w-[1900px] mx-auto">
-      <div className=" grid grid-cols-1 reveal lg:grid-cols-2 gap-3 pt-[150px] pb-6 px-3 lg:px-16 mb-16">
-        <div>
-          <ScrollAnimateWrapper>
+      <ScrollAnimateWrapper>
+        <div className=" grid grid-cols-1 reveal lg:grid-cols-2 gap-3 pt-[150px] pb-6 px-3 lg:px-16 mb-16">
+          <div>
             <div className=" grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div className=" bg-[#b8df4b1a] dark:bg-[#86868517] rounded-2xl py-10 px-6 text-center flex flex-col gap-3 text-sm justify-center">
                 <p>Customer Service Department</p>
@@ -72,20 +72,16 @@ const ContactPage = () => {
               If you want to settle your outstanding payments, please use the
               account: 59 1090 1056 0000 0001 4794 6002
             </div>
-          </ScrollAnimateWrapper>
-        </div>
+          </div>
 
-        <div className=" mt-10 lg:mt-0">
-          <div className=" max-w-md mx-auto marginInherit lg:ml-auto">
-            <ScrollAnimateWrapper>
+          <div className=" mt-10 lg:mt-0">
+            <div className=" max-w-md mx-auto marginInherit lg:ml-auto">
               <p className=" text-gray-500 text-[12px] font-semibold">
                 Leave your details and we will contact you
               </p>
-            </ScrollAnimateWrapper>
 
-            <form onSubmit={handleSubmit}>
-              <div className=" relative mt-5">
-                <ScrollAnimateWrapper>
+              <form onSubmit={handleSubmit}>
+                <div className=" relative mt-5">
                   <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
                     <span className=" text-red-400">*</span>E-mail
                   </label>
@@ -98,10 +94,8 @@ const ContactPage = () => {
                     name="email"
                     onChange={handleChange}
                   />
-                </ScrollAnimateWrapper>
-              </div>
-              <div className=" relative mt-9">
-                <ScrollAnimateWrapper>
+                </div>
+                <div className=" relative mt-9">
                   <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
                     <span className=" text-red-400">*</span>First name and last
                     name
@@ -115,10 +109,8 @@ const ContactPage = () => {
                     name="name"
                     onChange={handleChange}
                   />
-                </ScrollAnimateWrapper>
-              </div>
-              <div className=" relative mt-9">
-                <ScrollAnimateWrapper>
+                </div>
+                <div className=" relative mt-9">
                   <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
                     <span className=" text-red-400">*</span>Telephone
                   </label>
@@ -131,11 +123,9 @@ const ContactPage = () => {
                     name="phone"
                     onChange={handleChange}
                   />
-                </ScrollAnimateWrapper>
-              </div>
+                </div>
 
-              <div className=" relative mt-9">
-                <ScrollAnimateWrapper>
+                <div className=" relative mt-9">
                   <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
                     <span className=" text-red-400">*</span>Message
                   </label>
@@ -147,9 +137,7 @@ const ContactPage = () => {
                     name="message"
                     onChange={handleChange}
                   />
-                </ScrollAnimateWrapper>
-              </div>
-              <ScrollAnimateWrapper>
+                </div>
                 <Button
                   variant="primaryGreen"
                   className="dark:text-black shadow-2xl text-sm rounded-full px-6 mt-5"
@@ -157,35 +145,27 @@ const ContactPage = () => {
                 >
                   Send a message
                 </Button>
-              </ScrollAnimateWrapper>
 
-              <div className=" mt-3 text-[13px] text-gray-500 dark:text-gray-400">
-                <ScrollAnimateWrapper>
+                <div className=" mt-3 text-[13px] text-gray-500 dark:text-gray-400">
                   ( <span className=" text-red-400">*</span> ) required fields
-                </ScrollAnimateWrapper>
-              </div>
-            </form>
+                </div>
+              </form>
 
-            <div>
-              <Button
-                onClick={() => setShowReadmore(!showReadmore)}
-                className=" mt-5 bg-transparent hover:bg-transparent text-[#6cce40] font-semibold"
-              >
-                <ScrollAnimateWrapper>read more</ScrollAnimateWrapper>
-                {showReadmore ? (
-                  <ScrollAnimateWrapper>
+              <div>
+                <Button
+                  onClick={() => setShowReadmore(!showReadmore)}
+                  className=" mt-5 bg-transparent hover:bg-transparent text-[#6cce40] font-semibold"
+                >
+                  read more
+                  {showReadmore ? (
                     <ChevronUp className=" ml-1" size={18} />
-                  </ScrollAnimateWrapper>
-                ) : (
-                  <ScrollAnimateWrapper>
+                  ) : (
                     <ChevronDown className=" ml-1" size={18} />
-                  </ScrollAnimateWrapper>
-                )}
-              </Button>
+                  )}
+                </Button>
 
-              {showReadmore && (
-                <div>
-                  <ScrollAnimateWrapper>
+                {showReadmore && (
+                  <div>
                     <p className=" text-[13px] text-gray-500 dark:text-gray-400 leading-6">
                       <span className=" font-semibold text-[#0d1c07] dark:text-white">
                         Processing purposes:{' '}
@@ -198,8 +178,6 @@ const ContactPage = () => {
                       conduct analyses and statistics for marketing purposes and
                       to survey satisfaction with the services offered.
                     </p>
-                  </ScrollAnimateWrapper>
-                  <ScrollAnimateWrapper>
                     <p className="mt-4 text-[13px] text-gray-500 dark:text-gray-400 leading-6">
                       <span className=" font-semibold text-[#0d1c07] dark:text-white">
                         Your rights in connection with the processing of
@@ -215,19 +193,19 @@ const ContactPage = () => {
                       the right to lodge a complaint with the President of the
                       Personal Data Protection Office.
                     </p>
-                  </ScrollAnimateWrapper>
-                </div>
-              )}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <hr className="w-full" />
-      <div className="pt-16 pb-12 px-3 lg:px-16 mb-16">
-        <ClientOnly>
-          <Schedule />
-        </ClientOnly>
-      </div>
+        <hr className="w-full" />
+        <div className="pt-16 pb-12 px-3 lg:px-16 mb-16">
+          <ClientOnly>
+            <Schedule />
+          </ClientOnly>
+        </div>
+      </ScrollAnimateWrapper>
     </div>
   );
 };

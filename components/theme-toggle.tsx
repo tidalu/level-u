@@ -43,20 +43,18 @@ export function ThemeToggle() {
         align="end"
         className="bg-[#F8FFE5] dark:bg-gray-800 "
       >
-        <ScrollAnimateWrapper>
-          <DropdownMenuItem
-            onClick={() => setTheme('light')}
-            className="rounded-xl  cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720]"
-          >
-            {data.header.theme.light}
-          </DropdownMenuItem>
-          <DropdownMenuItem
-            onClick={() => setTheme('dark')}
-            className="rounded-xl  cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720]"
-          >
-            {data.header.theme.dark}
-          </DropdownMenuItem>
-        </ScrollAnimateWrapper>
+        <DropdownMenuItem
+          onClick={() => setTheme('light')}
+          className="rounded-xl  cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720]"
+        >
+          {data.header.theme.light}
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => setTheme('dark')}
+          className="rounded-xl  cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720]"
+        >
+          {data.header.theme.dark}
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

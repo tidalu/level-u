@@ -42,109 +42,107 @@ const MapPin = ({ item }: MapPinProps) => {
       {item.clubs.map((item: any) => (
         <Marker key={item.name} position={[item.latitude, item.longitude]}>
           <Popup>
-            <ScrollAnimateWrapper>
-              <div className=" bg-white rounded-2xl p-1">
-                <div className="bg-[#b8df4b1a] rounded-md p-4">
-                  {/* image */}
-                  <Image
-                    src={item.image}
-                    alt="logo"
-                    width={0}
-                    height={0}
-                    className="w-full h-40"
-                  />
-                  <h3 className=" text-[13px] capitalize mb-1 font-bold">
-                    {item.name}
-                  </h3>
-                  <div className="mt-0 text-[12px] text-gray-500">
-                    {item.address}
-                  </div>
+            <div className=" bg-white rounded-2xl p-1">
+              <div className="bg-[#b8df4b1a] rounded-md p-4">
+                {/* image */}
+                <Image
+                  src={item.image}
+                  alt="logo"
+                  width={0}
+                  height={0}
+                  className="w-full h-40"
+                />
+                <h3 className=" text-[13px] capitalize mb-1 font-bold">
+                  {item.name}
+                </h3>
+                <div className="mt-0 text-[12px] text-gray-500">
+                  {item.address}
+                </div>
 
-                  <div>
-                    <a
-                      href={`tel:${item.phone}`}
-                      className="text-[12px] text-[#1d75c7] font-semibold"
-                    >
-                      {item.phone}
-                    </a>
-                  </div>
-                  <div className="flex gap-2 mt-2">
-                    {item.benefits.map((icon: any, idx: any) => (
-                      <img
-                        key={idx}
-                        src={
-                          (icon == 'Gym' && 'fiticon1.svg') ||
-                          '' ||
-                          (icon == 'Fitness' && 'fiticon2.svg') ||
-                          '' ||
-                          (icon == 'Indoor Cycling' && 'fiticon3.svg') ||
-                          '' ||
-                          (icon == 'Sauna' && 'fiticon4.svg') ||
-                          '' ||
-                          (icon == 'Wifi' && 'fiticon5.svg') ||
-                          '' ||
-                          (icon == 'Parking' && 'fiticon6.svg') ||
-                          '' ||
-                          (icon == 'Bar' && 'fiticon7.svg') ||
-                          '' ||
-                          (icon == 'Lockers with Padlocks' && 'fiticon8.svg') ||
-                          '' ||
-                          (icon == 'Solarium' && 'fiticon9.svg') ||
-                          '' ||
-                          (icon == 'Fight Zone' && 'fiticon10.svg') ||
-                          '' ||
-                          (icon == 'Squash' && 'fiticon11.svg') ||
-                          '' ||
-                          (icon == 'SPA & Wellness' && 'fiticon12.svg') ||
-                          ''
-                        }
-                        alt=""
-                        className="w-4 h-4"
-                        title={icon}
-                      />
-                    ))}
-                  </div>
-                  <div className="flex flex-col">
-                    <button
-                      className="text-[12px] text-[#1d75c7] font-semibold  flex justify-center items-center gap-1 border border-[#1d75c7] rounded-full py-1 px-2 mt-2"
-                      onClick={() =>
-                        handleGetDirections(
-                          item.longitude,
-                          item.latitude,
-                          'google'
-                        )
+                <div>
+                  <a
+                    href={`tel:${item.phone}`}
+                    className="text-[12px] text-[#1d75c7] font-semibold"
+                  >
+                    {item.phone}
+                  </a>
+                </div>
+                <div className="flex gap-2 mt-2">
+                  {item.benefits.map((icon: any, idx: any) => (
+                    <img
+                      key={idx}
+                      src={
+                        (icon == 'Gym' && 'fiticon1.svg') ||
+                        '' ||
+                        (icon == 'Fitness' && 'fiticon2.svg') ||
+                        '' ||
+                        (icon == 'Indoor Cycling' && 'fiticon3.svg') ||
+                        '' ||
+                        (icon == 'Sauna' && 'fiticon4.svg') ||
+                        '' ||
+                        (icon == 'Wifi' && 'fiticon5.svg') ||
+                        '' ||
+                        (icon == 'Parking' && 'fiticon6.svg') ||
+                        '' ||
+                        (icon == 'Bar' && 'fiticon7.svg') ||
+                        '' ||
+                        (icon == 'Lockers with Padlocks' && 'fiticon8.svg') ||
+                        '' ||
+                        (icon == 'Solarium' && 'fiticon9.svg') ||
+                        '' ||
+                        (icon == 'Fight Zone' && 'fiticon10.svg') ||
+                        '' ||
+                        (icon == 'Squash' && 'fiticon11.svg') ||
+                        '' ||
+                        (icon == 'SPA & Wellness' && 'fiticon12.svg') ||
+                        ''
                       }
-                      formTarget="_blank"
-                    >
-                      Get directions with{' '}
-                      <Image
-                        src={googleMap}
-                        alt="google map"
-                        className="w-[30px] "
-                      />
-                    </button>
-                    <button
-                      className="text-[12px] text-[#1d75c7] font-semibold flex justify-center items-center gap-1 border border-[#1d75c7] rounded-full py-2.5 px-2 mt-2 "
-                      onClick={() =>
-                        handleGetDirections(
-                          item.longitude,
-                          item.latitude,
-                          'yandex'
-                        )
-                      }
-                      formTarget="_blank"
-                    >
-                      Get directions with
-                      <Image
-                        src={yandexIcon}
-                        alt="yandex icon map"
-                        className="w-[40px] "
-                      />
-                    </button>
-                  </div>
+                      alt=""
+                      className="w-4 h-4"
+                      title={icon}
+                    />
+                  ))}
+                </div>
+                <div className="flex flex-col">
+                  <button
+                    className="text-[12px] text-[#1d75c7] font-semibold  flex justify-center items-center gap-1 border border-[#1d75c7] rounded-full py-1 px-2 mt-2"
+                    onClick={() =>
+                      handleGetDirections(
+                        item.longitude,
+                        item.latitude,
+                        'google'
+                      )
+                    }
+                    formTarget="_blank"
+                  >
+                    Get directions with{' '}
+                    <Image
+                      src={googleMap}
+                      alt="google map"
+                      className="w-[30px] "
+                    />
+                  </button>
+                  <button
+                    className="text-[12px] text-[#1d75c7] font-semibold flex justify-center items-center gap-1 border border-[#1d75c7] rounded-full py-2.5 px-2 mt-2 "
+                    onClick={() =>
+                      handleGetDirections(
+                        item.longitude,
+                        item.latitude,
+                        'yandex'
+                      )
+                    }
+                    formTarget="_blank"
+                  >
+                    Get directions with
+                    <Image
+                      src={yandexIcon}
+                      alt="yandex icon map"
+                      className="w-[40px] "
+                    />
+                  </button>
                 </div>
               </div>
-            </ScrollAnimateWrapper>
+            </div>
           </Popup>
         </Marker>
       ))}

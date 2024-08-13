@@ -169,11 +169,9 @@ const FileDownload = () => {
 
   return (
     <div>
-      <ScrollAnimateWrapper>
         <h2 className=" text-black font-bold text-2xl dark:text-white">
           Files to download
         </h2>
-      </ScrollAnimateWrapper>
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-10">
         <div>
           <div className="bg-[#b8df4b1a] dark:bg-[#0f1227] p-5 md:p-10 rounded-2xl">
@@ -183,7 +181,6 @@ const FileDownload = () => {
 
             <div className="mt-5 md:mt-10">
               {general.map((file, i) => (
-                <ScrollAnimateWrapper key={i}>
                   <div
                     key={i}
                     className=" border-t-2 text-[#0d1c07] dark:text-gray-300 font-semibold text-sm  border-t-[#6cce4033] "
@@ -201,7 +198,6 @@ const FileDownload = () => {
                       />
                     </Link>
                   </div>
-                </ScrollAnimateWrapper>
               ))}
             </div>
           </div>
@@ -213,7 +209,6 @@ const FileDownload = () => {
 
             <div className="mt-5 md:mt-10">
               {promotion.map((file, i) => (
-                <ScrollAnimateWrapper key={i}>
                   <div
                     key={i}
                     className=" border-t-2 text-[#0d1c07] dark:text-gray-300 font-semibold text-sm  border-t-[#6cce4033] "
@@ -231,7 +226,6 @@ const FileDownload = () => {
                       />
                     </Link>
                   </div>
-                </ScrollAnimateWrapper>
               ))}
             </div>
           </div>
@@ -245,7 +239,6 @@ const FileDownload = () => {
 
             <div className="mt-5 md:mt-10">
               {promotion.map((file, i) => (
-                <ScrollAnimateWrapper key={i}>
                   <div
                     key={i}
                     className=" border-t-2 text-[#0d1c07] dark:text-gray-300 font-semibold text-sm  border-t-[#6cce4033] "
@@ -263,7 +256,6 @@ const FileDownload = () => {
                       />
                     </Link>
                   </div>
-                </ScrollAnimateWrapper>
               ))}
             </div>
           </div>
@@ -275,7 +267,6 @@ const FileDownload = () => {
 
             <div className="mt-5 md:mt-10">
               {document.map((file, i) => (
-                <ScrollAnimateWrapper key={i}>
                   <div
                     key={i}
                     className=" border-t-2 text-[#0d1c07] dark:text-gray-300 font-semibold text-sm  border-t-[#6cce4033] "
@@ -293,7 +284,6 @@ const FileDownload = () => {
                       />
                     </Link>
                   </div>
-                </ScrollAnimateWrapper>
               ))}
             </div>
           </div>

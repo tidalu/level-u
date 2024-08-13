@@ -112,61 +112,59 @@ const Schedule = () => {
     : data.schedule.places;
 
   return (
-    <Tabs defaultValue="list" className="">
-      <div className=" flex justify-center items-center flex-wrap gap-5 sm:gap-20 mb-8">
-        <select
-          name="city"
-          id="city"
-          className="custom-select trunc pr-8 appearance-none w-44 outline-none border-2 border-[#6cce40] dark:bg-[#020817] rounded-full py-1.5 px-5 text-sm font-semibold"
-          onChange={handleCityChange}
-        >
-          <option value="">Place</option>
-          {data.schedule.places.map(
-            (
-              item: {
-                cityName: string;
-                clubs: Club[];
-              },
-              index: number
-            ) => (
-              <option key={index} value={item.cityName}>
-                {item.cityName}
-              </option>
-            )
-          )}
-        </select>
-        <TabsList className="rounded-full">
-          <TabsTrigger
-            className="data-[state=active]:text-black rounded-full schedule"
-            value="map"
+    <ScrollAnimateWrapper>
+      <Tabs defaultValue="list" className="">
+        <div className=" flex justify-center items-center flex-wrap gap-5 sm:gap-20 mb-8">
+          <select
+            name="city"
+            id="city"
+            className="custom-select trunc pr-8 appearance-none w-44 outline-none border-2 border-[#6cce40] dark:bg-[#020817] rounded-full py-1.5 px-5 text-sm font-semibold"
+            onChange={handleCityChange}
           >
-            <MapPin size={18} className=" mr-1" />
-            Map
-          </TabsTrigger>
-          <TabsTrigger
-            className=" data-[state=active]:text-black rounded-full schedule"
-            value="list"
-          >
-            <ListChecks size={18} className=" mr-1" />
-            List
-          </TabsTrigger>
-        </TabsList>
-      </div>
-      <TabsContent value="map">
-        <ScrollAnimateWrapper>
+            <option value="">Place</option>
+            {data.schedule.places.map(
+              (
+                item: {
+                  cityName: string;
+                  clubs: Club[];
+                },
+                index: number
+              ) => (
+                <option key={index} value={item.cityName}>
+                  {item.cityName}
+                </option>
+              )
+            )}
+          </select>
+          <TabsList className="rounded-full">
+            <TabsTrigger
+              className="data-[state=active]:text-black rounded-full schedule"
+              value="map"
+            >
+              <MapPin size={18} className=" mr-1" />
+              Map
+            </TabsTrigger>
+            <TabsTrigger
+              className=" data-[state=active]:text-black rounded-full schedule"
+              value="list"
+            >
+              <ListChecks size={18} className=" mr-1" />
+              List
+            </TabsTrigger>
+          </TabsList>
+        </div>
+        <TabsContent value="map">
           <ClientOnly>
             <MapComponent items={filteredPlaces} />
           </ClientOnly>
-        </ScrollAnimateWrapper>
-      </TabsContent>
-      <TabsContent value="list">
-        {filteredPlaces.map((item: placeInterface, index: number) => (
-          <ScrollAnimateWrapper key={index}>
+        </TabsContent>
+        <TabsContent value="list">
+          {filteredPlaces.map((item: placeInterface, index: number) => (
             <ClubItem key={index} city={item.cityName} clubs={item.clubs} />
-          </ScrollAnimateWrapper>
-        ))}
-      </TabsContent>
-    </Tabs>
+          ))}
+        </TabsContent>
+      </Tabs>
+    </ScrollAnimateWrapper>
   );
 };
 

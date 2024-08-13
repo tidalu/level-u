@@ -21,10 +21,10 @@ const ClassesPage = () => {
 
   return (
     <div className="h-full max-w-[1900px] mx-auto ">
-      <div className="homeBanner pt-32 pb-12 rounded-b-3xl px-3 lg:px-16">
-        <div className=" reveal relative rounded-2xl overflow-hidden lg:h-[450px] grid grid-cols-12 bg-white mx-auto dark:bg-[#020817]">
-          <div className="reveal relative col-span-12 lg:col-span-7 xl:col-span-8 rounded-2xl overflow-hidden">
-            <ScrollAnimateWrapper>
+      <ScrollAnimateWrapper>
+        <div className="homeBanner pt-32 pb-12 rounded-b-3xl px-3 lg:px-16">
+          <div className=" reveal relative rounded-2xl overflow-hidden lg:h-[450px] grid grid-cols-12 bg-white mx-auto dark:bg-[#020817]">
+            <div className="reveal relative col-span-12 lg:col-span-7 xl:col-span-8 rounded-2xl overflow-hidden">
               <video
                 ref={videoRef}
                 width="1120"
@@ -50,11 +50,9 @@ const ClassesPage = () => {
                   alt=""
                 />
               </Button>
-            </ScrollAnimateWrapper>
-          </div>
+            </div>
 
-          <div className=" text-gray-600 dark:text-gray-400 py-4 px-10 col-span-12 lg:col-span-5 xl:col-span-4 h-auto overflow-y-auto scrollbar-hide">
-            <ScrollAnimateWrapper>
+            <div className=" text-gray-600 dark:text-gray-400 py-4 px-10 col-span-12 lg:col-span-5 xl:col-span-4 h-auto overflow-y-auto scrollbar-hide">
               <h1 className=" text-xl sm:text-2xl reveal text-wrap mt-1 mb-4 text-[#6cce40] font-extrabold">
                 {data.classPage.mainContent.title}
               </h1>
@@ -85,14 +83,14 @@ const ClassesPage = () => {
                   All classes
                 </Link>
               </div>
-            </ScrollAnimateWrapper>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="my-16 px-3 lg:px-16 mx-auto" id="category">
-        <Categories />
-      </div>
+        <div className="my-16 px-3 lg:px-16 mx-auto" id="category">
+          <Categories />
+        </div>
+      </ScrollAnimateWrapper>
     </div>
   );
 };

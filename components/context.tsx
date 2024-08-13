@@ -15,7 +15,6 @@ function Context({ children }: { children: React.ReactNode }) {
       <ContextMenu>
         <ContextMenuTrigger>{children}</ContextMenuTrigger>
         <ContextMenuContent className="px-4">
-          <ScrollAnimateWrapper>
             <Label>Settings</Label>
             <ContextMenuItem>contrast +10%</ContextMenuItem>
             <ContextMenuItem>contrast -10%</ContextMenuItem>
@@ -23,7 +22,6 @@ function Context({ children }: { children: React.ReactNode }) {
             <Label>Font size</Label>
             <ContextMenuItem>font +10%</ContextMenuItem>
             <ContextMenuItem>font -10%</ContextMenuItem>
-          </ScrollAnimateWrapper>
         </ContextMenuContent>
       </ContextMenu>
     </div>

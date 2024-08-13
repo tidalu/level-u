@@ -37,7 +37,6 @@ const FooterLinks = () => {
         className="col-span-12 md:col-span-3 lg:col-span-2  px-6 md:px-3 py-2"
         onClick={() => toggleSection('information')}
       >
-        <ScrollAnimateWrapper>
           <h3 className="cursor-pointer md:cursor-default flex justify-between items-center font-bold">
             INFORMATION
             <ChevronDown className={cn('block md:hidden text-[#6cce40]')} />
@@ -70,13 +69,11 @@ const FooterLinks = () => {
               </Link>
             </li>
           </ul>
-        </ScrollAnimateWrapper>
       </div>
       <div
         className="col-span-12 md:col-span-3 lg:col-span-2 px-6 md:px-3 py-2"
         onClick={() => toggleSection('services')}
       >
-        <ScrollAnimateWrapper>
           <h3 className="cursor-pointer md:cursor-default flex justify-between items-center font-bold">
             SERVICES
             <ChevronDown className={cn('block md:hidden text-[#6cce40]')} />
@@ -109,13 +106,11 @@ const FooterLinks = () => {
               </Link>
             </li>
           </ul>
-        </ScrollAnimateWrapper>
       </div>
       <div
         className="col-span-12 md:col-span-3 lg:col-span-2 px-6 md:px-3 py-2"
         onClick={() => toggleSection('documents')}
       >
-        <ScrollAnimateWrapper>
           <h3 className="cursor-pointer md:cursor-default flex justify-between items-center font-bold">
             DOCUMENTS
             <ChevronDown className={cn('block md:hidden text-[#6cce40]')} />
@@ -133,13 +128,11 @@ const FooterLinks = () => {
               </Link>
             </li>
           </ul>
-        </ScrollAnimateWrapper>
       </div>
       <div
         className="col-span-12 md:col-span-3 lg:col-span-2 px-6 md:px-3 py-2"
         onClick={() => toggleSection('help')}
       >
-        <ScrollAnimateWrapper>
           <h3 className="cursor-pointer md:cursor-default flex justify-between items-center font-bold">
             Services
             <ChevronDown className={cn('block md:hidden text-[#6cce40]')} />
@@ -157,7 +150,6 @@ const FooterLinks = () => {
               </Link>
             </li>
           </ul>
-        </ScrollAnimateWrapper>
       </div>
     </div>
   );

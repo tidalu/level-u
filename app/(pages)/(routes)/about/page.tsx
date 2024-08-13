@@ -27,8 +27,8 @@ const AboutPage = () => {
 
   return (
     <div className="h-full max-w-[1900px] mx-auto">
-      <div className="min-h-[800px] flex flex-col items-center  justify-center pt-32 pb-12 rounded-b-3xl px-3 lg:px-16 border-red-700">
-        <ScrollAnimateWrapper>
+      <ScrollAnimateWrapper>
+        <div className="min-h-[800px] flex flex-col items-center  justify-center pt-32 pb-12 rounded-b-3xl px-3 lg:px-16 border-red-700">
           <div className=" relative rounded-2xl overflow-hidden  lg:h-[450px] grid grid-cols-12 bg-white  dark:bg-[#020817]  my-4 lg:my-10">
             <div className=" relative col-span-12 reveal lg:col-span-7 xl:col-span-8  flex xl:justify-end justify-center items-center overflow-hidden ">
               <div className="rounded-xl  bg-slate-50">
@@ -77,18 +77,14 @@ const AboutPage = () => {
               </p>
             </div>{' '}
           </div>
-        </ScrollAnimateWrapper>
-        {/* accordion for top reasons to study */}
-        <div className="reveal  w-full h-auto px-10">
-          <div className="w-full flex justify-center items-center my-4">
-            <ScrollAnimateWrapper>
+          {/* accordion for top reasons to study */}
+          <div className="reveal  w-full h-auto px-10">
+            <div className="w-full flex justify-center items-center my-4">
               <h2 className=" text-black dark:text-white font-extrabold text-2xl text-center">
                 Why you should study at Level learning center
               </h2>
-            </ScrollAnimateWrapper>
-          </div>
+            </div>
 
-          <ScrollAnimateWrapper>
             <InfiniteMovingCards
               items={data.reasons}
               direction="right"
@@ -96,9 +92,9 @@ const AboutPage = () => {
               pauseOnHover={true}
               className="w-full mx-auto"
             />
-          </ScrollAnimateWrapper>
+          </div>
         </div>
-      </div>
+      </ScrollAnimateWrapper>
     </div>
   );
 };

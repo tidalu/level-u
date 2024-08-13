@@ -9,14 +9,11 @@ const Offer = () => {
   return (
     <section>
       <div className="my-16 px-3 lg:px-16 mx-auto">
-        <ScrollAnimateWrapper>
           <h2 className="text-black dark:text-white font-extrabold text-2xl text-center">
             Offer
           </h2>
-        </ScrollAnimateWrapper>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
-          <ScrollAnimateWrapper>
             <div className="rounded-2xl bg-[#f8ffe5] dark:bg-[#86868517]">
               <div className="grid grid-cols-1 sm:grid-cols-2">
                 <div className="pl-10 py-10 md:py-5 flex flex-col justify-center text-sm 2xl:text-xl">
@@ -40,9 +37,7 @@ const Offer = () => {
                 </div>
               </div>
             </div>
-          </ScrollAnimateWrapper>
 
-          <ScrollAnimateWrapper>
             <div className="rounded-2xl bg-[#e7e9e7]">
               <div className="grid grid-cols-1 sm:grid-cols-2">
                 <div className="pl-10 py-10 md:py-5 flex flex-col justify-center text-sm 2xl:text-xl">
@@ -65,11 +60,9 @@ const Offer = () => {
                 </div>
               </div>
             </div>
-          </ScrollAnimateWrapper>
         </div>
 
         <div className="flex gap-5 mt-5 scrollMobile">
-          <ScrollAnimateWrapper>
             <div className="shadow-xl relative rounded-xl pt-32 md:pt-4 p-4 min-w-64 md:min-w-fit md:pl-32 flex-1 md:h-32 overflow-hidden dark:bg-[#0f1227]">
               <Link href="/blogs/package-info">
                 <div className="absolute skew top-0 left-0 right-0 bottom-52 md:bottom-0 w-full h-full overflow-hidden">
@@ -95,9 +88,7 @@ const Offer = () => {
                 />
               </Link>
             </div>
-          </ScrollAnimateWrapper>
 
-          <ScrollAnimateWrapper>
             <div className="group/item shadow-xl relative rounded-xl pt-32 md:pt-4 p-4 min-w-64 md:min-w-fit md:pl-32 flex-1 md:h-32 overflow-hidden dark:bg-[#0f1227]">
               <Link href="/blogs/package-info">
                 <div className="absolute skew top-0 left-0 right-0 bottom-44 md:bottom-0 w-full h-full overflow-hidden">
@@ -125,9 +116,7 @@ const Offer = () => {
                 />
               </Link>
             </div>
-          </ScrollAnimateWrapper>
 
-          <ScrollAnimateWrapper>
             <div className="group/item shadow-xl relative rounded-xl pt-32 md:pt-4 p-4 min-w-64 md:min-w-fit md:pl-32 flex-1 md:h-32 overflow-hidden dark:bg-[#0f1227]">
               <Link href="/blogs/package-info">
                 <div className="absolute skew top-0 left-0 right-0 bottom-0 w-full h-full overflow-hidden">
@@ -155,7 +144,6 @@ const Offer = () => {
                 />
               </Link>
             </div>
-          </ScrollAnimateWrapper>
         </div>
       </div>
     </section>

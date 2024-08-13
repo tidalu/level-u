@@ -70,14 +70,11 @@ export function Form({ children }: { children: React.ReactNode }) {
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <ScrollAnimateWrapper>
             <DialogTitle>Fill the form</DialogTitle>
             <DialogDescription>
               Leave your details and we will contact you
             </DialogDescription>
-          </ScrollAnimateWrapper>
         </DialogHeader>
-        <ScrollAnimateWrapper>
           <form action="" onSubmit={formHandler}>
             <div className=" relative mt-5">
               <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
@@ -155,7 +152,7 @@ export function Form({ children }: { children: React.ReactNode }) {
               ( <span className=" text-red-400">*</span> ) required fields
             </div>
             {dataController && (
-              <p className=" mt-4 text-[13px] text-gray-500 dark:text-gray-400 leading-6">
+              <span className=" mt-4 text-[13px] text-gray-500 dark:text-gray-400 leading-6">
                 <span className=" font-semibold text-[#0d1c07] dark:text-white">
                   Data controller:
                 </span>{' '}
@@ -177,10 +174,9 @@ export function Form({ children }: { children: React.ReactNode }) {
                 </Link>{' '}
                 or in writing to the following address: Pl. Europejski 2, 00-844
                 Warsaw, with the note {`"`}Personal data{`"`}.
-              </p>
+              </span>
             )}
           </form>
-        </ScrollAnimateWrapper>
         <ToastContainer
           position="top-center"
           autoClose={5000}

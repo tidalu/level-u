@@ -62,13 +62,11 @@ const HorizontalScroll: React.FC = () => {
       >
         {images.map((image, index) => (
           <div key={index} className="flex-shrink-0 ">
-            <ScrollAnimateWrapper>
-              <img
-                src={image}
-                alt={`Image ${index + 1}`}
-                className=" rounded-lg"
-              />
-            </ScrollAnimateWrapper>
+            <img
+              src={image}
+              alt={`Image ${index + 1}`}
+              className=" rounded-lg"
+            />
           </div>
         ))}
       </div>

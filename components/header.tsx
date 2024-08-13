@@ -42,10 +42,10 @@ const Header = () => {
       label: data.header.tabs.contact,
       href: '/contact',
     },
-    //   {
-    //     label: 'Schedule',
-    //     href: '/schedule',
-    //   },
+    {
+      label: 'Study Abroad',
+      href: '/study-abroad',
+    },
     {
       label: data.header.tabs.about,
       href: '/about',
@@ -109,7 +109,8 @@ const Header = () => {
     pathName.startsWith('/blogs') ||
     pathName.startsWith('/classess') ||
     pathName === '/files-to-download' ||
-    pathName === '/careers';
+    pathName === '/careers' ||
+    pathName === '/study-abroad';
 
   return (
     <header
@@ -192,18 +193,16 @@ const Header = () => {
             </li>
             {routes.map((route) => (
               <li key={route.label}>
-                <ScrollAnimateWrapper>
-                  <Link
-                    className={cn(
-                      ' hover:underline  2xl:text-lg',
-                      pathName === route.href && ' text-[#6cce40] '
-                    )}
-                    onClick={() => setOpen(false)}
-                    href={route.href}
-                  >
-                    {route.label}
-                  </Link>
-                </ScrollAnimateWrapper>
+                <Link
+                  className={cn(
+                    ' hover:underline  2xl:text-lg',
+                    pathName === route.href && ' text-[#6cce40] '
+                  )}
+                  onClick={() => setOpen(false)}
+                  href={route.href}
+                >
+                  {route.label}
+                </Link>
               </li>
             ))}
           </ul>

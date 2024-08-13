@@ -173,7 +173,6 @@ function Accessibility() {
           <PersonStanding className="w-[30px] h-[30px]" />
         </PopoverTrigger>
         <PopoverContent className="mt-1 mr-1 w-[150px] lg:w-[200px] bg-[#F8FFE5] dark:bg-gray-800 dark:text-white text-gray-900 rounded-lg shadow-md py-2 pr-1 px-2">
-          <ScrollAnimateWrapper>
             <div className="border-red-400 w-full h-full">
               <h2 className="font-medium text-base w-full border-b border-b-gray-500 dark:border-b-slate-200 my-[2px]">
                 {data.header.accessibility.title}
@@ -279,7 +278,6 @@ function Accessibility() {
                 </li>
               </ul>
             </div>
-          </ScrollAnimateWrapper>
         </PopoverContent>
       </Popover>
     </div>

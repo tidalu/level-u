@@ -30,7 +30,6 @@ const Categories = () => {
   const data = useLocalizedData();
   return (
     <div>
-      <ScrollAnimateWrapper>
         <div className="flex flex-col items-center gap-7 mt-6 md:flex-row flex-wrap justify-evenly">
           {Object.values(data.classPage.classList as ClassList[]).map(
             (item: ClassList, index: number) => {
@@ -60,7 +59,6 @@ const Categories = () => {
             }
           )}
         </div>
-      </ScrollAnimateWrapper>
     </div>
   );
 };

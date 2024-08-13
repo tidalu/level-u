@@ -29,14 +29,16 @@ const ScrollAnimateWrapper = ({
   }, [controls, animate, inView]);
 
   return (
-    <motion.div
-      ref={ref}
-      initial={initial}
-      animate={controls}
-      transition={transition}
-    >
-      {children}
-    </motion.div>
+    <div>
+      <motion.div
+        ref={ref}
+        initial={initial}
+        animate={controls}
+        transition={transition}
+      >
+        {children}
+      </motion.div>
+    </div>
   );
 };
 

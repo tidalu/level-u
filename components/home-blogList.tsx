@@ -90,7 +90,6 @@ const HomeBlogList = () => {
       <Slider {...settings} className=" ">
         {BlogList.map((item) => (
           <div key={item.id} className=" h-full">
-            <ScrollAnimateWrapper>
               <div className=" bg-white dark:bg-[#020817] rounded-2xl p-4 group/item mr-5">
                 <Link href="/blogs/package-info">
                   <div className=" grid grid-cols-12 gap-4">
@@ -114,7 +113,6 @@ const HomeBlogList = () => {
                   </div>
                 </Link>
               </div>
-            </ScrollAnimateWrapper>
           </div>
         ))}
       </Slider>

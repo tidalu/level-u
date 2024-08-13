@@ -8,15 +8,12 @@ const PopulaActivities = () => {
   return (
     <section>
       <div className="my-16 px-3 lg:px-16 mx-auto">
-        <ScrollAnimateWrapper>
           <h2 className=" text-black dark:text-white reveal font-bold text-2xl text-center">
             Popular Activities
           </h2>
-        </ScrollAnimateWrapper>
 
         <div className="flex  reveal lg:grid lg:grid-cols-3 gap-5 mt-10 scrollMobile">
           <div className=" rounded-2xl bg-[#b8df4b1a] dark:bg-[#86868517] group/item min-w-[300px] lg:min-w-fit relative pb-8">
-            <ScrollAnimateWrapper>
               <Link
                 href="/classess/functional training"
                 className="block h-full p-4 pt-16 md:p-10"
@@ -80,11 +77,9 @@ const PopulaActivities = () => {
                   </div>
                 </div>
               </Link>
-            </ScrollAnimateWrapper>
           </div>
 
           <div className=" rounded-2xl bg-[#b8df4b1a] dark:bg-[#86868517]  group/item min-w-[300px] lg:min-w-fit relative">
-            <ScrollAnimateWrapper>
               <Link
                 href="/classess/flat belly"
                 className="block h-full p-4 pt-16 md:p-10"
@@ -126,11 +121,9 @@ const PopulaActivities = () => {
                   </div>
                 </div>
               </Link>
-            </ScrollAnimateWrapper>
           </div>
 
           <div className=" rounded-2xl bg-[#b8df4b1a] dark:bg-[#86868517] group/item min-w-[300px] lg:min-w-fit relative">
-            <ScrollAnimateWrapper>
               <Link
                 href="/classess/yoga"
                 className="block h-full p-4 pt-16 md:p-10"
@@ -183,7 +176,6 @@ const PopulaActivities = () => {
                   </div>
                 </div>
               </Link>
-            </ScrollAnimateWrapper>
           </div>
         </div>
       </div>
