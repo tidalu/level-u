@@ -10,6 +10,7 @@ import { InfiniteMovingCards } from '@/components/InfiniteMovingCards';
 import Particles from '@/components/magicui/particles';
 import { useTheme } from 'next-themes';
 import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
+import ThreeDTextScene from '@/components/ThreeDTextScene';
 
 const AboutPage = () => {
   const data = useLocalizedData();
@@ -32,23 +33,7 @@ const AboutPage = () => {
           <div className=" relative rounded-2xl overflow-hidden  lg:h-[450px] grid grid-cols-12 bg-white  dark:bg-[#020817]  my-4 lg:my-10">
             <div className=" relative col-span-12 reveal lg:col-span-7 xl:col-span-8  flex xl:justify-end justify-center items-center overflow-hidden ">
               <div className="rounded-xl  bg-slate-50">
-                <Image
-                  src={logo}
-                  className="rounded-xl w-[80%]  mx-auto"
-                  alt="about"
-                  layout="responsive"
-                  placeholder="blur"
-                  blurDataURL="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTI1cHgiIGhlaWdodD0iMTI1cHgiIHZpZXdCb3g9IjAgMCAxMjUgMTI1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICA8cGF0aCBkPSJNMTI1LjQ5IDMwLjI1Yy0xLjI1LjI1LTMuMjUgMS4yNS01LjI1IDAtMS4yNS0uMjUtMS4yNS01LjI1IDAtMS4yNSAyLjI1LTIuMjUgNS4yNSAwIDEuMjUuMjUgMS4yNSAyLjI1IDAgMS4yNS0yLjI1IDEuMjUtNS4yNSAwIDEuMjUtLjI1IDEuMjUtMS4yNSAwLTEuMjUtMi4yNS0xLjI1LTUuMjUgMC0xLjI1LS"
-                />
-                <Particles
-                  className="absolute inset-0"
-                  quantity={500}
-                  ease={80}
-                  color={color}
-                  refresh
-                  staticity={60}
-                  vy={0.5}
-                />
+                <ThreeDTextScene />
               </div>
             </div>{' '}
             <div
