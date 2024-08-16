@@ -89,9 +89,8 @@ const ClassesDataPage = () => {
                   </div>
                 </div>
 
-                <div className=" flex flex-col sm:flex-row gap-4 items-center mt-5">
+                <div className=" flex flex-col sm:flex-row flex-wrap gap-4 items-center mt-5">
                   <Button
-                    onClick={() => handleModal(classInfo?.match.video || '')}
                     variant="primaryGreen"
                     className="dark:text-black w-full sm:w-auto rounded-full px-6 text-sm"
                   >
@@ -102,11 +101,11 @@ const ClassesDataPage = () => {
                       className=" rounded-xl mr-2"
                       alt=""
                     />
-                    See the video
+                    See Introductory Video
                   </Button>
                   <Link href="/contact" className="w-full sm:w-auto">
                     <Button className="dark:text-white w-full sm:w-auto rounded-full px-6 bg-transparent hover:bg-transparent text-black border-2 border-[#6cce40] text-sm">
-                      Buy a pass
+                      Enroll in the lesson
                     </Button>
                   </Link>
                 </div>
