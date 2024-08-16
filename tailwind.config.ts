@@ -33,7 +33,7 @@ const config = {
         basic: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
         'basic-sans': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
         'londrina-sketch': ['var(--font-londrina-sketch)'],
-        'intro-friday': ['IntroFriday', 'cursive'],
+        helvetica: ['var(--font-helvetica)', 'cursive'],
       },
 
       colors: {
