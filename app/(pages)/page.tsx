@@ -4,7 +4,6 @@ import YesMove from '@/components/yes-move';
 import LandingBanner from '@/components/landing-banner';
 import Offer from '@/components/offer';
 import PopulaActivities from '@/components/popula-activities';
-import Call from '@/components/Call';
 import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
 
 const LandingPage = () => {
@@ -13,7 +12,7 @@ const LandingPage = () => {
       <ScrollAnimateWrapper>
         {/* landing banner */}
         <LandingBanner />
-        <Call />
+
         <div className=" max-w-[1600px] mx-auto reveal">
           {/* offer */}
           <Offer />
@@ -33,7 +32,7 @@ const LandingPage = () => {
           {/* popular activities */}
           <PopulaActivities />
           {/* yes2move */}
-          <YesMove />
+          {/* <YesMove /> */}
         </div>
       </ScrollAnimateWrapper>
     </div>
