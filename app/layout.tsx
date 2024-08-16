@@ -3,13 +3,6 @@ import { Montserrat, Londrina_Outline } from 'next/font/google';
 import './globals.css';
 import localFont from 'next/font/local';
 
-// load fonts
-const introFriday = localFont({
-  src: './fonts/IntroFriday.woff2',
-  display: 'swap',
-  variable: '--font-intro-friday',
-});
-
 const londriaSketch = Londrina_Outline({
   subsets: ['latin'],
   weight: '400',
@@ -19,7 +12,7 @@ const londriaSketch = Londrina_Outline({
 const helvetica = localFont({
   src: './fonts/helveticaneue-medium.woff2',
   display: 'swap',
-  variable: '--font-intro-friday',
+  variable: '--font-helvetica',
 });
 const inter = Montserrat({
   subsets: ['latin', 'cyrillic'],
