@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Montserrat, Londrina_Outline } from 'next/font/google';
 import './globals.css';
 import localFont from 'next/font/local';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 
 const londriaSketch = Londrina_Outline({
   subsets: ['latin'],
@@ -81,7 +83,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={helvetica.className}>{children}</body>
+      <body className={helvetica.className}>
+        <SpeedInsights />
+        <Analytics />
+        {children}
+      </body>
     </html>
   );
 }
