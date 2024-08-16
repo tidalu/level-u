@@ -372,7 +372,7 @@ export const data = {
             ],
           },
           {
-            name: 'Kids’ English Program',
+            name: 'Kids English Program',
             description:
               'Engaging English language courses for children, focusing on vocabulary, grammar, and conversational skills through interactive activities.',
             video:
@@ -543,7 +543,7 @@ export const data = {
     {
       video:
         'https://player.vimeo.com/video/399707077?autoplay=1&title=0&byline=0&portrait=0',
-      img: '/yesmove1.jpg',
+      img: '/offer5.webp',
       title: 'TURBO COMBUSTION',
       trainers: 'Maria and Kamil Mańko',
       duration: '30',
@@ -552,7 +552,7 @@ export const data = {
     {
       video:
         'https://player.vimeo.com/video/399716434?autoplay=1&title=0&byline=0&portrait=0',
-      img: '/yesmove2.jpg',
+      img: '/offer2.webp',
       title: 'GOOD MORNING YOGA',
       trainers: 'Adrian Matecki',
       duration: '15',
@@ -561,7 +561,7 @@ export const data = {
     {
       video:
         'https://player.vimeo.com/video/399692892?autoplay=1&title=0&byline=0&portrait=0',
-      img: '/yesmove3.jpg',
+      img: '/offer3.webp',
       title: 'STRETCHING FOR WARM-UP',
       trainers: 'Agnieszka Dolniak',
       duration: '15',
@@ -570,7 +570,7 @@ export const data = {
     {
       video:
         'https://player.vimeo.com/video/399716434?autoplay=1&title=0&byline=0&portrait=0',
-      img: '/yesmove4.jpg',
+      img: '/offer4.webp',
       title: 'CORE PILATES',
       trainers: 'atrick Tomaszewski',
       duration: '15',
