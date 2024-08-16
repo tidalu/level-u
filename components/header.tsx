@@ -134,30 +134,28 @@ const Header = () => {
           )}
         >
           <Link href="/" className=" flex-shrink-0">
-            <div className="flex flex-row gap-2 ">
+            <div className="flex flex-row gap-2  ">
               <img
                 src={urls ? '/logo.svg' : isVisible ? '/logo.svg' : '/logo.svg'}
-                className=" w-auto h-8 md:h-10 lg:h-12 2xl:h-14"
+                className=" w-auto h-8 md:h-10 lg:h-12 2xl:h-14 self-center"
                 width={80}
                 height={40}
                 alt="logo"
               />
-              <div className=" w-[3px] bg-white rounded-lg "></div>
+              <div className=" w-[3px] bg-black dark:bg-white rounded-lg "></div>
               <span
-                className="flex flex-col items-center  text-wrap text-sm
+                className="flex flex-col items-center text-sm text-wrap
     align-middle 
     md:text-base
     lg:text-lg
     2xl:text-2xl
     3xl:text-3xl
-    justify-center
     font-normal
     apply-font-o
   "
               >
-                {data.header.logoSideText}
                 <FlipWords
-                  words={['центр', 'center', 'markaz']}
+                  words={['Учебный центр', 'Study center', 'O❛quv markaz']}
                   className="text-inherit"
                 />
               </span>
