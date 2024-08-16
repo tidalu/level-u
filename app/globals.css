@@ -295,18 +295,8 @@ button[data-state='active'].schedule {
 
 @font-face {
   font-family: 'Neometric Alt Heavy Italic';
-  src: url('https://db.onlinewebfonts.com/t/40febe1ecb4b531fb4be59d3115652b7.eot');
-  src:
-    url('https://db.onlinewebfonts.com/t/40febe1ecb4b531fb4be59d3115652b7.eot?#iefix')
-      format('embedded-opentype'),
-    url('https://db.onlinewebfonts.com/t/40febe1ecb4b531fb4be59d3115652b7.woff2')
-      format('woff2'),
-    url('https://db.onlinewebfonts.com/t/40febe1ecb4b531fb4be59d3115652b7.woff')
-      format('woff'),
-    url('https://db.onlinewebfonts.com/t/40febe1ecb4b531fb4be59d3115652b7.ttf')
-      format('truetype'),
-    url('https://db.onlinewebfonts.com/t/40febe1ecb4b531fb4be59d3115652b7.svg#Neometric Alt Heavy Italic')
-      format('svg');
+  src: url('/textures/fonts/NeometricAlt-HeavyItalic.woff2') format('woff2');
+  font-display: swap;
 }
 
 .jello-diagonal-1 {
@@ -384,4 +374,26 @@ button[data-state='active'].schedule {
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+/* styles.css */
+.text-with-blur {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+.text-with-blur::after {
+  content: 'this is a blurred background';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4ade80;
+  filter: blur(8px); /* Adjust blur amount as needed */
+  z-index: -1; /* Place the blurred background behind the text */
+  border-radius: inherit; /* Match the border radius of the parent */
 }
