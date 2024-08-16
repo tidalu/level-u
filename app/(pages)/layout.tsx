@@ -6,6 +6,8 @@ import Footer from '@/components/footer';
 import Header from '@/components/header';
 import { ThemeProvider } from '@/components/theme-provider';
 import { LanguageProvider } from '@/components/LanguageContext';
+import { ToastContainer } from 'react-toastify';
+import Call from '@/components/Call';
 
 const LandingLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -16,6 +18,19 @@ const LandingLayout = ({ children }: { children: React.ReactNode }) => {
             <LanguageProvider>
               <Header />
               {children}
+              <ToastContainer
+                position="bottom-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+              />
+              <Call />
               <Footer />
             </LanguageProvider>
           </ThemeProvider>
