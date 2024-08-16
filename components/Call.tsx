@@ -9,7 +9,7 @@ function Call() {
         bg-[#6cce40] dark:bg-[#223563] flex justify-center items-center shadow-2xl cursor-pointer
         "
       onClick={() => {
-        window.open('tel:+48789725742');
+        window.open('tel:+998559033747');
       }}
     >
       <Phone size={24} />
