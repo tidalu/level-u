@@ -37,119 +37,119 @@ const FooterLinks = () => {
         className="col-span-12 md:col-span-3 lg:col-span-2  px-6 md:px-3 py-2"
         onClick={() => toggleSection('information')}
       >
-          <h3 className="cursor-pointer md:cursor-default flex justify-between items-center font-bold">
-            INFORMATION
-            <ChevronDown className={cn('block md:hidden text-[#6cce40]')} />
-          </h3>
-          <ul
-            className={`transition-all text-gray-300 text-sm duration-300 ease-in-out overflow-hidden md:overflow-visible ${
-              openSection === 'information' || !isMobile
-                ? 'max-h-screen md:max-h-none'
-                : 'max-h-0'
-            }`}
-          >
-            <li className="py-2">
-              <Link href="/" className="hover:underline">
-                Fit Fabric network
-              </Link>
-            </li>
-            <li className="py-2">
-              <Link href="/" className="hover:underline">
-                Work
-              </Link>
-            </li>
-            <li className="py-2">
-              <Link href="/" className="hover:underline">
-                News
-              </Link>
-            </li>
-            <li className="py-2">
-              <Link href="/" className="hover:underline">
-                Timetable
-              </Link>
-            </li>
-          </ul>
+        <h3 className="cursor-pointer md:cursor-default flex justify-between items-center font-bold">
+          INFORMATION
+          <ChevronDown className={cn('block md:hidden text-[#6cce40]')} />
+        </h3>
+        <ul
+          className={`transition-all text-gray-300 text-sm duration-300 ease-in-out overflow-hidden md:overflow-visible ${
+            openSection === 'information' || !isMobile
+              ? 'max-h-screen md:max-h-none'
+              : 'max-h-0'
+          }`}
+        >
+          <li className="py-2">
+            <Link href="/" className="hover:underline">
+              Level education
+            </Link>
+          </li>
+          <li className="py-2">
+            <Link href="/careers" className="hover:underline">
+              Careers
+            </Link>
+          </li>
+          <li className="py-2">
+            <Link href="/#news-section" className="hover:underline ">
+              News
+            </Link>
+          </li>
+          <li className="py-2">
+            <Link href="/classes" className="hover:underline">
+              Classes
+            </Link>
+          </li>
+        </ul>
       </div>
       <div
         className="col-span-12 md:col-span-3 lg:col-span-2 px-6 md:px-3 py-2"
         onClick={() => toggleSection('services')}
       >
-          <h3 className="cursor-pointer md:cursor-default flex justify-between items-center font-bold">
-            SERVICES
-            <ChevronDown className={cn('block md:hidden text-[#6cce40]')} />
-          </h3>
-          <ul
-            className={`transition-all text-gray-300 text-sm duration-300 ease-in-out overflow-hidden md:overflow-visible ${
-              openSection === 'services' || !isMobile
-                ? 'max-h-screen md:max-h-none'
-                : 'max-h-0'
-            }`}
-          >
-            <li className="py-2">
-              <Link href="/" className="hover:underline">
-                Offer for companies
-              </Link>
-            </li>
-            <li className="py-2">
-              <Link href="/" className="hover:underline">
-                Tickets for you
-              </Link>
-            </li>
-            <li className="py-2">
-              <Link href="/" className="hover:underline">
-                Advertising in clubs
-              </Link>
-            </li>
-            <li className="py-2">
-              <Link href="/" className="hover:underline">
-                Find a club
-              </Link>
-            </li>
-          </ul>
+        <h3 className="cursor-pointer md:cursor-default flex justify-between items-center font-bold">
+          SERVICES
+          <ChevronDown className={cn('block md:hidden text-[#6cce40]')} />
+        </h3>
+        <ul
+          className={`transition-all text-gray-300 text-sm duration-300 ease-in-out overflow-hidden md:overflow-visible ${
+            openSection === 'services' || !isMobile
+              ? 'max-h-screen md:max-h-none'
+              : 'max-h-0'
+          }`}
+        >
+          <li className="py-2">
+            <Link href="/#offersComp" className="hover:underline">
+              Offer for companies
+            </Link>
+          </li>
+          <li className="py-2">
+            <Link href="/#forYou" className="hover:underline">
+              For you
+            </Link>
+          </li>
+          <li className="py-2">
+            <Link href="/study-abroad" className="hover:underline">
+              Study Abroad
+            </Link>
+          </li>
+          <li className="py-2">
+            <Link href="/contact#map" className="hover:underline">
+              Find your center
+            </Link>
+          </li>
+        </ul>
       </div>
-      <div
+      {/* <div
         className="col-span-12 md:col-span-3 lg:col-span-2 px-6 md:px-3 py-2"
         onClick={() => toggleSection('documents')}
       >
-          <h3 className="cursor-pointer md:cursor-default flex justify-between items-center font-bold">
-            DOCUMENTS
-            <ChevronDown className={cn('block md:hidden text-[#6cce40]')} />
-          </h3>
-          <ul
-            className={`transition-all text-gray-300 text-sm duration-300 ease-in-out overflow-hidden md:overflow-visible ${
-              openSection === 'documents' || !isMobile
-                ? 'max-h-screen md:max-h-none'
-                : 'max-h-0'
-            }`}
-          >
-            <li className="py-2">
-              <Link href="/files-to-download" className="hover:underline">
-                Files to download
-              </Link>
-            </li>
-          </ul>
-      </div>
+        <h3 className="cursor-pointer md:cursor-default flex justify-between items-center font-bold">
+          DOCUMENTS
+          <ChevronDown className={cn('block md:hidden text-[#6cce40]')} />
+        </h3>
+        <ul
+          className={`transition-all text-gray-300 text-sm duration-300 ease-in-out overflow-hidden md:overflow-visible ${
+            openSection === 'documents' || !isMobile
+              ? 'max-h-screen md:max-h-none'
+              : 'max-h-0'
+          }`}
+        >
+          <li className="py-2">
+            <Link href="/files-to-download" className="hover:underline">
+              Files to download
+            </Link>
+          </li>
+        </ul>
+      </div> */}
       <div
         className="col-span-12 md:col-span-3 lg:col-span-2 px-6 md:px-3 py-2"
         onClick={() => toggleSection('help')}
       >
-          <h3 className="cursor-pointer md:cursor-default flex justify-between items-center font-bold">
-            Services
-            <ChevronDown className={cn('block md:hidden text-[#6cce40]')} />
-          </h3>
-          <ul
-            className={`transition-all text-gray-300 text-sm duration-300 ease-in-out overflow-hidden md:overflow-visible ${
-              openSection === 'help' || !isMobile
-                ? 'max-h-screen md:max-h-none'
-                : 'max-h-0'
-            }`}
-          >
-            <li className="py-2">
-              <Link href="/" className="hover:underline">
-                Contact
-              </Link>
-            </li>
-          </ul>
+        <h3 className="cursor-pointer md:cursor-default flex justify-between items-center font-bold">
+          Get in touch
+          <ChevronDown className={cn('block md:hidden text-[#6cce40]')} />
+        </h3>
+        <ul
+          className={`transition-all text-gray-300 text-sm duration-300 ease-in-out overflow-hidden md:overflow-visible ${
+            openSection === 'help' || !isMobile
+              ? 'max-h-screen md:max-h-none'
+              : 'max-h-0'
+          }`}
+        >
+          <li className="py-2">
+            <Link href="/contact" className="hover:underline">
+              Contact
+            </Link>
+          </li>
+        </ul>
       </div>
     </div>
   );
