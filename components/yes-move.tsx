@@ -35,10 +35,10 @@ const YesMove = () => {
             alt=""
           />
           <p className="reveal text-[12px] 2xl:text-[15px] text-center text-gray-500  mt-6">
-            The largest training platform in Poland.{' '}
+            The best learning center in Uzbekistan.{' '}
           </p>
           <p className="reveal text-[12px] 2xl:text-[15px] text-center text-gray-500  mt-2 mb-10">
-            Train. Where you want and when you want.
+            Enroll in our courses and get the best experience
           </p>
 
           <div className="flex md:inline scrollMobile">
@@ -46,7 +46,7 @@ const YesMove = () => {
               <div
                 key={item.title}
                 className={cn(
-                  ' bg-white dark:bg-[#020817] dark:border align-top custom-shadow reveal rounded-2xl p-4 inline-block mr-4',
+                  ' bg-white dark:bg-[#020817] dark:border align-top  custom-shadow reveal rounded-2xl p-4 inline-block mr-4',
                   i == 0 ? 'w-72 xl:w-96' : 'w-72 md:w-52 xl:w-72',
                   i == 3 && 'md:ml-20 xl:ml-24 md:mt-4'
                 )}
@@ -88,22 +88,28 @@ const YesMove = () => {
             ))}
           </div>
 
-          <div className=" inline-block md:-mt-6 bg-[#b8df4b1a] dark:bg-[#86868517] align-top w-full md:w-[27rem] xl:w-[37rem] px-6 py-10 text-center rounded-2xl">
+          <div className=" inline-block md:-mt-6 flex-grow flex-1 bg-[#b8df4b1a] dark:bg-[#86868517] align-top w-full md:w-[27rem] xl:w-[37rem] px-6 py-10 text-center rounded-2xl">
             {/* <ScrollAnimateWrapper> */}
-            <div className="reveal text-6xl font-bold text-[#6cce40]">900</div>
+            <div className="reveal text-6xl font-bold text-[#6cce40]">All</div>
             <p className="reveal text-xl font-bold text-black dark:text-white">
-              A variety of workouts <br />
+              variety of classes <br />
               for everyone
             </p>
 
             <div className="flex reveal justify-center gap-5 mt-5">
               <Button
+                onClick={() => {
+                  window.location.href = '/contact';
+                }}
                 variant="primaryGreen"
                 className=" rounded-full dark:text-black text-[12px]"
               >
-                Try it for 1 PLN
+                Join now
               </Button>
-              <Button className=" bg-transparent hover:bg-transparent text-[12px] text-black dark:text-white rounded-full border-2 border-[#6cce40]">
+              <Button
+                onClick={() => (window.location.href = '/classes')}
+                className=" bg-transparent hover:bg-transparent text-[12px] text-black dark:text-white rounded-full border-2 border-[#6cce40]"
+              >
                 Find out more
               </Button>
             </div>
