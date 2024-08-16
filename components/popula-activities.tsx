@@ -158,14 +158,6 @@ const PopulaActivities = () => {
                     alt="Icon"
                   />
                 </div>
-                <div className="bg-white dark:bg-[#020817] rounded-xl p-2">
-                  <img
-                    src="/popularicon6.svg"
-                    width={16}
-                    className=""
-                    alt="Icon"
-                  />
-                </div>
               </div>
             </Link>
           </div>
