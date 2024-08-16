@@ -72,7 +72,11 @@ const LandingBanner = () => {
         </div>
 
         <div className="reveal relative col-span-12 md:hidden ">
-          <img src="/mobile_home-banner.webp" className="" />
+          <img
+            src="/mobile_home-banner.webp"
+            className=""
+            alt="mobile banner"
+          />
           <div className="h-[60%] px-6 mt-4 w-full  absolute top-0 left-0 flex flex-col">
             <p className="self-start text-gray-800  text-center text-2xl apply-font-o">
               NEW <br /> STUDY <br /> YEAR
