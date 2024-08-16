@@ -82,13 +82,16 @@ const ContactPage = () => {
           <div>
             <div className=" grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div className=" bg-[#b8df4b1a] dark:bg-[#86868517] rounded-2xl py-10 px-6 text-center flex flex-col gap-3 text-sm justify-center">
-                <p>Customer Service Department</p>
-                <div className=" text-gray-500">22 487 81 33</div>
-                <Link href="/" className="hover:underline break-words">
-                  dok@fitness.benefitsystems.pl
+                <p>Customer Service Department </p>
+                <div className=" text-gray-500">+998 99 005 37 47</div>
+                <Link
+                  href="mailto:level.edu.uz.@gmail.com"
+                  className="hover:underline break-words"
+                >
+                  level.edu.uz.@gmail.com
                 </Link>
                 <p className="  text-gray-500 leading-8">
-                  We work from Monday to Friday, <br />
+                  We work from Monday to Sunday, <br />
                   from 8:00 to 20:00.
                 </p>
               </div>
@@ -96,21 +99,27 @@ const ContactPage = () => {
               <div className=" bg-[#b8df4b1a] dark:bg-[#86868517] rounded-2xl py-10 px-6 text-center flex flex-col gap-3 text-sm justify-center">
                 <p>Contact for Companies</p>
                 <div className=" text-gray-500">Requests for quotes</div>
-                <Link href="/" className="hover:underline break-words">
-                  opakowaniadlafirm@fitness.benefitsystems.pl
+                <Link
+                  href="mailto:level.edu.uz.@gmail.com"
+                  className="hover:underline break-words"
+                >
+                  level.edu.uz.@gmail.com
                 </Link>
               </div>
             </div>
             <div className="text-gray-500 text-[12px] mt-5">
               If you want to settle your outstanding payments, please use the
-              account: 59 1090 1056 0000 0001 4794 6002
+              card:{' '}
+              <span className="text-red-500">
+                can you please send me the card number to place here
+              </span>
             </div>
           </div>
 
           <div className=" mt-10 lg:mt-0">
             <div className=" max-w-md mx-auto marginInherit lg:ml-auto">
               <p className=" text-gray-500 text-[12px] font-semibold">
-                Leave your details and we will contact you
+                Leave your details and we will contact you 
               </p>
 
               <form onSubmit={formHandler}>
@@ -121,7 +130,7 @@ const ContactPage = () => {
                   <input
                     type="email"
                     className=" w-full lg:w-80 dark:bg-[#020817] outline-none text-sm border-2 border-[#6cce40] rounded-full py-2 px-6"
-                    placeholder="eg.fitfabric@info.com"
+                    placeholder="email@domain.com"
                     required
                     value={userData.email}
                     name="email"
@@ -233,7 +242,7 @@ const ContactPage = () => {
           </div>
         </div>
         <hr className="w-full" />
-        <div className="pt-16 pb-12 px-3 lg:px-16 mb-16">
+        <div className="pt-16 pb-12 px-3 lg:px-16 mb-16 scroll-mt-20" id="map">
           <ClientOnly>
             <Schedule />
           </ClientOnly>
