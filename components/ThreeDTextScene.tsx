@@ -7,7 +7,7 @@ import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js';
 const ThreeDTextScene: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const rendererRef = useRef<THREE.WebGLRenderer>();
-
+  let textMesh: THREE.Mesh;
   useEffect(() => {
     // Avoid multiple renderer instances
     if (rendererRef.current) return;
@@ -71,7 +71,7 @@ const ThreeDTextScene: React.FC = () => {
 
     // Font Loader
     const fontLoader = new FontLoader();
-    let textMesh: THREE.Mesh;
+
     const textGroup = new THREE.Group();
     textGroup.name = 'textGroup'; // Set a name for the text group
 
@@ -81,7 +81,7 @@ const ThreeDTextScene: React.FC = () => {
         const textGeometry = new TextGeometry('L E V E L', {
           font: font,
           size: 0.5,
-          height: 0.2,
+          depth: 0.2,
           curveSegments: 4,
           bevelEnabled: true,
           bevelThickness: 0.03,
@@ -97,7 +97,6 @@ const ThreeDTextScene: React.FC = () => {
           color: 'white',
         });
         textMesh = new THREE.Mesh(textGeometry, material);
-        textMesh.scale.set(1, 1, 1);
         textGroup.add(textMesh);
       }
     );
@@ -111,6 +110,7 @@ const ThreeDTextScene: React.FC = () => {
       })
     );
     textGroup.add(plane);
+    textGroup.scale.set(1.5, 1.5, 1.5);
     scene.add(textGroup);
 
     // Objects (donuts, octahedrons, hearts)
