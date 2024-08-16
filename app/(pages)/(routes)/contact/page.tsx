@@ -10,6 +10,7 @@ import { useLocalizedData } from '@/lib/useLocalizedData';
 
 import ClientOnly from '@/components/ClientOnly';
 import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
+import { ToastPosition, Bounce, toast, ToastContainer } from 'react-toastify';
 
 const ContactPage = () => {
   const [showReadmore, setShowReadmore] = useState(false);
@@ -30,17 +31,49 @@ const ContactPage = () => {
     });
   };
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  async function formHandler(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const { email, name, phone, message } = userData;
-    const subject = 'I am connecting regarding the course';
-    const body = `Assalomu alaykum \n My name is ${name}\n My message: ${message} \n\n\nEmail: ${email}\nPhone: ${phone}\nBest regards ) \n${name}`;
-    const mailtoLink = `mailto:your-email@example.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
 
-    window.location.href = mailtoLink;
-  };
+    const toastSettings = {
+      position: 'top-center' as ToastPosition,
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      transition: Bounce,
+    };
+
+    try {
+      await toast.promise(
+        fetch(
+          'https://script.google.com/macros/s/AKfycbyWJ0ek3NvwFxLpfqeh2b3nbu_ixMC47zR5MR5S6MgAk5UKfbcEXNdlNt0LRO7yyLM3/exec',
+          {
+            method: 'POST',
+            body: JSON.stringify(userData),
+          }
+        ),
+        {
+          pending: 'Submitting form...',
+          success: 'Form submitted successfully',
+          error: 'Error submitting form',
+        }
+      );
+      setUserData({
+        email: '',
+        name: '',
+        phone: '',
+        message: '',
+      });
+    } catch (error) {
+      toast.error(
+        'Error submitting form better to send an email',
+        toastSettings
+      );
+    }
+  }
 
   return (
     <div className="h-full max-w-[1900px] mx-auto">
@@ -80,7 +113,7 @@ const ContactPage = () => {
                 Leave your details and we will contact you
               </p>
 
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={formHandler}>
                 <div className=" relative mt-5">
                   <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
                     <span className=" text-red-400">*</span>E-mail
