@@ -20,6 +20,7 @@ import { FlipWords } from './ui/flip-words';
 import { useLanguage } from './LanguageContext';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import ScrollAnimateWrapper from './ScrollAnimateWrapper';
+import { useTheme } from 'next-themes';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -31,6 +32,10 @@ const Header = () => {
   const data = useLocalizedData();
   const routes = [
     {
+      label: data.header.tabs.studyAbroad,
+      href: '/study-abroad',
+    },
+    {
       label: data.header.tabs.courses,
       href: '/classes',
     },
@@ -41,10 +46,6 @@ const Header = () => {
     {
       label: data.header.tabs.contact,
       href: '/contact',
-    },
-    {
-      label: 'Study Abroad',
-      href: '/study-abroad',
     },
     {
       label: data.header.tabs.about,
@@ -59,6 +60,7 @@ const Header = () => {
       circleIcon: string;
     };
   };
+  const theme = useTheme();
 
   const langs: Langs = {
     en: {
@@ -142,17 +144,30 @@ const Header = () => {
                 height={40}
                 alt="logo"
               />
-              <div className=" w-[3px] bg-black dark:bg-white rounded-lg "></div>
+              {/* <div className=" w-[3px] bg-black dark:bg-white rounded-lg "></div> */}
+              <div className="  rounded-lg w-[5px] mr-2 flex flex-col items-center ">
+                <Image
+                  src={
+                    theme.theme === 'dark'
+                      ? '/figure-white.png'
+                      : '/figure-black.png'
+                  }
+                  alt="stick figure"
+                  width={0}
+                  height={0}
+                  className="h-full w-full text-white bg-transparent"
+                />
+              </div>
               <span
-                className="flex flex-col items-center text-sm text-wrap
-    align-middle 
-    md:text-base
-    lg:text-lg
-    2xl:text-2xl
-    3xl:text-3xl
-    font-normal
-    apply-font-o
-  "
+                className=" flex flex-col  items-start justify-center text-center  2xl:w-24 w-20 text-sm text-wrap will-change-transform
+                align-middle 
+                md:text-base
+                lg:text-lg
+                2xl:text-2xl
+                3xl:text-3xl
+                font-normal
+                apply-font-o
+              "
               >
                 <FlipWords
                   words={['Учебный центр', 'Study center', 'O❛quv markaz']}
@@ -176,12 +191,12 @@ const Header = () => {
 
           <ul
             className={cn(
-              'lg:text-sm hidden lg:flex gap-16 transition-all duration-500',
+              'xl:text-sm hidden xl:flex jusitify-evenly gap-16 transition-all duration-500',
               open &&
                 ' fixed top-0 bottom-0 left-0 right-0 bg-white dark:bg-[#020817] text-black dark:text-white flex justify-center z-40 items-center text-2xl flex-col gap-8 font-semibold tilt-in-fwd-tr'
             )}
           >
-            <li className="lg:hidden ">
+            <li className="xl:hidden ">
               <Button
                 onClick={() => setOpen(!open)}
                 className="radial-bg-green rounded-full p-0 w-10 fixed top-5 right-5 border-0 shadow-xl "
@@ -193,7 +208,7 @@ const Header = () => {
               <li key={route.label}>
                 <Link
                   className={cn(
-                    ' hover:underline  2xl:text-lg',
+                    ' hover:underline  2xl:text-lg text-center',
                     pathName === route.href && ' text-[#6cce40] '
                   )}
                   onClick={() => setOpen(false)}
@@ -264,7 +279,7 @@ const Header = () => {
 
             <Button
               onClick={() => setOpen(!open)}
-              className="bg-transparent p-0 m-0 text-[#6cce40] rounded-full  w-[40px] [h-40px] border-2 lg:hidden border-[#6cce40] flex justify-center items-center hover-none"
+              className="bg-transparent p-0 m-0 text-[#6cce40] rounded-full  w-[40px] [h-40px] border-2 xl:hidden border-[#6cce40] flex justify-center items-center hover-none"
             >
               <RxTextAlignCenter className="w-[25px] hover:-rotate-90 transition-all delay-75 ease-linear h-[25px]" />
             </Button>
