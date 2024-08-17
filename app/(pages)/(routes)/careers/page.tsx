@@ -28,13 +28,6 @@ function Careers() {
         'Send us your portfolio (please make it relevant) and a CV (please make it 1 page only). You can apply for one of the open positions or send us your application anyway.',
       stepVideo: '/video/rec-3.mp4',
     },
-    {
-      stepIndex: 4,
-      stepTitle: 'Test task',
-      stepDescription:
-        "If you're a candidate for a junior role, we'll ask you to complete a test task. It will help us learn more about your skills. You also will see what could be your potential tasks.",
-      stepVideo: '/video/rec-4.mp4',
-    },
   ];
 
   return (
@@ -111,7 +104,7 @@ function Careers() {
                       <h2 className="text-lg md:text-2xl">
                         Instructor (English Language)
                       </h2>
-                      <p className="md:text-lg">Tashkent / On-site</p>
+                      <p className="md:text-lg">Chirchik / On-site</p>
                     </div>
                     <svg
                       viewBox="0 0 27 26"
@@ -138,7 +131,7 @@ function Careers() {
                       <h2 className="text-lg md:text-2xl">
                         Instructor (Korean Language)
                       </h2>
-                      <p className="md:text-lg">Tashkent / On-site</p>
+                      <p className="md:text-lg">Chirchik / On-site</p>
                     </div>
                     <svg
                       viewBox="0 0 27 26"
@@ -165,7 +158,7 @@ function Careers() {
                       <h2 className="text-lg md:text-2xl">
                         Front-desk receptionist
                       </h2>
-                      <p className="md:text-lg">Tashkent / On-site</p>
+                      <p className="md:text-lg">Chirchik / On-site</p>
                     </div>
                     <svg
                       viewBox="0 0 27 26"
@@ -190,8 +183,8 @@ function Careers() {
                 </h2>
                 <p className="mt-1 text-center text-base">
                   Send us your portfolio and CV to{' '}
-                  <a href="mailto:jobs@thedigitalbunch.com">
-                    jobs@thedigitalbunch.com
+                  <a href="mailto:level.edu.careers.uz@gmail.com">
+                    level.edu.careers.uz@gmail.com
                   </a>
                 </p>
               </div>
@@ -243,18 +236,22 @@ function Careers() {
                 <hr className="h-[3px] w-[80px] border-0 bg-gray-800 mx-auto" />
               </div>
               <div className="container reveal  mx-auto px-16 mt-6 flex lg:mt-12 flex-wrap flex-row gap-4 justify-evenly">
-                <BenefitCard hoverImage="/fit1.webp" />
-                <BenefitCard hoverImage="/fit1.webp" />
-                <BenefitCard hoverImage="/fit1.webp" />
-                <BenefitCard hoverImage="/fit1.webp" />
-                <BenefitCard hoverImage="/fit1.webp" />
-                <BenefitCard hoverImage="/fit1.webp" />
-                <BenefitCard hoverImage="/fit1.webp" />
-                <BenefitCard hoverImage="/fit1.webp" />
-                <BenefitCard hoverImage="/fit1.webp" />
-                <BenefitCard hoverImage="/fit1.webp" />
-                <BenefitCard hoverImage="/fit1.webp" />
-                <BenefitCard hoverImage="/fit1.webp" />
+                <BenefitCard
+                  hoverImage="/fit1.webp"
+                  title="Flexible working hours"
+                />
+                <BenefitCard
+                  hoverImage="/fit1.webp"
+                  title="Career development"
+                />
+                <BenefitCard
+                  hoverImage="/fit1.webp"
+                  title="Collaborative environment"
+                />
+                <BenefitCard
+                  hoverImage="/fit1.webp"
+                  title="High competetive offers"
+                />
               </div>
             </section>
             <section
