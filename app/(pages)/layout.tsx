@@ -1,7 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
-import Context from '@/components/context';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import { ThemeProvider } from '@/components/theme-provider';
