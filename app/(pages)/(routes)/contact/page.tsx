@@ -11,6 +11,7 @@ import { useLocalizedData } from '@/lib/useLocalizedData';
 import ClientOnly from '@/components/ClientOnly';
 import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
 import { ToastPosition, Bounce, toast, ToastContainer } from 'react-toastify';
+import DockLive from '@/components/magicui/dock-live';
 
 const ContactPage = () => {
   const [showReadmore, setShowReadmore] = useState(false);
@@ -79,47 +80,30 @@ const ContactPage = () => {
     <div className="h-full max-w-[1900px] mx-auto">
       <ScrollAnimateWrapper>
         <div className=" grid grid-cols-1 reveal lg:grid-cols-2 gap-3 pt-[150px] pb-6 px-3 lg:px-16 mb-16">
-          <div>
-            <div className=" grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div className=" bg-[#b8df4b1a] dark:bg-[#86868517] rounded-2xl py-10 px-6 text-center flex flex-col gap-3 text-sm justify-center">
-                <p>Customer Service Department </p>
-                <div className=" text-gray-500">+998 99 005 37 47</div>
-                <Link
-                  href="mailto:level.edu.uz.@gmail.com"
-                  className="hover:underline break-words"
-                >
-                  level.edu.uz.@gmail.com
-                </Link>
-                <p className="  text-gray-500 leading-8">
-                  We work from Monday to Sunday, <br />
-                  from 8:00 to 20:00.
-                </p>
-              </div>
+          <div className=" flex  flex-col justify-center items-center h-auto w-full gap-4">
+            <div className=" bg-[#b8df4b1a] dark:bg-[#86868517] rounded-2xl py-10 px-6 text-center w-full flex flex-col gap-3 text-sm justify-center">
+              <p>Customer Service Department </p>
+              <div className=" text-gray-500">+998 55 903 37 47</div>
+              <div className=" text-gray-500">+998 99 005 37 47</div>
+              <Link
+                href="mailto:level.edu.uz.@gmail.com"
+                className="hover:underline break-words"
+              >
+                level.edu.uz.@gmail.com
+              </Link>
+              <p className="  text-gray-500 leading-8">
+                Every day from, <br />
+                from 8:00 to 20:00.
+              </p>
+            </div>
 
-              <div className=" bg-[#b8df4b1a] dark:bg-[#86868517] rounded-2xl py-10 px-6 text-center flex flex-col gap-3 text-sm justify-center">
-                <p>Contact for Companies</p>
-                <div className=" text-gray-500">Requests for quotes</div>
-                <Link
-                  href="mailto:level.edu.uz.@gmail.com"
-                  className="hover:underline break-words"
-                >
-                  level.edu.uz.@gmail.com
-                </Link>
-              </div>
-            </div>
-            <div className="text-gray-500 text-[12px] mt-5">
-              If you want to settle your outstanding payments, please use the
-              card:{' '}
-              <span className="text-red-500">
-                can you please send me the card number to place here
-              </span>
-            </div>
+            <DockLive />
           </div>
 
           <div className=" mt-10 lg:mt-0">
             <div className=" max-w-md mx-auto marginInherit lg:ml-auto">
               <p className=" text-gray-500 text-[12px] font-semibold">
-                Leave your details and we will contact you 
+                Leave your details and we will contact you
               </p>
 
               <form onSubmit={formHandler}>
