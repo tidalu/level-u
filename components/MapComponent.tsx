@@ -10,10 +10,10 @@ interface MapComponentProps {
 
 const MapComponent = ({ items }: MapComponentProps) => {
   return (
-    
     <MapContainer
-      center={[41.30149, 69.25194]}
+      center={[41.4725, 69.5906]}
       zoom={12}
+      doubleClickZoom={true}
       scrollWheelZoom={true}
       className="w-full rounded-3xl h-[60vh] z-20"
     >
