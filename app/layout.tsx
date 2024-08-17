@@ -76,7 +76,7 @@ export default function RootLayout({
         <meta name="description" content={metadata.description || ''} />
         <meta name="keywords" content={String(metadata.keywords) || ''} />
         <title>{String(metadata.title)}</title>
-        <link rel="icon" href="./favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes='any'/>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
