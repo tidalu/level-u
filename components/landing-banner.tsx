@@ -16,10 +16,10 @@ const LandingBanner = () => {
         <div className=" text-white p-6 lg:py-12 lg:pl-16 col-span-12 md:col-span-5 flex flex-col items-center ">
           <div className="w-full ">
             <p className="text-4xl reveal text-left text-black xl:text-5xl 2xl:text-6xl font-extrabold leading-snug italic apply-font-o ">
-              Pre-Registration
+              {data.landingAdd.mainTitle[0]}
             </p>
             <p className="text-4xl reveal text-right lg:-mr-8 xl:text-5xl 2xl:text-6xl xl:-mr-11 text-black font-extrabold leading-snug italic apply-font-o ">
-              is open now
+              {data.landingAdd.mainTitle[1]}
             </p>
           </div>
 
@@ -45,14 +45,13 @@ const LandingBanner = () => {
                 />
               </div>
               <section className="reveal apply-font-otext-[#101210] text-wrap text-center p-7 pl-10 font-bold  tracking-wide h-full flex justify-center items-center text-black">
-                SIGN UP IN TIME TO THE GROUP AND GET THE OPPORTUNITY TO STUDY
-                ABROAD
+                {data.landingAdd.subTitle}
               </section>
             </div>
           </div>
           <Form>
             <div className="self-end text-gray-700 scale-110 hover:scale-105 transition-all delay-75 shadow-lg inline-flex items-center justify-center whitespace-nowrap  text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 radial-bg-green h-10 px-4 py-2 rounded-xl cursor-pointer">
-              Fill the form
+              {data.landingAdd.buttonText}
             </div>
           </Form>
         </div>
@@ -63,10 +62,24 @@ const LandingBanner = () => {
           justify-center"
           >
             <p className="text-gray-800  text-3xl md:text-4xl lg:text-5xl   text-wrap apply-font-o text-center">
-              NEW <br /> STUDY <br /> YEAR
+              {data.landingAdd.topPic.map((item: string, i: number) => {
+                return (
+                  <React.Fragment key={i}>
+                    {item}
+                    {i !== 2 && <br />}
+                  </React.Fragment>
+                );
+              })}
             </p>
             <p className="text-3xl md:text-4xl lg:text-5xl  text-center text-gray-800 text-wrap apply-font-o">
-              NEW <br /> TARGETS
+              {data.landingAdd.bottomPic.map((item: string, i: number) => {
+                return (
+                  <React.Fragment key={i}>
+                    {item}
+                    {i !== 1 && <br />}
+                  </React.Fragment>
+                );
+              })}
             </p>
           </div>
         </div>
@@ -79,10 +92,24 @@ const LandingBanner = () => {
           />
           <div className="h-[60%] px-6 mt-4 w-full  absolute top-0 left-0 flex flex-col">
             <p className="self-start text-gray-800  text-center text-2xl apply-font-o">
-              NEW <br /> STUDY <br /> YEAR
+              {data.landingAdd.topPic.map((item: string, i: number) => {
+                return (
+                  <React.Fragment key={i}>
+                    {item}
+                    {i !== 2 && <br />}
+                  </React.Fragment>
+                );
+              })}
             </p>
             <p className="self-end mt-7 text-center text-gray-800  text-2xl apply-font-o">
-              NEW <br /> TARGETS
+              {data.landingAdd.bottomPic.map((item: string, i: number) => {
+                return (
+                  <React.Fragment key={i}>
+                    {item}
+                    {i !== 1 && <br />}
+                  </React.Fragment>
+                );
+              })}
             </p>
           </div>
         </div>
@@ -91,7 +118,7 @@ const LandingBanner = () => {
       <div className="mt-4 z-10 relative reveal scroll-mt-24">
         <h2 className=" text-white text-xl md:text-2xl font-extrabold">
           <Link href="/" className="hover:underline " id="news-section">
-            News!
+            {data.news}
             <ChevronRight
               size={24}
               className=" inline-block ml-1 text-[#6cce40]"
