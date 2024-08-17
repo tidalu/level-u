@@ -1,8 +1,11 @@
 import Link from 'next/link';
 import FooterLinks from './footer-links';
 import { FaTelegram, FaInstagram, FaLink } from 'react-icons/fa';
+import { useLocalizedData } from '@/lib/useLocalizedData';
 
 const Footer = () => {
+  const data = useLocalizedData();
+  const date = new Date();
   return (
     <footer className=" bg-[#0d1c07] dark:bg-[#0d270273] rounded-t-3xl">
       <div className="max-w-[1900px] mx-auto px-3 lg:px-12 py-10 text-white">
@@ -13,7 +16,7 @@ const Footer = () => {
 
         <div className="reveal flex flex-col gap-5  mt-6 md:flex-row justify-between items-center px-6 md:px-3">
           <div className=" text-sm text-gray-300">
-            © Copyright 2024 Level learning center
+            © Copyright {date.getFullYear()} {data?.footer?.copyright.name}
           </div>
           <div className="flex items-center gap-6 ">
             <Link
