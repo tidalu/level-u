@@ -13,17 +13,17 @@ import Link from 'next/link';
 import { Bounce, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastPosition } from 'react-toastify';
-
+import { useLocalizedData } from '@/lib/useLocalizedData';
 import { useState } from 'react';
 
 export function Form({ children }: { children: React.ReactNode }) {
-  const [dataController, setDataController] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
     name: '',
     phone: '',
     message: '',
   });
+  const data = useLocalizedData();
 
   async function formHandler(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -50,11 +50,9 @@ export function Form({ children }: { children: React.ReactNode }) {
           }
         ),
         {
-          pending: 'Sending your message...',
-          success:
-            'Your message has been sent successfully, please wait for our response',
-          error:
-            '  Error submitting form better to send an email: sampleEmail@level-edu.uz',
+          pending: data.toastMessages.pending,
+          success: data.toastMessages.success,
+          error: data.toastMessages.error,
         }
       );
       setFormData({
@@ -64,10 +62,7 @@ export function Form({ children }: { children: React.ReactNode }) {
         message: '',
       });
     } catch (error) {
-      toast.error(
-        'Error submitting form better to send an email',
-        toastSettings
-      );
+      toast.error(data.toastMessages.error, toastSettings);
     }
   }
   return (
@@ -75,20 +70,19 @@ export function Form({ children }: { children: React.ReactNode }) {
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Fill the form</DialogTitle>
-          <DialogDescription>
-            Leave your details and we will contact you
-          </DialogDescription>
+          <DialogTitle>{data.contactForm.title}</DialogTitle>
+          <DialogDescription>{data.contactForm.description}</DialogDescription>
         </DialogHeader>
         <form action="" onSubmit={formHandler}>
           <div className=" relative mt-5">
             <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
-              <span className=" text-red-400">*</span>E-mail
+              <span className=" text-red-400">*</span>
+              {data.contactForm.email}
             </label>
             <input
               type="email"
               className=" w-full lg:w-80 dark:bg-[#020817] outline-none text-sm border-2 border-[#6cce40] rounded-full py-2 px-6"
-              placeholder="yourMail@gmail.com"
+              placeholder={data.contactForm.emailPlaceholder}
               required
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
@@ -98,12 +92,13 @@ export function Form({ children }: { children: React.ReactNode }) {
 
           <div className=" relative mt-9">
             <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
-              <span className=" text-red-400">*</span>First name and last name
+              <span className=" text-red-400">*</span>
+              {data.contactForm.name}
             </label>
             <input
               type="text"
               className=" w-full lg:w-80 dark:bg-[#020817] outline-none text-sm border-2 border-[#6cce40] rounded-full py-2 px-6"
-              placeholder="eg.John doe"
+              placeholder={data.contactForm.namePlaceholder}
               required
               value={formData.name}
               name="name"
@@ -114,12 +109,13 @@ export function Form({ children }: { children: React.ReactNode }) {
           </div>
           <div className=" relative mt-9">
             <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
-              <span className=" text-red-400">*</span>Telephone
+              <span className=" text-red-400">*</span>
+              {data.contactForm.phone}
             </label>
             <input
               type="tel"
               className=" w-full lg:w-80 dark:bg-[#020817] outline-none text-sm border-2 border-[#6cce40] rounded-full py-2 px-6"
-              placeholder="+998 99 999 99 99"
+              placeholder={data.contactForm.phonePlaceholder}
               required
               value={formData.phone}
               name="phone"
@@ -131,11 +127,12 @@ export function Form({ children }: { children: React.ReactNode }) {
 
           <div className=" relative mt-9">
             <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
-              <span className=" text-red-400">*</span>Message
+              <span className=" text-red-400">*</span>
+              {data.contactForm.message}
             </label>
             <textarea
               className=" w-full outline-none text-sm dark:bg-[#020817] border-2 border-[#6cce40] rounded-3xl py-5 px-5 resize-none h-28"
-              placeholder="Message Content"
+              placeholder={data.contactForm.messagePlaceholder}
               required
               value={formData.message}
               name="message"
@@ -150,37 +147,13 @@ export function Form({ children }: { children: React.ReactNode }) {
             type="submit"
             className="dark:text-black shadow-2xl text-sm rounded-full px-6 mt-5 "
           >
-            Send a message
+            {data.contactForm.button}
           </Button>
 
           <div className=" mt-3 text-[13px] text-gray-500 dark:text-gray-400">
-            ( <span className=" text-red-400">*</span> ) required fields
+            ( <span className=" text-red-400">*</span> ){' '}
+            {data.contactForm.required}
           </div>
-          {dataController && (
-            <span className=" mt-4 text-[13px] text-gray-500 dark:text-gray-400 leading-6">
-              <span className=" font-semibold text-[#0d1c07] dark:text-white">
-                Data controller:
-              </span>{' '}
-              Benefit Systems SA with its registered office in Warsaw, ul. Plac
-              Europejski 2, 00-844 Warsaw (hereinafter {`"`}{' '}
-              <span className=" font-semibold text-[#0d1c07] dark:text-white">
-                we
-              </span>{' '}
-              {`"`} or {`"`}{' '}
-              <span className=" font-semibold text-[#0d1c07] dark:text-white">
-                Benefit Systems
-              </span>{' '}
-              {`"`}). You can contact the controller via e-mail:{' '}
-              <Link
-                href=""
-                className=" underline font-semibold text-[#0d1c07] dark:text-white"
-              >
-                daneosobowe@fitness.benefitsystems.pl{' '}
-              </Link>{' '}
-              or in writing to the following address: Pl. Europejski 2, 00-844
-              Warsaw, with the note {`"`}Personal data{`"`}.
-            </span>
-          )}
         </form>
       </DialogContent>
     </Dialog>
