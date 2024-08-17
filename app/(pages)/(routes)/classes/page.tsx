@@ -31,25 +31,11 @@ const ClassesPage = () => {
                 height="632"
                 className="h-full w-full object-cover"
                 autoPlay
-                muted={isMuted}
+                muted={true}
                 loop
               >
-                <source
-                  src="https://fitfabric.pl/media/5580/download/zajecia.mp4?v=1&inline=1"
-                  type="video/mp4"
-                />
+                <source src="/video/classes.webm" type="video/mp4" />
               </video>
-              <Button
-                onClick={toggleMute}
-                className="border-2 border-[#6cce40] bg-white hover:bg-white rounded-full absolute bottom-5 p-0 w-10 right-5 shadow-xl"
-              >
-                <img
-                  src={isMuted ? '/sound-on.svg' : '/sound-mute.svg'}
-                  width={20}
-                  height={10}
-                  alt=""
-                />
-              </Button>
             </div>
 
             <div className=" text-gray-600 dark:text-gray-400 py-4 px-10 col-span-12 lg:col-span-5 xl:col-span-4 h-auto overflow-y-auto scrollbar-hide">
