@@ -1,10 +1,17 @@
 export const data = {
-  about: `Welcome to LEVEL Educational Center!We are a cutting-edge educational center founded to provide everyone with high-quality and affordable education, as well as opportunities to study abroad. Our team comprises individuals who have studied abroad and are eager to apply their invaluable experience and methodologies for your benefit.The concept of a hybrid educational center that combines learning with assistance in selecting and applying to universities is not new and is widely practiced globally. However, we are currently the first of its kind in Uzbekistan, with no equivalents. Furthermore, we make education accessible to all and offer unlimited opportunities by providing modern teaching methods and top-notch service. If you are ready to acquire new knowledge and study at prestigious universities worldwide, we are here to help you achieve your goals. We are committed to providing you with the best education and support you in your journey to success. `,
+  about: {
+    title: 'Who we are and what you get from our spaces',
+    description: `Welcome to LEVEL Educational Center!We are a cutting-edge educational center founded to provide everyone with high-quality and affordable education, as well as opportunities to study abroad. Our team comprises individuals who have studied abroad and are eager to apply their invaluable experience and methodologies for your benefit.The concept of a hybrid educational center that combines learning with assistance in selecting and applying to universities is not new and is widely practiced globally. However, we are currently the first of its kind in Uzbekistan, with no equivalents. Furthermore, we make education accessible to all and offer unlimited opportunities by providing modern teaching methods and top-notch service. If you are ready to acquire new knowledge and study at prestigious universities worldwide, we are here to help you achieve your goals. We are committed to providing you with the best education and support you in your journey to success. `,
+    topText: 'About Us',
+    motto: 'Motto',
+    why: 'Why you should study at Level learning center',
+  },
   header: {
     header_logo1: 'Study',
     tabs: {
       courses: 'Courses',
-      about: 'About',
+      studyAbroad: 'Study Abroad',
+      about: 'About Us',
       contact: 'Contact',
       careers: 'Careers',
     },
@@ -30,14 +37,12 @@ export const data = {
   },
 
   landingAdd: {
-    imgDesktop:
-      'https://fitfabric.pl/uploads/media/height-696/06/7686-desktop.webp',
-    imgMobile:
-      'https://fitfabric.pl/uploads/media/height-696/06/7686-mobile.webp',
-    topText: 'Pre-Registration',
-    topText2: 'is open now',
-    rushAdd:
+    mainTitle: ['Pre-Registration', 'is open now'],
+    subTitle:
       'SIGN UP IN TIME TO THE GROUP AND GET THE OPPORTUNITY TO STUDY ABROAD',
+    buttonText: 'Fill the form',
+    topPic: ['NEW', 'STUDY', 'YEAR'],
+    bottomPic: ['NEW', 'TARGETS'],
   },
   reasons: [
     {
@@ -66,244 +71,28 @@ export const data = {
   news: 'News',
   blogs: [
     {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
+      id: 1,
+      img: '/coming-soon.jpg',
+      title: 'Something you want to know about us',
+      comingSoon: true,
     },
     {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
+      id: 2,
+      img: '/coming-soon.jpg',
+      title: 'Something you want to know about us',
+      comingSoon: true,
     },
     {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
+      id: 3,
+      img: '/coming-soon.jpg',
+      title: 'Something you want to know about us',
+      comingSoon: true,
     },
     {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
-    },
-    {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
-    },
-    {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
+      id: 4,
+      img: '/coming-soon.jpg',
+      title: 'Something you want to know about us ',
+      comingSoon: true,
     },
   ],
   classPage: {
@@ -578,21 +367,121 @@ export const data = {
     },
   ],
   offers: {
+    title: 'Offer',
     forYou: {
-      desc: 'Choose a club, buy a pass and enjoy training!',
-      btn: 'Choose a club',
+      title: 'for you',
+      desc: 'Choose a center and start your adventure with us!',
+      btn: 'Choose a center',
     },
     forCompanies: {
-      desc: 'Check out our offer of employee and business passes!',
+      title: 'for companies',
+      desc: ['Check out our offers for', 'your teams and employees'],
       btn: 'Find out more',
     },
-    introParts: {
-      yes2Move: {
-        link: '/blogs/package-info',
-        title: 'YES2MOVE',
+    packages: {
+      ielts: {
+        title: 'IELTS',
         desc: 'Online training ',
       },
-      zdProfitAcademy: {},
+      korean: {
+        title: 'Korean language',
+        desc: 'Online training ',
+      },
+      kids: {
+        title: 'Kids club ',
+        desc: 'Online training ',
+      },
+    },
+  },
+  footer: {
+    information: {
+      title: 'Information',
+      links: [
+        {
+          title: 'Level education',
+          href: '/',
+        },
+        {
+          title: 'Careers',
+          href: '/careers',
+        },
+        {
+          title: 'News',
+          href: '/#news-section',
+        },
+        {
+          title: 'Classes',
+          href: '/classes',
+        },
+      ],
+    },
+    services: {
+      title: 'Services',
+      links: [
+        {
+          title: 'Offer for companies',
+          href: '/#offersComp',
+        },
+        {
+          title: 'For you',
+          href: '/#forYou',
+        },
+        {
+          title: 'Study Abroad',
+          href: '/study-abroad',
+        },
+        {
+          title: 'Find your center',
+          href: '/contact#map',
+        },
+      ],
+    },
+    contact: {
+      title: 'Get in touch',
+      links: [
+        {
+          title: 'Contact',
+          href: '/contact',
+        },
+      ],
+    },
+    copyright: {
+      name: 'Level Learning Center',
+    },
+  },
+  contactForm: {
+    title: 'Fill the form',
+    description: 'Leave your details and we will contact you',
+    email: 'E-mail',
+    name: 'First name and last name',
+    phone: 'Telephone',
+    message: 'Message',
+    emailPlaceholder: 'example@domain.com',
+    namePlaceholder: 'Eshmatov Toshmat',
+    phonePlaceholder: '+998 99 999 99 99',
+    messagePlaceholder: 'Your message here...',
+    button: 'Send a message',
+    required: 'required fields',
+  },
+  toastMessages: {
+    pending: 'Sending your message...',
+    success:
+      'Your message has been sent successfully, please wait for our response!',
+    error:
+      'Error submitting form better to send an email: sampleEmail@level-edu.uz',
+  },
+  hero: {
+    title: 'Join Our Waitlist: Be Among the First to Explore the World!',
+    description:
+      'Our study abroad programs are designed to offer you a unique educational experience that combines academic excellence with cultural immersion. Prepare to discover new cultures, meet diverse communities, and expand your global perspective while pursuing your studies. This landing page is specially crafted to save you time and help you find the perfect international program before you embark on this exciting journey. Join our waitlist today and be the first to receive updates on our upcoming programs, scholarships, and exclusive opportunities!',
+    button: 'Join the Waitlist',
+    checkUs: 'Check us out on social media',
+    thankYou: {
+      title: 'Thank You for Joining!',
+      description:
+        'We appreciate your interest in our programs. You will be among the first to receive updates on our new study abroad opportunities.',
+      stayTuned:
+        'Stay tuned for more information. Follow us on our social media channels for the latest news and updates.',
     },
   },
 };

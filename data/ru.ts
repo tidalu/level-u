@@ -1,10 +1,21 @@
+import { title } from 'process';
+
 export const data = {
-  about: `Welcome to LEVEL Educational Center!We are a cutting-edge educational center founded to provide everyone with high-quality and affordable education, as well as opportunities to study abroad. Our team comprises individuals who have studied abroad and are eager to apply their invaluable experience and methodologies for your benefit.The concept of a hybrid educational center that combines learning with assistance in selecting and applying to universities is not new and is widely practiced globally. However, we are currently the first of its kind in Uzbekistan, with no equivalents. Furthermore, we make education accessible to all and offer unlimited opportunities by providing modern teaching methods and top-notch service. If you are ready to acquire new knowledge and study at prestigious universities worldwide, we are here to help you achieve your goals. We are committed to providing you with the best education and support you in your journey to success. `,
+  about: {
+    title: 'Кто мы и что вы получите от наших услуг',
+    description: `Добро пожаловать в учебный центр LEVEL! Мы — современный учебный центр, основанный с целью предоставить каждому желающему качественное и доступное образование, а также возможность обучаться за рубежом. Наша команда состоит из людей, которые обучались за границей, и готовы применить свой бесценный опыт и методики для вас. Идея создания гибридного образовательного центра, который включал бы в себя обучение и помощь в выборе и подаче заявлений в вузы, не нова и широко применяется по всему миру. Однако на данный момент в Узбекистане мы являемся первой такой образовательной платформой, не имеющей аналогов. Более того, мы делаем образование доступным для каждого и не ограничиваем возможности, предлагая современные методики обучения и качественный сервис. Если вы готовы получать новые знания и учиться в мировых вузах, тогда мы поможем вам осуществить ваши цели.
+`,
+    topText: 'О нас',
+    motto: 'Девиз',
+    why: 'Почему стоит учиться в учебном центре Level',
+  },
+
   header: {
     header_logo1: 'Study',
     tabs: {
       courses: 'Курсы',
       about: 'О нас',
+      studyAbroad: 'Обучение за рубежом',
       contact: 'Контакты',
       careers: 'Карьера',
     },
@@ -30,282 +41,71 @@ export const data = {
   },
 
   landingAdd: {
-    imgDesktop:
-      'https://fitfabric.pl/uploads/media/height-696/06/7686-desktop.webp',
-    imgMobile:
-      'https://fitfabric.pl/uploads/media/height-696/06/7686-mobile.webp',
-    topText: 'Pre-Registration',
-    topText2: 'is open now',
-    rushAdd:
-      'SIGN UP IN TIME TO THE GROUP AND GET THE OPPORTUNITY TO STUDY ABROAD',
+    mainTitle: ['Предварительная регистрация', 'открыта сейчас'],
+    subTitle:
+      'ЗАРЕГИСТРИРУЙТЕСЬ В ГРУППУ ВОВРЕМЯ И ПОЛУЧИТЕ ВОЗМОЖНОСТЬ УЧИТЬСЯ ЗА ГРАНИЦЕЙ',
+    buttonText: 'Заполнить форму',
+    topPic: ['НОВЫЙ', 'УЧЕБНЫЙ', 'ГОД'],
+    bottomPic: ['НОВЫЕ', 'ЦЕЛИ'],
   },
+
   reasons: [
     {
       question:
-        'For our students with excellent academic performance, we submit applications to foreign universities for free, both on a scholarship and paid basis',
+        'Для наших учеников с отличной успеваемостью мы бесплатно подаём заявки в иностранные университеты на грантовой и платной основах.',
       answer:
-        'You no longer need to search for universities yourself. Our specialists will do it for you: they will select a university that suits your skills and achievements, and help prepare the entire package of documents for university application and visa processing. Please note that to apply to a university on a scholarship basis, your previous grades must be above average, and you need a language proficiency certificate at a certain level',
+        'Вам больше не нужно заниматься поиском университетов самим. Наши специалисты сделают это за вас: подберут университет, подходящий вашим навыкам и достижениям, и помогут подготовить весь пакет документов для подачи в университет и получения визы. Стоит учитывать, что для подачи в университет на грантовой основе ваши предыдущие оценки должны быть выше среднего, а также требуется сертификат о знании языка с определённым уровнем.',
     },
     {
       question:
-        'Free education or discounts on courses for students of our learning center',
-      answer: `Free education is possible! Our learning center is the only one of its kind in Uzbekistan. Students of our learning center can study for free if they meet the following requirements:  a) Show excellent academic performance.        b) Achieve the highest scores of 99+ on exams and tests.We also offer discounts on education in our learning center (corporate, friend referral, and others)`,
+        'Бесплатное обучение или скидки на курсы для учеников нашего учебного центра.',
+      answer: `Бесплатное обучение возможно! Наш учебный центр – единственный такого рода в Узбекистане. Ученики нашего учебного центра могут учиться на бесплатной основе, если они соответствуют следующим требованиям:
+      a) Показывают отличную успеваемость.
+      b) Получают наивысшие баллы 99+ на экзаменах и тестах.
+      Мы также предоставляем скидки на обучение в нашем учебном центре (корпоративные, по рекомендации друга и другие).
+`,
     },
     {
       question:
-        'All our teachers are certified and are either students or graduates of world-renowned universities',
+        'Все наши преподаватели сертифицированы, а также являются студентами либо выпускниками мировых университетов.',
       answer:
-        'Members of our team hold official certificates that confirm their level of foreign language proficiency, issued by government institutions and consulates. The knowledge they gained abroad is applied in their teaching methods, which positively impacts the quality of education',
+        'Члены нашей команды имеют официальные сертификаты, подтверждающие уровень и знание иностранного языка, выданные госучреждениями и консульствами. Знания, полученные за рубежом, они применяют в методике обучения, что положительно влияет на его качество.',
     },
     {
-      question: 'Offering online classes',
+      question: 'Предоставление занятий в онлайн-режиме.',
       answer:
-        'Online classes are more relevant than ever. Their advantage is the flexibility that adapts to your schedule. Teachers located abroad effectively use this method regardless of their geographic location, allowing them to convey the latest trends and up-to-date knowledge',
+        'Онлайн-занятия актуальны как никогда. Их преимущество — это гибкость, которая подстраивается под ваш график. Преподаватели, находящиеся за рубежом, отлично применяют эту методику, невзирая на географическое положение, что позволяет им передавать последние тренды и актуальные знания.',
     },
   ],
-  news: 'News',
+  news: 'Новости!',
+
   blogs: [
     {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
+      id: 1,
+      img: '/coming-soon.jpg',
+      title: 'Что-то, что вы хотите узнать о нас',
+      comingSoon: true,
     },
     {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
+      id: 2,
+      img: '/coming-soon.jpg',
+      title: 'Что-то, что вы хотите узнать о нас',
+      comingSoon: true,
     },
     {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
+      id: 3,
+      img: '/coming-soon.jpg',
+      title: 'Что-то, что вы хотите узнать о нас',
+      comingSoon: true,
     },
     {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
-    },
-    {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
-    },
-    {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
+      id: 4,
+      img: '/coming-soon.jpg',
+      title: 'Что-то, что вы хотите узнать о нас',
+      comingSoon: true,
     },
   ],
+
   classPage: {
     mainContent: {
       video: '',
@@ -578,21 +378,124 @@ export const data = {
     },
   ],
   offers: {
+    title: 'Предложения',
     forYou: {
-      desc: 'Choose a club, buy a pass and enjoy training!',
-      btn: 'Choose a club',
+      title: 'для вас',
+      desc: 'Выберите центр и начните ваше приключение с нами!',
+      btn: 'Выберите центр',
     },
     forCompanies: {
-      desc: 'Check out our offer of employee and business passes!',
-      btn: 'Find out more',
+      title: 'для компаний',
+      desc: ['Посмотрите наши предложения для', 'ваших команд и сотрудников'],
+      btn: 'Узнать больше',
     },
-    introParts: {
-      yes2Move: {
-        link: '/blogs/package-info',
-        title: 'YES2MOVE',
-        desc: 'Online training ',
+    packages: {
+      ielts: {
+        title: 'IELTS',
+        desc: 'Онлайн-обучение',
       },
-      zdProfitAcademy: {},
+      korean: {
+        title: 'Корейский язык',
+        desc: 'Онлайн-обучение',
+      },
+      kids: {
+        title: 'Детский клуб',
+        desc: 'Онлайн-обучение',
+      },
+    },
+  },
+
+  footer: {
+    information: {
+      title: 'Информация',
+      links: [
+        {
+          title: 'Уровень образования',
+          href: '/',
+        },
+        
+        {
+          title: 'Карьера',
+          href: '/careers',
+        },
+        {
+          title: 'Новости',
+          href: '/#news-section',
+        },
+        {
+          title: 'Курсы',
+          href: '/classes',
+        },
+      ],
+    },
+    services: {
+      title: 'Услуги',
+      links: [
+        {
+          title: 'Предложение для компаний',
+          href: '/#offersComp',
+        },
+        {
+          title: 'Для вас',
+          href: '/#forYou',
+        },
+        {
+          title: 'Обучение за границей',
+          href: '/study-abroad',
+        },
+        {
+          title: 'Найдите ваш центр',
+          href: '/contact#map',
+        },
+      ],
+    },
+    contact: {
+      title: 'Свяжитесь с нами',
+      links: [
+        {
+          title: 'Контакты',
+          href: '/contact',
+        },
+      ],
+    },
+    copyright: {
+      name: 'Центр образовательного уровня',
+    },
+  },
+  contactForm: {
+    title: 'Заполните форму',
+    description: 'Оставьте свои данные, и мы свяжемся с вами',
+    email: 'Электронная почта',
+    name: 'Имя и фамилия',
+    phone: 'Телефон',
+    message: 'Сообщение',
+    emailPlaceholder: 'example@domain.com',
+    namePlaceholder: 'Ишматов Тошмат',
+    phonePlaceholder: '+998 99 999 99 99',
+    messagePlaceholder: 'Ваше сообщение здесь...',
+    button: 'Отправить сообщение',
+    required: 'обязательные поля',
+  },
+  toastMessages: {
+    pending: 'Отправка вашего сообщения...',
+    success:
+      'Ваше сообщение успешно отправлено, пожалуйста, ожидайте нашего ответа!',
+    error:
+      'Ошибка при отправке формы, лучше отправить электронное письмо: sampleEmail@level-edu.uz',
+  },
+  hero: {
+    title:
+      'Присоединяйтесь к нашему списку ожидания: Будьте в числе первых, кто исследует мир!',
+    description:
+      'Наши программы обучения за границей разработаны для того, чтобы предложить вам уникальный образовательный опыт, сочетающий академическое превосходство с культурным погружением. Готовьтесь открывать новые культуры, встречать разные сообщества и расширять свой глобальный кругозор, продолжая учебу. Эта страница специально создана, чтобы сэкономить ваше время и помочь вам найти идеальную международную программу, прежде чем вы отправитесь в это захватывающее путешествие. Присоединяйтесь к нашему списку ожидания сегодня и будьте первыми, кто получит обновления о наших предстоящих программах, стипендиях и эксклюзивных возможностях!',
+    button: 'Присоединиться к списку ожидания',
+    checkUs: 'Посмотрите нас в социальных сетях',
+    thankYou: {
+      title: 'Спасибо за участие!',
+      description:
+        'Мы ценим ваш интерес к нашим программам. Вы будете в числе первых, кто получит обновления о наших новых возможностях обучения за границей.',
+      stayTuned:
+        'Ожидайте дополнительную информацию. Подписывайтесь на наши социальные сети, чтобы быть в курсе последних новостей и обновлений.',
     },
   },
 };

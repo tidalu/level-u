@@ -1,9 +1,17 @@
 export const data = {
-  about: `Welcome to LEVEL Educational Center!We are a cutting-edge educational center founded to provide everyone with high-quality and affordable education, as well as opportunities to study abroad. Our team comprises individuals who have studied abroad and are eager to apply their invaluable experience and methodologies for your benefit.The concept of a hybrid educational center that combines learning with assistance in selecting and applying to universities is not new and is widely practiced globally. However, we are currently the first of its kind in Uzbekistan, with no equivalents. Furthermore, we make education accessible to all and offer unlimited opportunities by providing modern teaching methods and top-notch service. If you are ready to acquire new knowledge and study at prestigious universities worldwide, we are here to help you achieve your goals. We are committed to providing you with the best education and support you in your journey to success. `,
+  about: {
+    title: 'Biz kimmiz va siz bizning xizmatlarimizdan nimani olasiz',
+    description: `LEVEL o’quv markaziga xush kelibsiz! Biz — har bir kishiga sifatli va arzon ta’lim, shuningdek, chet elda o’qish imkoniyatini taqdim etish maqsadida tashkil etilgan zamonaviy o’quv markazimiz. Bizning jamoamiz xorijda tahsil olgan va o’zlarining bebaho tajribasi va uslublarini siz uchun qo’llashga tayyor bo’lgan odamlardan iborat. O’quv va universitetlarga hujjat topshirishda yordam berishni o’z ichiga oladigan gibrid o’quv markazi yaratish g’oyasi yangilik emas va butun dunyo bo’ylab keng qo’llaniladi. Biroq, hozirgi vaqtda biz O’zbekistonda bu turdagi birinchi o’quv platformasimiz va o’xshashi yo’q. Bundan tashqari, biz ta’limni har bir kishi uchun ochiq qilib, zamonaviy o’quv uslublari va sifatli xizmat ko’rsatishni taklif etamiz. Agar siz yangi bilim olishga va dunyo miqyosidagi universitetlarda o’qishga tayyor bo’lsangiz, biz sizning maqsadlaringizga erishishda yordam beramiz.`,
+    topText: 'Biz haqimizda',
+    motto: 'Shior',
+    why: 'Nima uchun Level ta’lim markazida o‘qish kerak',
+  },
+
   header: {
     header_logo1: 'Study',
     tabs: {
       courses: 'Kurslar',
+      studyAbroad: 'Chet elda ta’lim',
       about: 'Biz haqimizda',
       contact: "Bog'lanish",
       careers: 'Karyeralar',
@@ -30,282 +38,67 @@ export const data = {
   },
 
   landingAdd: {
-    imgDesktop:
-      'https://fitfabric.pl/uploads/media/height-696/06/7686-desktop.webp',
-    imgMobile:
-      'https://fitfabric.pl/uploads/media/height-696/06/7686-mobile.webp',
-    topText: 'Pre-Registration',
-    topText2: 'is open now',
-    rushAdd:
-      'SIGN UP IN TIME TO THE GROUP AND GET THE OPPORTUNITY TO STUDY ABROAD',
+    mainTitle: ['Oldindan ro‘yxatga olish', 'hozir ochiq'],
+    subTitle:
+      'GURUHGA O‘Z VAQТIDA RO‘YXATDAN O‘TING VA CHET ELDA TA’LIM OLISH IMKONIYATINI QO‘LGA KIRITING',
+    buttonText: 'Formani to‘ldiring',
+    topPic: ['YANGI', 'O‘QUV', 'YILI'],
+    bottomPic: ['YANGI', 'MAQSAD'],
   },
+
   reasons: [
     {
       question:
-        'For our students with excellent academic performance, we submit applications to foreign universities for free, both on a scholarship and paid basis',
+        'Bizning yuqori o’zlashtirishga ega o’quvchilarimiz uchun biz xorijiy universitetlarga grant va to’lov asosida arizalarni bepul topshiramiz.',
       answer:
-        'You no longer need to search for universities yourself. Our specialists will do it for you: they will select a university that suits your skills and achievements, and help prepare the entire package of documents for university application and visa processing. Please note that to apply to a university on a scholarship basis, your previous grades must be above average, and you need a language proficiency certificate at a certain level',
+        'Sizga universitetlarni o’zingiz qidirishingiz shart emas. Bizning mutaxassislarimiz bu ishni siz uchun amalga oshiradilar: sizning ko’nikmalaringiz va yutuqlaringizga mos keladigan universitetni tanlaydilar va universitetga topshirish hamda viza olish uchun hujjatlar paketini tayyorlashda yordam berishadi. Universitetga grant asosida topshirish uchun oldingi baholaringiz o’rtacha ko’rsatkichdan yuqori bo’lishi kerakligini va til bilish darajasini tasdiqlovchi sertifikat talab etilishini hisobga olish lozim.',
     },
     {
       question:
-        'Free education or discounts on courses for students of our learning center',
-      answer: `Free education is possible! Our learning center is the only one of its kind in Uzbekistan. Students of our learning center can study for free if they meet the following requirements:  a) Show excellent academic performance.        b) Achieve the highest scores of 99+ on exams and tests.We also offer discounts on education in our learning center (corporate, friend referral, and others)`,
+        'Bizning o’quv markazimiz o’quvchilari uchun bepul ta’lim yoki kurslarga chegirmalar.',
+      answer: `Bepul ta’lim mumkin! Bizning o’quv markazimiz O’zbekistonda yagona. Bizning  o’quvchilarimiz quyidagi talablarga javob bersalar, bepul asosda ta’lim olishlari mumkin:   a) Yuqori akademik ko’rsatkichlarga ega bo’lishlari.  b) Imtihon va testlarda eng yuqori 99+ ballarni olishlari. Biz shuningdek, o’quv markazimizda ta’lim olish uchun chegirmalar ham taqdim etamiz (korporativ, do’st tavsiyasi va boshqalar).
+`,
     },
     {
       question:
-        'All our teachers are certified and are either students or graduates of world-renowned universities',
+        'Barcha o’qituvchilarimiz sertifikatlangan bo’lib, jahon universitetlarining talabalari yoki bitiruvchilari hisoblanadilar.',
       answer:
-        'Members of our team hold official certificates that confirm their level of foreign language proficiency, issued by government institutions and consulates. The knowledge they gained abroad is applied in their teaching methods, which positively impacts the quality of education',
+        'Bizning jamoamiz a’zolari hukumat muassasalari va konsulliklar tomonidan berilgan rasmiy sertifikatlarga ega bo’lib, chet tilini bilish darajasini tasdiqlaydilar. Ular xorijda olgan bilimlarini o’qitish metodikasida qo’llaydilar, bu esa ta’lim sifatiga ijobiy ta’sir ko’rsatadi.',
     },
     {
-      question: 'Offering online classes',
+      question: 'Onlayn darslarning taqdim etilishi',
       answer:
-        'Online classes are more relevant than ever. Their advantage is the flexibility that adapts to your schedule. Teachers located abroad effectively use this method regardless of their geographic location, allowing them to convey the latest trends and up-to-date knowledge',
+        'Onlayn darslar hozirgidek hech qachon dolzarb bo’lmagan. Ularning afzalligi – bu sizning jadvalingizga mos keladigan moslashuvchanlikdir. Chet eldagi o’qituvchilar bu metodikani joylashuvlariga qaramasdan, samarali qo’llaydilar, bu esa ularga so’nggi tendensiyalar va dolzarb bilimlarni yetkazib berishga imkon beradi.',
     },
   ],
-  news: 'News',
+  news: 'Yangiliklar!',
   blogs: [
     {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
+      id: 1,
+      img: '/coming-soon.jpg',
+      title: 'Biz haqimizda bilmoqchi bo‘lgan narsangiz',
+      comingSoon: true,
     },
     {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
+      id: 2,
+      img: '/coming-soon.jpg',
+      title: 'Biz haqimizda bilmoqchi bo‘lgan narsangiz',
+      comingSoon: true,
     },
     {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
+      id: 3,
+      img: '/coming-soon.jpg',
+      title: 'Biz haqimizda bilmoqchi bo‘lgan narsangiz',
+      comingSoon: true,
     },
     {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
-    },
-    {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
-    },
-    {
-      thumbImg: 'https://picsum.photos/200/200',
-      thumbTitle: 'We will introduce you to the world of fitness and gym',
-      description:
-        'With our ZaczyNAJ Package you can safely start exercising in fitness clubs:',
-      bulletPoints: [
-        'You will receive a tailored training plan and trainer support',
-        'You will learn how to use the devices',
-        'You will learn about the types of training zones in the club',
-        'You choose group fitness classes',
-        'You will benefit from fitness tests or measurements of body mass components',
-      ],
-      headerImg: 'https://picsum.photos/500/400',
-      packs: [
-        {
-          title: 'Introductory meeting',
-          content: {
-            show: ['vid', 'https://www.youtube.com/watch?v=9xwazD5SyVg'],
-            description:
-              'The trainer will explain the club zones and group exercise schedule to you and will perform measurements or tests to help you choose the exercises.',
-          },
-        },
-        {
-          title: 'Training plan',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              'Based on the survey, you will receive a 10-week training plan tailored to you.',
-          },
-        },
-        {
-          title: 'Training intro',
-          content: {
-            show: ['img', 'https://picsum.photos/500/400'],
-            videoDescription:
-              "Don't know how to perform individual exercises from your training plan? Do you have doubts about the technique and safety of the movements performed? Schedule a training intro!",
-          },
-        },
-      ],
+      id: 4,
+      img: '/coming-soon.jpg',
+      title: 'Biz haqimizda bilmoqchi bo‘lgan narsangiz',
+      comingSoon: true,
     },
   ],
+
   classPage: {
     mainContent: {
       video: '',
@@ -520,10 +313,11 @@ export const data = {
         cityName: 'Tashkent',
         clubs: [
           {
-            name: 'Level Education',
-            address: 'Furkat Street 4, 100021, Tashkent, Uzbekistan',
-            latitude: 41.31861,
-            longitude: 69.23872,
+            name: 'Level Learning Center',
+            address:
+              'Sharof Rashidov 4 uy Chirchik 111700 Tashkent region Uzbekistan',
+            latitude: 41.4725,
+            longitude: 69.5906,
             image: '/logo.svg',
             benefits: [
               'English',
@@ -578,21 +372,129 @@ export const data = {
     },
   ],
   offers: {
+    title: 'Takliflar',
     forYou: {
-      desc: 'Choose a club, buy a pass and enjoy training!',
-      btn: 'Choose a club',
+      title: 'siz uchun',
+      desc: 'Markazni tanlang va biz bilan sarguzashtni boshlang!',
+      btn: 'Markazni tanlang',
     },
     forCompanies: {
-      desc: 'Check out our offer of employee and business passes!',
-      btn: 'Find out more',
+      title: 'kompaniyalar uchun',
+      desc: [
+        'Jamoalaringiz va xodimlaringiz uchun',
+        'bizning takliflarimizni ko‘ring',
+      ],
+      btn: 'Batafsil ma’lumot oling',
     },
-    introParts: {
-      yes2Move: {
-        link: '/blogs/package-info',
-        title: 'YES2MOVE',
-        desc: 'Online training ',
+    packages: {
+      ielts: {
+        title: 'IELTS',
+        desc: 'Onlayn ta’lim',
       },
-      zdProfitAcademy: {},
+      korean: {
+        title: 'Koreys tili',
+        desc: 'Onlayn ta’lim',
+      },
+      kids: {
+        title: 'Bolalar klubi',
+        desc: 'Onlayn ta’lim',
+      },
+    },
+  },
+
+  footer: {
+    information: {
+      title: "Ma'lumot",
+      links: [
+        {
+          title: "Level Ta'lim dargohi",
+          href: '/',
+        },
+        {
+          title: 'Karyera',
+          href: '/careers',
+        },
+        {
+          title: 'Yangiliklar',
+          href: '/#news-section',
+        },
+        {
+          title: 'Kurslar',
+          href: '/classes',
+        },
+      ],
+    },
+    services: {
+      title: 'Xizmatlar',
+      links: [
+        {
+          title: 'Kompaniyalar uchun taklif',
+          href: '/#offersComp',
+        },
+        {
+          title: 'Siz uchun',
+          href: '/#forYou',
+        },
+        {
+          title: "Chet elda ta'lim",
+          href: '/study-abroad',
+        },
+        {
+          title: 'Markazingizni toping',
+          href: '/contact#map',
+        },
+      ],
+    },
+    contact: {
+      title: 'Aloqaga chiqish',
+      links: [
+        {
+          title: "Bog'lanish",
+          href: '/contact',
+        },
+      ],
+    },
+    copyright: {
+      name: "Level Ta'lim Dargohi",
+    },
+  },
+
+  contactForm: {
+    title: 'Formani to‘ldiring',
+    description: 'Ma’lumotlaringizni qoldiring va biz siz bilan bog‘lanamiz',
+    email: 'Elektron pochta',
+    name: 'Ism va familiya',
+    phone: 'Telefon',
+    message: 'Xabar',
+    emailPlaceholder: 'example@domain.com',
+    namePlaceholder: 'Eshmatov Toshmat',
+    phonePlaceholder: '+998 99 999 99 99',
+    messagePlaceholder: 'Xabaringizni bu yerga yozing...',
+    button: 'Xabar yuboring',
+    required: 'majburiy maydonlar',
+  },
+
+  toastMessages: {
+    pending: 'Xabaringiz yuborilmoqda...',
+    success:
+      'Xabaringiz muvaffaqiyatli yuborildi, iltimos, bizning javobimizni kuting!',
+    error:
+      'Formani yuborishda xatolik yuz berdi, yaxshisi elektron pochta orqali yuboring: sampleEmail@level-edu.uz',
+  },
+
+  hero: {
+    title:
+      'Navbat ro‘yxatimizga qo‘shiling: Dunyoni birinchi bo‘lib kashf eting!',
+    description:
+      'Bizning chet elda o‘qish dasturlarimiz sizga akademik mukammallikni madaniy singdirish bilan uyg‘unlashtiradigan noyob ta’lim tajribasini taklif qilish uchun ishlab chiqilgan. Yangi madaniyatlarni kashf etishga, turli jamoalarni uchratishga va o‘qishni davom ettirgan holda global dunyoqarashingizni kengaytirishga tayyorlaning. Ushbu qabul sahifasi sizning vaqtingizni tejash va ushbu hayajonli safarga chiqishdan oldin mukammal xalqaro dastur topishga yordam berish uchun maxsus ishlab chiqilgan. Bugun navbat ro‘yxatimizga qo‘shiling va yaqinlashib kelayotgan dasturlarimiz, stipendiyalar va eksklyuziv imkoniyatlar haqidagi yangilanishlarni birinchi bo‘lib oling!',
+    button: 'Navbat ro‘yxatiga qo‘shiling',
+    checkUs: 'Bizni ijtimoiy tarmoqlarda ko‘ring',
+    thankYou: {
+      title: 'Qo‘shilganingiz uchun rahmat!',
+      description:
+        'Dasturlarimizga bo‘lgan qiziqishingiz uchun minnatdormiz. Siz chet elda o‘qish bo‘yicha yangi imkoniyatlarimiz haqida birinchi bo‘lib xabardor bo‘lasiz.',
+      stayTuned:
+        'Qo‘shimcha ma’lumotlar uchun biz bilan qoling. So‘nggi yangiliklar va yangilanishlar uchun ijtimoiy tarmoqlarimizga obuna bo‘ling.',
     },
   },
 };
