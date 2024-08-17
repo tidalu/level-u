@@ -2,15 +2,14 @@
 
 import { Button } from '@/components/ui/button';
 import { ChevronRight } from 'lucide-react';
-import Link from 'next/link';
-
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import ScrollAnimateWrapper from './ScrollAnimateWrapper';
-import ToolTipProv from './ToolTipProv';
+
+import { useLocalizedData } from '@/lib/useLocalizedData';
 
 const HomeBlogList = () => {
+  const data = useLocalizedData();
   const settings = {
     dots: false,
     infinite: false,
@@ -63,65 +62,45 @@ const HomeBlogList = () => {
     ],
   };
 
-  const BlogList = [
-    {
-      id: 1,
-      img: '/coming-soon.jpg',
-      title: 'Something you want to know about us',
-      comingSoon: true,
-    },
-    {
-      id: 2,
-      img: '/coming-soon.jpg',
-      title: 'Something you want to know about us',
-      comingSoon: true,
-    },
-    {
-      id: 3,
-      img: '/coming-soon.jpg',
-      title: 'Something you want to know about us',
-      comingSoon: true,
-    },
-    {
-      id: 4,
-      img: '/coming-soon.jpg',
-      title: 'Something you want to know about us ',
-      comingSoon: true,
-    },
-  ];
-
   return (
     <div className=" mt-4  reveal">
       <Slider {...settings} className=" ">
-        {BlogList.map((item) => (
-          <div key={item.id} className=" h-full">
-            <div className=" bg-white dark:bg-[#020817] rounded-2xl p-4 group/item mr-5">
-              <div className=" grid grid-cols-12 gap-4">
-                <div className=" col-span-6">
-                  <img
-                    src={item.img}
-                    className=" rounded-2xl object-cover w-full h-32"
-                    alt="fit1"
-                  />
-                </div>
-                <div className=" col-span-6 flex flex-col justify-between">
-                  <div className=" text-[13px] 2xl:text-lg font-semibold leading-6 group-hover/item:underline">
-                    {item.title}
+        {data.blogs.map(
+          (item: {
+            id: number;
+            img: string;
+            title: string;
+            comingSoon: boolean;
+          }) => (
+            <div key={item.id} className=" h-full">
+              <div className=" bg-white dark:bg-[#020817] rounded-2xl p-4 group/item mr-5">
+                <div className=" grid grid-cols-12 gap-4">
+                  <div className=" col-span-6">
+                    <img
+                      src={item.img}
+                      className=" rounded-2xl object-cover w-full h-32"
+                      alt="fit1"
+                    />
                   </div>
+                  <div className=" col-span-6 flex flex-col justify-between">
+                    <div className=" text-[13px] 2xl:text-lg font-semibold leading-6 group-hover/item:underline">
+                      {item.title}
+                    </div>
 
-                  <div className=" text-right">
-                    <Button
-                      variant="primaryGreen"
-                      className=" rounded-full p-0 h-5 px-2"
-                    >
-                      <ChevronRight size={14} className="text-black" />
-                    </Button>
+                    <div className=" text-right">
+                      <Button
+                        variant="primaryGreen"
+                        className=" rounded-full p-0 h-5 px-2"
+                      >
+                        <ChevronRight size={14} className="text-black" />
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
       </Slider>
     </div>
   );
