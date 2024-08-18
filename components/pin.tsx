@@ -5,12 +5,14 @@ import { Marker, Popup } from 'react-leaflet';
 import googleMap from '../public/google-maps.svg';
 import yandexIcon from '../public/yandex.svg';
 import ScrollAnimateWrapper from './ScrollAnimateWrapper';
+import { useLocalizedData } from '@/lib/useLocalizedData';
 
 interface MapPinProps {
   item: any;
 }
 
 const MapPin = ({ item }: MapPinProps) => {
+  const data = useLocalizedData();
   const handleGetDirections = (long: number, lat: number, type: string) => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -18,11 +20,9 @@ const MapPin = ({ item }: MapPinProps) => {
           const userLat = position.coords.latitude;
           const userLong = position.coords.longitude;
 
-          // Construct the Google Maps URL with the user's location as the origin
           const mapsUrlGoogle = `https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLong}&destination=${lat},${long}&travelmode=driving`;
           const mapsUrlYandex = `https://yandex.ru/maps/?rtext=${userLat},${userLong}~${lat},${long}&rtt=auto`;
 
-          // Redirect the user to the constructed URL
           if (type === 'yandex') window.open(mapsUrlYandex, '_blank');
           else window.open(mapsUrlGoogle, '_blank');
         },
@@ -44,7 +44,6 @@ const MapPin = ({ item }: MapPinProps) => {
           <Popup>
             <div className=" bg-white rounded-2xl p-1">
               <div className="bg-[#b8df4b1a] rounded-md p-4">
-                {/* image */}
                 <Image
                   src={item.image}
                   alt="logo"
@@ -115,7 +114,7 @@ const MapPin = ({ item }: MapPinProps) => {
                     }
                     formTarget="_blank"
                   >
-                    Get directions with{' '}
+                    {data.schedule.getDirections}{' '}
                     <Image
                       src={googleMap}
                       alt="google map"
@@ -133,7 +132,7 @@ const MapPin = ({ item }: MapPinProps) => {
                     }
                     formTarget="_blank"
                   >
-                    Get directions with
+                    {data.schedule.getDirections}
                     <Image
                       src={yandexIcon}
                       alt="yandex icon map"
