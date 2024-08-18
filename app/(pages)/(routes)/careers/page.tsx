@@ -4,38 +4,18 @@ import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
 import HorizontalScroll from '@/components/ScrollHorizontal';
 import Value from '@/components/Value';
 import { useEffect, useState } from 'react';
+import { useLocalizedData } from '@/lib/useLocalizedData';
 
 function Careers() {
-  const data = [
-    {
-      stepIndex: 1,
-      stepTitle: "Review applications and CV's",
-      stepDescription:
-        'Send us your portfolio (please make it relevant) and a CV (please make it 1 page only). You can apply for one of the open positions or send us your application anyway.',
-      stepVideo: '/video/rec-1.mp4',
-    },
-    {
-      stepIndex: 2,
-      stepTitle: 'Interview invitation',
-      stepDescription:
-        'If you get invited for an interview, just bring your best energy and ideas! You will be interviewed by the people you will be working with: the CEO and your future project manager.',
-      stepVideo: '/video/rec-2.mp4',
-    },
-    {
-      stepIndex: 3,
-      stepTitle: 'The interview',
-      stepDescription:
-        'Send us your portfolio (please make it relevant) and a CV (please make it 1 page only). You can apply for one of the open positions or send us your application anyway.',
-      stepVideo: '/video/rec-3.mp4',
-    },
-  ];
-
+  const data = useLocalizedData();
   return (
     <>
       <ScrollAnimateWrapper>
         <div className="h-full max-w-[1900px] mx-auto mt-36">
           <section className="reveal container px-4 sm:px-10 m-auto my-10 md:my-16 lg:my-18">
-            <h1 className="text-6xl md:text-[60px] my-6">Careers</h1>
+            <h1 className="text-6xl md:text-[60px] my-6">
+              {data.careers.header}
+            </h1>
           </section>
         </div>
         <HorizontalScroll />
@@ -45,42 +25,31 @@ function Careers() {
               <div className="mt-8 flex flex-col md:flex-row justify-between">
                 <div className="order-2 md:order-1 reveal">
                   <div className="text-md text-gray-700 darl:text-gray-300">
-                    Contents
+                    {data.careers.navSection.title}
                   </div>
                   <div className="flex-col flex gap-1 ">
-                    <a
-                      href="#open-positions"
-                      className="lg:text-2xl text-gray-900 dark:text-white font-semibold text-left text-base md:text-xl hover:underline trasition-all duration-150 ease-linear hover:underline-offset-4 "
-                      style={{ opacity: 1 }}
-                    >
-                      Open positions
-                    </a>
-                    <a
-                      href="#benefits"
-                      className="lg:text-2xl text-gray-900 dark:text-white font-semibold text-left text-base md:text-xl hover:underline trasition-all duration-150 ease-linear hover:underline-offset-4 "
-                      style={{ opacity: 1 }}
-                    >
-                      Benefits
-                    </a>
-                    <a
-                      href="#recruitment-process"
-                      className="lg:text-2xl text-gray-900 dark:text-white font-semibold text-left text-base md:text-xl hover:underline trasition-all duration-150 ease-linear hover:underline-offset-4 "
-                      style={{ opacity: 1 }}
-                    >
-                      Recruitment process
-                    </a>
-                    <a
-                      href="#values"
-                      className="lg:text-2xl text-gray-900 dark:text-white font-semibold text-left text-base md:text-x hover:underline trasition-all duration-150 ease-linear hover:underline-offset-4 "
-                      style={{ opacity: 1 }}
-                    >
-                      Values
-                    </a>
+                    {data.careers.navSection.links.map(
+                      (
+                        link: {
+                          name: string;
+                          href: string;
+                        },
+                        index: number
+                      ) => (
+                        <a
+                          key={index}
+                          href={`#${link.href}`}
+                          className="lg:text-2xl text-gray-900 dark:text-white font-semibold text-left text-base md:text-xl hover:underline trasition-all duration-150 ease-linear hover:underline-offset-4 "
+                          style={{ opacity: 1 }}
+                        >
+                          {link.name}
+                        </a>
+                      )
+                    )}
                   </div>
                 </div>
                 <div className="order-1 reveal md:order-2 mb-6 md:mb-0 text-lg md:text-2xl dark:text-white max-w-full w-[420px] text-gray-900">
-                  If you&apos;re as obsessed with teaching and tech as we are,
-                  you&apos;ve come to the right place.
+                  {data.careers.navSection.description}
                 </div>
               </div>
             </section>
@@ -90,99 +59,60 @@ function Careers() {
             >
               <div className="mb-8 " style={{ opacity: 1, transform: 'none' }}>
                 <h2 className="text-3xl md:text-4xl mb-4 reveal">
-                  Open positions
+                  {data.careers.openPositions.title}
                 </h2>{' '}
                 <hr className="reveal h-[3px] w-[80px] border-0 bg-tdbGrey1 bg-black dark:bg-white" />
               </div>
               <div className="grid grid-cols-1 gap-4 md:mt-8 md:grid-cols-2 md:gap-12 lg:grid-cols-2">
-                <span style={{ opacity: 1, transform: 'none' }}>
-                  <a
-                    className="reveal flex cursor-pointer items-center justify-between group careers_posting__ypMs4"
-                    href="/job/react-developer"
-                  >
-                    <div>
-                      <h2 className="text-lg md:text-2xl">
-                        Instructor (English Language)
-                      </h2>
-                      <p className="md:text-lg">Chirchik / On-site</p>
-                    </div>
-                    <svg
-                      viewBox="0 0 27 26"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 group-hover:jello-diagonal-1 group-hover:scale-110 transition-all delay-150"
-                    >
-                      <path
-                        d="M2 23.135 25 2m0 0H4m21 0v21.135"
-                        stroke="#717174"
-                        stroke-width="4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                  </a>
-                </span>
-                <span style={{ opacity: 1, transform: 'none' }}>
-                  <a
-                    className="reveal flex cursor-pointer items-center justify-between careers_posting__ypMs4"
-                    href="/job/ux-ui-designer"
-                  >
-                    <div>
-                      <h2 className="text-lg md:text-2xl">
-                        Instructor (Korean Language)
-                      </h2>
-                      <p className="md:text-lg">Chirchik / On-site</p>
-                    </div>
-                    <svg
-                      viewBox="0 0 27 26"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5"
-                    >
-                      <path
-                        d="M2 23.135 25 2m0 0H4m21 0v21.135"
-                        stroke="#717174"
-                        stroke-width="4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                  </a>
-                </span>
-                <span style={{ opacity: 1, transform: 'none' }}>
-                  <a
-                    className="reveal flex cursor-pointer items-center justify-between careers_posting__ypMs4"
-                    href="/job/node-developer"
-                  >
-                    <div>
-                      <h2 className="text-lg md:text-2xl">
-                        Front-desk receptionist
-                      </h2>
-                      <p className="md:text-lg">Chirchik / On-site</p>
-                    </div>
-                    <svg
-                      viewBox="0 0 27 26"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5"
-                    >
-                      <path
-                        d="M2 23.135 25 2m0 0H4m21 0v21.135"
-                        stroke="#717174"
-                        stroke-width="4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                  </a>
-                </span>
+                {data.careers.openPositions.positions.map(
+                  (
+                    position: {
+                      title: string;
+                      location: string;
+                    },
+                    index: number
+                  ) => {
+                    return (
+                      <span
+                        key={index}
+                        style={{ opacity: 1, transform: 'none' }}
+                      >
+                        <a
+                          className="reveal flex cursor-pointer items-center justify-between group careers_posting__ypMs4"
+                          href="/careers"
+                        >
+                          <div>
+                            <h2 className="text-lg md:text-2xl">
+                              {position.title}
+                            </h2>
+                            <p className="md:text-lg">{position.location}</p>
+                          </div>
+                          <svg
+                            viewBox="0 0 27 26"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 group-hover:jello-diagonal-1 group-hover:scale-110 transition-all delay-150"
+                          >
+                            <path
+                              d="M2 23.135 25 2m0 0H4m21 0v21.135"
+                              stroke="#717174"
+                              stroke-width="4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </a>
+                      </span>
+                    );
+                  }
+                )}
               </div>
               <div className="m-auto mt-12 max-w-6xl justify-center reveal">
                 <h2 className="text-center font-basic-sans text-2xl font-semibold">
-                  Got other ideas?
+                  {data.careers.optionalRequision.title}
                 </h2>
                 <p className="mt-1 text-center text-base">
-                  Send us your portfolio and CV to{' '}
+                  {data.careers.optionalRequision.description}{' '}
                   <a href="mailto:level.edu.careers.uz@gmail.com">
                     level.edu.careers.uz@gmail.com
                   </a>
@@ -212,13 +142,13 @@ function Careers() {
               <div className="absolute top-0 left-0 h-full w-full bg-gray-900 opacity-30"></div>
               <section className="container px-4 sm:px-10 m-auto relative py-24">
                 <p className="mb-4 max-w-2xl text-3xl font-semibold text-white md:mb-8 md:text-5xl">
-                  Grab our Culture Book and learn more!
+                  {data.careers.optionalRequision.cultureBook}
                 </p>
                 <button
                   className="max-w-md md:text-lg flex items-center transition-all py-2 px-8 text-black bg-white hover:bg-gray-300 border-2 border-white hover:border-gray-300 rounded-full"
                   type="button"
                 >
-                  Download
+                  {data.careers.optionalRequision.button}
                 </button>
               </section>
             </section>
@@ -231,27 +161,33 @@ function Careers() {
                 style={{ opacity: 1, transform: 'none' }}
               >
                 <h2 className="text-3xl md:text-4xl text-center mb-4">
-                  Benefits
+                  {data.careers.benefits.title}
                 </h2>
                 <hr className="h-[3px] w-[80px] border-0 bg-gray-800 mx-auto" />
               </div>
               <div className="container reveal  mx-auto px-16 mt-6 flex lg:mt-12 flex-wrap flex-row gap-4 justify-evenly">
-                <BenefitCard
-                  hoverImage="/fit1.webp"
-                  title="Flexible working hours"
-                />
-                <BenefitCard
-                  hoverImage="/fit1.webp"
-                  title="Career development"
-                />
-                <BenefitCard
-                  hoverImage="/fit1.webp"
-                  title="Collaborative environment"
-                />
-                <BenefitCard
-                  hoverImage="/fit1.webp"
-                  title="High competetive offers"
-                />
+                {data.careers.benefits.cards.map(
+                  (
+                    card: {
+                      icon: string;
+                      title: string;
+                      image: string;
+                    },
+                    index: number
+                  ) => {
+                    return (
+                      <BenefitCard
+                        key={index}
+                        // icon={card.icon}
+                        title={card.title}
+                        hoverImage={
+                          // card.image ||
+                          '/fit1.webp'
+                        }
+                      />
+                    );
+                  }
+                )}
               </div>
             </section>
             <section
@@ -261,7 +197,10 @@ function Careers() {
               <div className="mb-8" style={{ opacity: 1, transform: 'none' }}>
                 <hr className="h-[3px] w-[80px] border-0 bg-tdbGrey1 mx-auto bg-gray-800" />
               </div>
-              <RecruitmentProcess data={data} />
+              <RecruitmentProcess
+                data={data.careers.recruitmentProcess.process}
+                title={data.careers.recruitmentProcess.title}
+              />
             </section>
 
             {/*  */}
@@ -275,51 +214,33 @@ function Careers() {
                 style={{ opacity: 1, transform: 'none' }}
               >
                 <h2 className="text-3xl md:text-4xl text-center mb-4 text-gray-800 dark:text-white">
-                  We&apos;re big on Values
+                  {data.careers.values.title}
                 </h2>
                 <hr className="h-[3px] w-[80px] border-0 bg-gray-800 mx-auto" />
               </div>
               <div className="mx-auto max-w-2xl reveal text-center text-base text-black lg:text-lg dark:text-white">
-                An aligned team is the cornerstone of amazing company culture.
-                It helps us do the work well and keep the precious work-life
-                balance.
+                {data.careers.values.description}
               </div>
               <div className="mt-12 flex flex-col gap-14 md:gap-20 lg:mt-32">
-                <Value
-                  index={1}
-                  title="Entrepreneurship"
-                  description="Be bold, be willing to take risks, have conviction in your
-                ideas, use your strengths. Creativity is often a solitary
-                pursuit. Being entrepreneurial about your work means owning your
-                tasks and projects and driving them forward with or without
-                oversight. It's also about knowing when to call on the team for
-                support, and when to take time to expand your skillset. If a new
-                plug-in calling out to you, there's a new tech you want to learn
-                or a whole new direction you want to take, we've got you
-                covered. Skills &gt; roles."
-                />
-                <Value
-                  index={2}
-                  title="Respect"
-                  description="Trust comes from relationships – starting with yourself and your work, all the way to the teammates you count on for support and the trust clients have in us when they put their precious ideas in our hands. Trust is built and cultivated; it's part of the work we do at TBD. If work needs do it, we pick it up. And we thank each other for doing so."
-                />
-                <Value
-                  index={3}
-                  title="Trust"
-                  description="Communication with empathy and emotional intelligence can be a tough exercise, but we believe it's the only way to truly grow. Accommodating differences of opinion can be even harder, but we pride ourselves on how varied and multidisciplinary our team is. We have no time for 'brilliant jerks' - we are a community and we are protective of it. We recognize each other's value and celebrate each other's wins."
-                />
-
-                <Value
-                  index={4}
-                  title="Efficiency"
-                  description="We create in a world of budgets and deadlines. Understanding the limitations and picking the right tools to work with is as much a part of the art as creative flow. It's also why we value the time spent pursuing new skills and tools, which in turn help us have more time for artistic flair. Developing a career is important to all of us. Grow along one of our predefined tracks or pick your own path."
-                />
-
-                <Value
-                  index={5}
-                  title="Integrity"
-                  description="We create in a world of budgets and deadlines. Understanding the limitations and picking the right tools to work with is as much a part of the art as creative flow. It's also why we value the time spent pursuing new skills and tools, which in turn help us have more time for artistic flair. Developing a career is important to all of us. Grow along one of our predefined tracks or pick your own path."
-                />
+                {data.careers.values.valueList.map(
+                  (
+                    value: {
+                      id: number;
+                      title: string;
+                      description: string;
+                    },
+                    index: number
+                  ) => {
+                    return (
+                      <Value
+                        key={index}
+                        index={value.id}
+                        title={value.title}
+                        description={value.description}
+                      />
+                    );
+                  }
+                )}
               </div>
             </section>
           </div>
@@ -333,6 +254,7 @@ export default Careers;
 
 function RecruitmentProcess({
   data,
+  title,
 }: {
   data: {
     stepIndex: number;
@@ -340,6 +262,7 @@ function RecruitmentProcess({
     stepDescription: string;
     stepVideo: string;
   }[];
+  title: string;
 }) {
   const [currentOnScreen, setCurrentOnScreen] = useState(data[0]);
 
@@ -365,8 +288,8 @@ function RecruitmentProcess({
         </div>
       </div>
       <div className="basis-1/2 flex flex-col gap-6 justify-center">
-        <h1 className="text-6xl reveal md:text-[60px] my-6 align-start">
-          Recruitment <br /> process
+        <h1 className="text-6xl reveal md:text-[60px] my-6 align-start text-wrap">
+          {title}
         </h1>
         <div className="flex flex-col gap-3">
           {data.map((step, index) => {

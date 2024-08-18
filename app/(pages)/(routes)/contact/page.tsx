@@ -57,9 +57,9 @@ const ContactPage = () => {
           }
         ),
         {
-          pending: 'Submitting form...',
-          success: 'Form submitted successfully',
-          error: 'Error submitting form',
+          pending: data.toastMessages.pending,
+          success: data.toastMessages.success,
+          error: data.toastMessages.error,
         }
       );
       setUserData({
@@ -69,10 +69,7 @@ const ContactPage = () => {
         message: '',
       });
     } catch (error) {
-      toast.error(
-        'Error submitting form better to send an email',
-        toastSettings
-      );
+      toast.error(data.toastMessages.error, toastSettings);
     }
   }
 
@@ -82,7 +79,7 @@ const ContactPage = () => {
         <div className=" grid grid-cols-1 reveal lg:grid-cols-2 gap-3 pt-[150px] pb-6 px-3 lg:px-16 mb-16">
           <div className=" flex  flex-col justify-center items-center h-auto w-full gap-4">
             <div className=" bg-[#b8df4b1a] dark:bg-[#86868517] rounded-2xl py-10 px-6 text-center w-full flex flex-col gap-3 text-sm justify-center">
-              <p>Customer Service Department </p>
+              <p>{data.contactPage.workInfo.customerServiceDepartment}</p>
               <div className=" text-gray-500">+998 55 903 37 47</div>
               <div className=" text-gray-500">+998 99 005 37 47</div>
               <Link
@@ -92,8 +89,9 @@ const ContactPage = () => {
                 level.edu.uz.@gmail.com
               </Link>
               <p className="  text-gray-500 leading-8">
-                Every day from, <br />
-                from 8:00 to 20:00.
+                {data.contactPage.workInfo.workdays} <br />
+                {data.contactPage.workInfo.start}{' '}
+                {data.contactPage.workInfo.end}.
               </p>
             </div>
 
@@ -103,18 +101,19 @@ const ContactPage = () => {
           <div className=" mt-10 lg:mt-0">
             <div className=" max-w-md mx-auto marginInherit lg:ml-auto">
               <p className=" text-gray-500 text-[12px] font-semibold">
-                Leave your details and we will contact you
+                {data.contactForm.description}
               </p>
 
               <form onSubmit={formHandler}>
                 <div className=" relative mt-5">
                   <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
-                    <span className=" text-red-400">*</span>E-mail
+                    <span className=" text-red-400">*</span>
+                    {data.contactForm.email}
                   </label>
                   <input
                     type="email"
                     className=" w-full lg:w-80 dark:bg-[#020817] outline-none text-sm border-2 border-[#6cce40] rounded-full py-2 px-6"
-                    placeholder="email@domain.com"
+                    placeholder={data.contactForm.emailPlaceholder}
                     required
                     value={userData.email}
                     name="email"
@@ -123,13 +122,13 @@ const ContactPage = () => {
                 </div>
                 <div className=" relative mt-9">
                   <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
-                    <span className=" text-red-400">*</span>First name and last
-                    name
+                    <span className=" text-red-400">*</span>
+                    {data.contactForm.name}
                   </label>
                   <input
                     type="text"
                     className=" w-full lg:w-80 dark:bg-[#020817] outline-none text-sm border-2 border-[#6cce40] rounded-full py-2 px-6"
-                    placeholder="eg.John doe"
+                    placeholder={data.contactForm.namePlaceholder}
                     required
                     value={userData.name}
                     name="name"
@@ -138,7 +137,8 @@ const ContactPage = () => {
                 </div>
                 <div className=" relative mt-9">
                   <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
-                    <span className=" text-red-400">*</span>Telephone
+                    <span className=" text-red-400">*</span>
+                    {data.contactForm.phone}
                   </label>
                   <input
                     type="tel"
@@ -153,11 +153,12 @@ const ContactPage = () => {
 
                 <div className=" relative mt-9">
                   <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
-                    <span className=" text-red-400">*</span>Message
+                    <span className=" text-red-400">*</span>
+                    {data.contactForm.message}
                   </label>
                   <textarea
                     className=" w-full outline-none text-sm dark:bg-[#020817] border-2 border-[#6cce40] rounded-3xl py-5 px-5 resize-none h-28"
-                    placeholder="Message Content"
+                    placeholder={data.contactForm.messagePlaceholder}
                     required
                     value={userData.message}
                     name="message"
@@ -169,11 +170,12 @@ const ContactPage = () => {
                   className="dark:text-black shadow-2xl text-sm rounded-full px-6 mt-5"
                   type="submit"
                 >
-                  Send a message
+                  {data.contactForm.button}
                 </Button>
 
                 <div className=" mt-3 text-[13px] text-gray-500 dark:text-gray-400">
-                  ( <span className=" text-red-400">*</span> ) required fields
+                  ( <span className=" text-red-400">*</span> ){' '}
+                  {data.contactForm.required}
                 </div>
               </form>
 
@@ -182,7 +184,7 @@ const ContactPage = () => {
                   onClick={() => setShowReadmore(!showReadmore)}
                   className=" mt-5 bg-transparent hover:bg-transparent text-[#6cce40] font-semibold"
                 >
-                  read more
+                  {data.contactPage.readMore.title}
                   {showReadmore ? (
                     <ChevronUp className=" ml-1" size={18} />
                   ) : (
@@ -194,30 +196,21 @@ const ContactPage = () => {
                   <div>
                     <p className=" text-[13px] text-gray-500 dark:text-gray-400 leading-6">
                       <span className=" font-semibold text-[#0d1c07] dark:text-white">
-                        Processing purposes:{' '}
+                        {data.contactPage.readMore.processingPurposes.title}{' '}
                       </span>
-                      We will process your personal data in order to provide you
-                      with the service of maintaining an account on our website;
-                      for tax and accounting purposes; to pursue, determine or
-                      defend against claims; to facilitate the use of our
-                      website; for direct marketing, including profiling, and to
-                      conduct analyses and statistics for marketing purposes and
-                      to survey satisfaction with the services offered.
+                      {data.contactPage.readMore.processingPurposes.description}
                     </p>
                     <p className="mt-4 text-[13px] text-gray-500 dark:text-gray-400 leading-6">
                       <span className=" font-semibold text-[#0d1c07] dark:text-white">
-                        Your rights in connection with the processing of
-                        personal data:
+                        {
+                          data.contactPage.readMore.processingOfPersonalData
+                            .title
+                        }
                       </span>{' '}
-                      The right to request access to personal data; the right to
-                      request the rectification of personal data; the right to
-                      request the deletion of personal data; the right to
-                      request the restriction of the processing of personal
-                      data, the right to object to the processing of personal
-                      data; the right to transfer personal data; the right to
-                      withdraw consent to the processing of personal data; and
-                      the right to lodge a complaint with the President of the
-                      Personal Data Protection Office.
+                      {
+                        data.contactPage.readMore.processingOfPersonalData
+                          .description
+                      }
                     </p>
                   </div>
                 )}

@@ -42,7 +42,7 @@ const AboutPage = () => {
                 msOverflowStyle: 'none',
               }}
             >
-              <p className="apply-font-o text-gray-800 text-lg reveal">
+              <p className="apply-font-o dark:text-slate-200 text-gray-800 text-lg reveal">
                 {data.about.topText}
               </p>
               <h1 className="reveal text-xl text-wrap sm:text-2xl mt-1 mb-4 text-[#69af49] font-extrabold">

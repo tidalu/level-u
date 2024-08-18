@@ -66,7 +66,7 @@ const ClassesPage = () => {
                   href="#category"
                   className="border-2 border-[#6cce40] cursor-pointer text-[11px] sm:text-sm rounded-full py-2 justify-center px-10 font-semibold flex gap-1 items-center hover:underline whitespace-nowrap"
                 >
-                  All classes
+                  {data.classPage.mainContent.button}
                 </Link>
               </div>
             </div>
