@@ -121,7 +121,7 @@ const Schedule = () => {
             className="custom-select trunc pr-8 appearance-none w-44 outline-none border-2 border-[#6cce40] dark:bg-[#020817] rounded-full py-1.5 px-5 text-sm font-semibold"
             onChange={handleCityChange}
           >
-            <option value="">Place</option>
+            <option value="">{data.schedule.title}</option>
             {data.schedule.places.map(
               (
                 item: {
@@ -142,14 +142,14 @@ const Schedule = () => {
               value="map"
             >
               <MapPin size={18} className=" mr-1" />
-              Map
+              {data.schedule.map}
             </TabsTrigger>
             <TabsTrigger
               className=" data-[state=active]:text-black rounded-full schedule"
               value="list"
             >
               <ListChecks size={18} className=" mr-1" />
-              List
+              {data.schedule.list}
             </TabsTrigger>
           </TabsList>
         </div>
