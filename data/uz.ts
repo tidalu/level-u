@@ -100,207 +100,215 @@ export const data = {
   ],
 
   classPage: {
+    homeContent: {
+      title: 'Klublarimizda mavjud darslar',
+      subtitle: 'Sevimli darsingizni tanlang va biz bilan o‘qishni boshlang!',
+    },
+
     mainContent: {
       video: '',
       title:
-        'Discover Advanced Learning Opportunities in Level Learning Center!',
+        'Level Learning Centerda ilgʻor taʼlim imkoniyatlarini kashf eting!',
       description: [
-        'At our educational center, you will experience a comprehensive range of language and IT courses designed to enhance your skills and knowledge.',
-        'Choose from a variety of courses including:',
+        'Bizning taʼlim markazimizda sizning bilim va koʻnikmalaringizni oshirish uchun moʻljallangan keng koʻlamli til va IT kurslarini boshdan kechirasiz.',
+        'Quyidagi kurslardan birini tanlang:',
         [
-          'Advanced language training for professional and personal development',
-          'Cutting-edge IT courses and certifications',
-          'Interactive workshops and hands-on projects',
-          'Specialized training in emerging technologies and languages',
+          'Professional va shaxsiy rivojlanish uchun ilgʻor til oʻrgatish',
+          'Zamonaviy IT kurslar va sertifikatlar',
+          'Interaktiv seminarlar va amaliy loyihalar',
+          'Yangi texnologiyalar va tillarda ixtisoslashgan taʼlim',
         ],
-        'Our curriculum also features renowned language programs and our own specialized IT training sessions, such as Data Science Bootcamps and Business English Workshops.',
+        'Bizning oʻquv dasturimizda mashhur til dasturlari va oʻzimizning maxsus IT treninglarimiz, masalan, Data Science Bootcamps va Business English Workshops ham mavjud.',
       ],
+      button: 'Barcha darslar',
     },
     classList: [
       {
-        title: 'English Langugage',
+        title: 'Ingliz tili',
         list: [
           {
-            name: 'IELTS Preparation',
+            name: 'IELTS tayyorgarligi',
             description:
-              'A comprehensive course designed to prepare students for the IELTS exam with a focus on test strategies, academic writing, reading comprehension, and speaking skills.',
+              'Talabalarni IELTS imtihoniga tayyorlash uchun keng qamrovli kurs, sinov strategiyalari, akademik yozish, oʻqish tushunish va soʻzlashuv koʻnikmalariga eʼtibor qaratilgan.',
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
             forWhom: [
-              'for students aiming to study abroad',
-              'for those seeking immigration opportunities',
-              'for anyone needing a high IELTS score',
+              'chet elda oʻqishni maqsad qilgan talabalar uchun',
+              'immigratsiya imkoniyatlarini izlayotganlar uchun',
+              'yuqori IELTS ballini olish kerak boʻlganlar uchun',
             ],
             cost: '$300',
-            duration: '8 weeks',
+            duration: '8 hafta',
             intensity: 4 / 4,
-            purpose: 'exam preparation, language proficiency improvement',
+            purpose: 'imtihonga tayyorgarlik, til bilish darajasini oshirish',
             effects: [
-              'improved IELTS score',
-              'enhanced academic English skills',
-              'better test-taking strategies',
-              'increased confidence in English',
+              'IELTS balining yaxshilanishi',
+              'akademik ingliz tili koʻnikmalarini oshirish',
+              'imtihon olish strategiyalarini yaxshilash',
+              'ingliz tilida ishonch orttirish',
             ],
           },
           {
-            name: 'CEFR Language Courses',
+            name: 'CEFR Til Kurslari',
             description:
-              'Courses designed to improve language skills according to the CEFR standards, with levels ranging from A1 to C2. Focus on speaking, writing, reading, and listening.',
+              'CEFR standartlariga muvofiq til koʻnikmalarini yaxshilash uchun moʻljallangan kurslar, darajalar A1 dan C2 gacha. Soʻzlashish, yozish, oʻqish va tinglashga eʼtibor qaratiladi.',
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
             forWhom: [
-              'for learners of all levels',
-              'for those needing structured language improvement',
-              'for individuals aiming for CEFR certification',
+              'har qanday darajadagi oʻquvchilar uchun',
+              'tilni yaxshilash uchun tizimli yondashuvga muhtojlar uchun',
+              'CEFR sertifikatini olishni maqsad qilgan shaxslar uchun',
             ],
             cost: '$250',
-            duration: '12 weeks',
+            duration: '12 hafta',
             intensity: 3 / 4,
-            purpose: 'language skill development, CEFR certification',
+            purpose:
+              'til koʻnikmalarini rivojlantirish, CEFR sertifikati olish',
             effects: [
-              'better language proficiency',
-              'certification according to CEFR',
-              'improved communication skills',
-              'enhanced understanding of grammar',
+              'til bilish darajasini yaxshilash',
+              'CEFR ga muvofiq sertifikat olish',
+              'muloqot koʻnikmalarini yaxshilash',
+              'grammatikani chuqurroq tushunish',
             ],
           },
           {
-            name: 'Kids English Program',
+            name: 'Bolalar uchun Ingliz Tili Dasturi',
             description:
-              'Engaging English language courses for children, focusing on vocabulary, grammar, and conversational skills through interactive activities.',
+              'Bolalar uchun ingliz tili kurslari, interaktiv faoliyatlar orqali soʻz boyligi, grammatika va soʻzlashuv koʻnikmalariga eʼtibor qaratilgan.',
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
             forWhom: [
-              'for children aged 6-12',
-              'for parents seeking quality English education for their kids',
-              'for young learners interested in English',
+              '6-12 yoshdagi bolalar uchun',
+              'bolalari uchun sifatli ingliz tili taʼlimi izlayotgan ota-onalar uchun',
+              'ingliz tiliga qiziquvchi yosh oʻrganuvchilar uchun',
             ],
             cost: '$200',
-            duration: '10 weeks',
+            duration: '10 hafta',
             intensity: 2 / 4,
-            purpose: 'early language development, foundational English skills',
+            purpose: 'erta til rivoji, ingliz tilining asosiy koʻnikmalari',
             effects: [
-              'improved English language skills',
-              'better vocabulary and grammar',
-              'enhanced conversational abilities',
-              'increased confidence in English',
+              'ingliz tilini yaxshilash',
+              'soʻz boyligi va grammatikani yaxshilash',
+              'soʻzlashuv koʻnikmalarini oshirish',
+              'ingliz tilida ishonch orttirish',
             ],
           },
           {
-            name: 'English Grammar Essentials',
+            name: 'Ingliz Grammatika Asoslari',
             description:
-              'A focused course on English grammar covering key topics such as verb tenses, sentence structure, and punctuation. Ideal for learners seeking to improve their grammar skills.',
+              'Ingliz grammatikasiga bagʻishlangan kurs, feʼl zamonlari, jumla tuzilishi va punktuatsiya kabi asosiy mavzularni oʻz ichiga oladi. Grammatika koʻnikmalarini yaxshilashni xohlovchilar uchun ideal.',
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
             forWhom: [
-              'for learners of all levels',
-              'for those needing a grammar refresher',
-              'for individuals preparing for exams',
+              'har qanday darajadagi oʻquvchilar uchun',
+              'grammatika boʻyicha eslatmalarga muhtojlar uchun',
+              'imtihonlarga tayyorlanayotgan shaxslar uchun',
             ],
             cost: '$150',
-            duration: '6 weeks',
+            duration: '6 hafta',
             intensity: 3 / 4,
-            purpose: 'grammar improvement, exam preparation',
+            purpose:
+              'grammatika koʻnikmalarini yaxshilash, imtihonga tayyorgarlik',
             effects: [
-              'enhanced grammar skills',
-              'better writing and speaking accuracy',
-              'improved understanding of English rules',
-              'increased confidence in using English',
+              'grammatika koʻnikmalarini oshirish',
+              'yozish va soʻzlashishdagi aniqlikni yaxshilash',
+              'ingliz tili qoidalarini yaxshiroq tushunish',
+              'ingliz tilidan foydalanishda ishonch orttirish',
             ],
           },
         ],
       },
       {
-        title: 'Korean Langugage',
+        title: 'Koreys tili',
         list: [
           {
-            name: 'Korean Language (Individual Lessons)',
+            name: 'Koreys tili (Individual darslar)',
             description:
-              'Personalized Korean language lessons tailored to individual learning needs, focusing on speaking, listening, reading, and writing skills.',
+              'Koreys tilini oʻrgatishga moʻljallangan shaxsiy darslar, soʻzlashuv, tinglash, oʻqish va yozish koʻnikmalariga eʼtibor qaratilgan.',
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
             forWhom: [
-              'for beginners to advanced learners',
-              'for those interested in Korean culture',
-              'for individuals seeking personalized instruction',
+              'yangi oʻrganuvchilardan ilgʻor oʻrganuvchilargacha',
+              'Koreys madaniyatiga qiziquvchilar uchun',
+              'shaxsiy oʻrgatishga muhtoj shaxslar uchun',
             ],
-            cost: '$50 per month',
-            duration: 'Flexible',
+            cost: '$50 oyiga',
+            duration: 'Moslashuvchan',
             intensity: 2 / 4,
-            purpose: 'language acquisition, personalized learning',
+            purpose: 'tilni oʻzlashtirish, shaxsiy taʼlim',
             effects: [
-              'improved Korean language skills',
-              'personalized learning experience',
-              'better understanding of Korean culture',
-              'increased confidence in speaking Korean',
+              'koreys tilini yaxshilash',
+              'shaxsiy oʻqitish tajribasi',
+              'Koreys madaniyatini yaxshiroq tushunish',
+              'koreys tilida soʻzlashishda ishonch orttirish',
             ],
           },
           {
-            name: 'Korean Group Classes',
+            name: 'Koreys Guruhi Darslari',
             description:
-              'Interactive group classes focusing on basic to advanced Korean language skills with a focus on communication and cultural understanding.',
+              'Guruhda oʻqitishga qaratilgan darslar, koreys tili boʻyicha asosiydan ilgʻor darajagacha boʻlgan koʻnikmalarni rivojlantirish, muloqot va madaniyatni tushunishga qaratilgan.',
             video:
-              'https://player.vimeo.com/video/456789012?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/456789012?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
             forWhom: [
-              'individuals looking for group learning environment',
-              'students interested in Korean language and culture',
-              'people seeking to improve conversational Korean',
+              'guruhda oʻqishni istaganlar uchun',
+              'koreys tili va madaniyatiga qiziquvchi talabalar uchun',
+              'koreys tilidagi soʻzlashuvni yaxshilashni istovchilar uchun',
             ],
-            duration: '10 weeks (1 session per week)',
+            duration: '10 hafta (haftasiga 1 seans)',
             cost: '$180',
             purpose:
-              'Learning Korean in a group setting, improving conversational skills',
+              'Guruhda koreys tilini oʻrganish, muloqot koʻnikmalarini yaxshilash',
             effects: [
-              'Better conversational Korean',
-              'Increased understanding of Korean culture',
-              'Enhanced language skills through interaction',
+              'Koreys tilida soʻzlashish koʻnikmalarini yaxshilash',
+              'Koreys madaniyatini tushunishni oshirish',
+              'Muloqot orqali til koʻnikmalarini oshirish',
             ],
           },
         ],
       },
       {
-        title: 'IT Courses',
+        title: 'IT Kurslari',
         list: [
           {
-            name: 'Introduction to Programming',
+            name: 'Dasturlash Asoslari',
             description:
-              'A beginner-friendly course that introduces the fundamentals of programming using various languages and tools.',
+              'Turli tillar va vositalardan foydalanib, dasturlashning asosiy tushunchalarini oʻrgatadigan yangi boshlanuvchilar uchun mos kurs.',
             video:
-              'https://player.vimeo.com/video/567890123?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/567890123?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
             forWhom: [
-              'beginners interested in programming',
-              'students seeking to enter the IT field',
-              'professionals looking to upskill',
+              'dasturlashga qiziqadigan yangi boshlanuvchilar uchun',
+              'IT sohasiga kirishni istaydigan talabalar uchun',
+              'oʻz malakasini oshirishni istaydigan mutaxassislar uchun',
             ],
-            duration: '6 weeks (2 sessions per week)',
+            duration: '6 hafta (haftasiga 2 seans)',
             cost: '$300',
             purpose:
-              'Understanding basic programming concepts, starting a career in IT',
+              'Dasturlashning asosiy tushunchalarini tushunish, IT sohasida kariyerani boshlash',
             effects: [
-              'Basic programming skills',
-              'Foundation for advanced programming courses',
-              'Enhanced career opportunities in IT',
+              'Dasturlashning asosiy koʻnikmalari',
+              'Ilgʻor dasturlash kurslariga asos yaratish',
+              'IT sohasida kariyera imkoniyatlarini yaxshilash',
             ],
           },
           {
             name: 'Advanced Data Analysis',
             description:
-              'An advanced course focused on data analysis techniques, tools, and methodologies for experienced learners.',
+              'Maʼlumotlar tahlilining ilgʻor usullari, vositalari va metodologiyalariga qaratilgan kurs, tajribali oʻrganuvchilar uchun moʻljallangan.',
             video:
-              'https://player.vimeo.com/video/678901234?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/678901234?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
             forWhom: [
-              'experienced individuals in data analysis',
-              'students with a background in IT',
-              'professionals needing advanced data skills',
+              'maʼlumotlar tahlilida tajribaga ega boʻlganlar uchun',
+              'IT boʻyicha bilimga ega boʻlgan talabalar uchun',
+              'ilgʻor maʼlumotlar koʻnikmalariga muhtoj mutaxassislar uchun',
             ],
-            duration: '8 weeks (2 sessions per week)',
+            duration: '8 hafta (haftasiga 2 seans)',
             cost: '$400',
             purpose:
-              'Mastering data analysis techniques, applying data skills in professional settings',
+              'Maʼlumotlar tahlili texnikalarini egallash, kasbiy sohada maʼlumotlar koʻnikmalarini qoʻllash',
             effects: [
-              'Advanced data analysis skills',
-              'Enhanced ability to handle complex data tasks',
-              'Improved job prospects in data-related fields',
+              'Maʼlumotlar tahlilining ilgʻor koʻnikmalari',
+              'Murakkab maʼlumotlar vazifalarini bajarish qobiliyatini oshirish',
+              'Maʼlumotlar sohasidagi ish imkoniyatlarini yaxshilash',
             ],
           },
         ],
@@ -308,31 +316,36 @@ export const data = {
     ],
   },
   schedule: {
+    title: 'Joylar',
+    map: 'Xarita',
+    list: 'Roʻyxat',
+    getDirections: 'Yoʻnalish olish ',
     places: [
       {
-        cityName: 'Tashkent',
+        cityName: 'Toshkent',
         clubs: [
           {
             name: 'Level Learning Center',
             address:
-              'Sharof Rashidov 4 uy Chirchik 111700 Tashkent region Uzbekistan',
+              'Sharof Rashidov ko‘chasi, 4-uy, Chirchiq, 111700, Toshkent viloyati, O‘zbekiston',
             latitude: 41.4725,
             longitude: 69.5906,
             image: '/logo.svg',
             benefits: [
-              'English',
-              'Chinese',
-              'Software Development',
-              'Hardware Development',
-              'Frontend Development',
-              ' Backend Development',
-              'Mathematics',
+              'Ingliz tili',
+              'Xitoy tili',
+              'Dasturiy taʼminot ishlab chiqish',
+              'Akkumulyator va qurilmalar ishlab chiqish',
+              'Frontend ishlab chiqish',
+              'Backend ishlab chiqish',
+              'Matematika',
             ],
           },
         ],
       },
     ],
   },
+
   yes2MoveCourses: [
     {
       video:
@@ -495,6 +508,215 @@ export const data = {
         'Dasturlarimizga bo‘lgan qiziqishingiz uchun minnatdormiz. Siz chet elda o‘qish bo‘yicha yangi imkoniyatlarimiz haqida birinchi bo‘lib xabardor bo‘lasiz.',
       stayTuned:
         'Qo‘shimcha ma’lumotlar uchun biz bilan qoling. So‘nggi yangiliklar va yangilanishlar uchun ijtimoiy tarmoqlarimizga obuna bo‘ling.',
+    },
+  },
+
+  popularActivities: {
+    title: 'Ommabop darslar',
+    classes: [
+      {
+        topText: 'IMTIHONLARGA TAYYORLASH',
+        title: 'IELTS GA TAYYORLASH',
+        description:
+          'IELTS imtihoniga tayyorgarlik darslarimiz sizning kerakli ballni olishga yordam berish uchun mo‘ljallangan. Biz to‘rt modul bo‘yicha keng qamrovli o‘qitish taklif etamiz: Tinglash, O‘qish, Yozish va Gapirish. Amaliy testlar, so‘z boyligini oshirish va shaxsiy maslahatlar orqali siz ko‘nikmalaringizni rivojlantirasiz va o‘z ishonchingizni oshirasiz.',
+        icons: ['/popularicon1.svg', '/popularicon2.svg', '/popularicon3.svg'],
+        href: '/classess/ielts%20tayyorgarligi',
+      },
+      {
+        topText: 'TIL O‘RGANISH',
+        title: 'KOREYS TILI DARSLARI',
+        description:
+          'Koreys tiliga bizning interaktiv darslarimiz orqali sho‘ng‘ing. Asosiy so‘z boyligi va grammatikadan tortib, murakkab muloqot ko‘nikmalarigacha, o‘quv dasturimiz sizga koreys tilini samarali o‘rganishga yordam beradi. Sayohatga tayyorlanayotgan bo‘lsangiz yoki tilni mukammal o‘rganishni maqsad qilgan bo‘lsangiz, kurslarimiz qiziqarli darslar va amaliy mashqlarni taklif etadi.',
+        icons: ['/popularicon4.svg'],
+        href: '/classess/koreys%20tili%20(individual%20darslar)',
+      },
+      {
+        topText: 'BOSHLANG‘ICH TA’LIM',
+        title: 'BOLALAR UCHUN INGLIZ TILI DARSLARI',
+        description:
+          'Bolalar uchun ingliz tili darslarimiz yosh o‘quvchilar uchun ta’limni qiziqarli va mazmunli qilish uchun mo‘ljallangan. Interaktiv o‘yinlar, hikoya qilish va ijodiy mashg‘ulotlar orqali bolalar qo‘llab-quvvatlovchi muhitda ingliz tilidagi ko‘nikmalarini rivojlantiradilar. Tilni o‘rganishni yoshligidan ishonch va qiziqish bilan boshlash uchun mukammal variant.',
+        icons: ['/popularicon5.svg'],
+        href: '/classess/bolalar%20uchun%20ingliz%20tili%20dasturi',
+      },
+    ],
+  },
+  careers: {
+    header: 'Karyera',
+    imgGallery: [
+      '/gallery/image-1.png',
+      '/gallery/image-2.png',
+      '/gallery/image-3.png',
+      '/gallery/image-4.png',
+      '/gallery/image-5.png',
+      '/gallery/image-6.png',
+      '/gallery/image-7.png',
+    ],
+    navSection: {
+      title: 'Mundarija',
+      links: [
+        {
+          name: 'Ochilgan vakansiyalar',
+          href: '#open-positions',
+        },
+        {
+          name: 'Imtiyozlar',
+          href: '#benefits',
+        },
+        {
+          name: 'Ishga qabul qilish jarayoni',
+          href: '#recruitment-process',
+        },
+        {
+          name: 'Qadriyatlar',
+          href: '#values',
+        },
+      ],
+      description:
+        'Agar siz ham taʼlim va texnologiyalarga biz kabi ishtiyoq bilan yondashsangiz, toʻgʻri joyga keldingiz.',
+    },
+    openPositions: {
+      title: 'Ochilgan Vakansiyalar',
+      positions: [
+        {
+          title: 'Oʻqituvchi (Ingliz tili)',
+          location: 'Chirchiq / Joyida',
+        },
+        {
+          title: 'Qabulxonachi',
+          location: 'Chirchiq / Joyida',
+        },
+        {
+          title: 'Oʻqituvchi (Koreys tili)',
+          location: 'Chirchiq / Joyida',
+        },
+      ],
+    },
+    optionalRequision: {
+      title: 'Boshqa gʻoyalaringiz bormi?',
+      description:
+        'Portfolio va rezyumeingizni quyidagi elektron pochta manziliga yuboring: ',
+      cultureBook:
+        'Bizning Madaniyat Kitobimizni yuklab olib, koʻproq maʼlumotga ega boʻling!',
+      button: 'Yuklab olish',
+      buttonHref: '/careers',
+      bgImage: '/careers-img.webp',
+    },
+    benefits: {
+      title: 'Imtiyozlar',
+      cards: [
+        {
+          icon: '',
+          image: '',
+          title: 'Moslashuvchan ish soatlari',
+        },
+        {
+          icon: '',
+          image: '',
+          title: 'Karyerani rivojlantirish',
+        },
+        {
+          icon: '',
+          image: '',
+          title: 'Hamkorlik muhiti',
+        },
+        {
+          icon: '',
+          image: '',
+          title: 'Yuqori raqobatbardosh maosh',
+        },
+      ],
+    },
+    recruitmentProcess: {
+      title: 'Ishga qabul qilish jarayoni',
+      process: [
+        {
+          stepIndex: 1,
+          stepTitle: 'Arizalar va rezyumelarni koʻrib chiqish',
+          stepDescription:
+            'Bizga portfoliongizni (iltimos, uni tegishli qiling) va rezyumeingizni (iltimos, 1 sahifada qiling) yuboring. Siz ochilgan vakansiyalardan biriga murojaat qilishingiz yoki baribir bizga arizangizni yuborishingiz mumkin.',
+          stepVideo: '/video/rec-1.mp4',
+        },
+        {
+          stepIndex: 2,
+          stepTitle: 'Suhbatga taklifnoma',
+          stepDescription:
+            'Agar suhbatga taklif qilsangiz, faqat eng yaxshi energiyangiz va gʻoyalaringizni olib keling! Siz bilan kelajakdagi loyiha menejeri va bosh direktor suhbat oʻtkazadi.',
+          stepVideo: '/video/rec-2.mp4',
+        },
+        {
+          stepIndex: 3,
+          stepTitle: 'Suhbat',
+          stepDescription:
+            'Bizga portfoliongizni (iltimos, uni tegishli qiling) va rezyumeingizni (iltimos, 1 sahifada qiling) yuboring. Siz ochilgan vakansiyalardan biriga murojaat qilishingiz yoki baribir bizga arizangizni yuborishingiz mumkin.',
+          stepVideo: '/video/rec-3.mp4',
+        },
+        {
+          stepIndex: 4,
+          stepTitle: 'Taklifnoma',
+          stepDescription:
+            'Suhbat jarayonini muvaffaqiyatli tugatganingizdan soʻng, biz arizangiz va suhbat natijalarini diqqat bilan koʻrib chiqamiz. Agar sizni jamoamiz uchun ajoyib nomzod deb hisoblasak, sizga ish taklif qilamiz. Bu taklif sizni ishga qoʻshilish haqida xabardor qaror qabul qilishingiz uchun barcha tafsilotlarni oʻz ichiga oladi. Biz jamoamizga ishtiyoqli va iqtidorli odamlarni kutib olishdan mamnunmiz. Keyingi qadamlar haqida koʻproq maʼlumot olish uchun videoni koʻring.',
+          stepVideo: '/video/rec-4.mp4',
+        },
+      ],
+    },
+    values: {
+      title: 'Biz Qadriyatlarga Katta Eʼtibor Qaratamiz',
+      description:
+        'Kelishilgan jamoa ajoyib kompaniya madaniyatining asosidir. Bu bizga ishni yaxshi bajarish va qadrli ish-hayot muvozanatini saqlashga yordam beradi.',
+      valueList: [
+        {
+          id: 1,
+          title: 'Tadbirkorlik',
+          description:
+            'Jasoratli boʻling, tavakkal qilishga tayyor boʻling, oʻz gʻoyalaringizga ishonch bildiring, kuchli tomonlaringizdan foydalaning. Yaratish ko‘pincha yolg‘iz bajariladigan faoliyatdir. Ishingizga tadbirkorlik bilan yondashish degani – vazifa va loyihalaringizni boshqarish va ularni nazorat qilinsin yoki qilinmasdan oldinga siljiting. Bu shuningdek, qachon jamoaning yordamini chaqirish va qachon mahoratingizni kengaytirishga vaqt ajratish kerakligini bilishni anglatadi. Agar yangi plaginni oʻrganishni istasangiz, oʻrganmoqchi boʻlgan yangi texnologiya yoki butunlay yangi yoʻnalish boʻlsa, bizda bu borada hammasi tayyor. Koʻnikmalar > rollar.',
+        },
+        {
+          id: 2,
+          title: 'Hurmat',
+          description:
+            'Ishonch munosabatlardan kelib chiqadi – oʻz ishingiz va oʻzingizdan boshlanib, sizga qoʻllab-quvvatlaydigan jamoadoshlardan va mijozlarimizning qimmatli gʻoyalarini qoʻlimizga topshirganlarida bizga boʻlgan ishonchiga qadar. Ishonch quriladi va rivojlantiriladi; bu biz TBD da qilayotgan ishimzning bir qismidir. Agar ishni bajarish kerak boʻlsa, biz uni bajaramiz. Va buni amalga oshirganimiz uchun bir-birimizga rahmat aytamiz.',
+        },
+        {
+          id: 3,
+          title: 'Ishonch',
+          description:
+            'Hissiyotni va hissiy razvedkani hisobga olgan holda muloqot qilish qiyin boʻlishi mumkin, lekin biz bu o‘sishni faqat shu yoʻl bilan qilish mumkinligiga ishonamiz. Fikrlar xilma-xilligini qabul qilish yanada qiyin boʻlishi mumkin, lekin biz jamoamizning qanchalik xilma-xil va koʻp qirrali ekanligi bilan faxrlanamiz. Biz “yorqin shafqatsizlar”ga vaqt ajratmaymiz – biz jamoadamiz va biz uni himoya qilamiz. Bir-birimizning qadriyatimizni tan olamiz va bir-birimizning muvaffaqiyatlarimizni nishonlaymiz.',
+        },
+        {
+          id: 4,
+          title: 'Samaradorlik',
+          description:
+            'Biz byudjetlar va muddatlar dunyosida yaratamiz. Cheklovlarni tushunish va ular bilan ishlash uchun toʻgʻri asboblarni tanlash ijodiy oqimning bir qismi boʻlishi kabi sanʼatning ham bir qismidir. Shuningdek, yangi koʻnikmalar va asboblarni oʻrganishga sarflangan vaqtni ham qadrlaymiz, bu esa oʻz navbatida bizga badiiy ijod uchun koʻproq vaqt ajratish imkonini beradi. Karyerani rivojlantirish hammamiz uchun muhimdir. Bizning oldindan belgilangan yoʻnalishlarimizdan birini tanlang yoki oʻzingizga mos yoʻldan boring.',
+        },
+        {
+          id: 5,
+          title: 'Halollik',
+          description:
+            'Biz byudjetlar va muddatlar dunyosida yaratamiz. Cheklovlarni tushunish va ular bilan ishlash uchun toʻgʻri asboblarni tanlash ijodiy oqimning bir qismi boʻlishi kabi sanʼatning ham bir qismidir. Shuningdek, yangi koʻnikmalar va asboblarni oʻrganishga sarflangan vaqtni ham qadrlaymiz, bu esa oʻz navbatida bizga badiiy ijod uchun koʻproq vaqt ajratish imkonini beradi. Karyerani rivojlantirish hammamiz uchun muhimdir. Bizning oldindan belgilangan yoʻnalishlarimizdan birini tanlang yoki oʻzingizga mos yoʻldan boring.',
+        },
+      ],
+    },
+  },
+  contactPage: {
+    workInfo: {
+      customerServiceDepartment: 'Mijozlarga xizmat ko‘rsatish bo‘limi',
+      workdays: 'Har kuni',
+      start: 'soat 8:00 dan',
+      end: ' 20:00 gacha',
+    },
+    readMore: {
+      title: 'batafsil o‘qish',
+      processingPurposes: {
+        title: 'Ma’lumotlarni qayta ishlash maqsadlari: ',
+        description:
+          'Shaxsiy ma’lumotlaringizni veb-saytimizda hisob qaydnomasini yuritish xizmatini taqdim etish; soliq va buxgalteriya maqsadlarida; da’volarni ilgari surish, aniqlash yoki himoya qilish uchun; veb-saytimizdan foydalanishni osonlashtirish uchun; to‘g‘ridan-to‘g‘ri marketing uchun, shu jumladan profiling va marketing maqsadlari uchun tahlil va statistikani amalga oshirish hamda taqdim etilgan xizmatlardan qoniqish darajasini o‘rganish uchun qayta ishlaymiz.',
+      },
+      processingOfPersonalData: {
+        title:
+          'Shaxsiy ma’lumotlarni qayta ishlash bilan bog‘liq huquqlaringiz: ',
+        description:
+          'Shaxsiy ma’lumotlarga kirishni so‘rash huquqi; shaxsiy ma’lumotlarni tuzatishni so‘rash huquqi; shaxsiy ma’lumotlarni o‘chirishni so‘rash huquqi; shaxsiy ma’lumotlarni qayta ishlashni cheklashni so‘rash huquqi; shaxsiy ma’lumotlarni qayta ishlashga e’tiroz bildirish huquqi; shaxsiy ma’lumotlarni ko‘chirish huquqi; shaxsiy ma’lumotlarni qayta ishlashga berilgan rozilikni qaytarib olish huquqi; va Shaxsiy ma’lumotlarni himoya qilish bo‘yicha prezident idorasiga shikoyat qilish huquqi.',
+      },
     },
   },
 };

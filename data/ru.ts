@@ -107,207 +107,212 @@ export const data = {
   ],
 
   classPage: {
+    homeContent: {
+      title: 'Доступные занятия в наших клубах',
+      subtitle: 'Выберите свой любимый курс и начните обучение с нами!',
+    },
     mainContent: {
       video: '',
       title:
-        'Discover Advanced Learning Opportunities in Level Learning Center!',
+        'Откройте для себя расширенные возможности обучения в Level Learning Center!',
       description: [
-        'At our educational center, you will experience a comprehensive range of language and IT courses designed to enhance your skills and knowledge.',
-        'Choose from a variety of courses including:',
+        'В нашем образовательном центре вы сможете пройти широкий спектр курсов по языкам и ИТ, направленных на повышение ваших навыков и знаний.',
+        'Выберите один из различных курсов, включая:',
         [
-          'Advanced language training for professional and personal development',
-          'Cutting-edge IT courses and certifications',
-          'Interactive workshops and hands-on projects',
-          'Specialized training in emerging technologies and languages',
+          'Продвинутое обучение языкам для профессионального и личного развития',
+          'Передовые ИТ-курсы и сертификации',
+          'Интерактивные семинары и практические проекты',
+          'Специализированное обучение новым технологиям и языкам',
         ],
-        'Our curriculum also features renowned language programs and our own specialized IT training sessions, such as Data Science Bootcamps and Business English Workshops.',
+        'Наша программа обучения также включает известные языковые программы и наши собственные специализированные ИТ-тренинги, такие как буткемпы по Data Science и мастер-классы по деловому английскому языку.',
       ],
+      button: 'Все курсы',
     },
     classList: [
       {
-        title: 'English Langugage',
+        title: 'Английский язык',
         list: [
           {
-            name: 'IELTS Preparation',
+            name: 'Подготовка к IELTS',
             description:
-              'A comprehensive course designed to prepare students for the IELTS exam with a focus on test strategies, academic writing, reading comprehension, and speaking skills.',
+              'Комплексный курс, разработанный для подготовки студентов к экзамену IELTS с акцентом на стратегии тестирования, академическое письмо, понимание прочитанного и разговорные навыки.',
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Замените на реальную ссылку на видео
             forWhom: [
-              'for students aiming to study abroad',
-              'for those seeking immigration opportunities',
-              'for anyone needing a high IELTS score',
+              'для студентов, планирующих учебу за границей',
+              'для тех, кто ищет возможности для иммиграции',
+              'для всех, кому необходим высокий балл IELTS',
             ],
             cost: '$300',
-            duration: '8 weeks',
+            duration: '8 недель',
             intensity: 4 / 4,
-            purpose: 'exam preparation, language proficiency improvement',
+            purpose: 'подготовка к экзамену, улучшение уровня владения языком',
             effects: [
-              'improved IELTS score',
-              'enhanced academic English skills',
-              'better test-taking strategies',
-              'increased confidence in English',
+              'повышение балла IELTS',
+              'улучшение академических навыков английского языка',
+              'улучшение стратегий сдачи экзаменов',
+              'повышение уверенности в английском языке',
             ],
           },
           {
-            name: 'CEFR Language Courses',
+            name: 'Курсы по стандартам CEFR',
             description:
-              'Courses designed to improve language skills according to the CEFR standards, with levels ranging from A1 to C2. Focus on speaking, writing, reading, and listening.',
+              'Курсы, направленные на улучшение языковых навыков в соответствии со стандартами CEFR, с уровнями от A1 до C2. Акцент на разговорные, письменные, чтение и аудирование навыки.',
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Замените на реальную ссылку на видео
             forWhom: [
-              'for learners of all levels',
-              'for those needing structured language improvement',
-              'for individuals aiming for CEFR certification',
+              'для учащихся всех уровней',
+              'для тех, кто нуждается в структурированном улучшении языка',
+              'для лиц, стремящихся к сертификации CEFR',
             ],
             cost: '$250',
-            duration: '12 weeks',
+            duration: '12 недель',
             intensity: 3 / 4,
-            purpose: 'language skill development, CEFR certification',
+            purpose: 'развитие языковых навыков, сертификация по CEFR',
             effects: [
-              'better language proficiency',
-              'certification according to CEFR',
-              'improved communication skills',
-              'enhanced understanding of grammar',
+              'улучшение уровня владения языком',
+              'сертификация по стандартам CEFR',
+              'улучшение коммуникативных навыков',
+              'углубленное понимание грамматики',
             ],
           },
           {
-            name: 'Kids English Program',
+            name: 'Английский язык для детей',
             description:
-              'Engaging English language courses for children, focusing on vocabulary, grammar, and conversational skills through interactive activities.',
+              'Увлекательные курсы английского языка для детей с акцентом на словарный запас, грамматику и разговорные навыки через интерактивные занятия.',
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Замените на реальную ссылку на видео
             forWhom: [
-              'for children aged 6-12',
-              'for parents seeking quality English education for their kids',
-              'for young learners interested in English',
+              'для детей в возрасте 6-12 лет',
+              'для родителей, ищущих качественное образование на английском языке для своих детей',
+              'для юных учащихся, интересующихся английским языком',
             ],
             cost: '$200',
-            duration: '10 weeks',
+            duration: '10 недель',
             intensity: 2 / 4,
-            purpose: 'early language development, foundational English skills',
+            purpose: 'раннее развитие языка, основные навыки английского языка',
             effects: [
-              'improved English language skills',
-              'better vocabulary and grammar',
-              'enhanced conversational abilities',
-              'increased confidence in English',
+              'улучшение навыков английского языка',
+              'улучшение словарного запаса и грамматики',
+              'повышение разговорных способностей',
+              'повышение уверенности в английском языке',
             ],
           },
           {
-            name: 'English Grammar Essentials',
+            name: 'Основы грамматики английского языка',
             description:
-              'A focused course on English grammar covering key topics such as verb tenses, sentence structure, and punctuation. Ideal for learners seeking to improve their grammar skills.',
+              'Курс, ориентированный на английскую грамматику, охватывающий ключевые темы, такие как времена глаголов, структура предложений и пунктуация. Идеально подходит для тех, кто хочет улучшить свои грамматические навыки.',
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Замените на реальную ссылку на видео
             forWhom: [
-              'for learners of all levels',
-              'for those needing a grammar refresher',
-              'for individuals preparing for exams',
+              'для учащихся всех уровней',
+              'для тех, кому нужна повторная грамматическая подготовка',
+              'для лиц, готовящихся к экзаменам',
             ],
             cost: '$150',
-            duration: '6 weeks',
+            duration: '6 недель',
             intensity: 3 / 4,
-            purpose: 'grammar improvement, exam preparation',
+            purpose: 'улучшение грамматики, подготовка к экзаменам',
             effects: [
-              'enhanced grammar skills',
-              'better writing and speaking accuracy',
-              'improved understanding of English rules',
-              'increased confidence in using English',
+              'улучшение грамматических навыков',
+              'повышение точности письма и речи',
+              'лучшее понимание правил английского языка',
+              'повышение уверенности в использовании английского языка',
             ],
           },
         ],
       },
       {
-        title: 'Korean Langugage',
+        title: 'Корейский язык',
         list: [
           {
-            name: 'Korean Language (Individual Lessons)',
+            name: 'Корейский язык (Индивидуальные занятия)',
             description:
-              'Personalized Korean language lessons tailored to individual learning needs, focusing on speaking, listening, reading, and writing skills.',
+              'Персонализированные уроки корейского языка, адаптированные к индивидуальным потребностям обучения, с акцентом на разговорные, аудирование, чтение и письменные навыки.',
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Замените на реальную ссылку на видео
             forWhom: [
-              'for beginners to advanced learners',
-              'for those interested in Korean culture',
-              'for individuals seeking personalized instruction',
+              'для начинающих и продвинутых учащихся',
+              'для тех, кто интересуется корейской культурой',
+              'для лиц, ищущих персонализированное обучение',
             ],
-            cost: '$50 per month',
-            duration: 'Flexible',
+            cost: '$50 в месяц',
+            duration: 'Гибкий',
             intensity: 2 / 4,
-            purpose: 'language acquisition, personalized learning',
+            purpose: 'овладение языком, персонализированное обучение',
             effects: [
-              'improved Korean language skills',
-              'personalized learning experience',
-              'better understanding of Korean culture',
-              'increased confidence in speaking Korean',
+              'улучшение навыков корейского языка',
+              'персонализированный учебный опыт',
+              'лучшее понимание корейской культуры',
+              'повышение уверенности в разговорном корейском языке',
             ],
           },
           {
-            name: 'Korean Group Classes',
+            name: 'Корейский язык (Групповые занятия)',
             description:
-              'Interactive group classes focusing on basic to advanced Korean language skills with a focus on communication and cultural understanding.',
+              'Интерактивные групповые занятия, направленные на базовые и продвинутые навыки корейского языка с акцентом на общение и понимание культуры.',
             video:
-              'https://player.vimeo.com/video/456789012?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/456789012?autoplay=1&title=0&byline=0&portrait=0', // Замените на реальную ссылку на видео
             forWhom: [
-              'individuals looking for group learning environment',
-              'students interested in Korean language and culture',
-              'people seeking to improve conversational Korean',
+              'для лиц, ищущих возможности группового обучения',
+              'для студентов, интересующихся корейским языком и культурой',
+              'для тех, кто хочет улучшить разговорный корейский',
             ],
-            duration: '10 weeks (1 session per week)',
+            duration: '10 недель (1 занятие в неделю)',
             cost: '$180',
             purpose:
-              'Learning Korean in a group setting, improving conversational skills',
+              'Изучение корейского языка в группе, улучшение разговорных навыков',
             effects: [
-              'Better conversational Korean',
-              'Increased understanding of Korean culture',
-              'Enhanced language skills through interaction',
+              'Улучшение разговорного корейского языка',
+              'Повышение понимания корейской культуры',
+              'Улучшение языковых навыков через взаимодействие',
             ],
           },
         ],
       },
       {
-        title: 'IT Courses',
+        title: 'ИТ курсы',
         list: [
           {
-            name: 'Introduction to Programming',
+            name: 'Введение в программирование',
             description:
-              'A beginner-friendly course that introduces the fundamentals of programming using various languages and tools.',
+              'Курс для начинающих, который знакомит с основами программирования с использованием различных языков и инструментов.',
             video:
-              'https://player.vimeo.com/video/567890123?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/567890123?autoplay=1&title=0&byline=0&portrait=0', // Замените на реальную ссылку на видео
             forWhom: [
-              'beginners interested in programming',
-              'students seeking to enter the IT field',
-              'professionals looking to upskill',
+              'для начинающих, интересующихся программированием',
+              'для студентов, стремящихся войти в сферу ИТ',
+              'для профессионалов, стремящихся повысить квалификацию',
             ],
-            duration: '6 weeks (2 sessions per week)',
+            duration: '6 недель (2 занятия в неделю)',
             cost: '$300',
             purpose:
-              'Understanding basic programming concepts, starting a career in IT',
+              'Понимание основных концепций программирования, начало карьеры в ИТ',
             effects: [
-              'Basic programming skills',
-              'Foundation for advanced programming courses',
-              'Enhanced career opportunities in IT',
+              'Базовые навыки программирования',
+              'Фундамент для продвинутых курсов программирования',
+              'Повышение карьерных возможностей в ИТ',
             ],
           },
           {
-            name: 'Advanced Data Analysis',
+            name: 'Продвинутый анализ данных',
             description:
-              'An advanced course focused on data analysis techniques, tools, and methodologies for experienced learners.',
+              'Продвинутый курс, ориентированный на методы, инструменты и методологии анализа данных для опытных учащихся.',
             video:
-              'https://player.vimeo.com/video/678901234?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/678901234?autoplay=1&title=0&byline=0&portrait=0', // Замените на реальную ссылку на видео
             forWhom: [
-              'experienced individuals in data analysis',
-              'students with a background in IT',
-              'professionals needing advanced data skills',
+              'для опытных специалистов в области анализа данных',
+              'для студентов с опытом работы в ИТ',
+              'для профессионалов, нуждающихся в продвинутых навыках анализа данных',
             ],
-            duration: '8 weeks (2 sessions per week)',
+            duration: '8 недель (2 занятия в неделю)',
             cost: '$400',
             purpose:
-              'Mastering data analysis techniques, applying data skills in professional settings',
+              'Освоение методов анализа данных, применение навыков работы с данными в профессиональной среде',
             effects: [
-              'Advanced data analysis skills',
-              'Enhanced ability to handle complex data tasks',
-              'Improved job prospects in data-related fields',
+              'Продвинутые навыки анализа данных',
+              'Повышение способности справляться с сложными задачами работы с данными',
+              'Повышение возможностей трудоустройства в сфере данных',
             ],
           },
         ],
@@ -315,30 +320,35 @@ export const data = {
     ],
   },
   schedule: {
+    title: 'Места',
+    map: 'Карта',
+    list: 'Список',
+    getDirections: 'Проложить маршрут с помощью ',
     places: [
       {
-        cityName: 'Tashkent',
+        cityName: 'Ташкент',
         clubs: [
           {
-            name: 'Level Education',
-            address: 'Furkat Street 4, 100021, Tashkent, Uzbekistan',
-            latitude: 41.31861,
-            longitude: 69.23872,
+            name: 'Level Learning Center',
+            address: 'Улица Фуркат 4, 100021, Ташкент, Узбекистан',
+            latitude: 41.4725,
+            longitude: 69.5906,
             image: '/logo.svg',
             benefits: [
-              'English',
-              'Chinese',
-              'Software Development',
-              'Hardware Development',
-              'Frontend Development',
-              ' Backend Development',
-              'Mathematics',
+              'Английский',
+              'Китайский',
+              'Разработка программного обеспечения',
+              'Разработка аппаратного обеспечения',
+              'Разработка Frontend',
+              'Разработка Backend',
+              'Математика',
             ],
           },
         ],
       },
     ],
   },
+
   yes2MoveCourses: [
     {
       video:
@@ -413,7 +423,7 @@ export const data = {
           title: 'Уровень образования',
           href: '/',
         },
-        
+
         {
           title: 'Карьера',
           href: '/careers',
@@ -496,6 +506,211 @@ export const data = {
         'Мы ценим ваш интерес к нашим программам. Вы будете в числе первых, кто получит обновления о наших новых возможностях обучения за границей.',
       stayTuned:
         'Ожидайте дополнительную информацию. Подписывайтесь на наши социальные сети, чтобы быть в курсе последних новостей и обновлений.',
+    },
+  },
+  popularActivities: {
+    title: 'Популярные занятия',
+    classes: [
+      {
+        topText: 'ПОДГОТОВКА К ЭКЗАМЕНАМ',
+        title: 'ПОДГОТОВКА К IELTS',
+        description:
+          'Наши занятия по подготовке к IELTS разработаны для того, чтобы помочь вам достичь желаемого результата. Мы предлагаем комплексное обучение по всем четырем модулям: Аудирование, Чтение, Письмо и Разговорная речь. Благодаря практическим тестам, увеличению словарного запаса и персонализированным отзывам вы улучшите свои навыки и повысите уверенность в себе.',
+        icons: ['/popularicon1.svg', '/popularicon2.svg', '/popularicon3.svg'],
+        href: '/classess/%D0%BF%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%BA%20ielts',
+      },
+      {
+        topText: 'ИЗУЧЕНИЕ ЯЗЫКА',
+        title: 'КУРСЫ КОРЕЙСКОГО ЯЗЫКА',
+        description:
+          'Погрузитесь в изучение корейского языка с нашими интерактивными занятиями. От базового словарного запаса и грамматики до продвинутых навыков общения, наша программа обучения поможет вам эффективно освоить корейский язык. Независимо от того, готовитесь ли вы к путешествию или стремитесь к свободному владению языком, наши курсы предлагают увлекательные уроки и практические упражнения.',
+        icons: ['/popularicon4.svg'],
+        href: '/classess/%D0%BA%D0%BE%D1%80%D0%B5%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D1%8F%D0%B7%D1%8B%D0%BA%20(%D0%B8%D0%BD%D0%B4%D0%B8%D0%B2%D0%B8%D0%B4%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D1%8F)',
+      },
+      {
+        topText: 'РАННЕЕ ОБУЧЕНИЕ',
+        title: 'АНГЛИЙСКИЙ ДЛЯ ДЕТЕЙ',
+        description:
+          'Наши занятия английским для детей созданы для того, чтобы сделать обучение веселым и увлекательным для юных учеников. Благодаря интерактивным играм, рассказыванию историй и творческим занятиям, дети будут развивать свои навыки английского языка в поддерживающей среде. Идеально подходит для укрепления уверенности и любви к языку с раннего возраста.',
+        icons: ['/popularicon5.svg'],
+        href: '/classess/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D1%8F%D0%B7%D1%8B%D0%BA%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%B5%D1%82%D0%B5%D0%B9',
+      },
+    ],
+  },
+  careers: {
+    header: 'Карьера',
+    imgGallery: [
+      '/gallery/image-1.png',
+      '/gallery/image-2.png',
+      '/gallery/image-3.png',
+      '/gallery/image-4.png',
+      '/gallery/image-5.png',
+      '/gallery/image-6.png',
+      '/gallery/image-7.png',
+    ],
+    navSection: {
+      title: 'Содержание',
+      links: [
+        {
+          name: 'Открытые вакансии',
+          href: '#open-positions',
+        },
+        {
+          name: 'Преимущества',
+          href: '#benefits',
+        },
+        {
+          name: 'Процесс набора персонала',
+          href: '#recruitment-process',
+        },
+        {
+          name: 'Ценности',
+          href: '#values',
+        },
+      ],
+      description:
+        'Если вы так же увлечены обучением и технологиями, как и мы, вы пришли в нужное место.',
+    },
+    openPositions: {
+      title: 'Открытые Вакансии',
+      positions: [
+        {
+          title: 'Инструктор (английский язык)',
+          location: 'Чирчик / На месте',
+        },
+        {
+          title: 'Администратор ресепшена',
+          location: 'Чирчик / На месте',
+        },
+        {
+          title: 'Инструктор (корейский язык)',
+          location: 'Чирчик / На месте',
+        },
+      ],
+    },
+    optionalRequision: {
+      title: 'Есть другие идеи?',
+      description: 'Отправьте нам свое портфолио и резюме на ',
+      cultureBook: 'Загрузите нашу Книгу Культуры и узнайте больше!',
+      button: 'Скачать',
+      buttonHref: '/careers',
+      bgImage: '/careers-img.webp',
+    },
+    benefits: {
+      title: 'Преимущества',
+      cards: [
+        {
+          icon: '',
+          image: '',
+          title: 'Гибкий график работы',
+        },
+        {
+          icon: '',
+          image: '',
+          title: 'Развитие карьеры',
+        },
+        {
+          icon: '',
+          image: '',
+          title: 'Сотрудничество в коллективе',
+        },
+        {
+          icon: '',
+          image: '',
+          title: 'Высокая конкурентоспособная зарплата',
+        },
+      ],
+    },
+    recruitmentProcess: {
+      title: 'Процесс набора персонала',
+      process: [
+        {
+          stepIndex: 1,
+          stepTitle: 'Рассмотрение заявок и резюме',
+          stepDescription:
+            'Отправьте нам свое портфолио (пожалуйста, сделайте его актуальным) и резюме (пожалуйста, ограничьтесь одной страницей). Вы можете подать заявку на одну из открытых позиций или отправить нам свою заявку в любом случае.',
+          stepVideo: '/video/rec-1.mp4',
+        },
+        {
+          stepIndex: 2,
+          stepTitle: 'Приглашение на интервью',
+          stepDescription:
+            'Если вас пригласили на интервью, просто приходите с энергией и новыми идеями! Собеседование будет проводиться с теми, с кем вы будете работать: генеральным директором и вашим будущим руководителем проекта.',
+          stepVideo: '/video/rec-2.mp4',
+        },
+        {
+          stepIndex: 3,
+          stepTitle: 'Интервью',
+          stepDescription:
+            'Отправьте нам свое портфолио (пожалуйста, сделайте его актуальным) и резюме (пожалуйста, ограничьтесь одной страницей). Вы можете подать заявку на одну из открытых позиций или отправить нам свою заявку в любом случае.',
+          stepVideo: '/video/rec-3.mp4',
+        },
+        {
+          stepIndex: 4,
+          stepTitle: 'Предложение',
+          stepDescription:
+            'После успешного прохождения интервью мы тщательно рассмотрим вашу заявку и результаты собеседования. Если мы посчитаем, что вы отлично подходите для нашей команды, мы сделаем вам предложение. Это предложение будет включать все детали, которые вам понадобятся, чтобы принять осознанное решение о присоединении к нам. Мы рады приветствовать страстных и талантливых людей в нашей компании. Пожалуйста, посмотрите видео, чтобы узнать больше о следующих шагах.',
+          stepVideo: '/video/rec-4.mp4',
+        },
+      ],
+    },
+    values: {
+      title: 'Наши Ценности',
+      description:
+        'Согласованная команда — это основа отличной корпоративной культуры. Это помогает нам хорошо выполнять работу и сохранять драгоценный баланс между работой и личной жизнью.',
+      valueList: [
+        {
+          id: 1,
+          title: 'Предпринимательство',
+          description:
+            'Будьте смелыми, будьте готовы идти на риск, верьте в свои идеи, используйте свои сильные стороны. Творчество часто бывает уединённым процессом. Предпринимательский подход к своей работе означает владение своими задачами и проектами и продвижение их вперёд с или без контроля. Это также умение знать, когда обратиться за поддержкой к команде и когда найти время для расширения своих навыков. Если вас привлекает новый плагин, вы хотите изучить новую технологию или взять новое направление, у нас есть всё необходимое. Навыки > роли.',
+        },
+        {
+          id: 2,
+          title: 'Уважение',
+          description:
+            'Доверие возникает из отношений — начиная с самого себя и своей работы, до коллег, на которых вы рассчитываете, и доверия клиентов, когда они доверяют нам свои ценные идеи. Доверие строится и культивируется; это часть работы, которую мы делаем в TBD. Если работа требует выполнения, мы берём её на себя. И мы благодарим друг друга за это.',
+        },
+        {
+          id: 3,
+          title: 'Доверие',
+          description:
+            'Коммуникация с эмпатией и эмоциональным интеллектом может быть трудной задачей, но мы верим, что это единственный способ по-настоящему развиваться. Принятие различий во мнениях может быть ещё сложнее, но мы гордимся тем, насколько разнообразна и многопрофильна наша команда. У нас нет времени на «гениальных придурков» — мы сообщество, и мы его защищаем. Мы признаём ценность друг друга и празднуем успехи друг друга.',
+        },
+        {
+          id: 4,
+          title: 'Эффективность',
+          description:
+            'Мы создаём в мире с бюджетами и сроками. Понимание ограничений и выбор правильных инструментов для работы — это такая же часть искусства, как и творческий поток. Именно поэтому мы ценим время, затраченное на освоение новых навыков и инструментов, которые, в свою очередь, позволяют нам выделить больше времени на художественный подход. Развитие карьеры важно для каждого из нас. Развивайтесь по одному из наших заранее определённых путей или выберите свой собственный путь.',
+        },
+        {
+          id: 5,
+          title: 'Честность',
+          description:
+            'Мы создаём в мире с бюджетами и сроками. Понимание ограничений и выбор правильных инструментов для работы — это такая же часть искусства, как и творческий поток. Именно поэтому мы ценим время, затраченное на освоение новых навыков и инструментов, которые, в свою очередь, позволяют нам выделить больше времени на художественный подход. Развитие карьеры важно для каждого из нас. Развивайтесь по одному из наших заранее определённых путей или выберите свой собственный путь.',
+        },
+      ],
+    },
+  },
+  contactPage: {
+    workInfo: {
+      customerServiceDepartment: 'Отдел обслуживания клиентов',
+      workdays: 'Каждый день',
+      start: 'с 8:00',
+      end: 'до 20:00',
+    },
+    readMore: {
+      title: 'узнать больше',
+      processingPurposes: {
+        title: 'Цели обработки: ',
+        description:
+          'Мы будем обрабатывать ваши персональные данные для предоставления вам услуги по ведению учетной записи на нашем сайте; для налоговых и бухгалтерских целей; для предъявления, определения или защиты от претензий; для облегчения использования нашего сайта; для прямого маркетинга, включая профилирование, а также для проведения анализа и статистики в маркетинговых целях и для проведения опроса удовлетворенности предлагаемыми услугами.',
+      },
+      processingOfPersonalData: {
+        title: 'Ваши права в связи с обработкой персональных данных: ',
+        description:
+          'Право требовать доступа к персональным данным; право требовать исправления персональных данных; право требовать удаления персональных данных; право требовать ограничения обработки персональных данных; право возражать против обработки персональных данных; право на перенос данных; право отозвать согласие на обработку персональных данных; и право подать жалобу президенту Управления по защите персональных данных.',
+      },
     },
   },
 };
