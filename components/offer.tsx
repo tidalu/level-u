@@ -6,6 +6,7 @@ import { Button } from './ui/button';
 import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 import ToolTipProv from './ToolTipProv';
 import { useLocalizedData } from '@/lib/useLocalizedData';
+import { ManagerContact } from './ManagerContact';
 
 const Offer = () => {
   const data = useLocalizedData();
@@ -33,6 +34,7 @@ const Offer = () => {
                 <Button
                   variant="primaryGreen"
                   className="mt-12 dark:text-black shadow-xl w-fit rounded-full text-sm 2xl:text-lg"
+                  onClick={() => (window.location.href = '/classes')}
                 >
                   {data.offers.forYou.btn}
                 </Button>
@@ -63,16 +65,16 @@ const Offer = () => {
                     )
                   )}
                 </p>
-                <div className="mt-6 dark:text-black ">
-                  <ToolTipProv content="coming soon">
+                <ManagerContact>
+                  <div className="mt-6 dark:text-black ">
                     <Button
                       variant="primaryGreen"
                       className=" w-fit rounded-full text-sm 2xl:text-lg shadow-xl"
                     >
                       {data.offers.forCompanies.btn}
                     </Button>
-                  </ToolTipProv>
-                </div>
+                  </div>
+                </ManagerContact>
               </div>
 
               <div>
