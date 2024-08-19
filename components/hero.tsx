@@ -55,10 +55,10 @@ const Hero = () => {
   }, [userData.phone]);
 
   return (
-    <div className="relative flex h-full max-w-full items-center justify-center overflow-hidden rounded-lg bg-background p-5 sm:p-10 mt-5 sm:mt-20">
-      <section className="flex flex-col items-center justify-center space-y-5 sm:space-y-10">
-        <div className="w-full text-center px-4 sm:px-0">
-          <h1 className="text-2xl sm:text-4xl lg:text-6xl font-semibold leading-tight text-neutral-900 dark:text-neutral-100">
+    <div className="relative flex h-full max-w-full items-center justify-center overflow-hidden rounded-lg bg-transparent p-5 sm:p-10 mt-5 sm:mt-20 ">
+      <section className="flex flex-col items-center  justify-center space-y-5 sm:space-y-10">
+        <div className="w-full text-center px-4 sm:px-0 backdrop-blur-sm">
+          <h1 className="text-2xl sm:text-4xl lg:text-6xl font-semibold leading-tight text-green-900 dark:text-neutral-100">
             {data.hero.title}
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-wrap text-neutral-600 dark:text-neutral-300">
