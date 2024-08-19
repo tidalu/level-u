@@ -114,6 +114,25 @@ const Header = () => {
     pathName === '/careers' ||
     pathName === '/study-abroad';
 
+  const getFigurePath = () => {
+    if (theme.theme === 'dark') {
+      return '/figure-white.png';
+    }
+
+    if (theme.theme === 'light') {
+      if (pathName === '/' && !isVisible) {
+        return '/figure-white.png';
+      }
+      if (pathName === '/classes' && !isVisible) {
+        return '/figure-white.png';
+      }
+      if (isVisible) {
+        return '/figure-black.png';
+      }
+    }
+
+    return '/figure-black.png';
+  };
   return (
     <header
       className={cn(
@@ -136,22 +155,18 @@ const Header = () => {
           )}
         >
           <Link href="/" className=" flex-shrink-0">
-            <div className="flex flex-row gap-2  ">
+            <div className="flex flex-row gap-[5px]   ">
               <img
                 src={urls ? '/logo.svg' : isVisible ? '/logo.svg' : '/logo.svg'}
-                className=" w-auto h-8 md:h-10 lg:h-12 2xl:h-14 self-center"
+                className=" w-auto h-8 md:h-10   lg:h-12 2xl:h-14 self-center"
                 width={80}
                 height={40}
                 alt="logo"
               />
               {/* <div className=" w-[3px] bg-black dark:bg-white rounded-lg "></div> */}
-              <div className="  rounded-lg w-[5px] mr-2 flex flex-col items-center ">
+              <div className="  rounded-lg w-[5px]  flex flex-col items-center  ">
                 <Image
-                  src={
-                    theme.theme === 'dark'
-                      ? '/figure-white.png'
-                      : '/figure-black.png'
-                  }
+                  src={getFigurePath()}
                   alt="stick figure"
                   width={0}
                   height={0}
@@ -159,7 +174,7 @@ const Header = () => {
                 />
               </div>
               <span
-                className=" flex flex-col  items-start justify-center text-center  2xl:w-24 w-20 text-sm text-wrap will-change-transform
+                className=" flex flex-col  items-start justify-center text-center  2xl:w-24 w-20 text-sm text-wrap will-change-transform  
                 align-middle 
                 md:text-base
                 lg:text-lg
