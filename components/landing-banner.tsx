@@ -50,7 +50,7 @@ const LandingBanner = () => {
             </div>
           </div>
           <Form>
-            <div className="self-end text-gray-700 scale-110 hover:scale-105 transition-all delay-75 shadow-lg inline-flex items-center justify-center whitespace-nowrap  text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 radial-bg-green h-10 px-4 py-2 rounded-xl cursor-pointer">
+            <div className="self-end  scale-110 hover:scale-105 transition-all delay-75 shadow-lg inline-flex items-center justify-center whitespace-nowrap  text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 radial_bg_red text-white h-10 px-4 py-2 rounded-xl cursor-pointer">
               {data.landingAdd.buttonText}
             </div>
           </Form>
