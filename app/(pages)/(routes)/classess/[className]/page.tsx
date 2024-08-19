@@ -90,7 +90,7 @@ const ClassesDataPage = () => {
                 </div>
 
                 <div className=" flex flex-col sm:flex-row flex-wrap gap-4 items-center mt-5">
-                  <Button
+                  {/* <Button
                     variant="primaryGreen"
                     className="dark:text-black w-full sm:w-auto rounded-full px-6 text-sm"
                   >
@@ -102,7 +102,7 @@ const ClassesDataPage = () => {
                       alt=""
                     />
                     See Introductory Video
-                  </Button>
+                  </Button> */}
                   <Link href="/contact" className="w-full sm:w-auto">
                     <Button className="dark:text-white w-full sm:w-auto rounded-full px-6 bg-transparent hover:bg-transparent text-black border-2 border-[#6cce40] text-sm">
                       Enroll in the lesson
