@@ -22,7 +22,7 @@ const MapComponent = ({ items }: MapComponentProps) => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       {items.map((item: any) => (
-        <MapPin key={item.cityName} item={item} />
+        <MapPin key={item.cityName} item={item}  />
       ))}
     </MapContainer>
   );
