@@ -26,7 +26,10 @@ const PopulaActivities = () => {
               index: number
             ) => {
               return (
-                <div key={index} className="rounded-2xl bg-[#b8df4b1a] dark:bg-[#86868517] group/item min-w-[300px] lg:min-w-fit relative pb-8">
+                <div
+                  key={index}
+                  className="rounded-2xl bg-[#b8df4b1a] dark:bg-[#86868517] group/item min-w-[300px] lg:min-w-fit relative pb-8"
+                >
                   <Link
                     href={item.href}
                     className="block h-full p-4 pt-16 md:p-10"
@@ -50,17 +53,6 @@ const PopulaActivities = () => {
                       >
                         <ChevronRight size={14} className="text-black" />
                       </Button>
-                    </div>
-
-                    <div className="absolute top-4 left-4 md:top-6 md:left-auto md:right-6 flex gap-1">
-                      {item.icons.map((icon: string, index: number) => (
-                        <div
-                          className="bg-white dark:bg-[#020817] rounded-xl p-2"
-                          key={index}
-                        >
-                          <img src={icon} width={16} className="" alt="Icon" />
-                        </div>
-                      ))}
                     </div>
                   </Link>
                 </div>
