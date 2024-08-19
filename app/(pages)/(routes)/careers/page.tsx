@@ -38,7 +38,7 @@ function Careers() {
                       ) => (
                         <a
                           key={index}
-                          href={`#${link.href}`}
+                          href={`${link.href}`}
                           className="lg:text-2xl text-gray-900 dark:text-white font-semibold text-left text-base md:text-xl hover:underline trasition-all duration-150 ease-linear hover:underline-offset-4 "
                           style={{ opacity: 1 }}
                         >
@@ -119,20 +119,17 @@ function Careers() {
                 </p>
               </div>
             </section>
-            <section className="my-10 reveal md:my-16 lg:my-18 relative bg-gray-900">
+            <section className=" my-10 h-auto w-full reveal md:my-16 lg:my-18 relative bg-gray-900">
               <img
                 alt="company-banner"
                 loading="lazy"
                 decoding="async"
                 data-nimg="fill"
                 style={{
-                  position: 'absolute',
+                  position: 'relative',
                   height: '100%',
                   width: '100%',
-                  left: 0,
-                  top: 0,
-                  right: 0,
-                  bottom: 0,
+
                   objectFit: 'cover',
                   color: 'transparent',
                 }}
@@ -140,7 +137,7 @@ function Careers() {
                 src="/careers-img.webp"
               />
               <div className="absolute top-0 left-0 h-full w-full bg-gray-900 opacity-30"></div>
-              <section className="container px-4 sm:px-10 m-auto relative py-24">
+              {/* <section className="container px-4 sm:px-10 m-auto relative py-24">
                 <p className="mb-4 max-w-2xl text-3xl font-semibold text-white md:mb-8 md:text-5xl">
                   {data.careers.optionalRequision.cultureBook}
                 </p>
@@ -150,7 +147,7 @@ function Careers() {
                 >
                   {data.careers.optionalRequision.button}
                 </button>
-              </section>
+              </section> */}
             </section>
             <section
               className="container px-4 sm:px-10 m-auto my-10 md:my-16 lg:my-18 scroll-mt-24"
@@ -178,7 +175,7 @@ function Careers() {
                     return (
                       <BenefitCard
                         key={index}
-                        // icon={card.icon}
+                        icon={card.icon}
                         title={card.title}
                         hoverImage={
                           // card.image ||
@@ -266,12 +263,18 @@ function RecruitmentProcess({
 }) {
   const [currentOnScreen, setCurrentOnScreen] = useState(data[0]);
 
+  // Update the currentOnScreen when the data changes (e.g., on language change)
+  useEffect(() => {
+    setCurrentOnScreen(data[0]);
+  }, [data]);
+
   const handleClick = (index: number) => {
     setCurrentOnScreen(data[index]);
   };
+
   return (
-    <div className="flex flex-col-reverse lg:flex-row  gap-10 lg:gap-4  mx-auto px-5">
-      <div className="rounded-xl reveal flex flex-col basis-1/2 mx-5 border-gray-900 dark:border-gray-200  border">
+    <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-4 mx-auto px-5">
+      <div className="rounded-xl reveal flex flex-col basis-1/2 mx-5 border-gray-900 dark:border-gray-200 border">
         <div className="basis-1/2">
           <video
             src={currentOnScreen.stepVideo}
