@@ -60,15 +60,6 @@ const ClassesPage = () => {
               <p className=" text-[13px] reveal xl:text-[14px] 2xl:text-[15px] ">
                 {data.classPage.mainContent.description[3]}
               </p>
-
-              <div className="flex reveal flex-col md:flex-row gap-4 md:gap-x-4 mt-4  mb-5 lg:mb-0">
-                <Link
-                  href="#category"
-                  className="border-2 border-[#6cce40] cursor-pointer text-[11px] sm:text-sm rounded-full py-2 justify-center px-10 font-semibold flex gap-1 items-center hover:underline whitespace-nowrap"
-                >
-                  {data.classPage.mainContent.button}
-                </Link>
-              </div>
             </div>
           </div>
         </div>
