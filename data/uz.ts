@@ -107,8 +107,7 @@ export const data = {
 
     mainContent: {
       video: '',
-      title:
-        'Level Learning Centerda ilgʻor taʼlim imkoniyatlarini kashf eting!',
+      title: 'Level oʻquv markazida ilgʻor taʼlim imkoniyatlarini kashf eting!',
       description: [
         'Bizning taʼlim markazimizda sizning bilim va koʻnikmalaringizni oshirish uchun moʻljallangan keng koʻlamli til va IT kurslarini boshdan kechirasiz.',
         'Quyidagi kurslardan birini tanlang:',
@@ -124,191 +123,188 @@ export const data = {
     },
     classList: [
       {
-        title: 'Ingliz tili',
+        title: 'Ingliz Tili',
         list: [
           {
-            name: 'IELTS tayyorgarligi',
+            name: 'Umumiy Ingliz Tili',
             description:
-              'Talabalarni IELTS imtihoniga tayyorlash uchun keng qamrovli kurs, sinov strategiyalari, akademik yozish, oʻqish tushunish va soʻzlashuv koʻnikmalariga eʼtibor qaratilgan.',
+              "Ushbu keng qamrovli kurs ingliz tilida mustahkam poydevor taqdim etadi, asosiy til ko'nikmalarini qamrab oladi, masalan, o'qish, yozish, eshitish va gapirish. Kurs amaliy foydalanish va muloqotga urg'u beradi, kundalik va professional aloqalar uchun mustahkam asos yaratadi.",
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
-              'chet elda oʻqishni maqsad qilgan talabalar uchun',
-              'immigratsiya imkoniyatlarini izlayotganlar uchun',
-              'yuqori IELTS ballini olish kerak boʻlganlar uchun',
+              "Ingliz tilini umumiy ravishda yaxshilamoqchi bo'lgan shaxslar.",
+              "Ingliz tilidan turli kontekstlarda foydalanishga ishonch hosil qilmoqchi bo'lgan boshlang'ichlar.",
+              "Shaxsiy yoki professional maqsadlar uchun muloqot ko'nikmalarini oshirishni xohlagan ingliz tilini bilmaydiganlar.",
             ],
-            cost: '$300',
-            duration: '8 hafta',
-            intensity: 4 / 4,
-            purpose: 'imtihonga tayyorgarlik, til bilish darajasini oshirish',
-            effects: [
-              'IELTS balining yaxshilanishi',
-              'akademik ingliz tili koʻnikmalarini oshirish',
-              'imtihon olish strategiyalarini yaxshilash',
-              'ingliz tilida ishonch orttirish',
-            ],
-          },
-          {
-            name: 'CEFR Til Kurslari',
-            description:
-              'CEFR standartlariga muvofiq til koʻnikmalarini yaxshilash uchun moʻljallangan kurslar, darajalar A1 dan C2 gacha. Soʻzlashish, yozish, oʻqish va tinglashga eʼtibor qaratiladi.',
-            video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
-            forWhom: [
-              'har qanday darajadagi oʻquvchilar uchun',
-              'tilni yaxshilash uchun tizimli yondashuvga muhtojlar uchun',
-              'CEFR sertifikatini olishni maqsad qilgan shaxslar uchun',
-            ],
-            cost: '$250',
+            cost: '$ N/A',
             duration: '12 hafta',
             intensity: 3 / 4,
             purpose:
-              'til koʻnikmalarini rivojlantirish, CEFR sertifikati olish',
+              "Ingliz tilida kuchli poydevor yaratish, o'rganuvchilarga shaxsiy va professional muhitda samarali muloqot qilish imkonini berish.",
             effects: [
-              'til bilish darajasini yaxshilash',
-              'CEFR ga muvofiq sertifikat olish',
-              'muloqot koʻnikmalarini yaxshilash',
-              'grammatikani chuqurroq tushunish',
+              'Ingliz tilida erkin gapirishni yaxshilash.',
+              'Gapirish va yozish ingliz tilida yaxshilanishi.',
+              'Kundalik muloqotlarda ingliz tilidan foydalanishdagi ishonchni oshirish.',
             ],
           },
           {
-            name: 'Bolalar uchun Ingliz Tili Dasturi',
+            name: 'Ingliz Tilida Shaxsiy Darslar',
             description:
-              'Bolalar uchun ingliz tili kurslari, interaktiv faoliyatlar orqali soʻz boyligi, grammatika va soʻzlashuv koʻnikmalariga eʼtibor qaratilgan.',
+              "Ushbu shaxsiy darslar sizning aniq ehtiyojlaringiz va o'rganish maqsadlaringizga moslashtirilgan. Biznes ingliz tili, akademik yozish yoki suhbat ko'nikmalariga e'tibor berishingiz kerakmi, ushbu shaxsiy darslar maqsadli ta'lim va fikr-mulohazalarni taqdim etadi.",
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
-              '6-12 yoshdagi bolalar uchun',
-              'bolalari uchun sifatli ingliz tili taʼlimi izlayotgan ota-onalar uchun',
-              'ingliz tiliga qiziquvchi yosh oʻrganuvchilar uchun',
+              "O'zining o'ziga xos ehtiyojlari va maqsadlariga qarab moslashtirilgan ta'lim olishni xohlagan o'rganuvchilar.",
+              "O'z ishiga tegishli ingliz tili ko'nikmalarini yaxshilash zarurati bo'lgan mutaxassislar.",
+              "O'z o'qish yoki imtihonlarda muvaffaqiyat qozonish uchun diqqatni jamlaydigan talabalar.",
             ],
-            cost: '$200',
+            cost: '$ N/A',
+            duration: 'Mavjudlikka qarab moslashtirilgan jadval',
+            intensity: 2 / 4,
+            purpose:
+              "Shaxsiy qo'llab-quvvatlash va ta'lim taklif etish, o'rganuvchilarga o'zining aniq ingliz tili maqsadlariga samarali ravishda erishishga yordam berish.",
+            effects: [
+              'Shaxsiy fikr-mulohazalar va aniq ehtiyojlarga moslashtirilgan darslar.',
+              'Ingliz tilining maqsadli sohalarida tezkor yaxshilanish.',
+              "Ingliz tilida ko'nikmalar va ishonchni oshirish.",
+            ],
+          },
+          {
+            name: 'Bolalar uchun Ingliz Tili',
+            description:
+              "Yosh o'rganuvchilar uchun mo'ljallangan ushbu kurs ingliz tilini interaktiv faoliyatlar va o'yinlar orqali qiziqarli va jalb etuvchi qiladi. Fokus asosiy til ko'nikmalarini rivojlantirishga qaratilgan, bu esa erta til rivojlanishini qo'llab-quvvatlaydi.",
+            video:
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
+            forWhom: [
+              "6-12 yoshdagi bolalar, ingliz tilini o'rganishni boshlayotgan.",
+              "Bolalari uchun yuqori sifatli ingliz tili ta'limini qidirayotgan ota-onalar.",
+              "Interaktiv va o'yinli o'rganish muhitini yoqtiradigan yosh o'rganuvchilar.",
+            ],
+            cost: '$ N/A',
             duration: '10 hafta',
             intensity: 2 / 4,
-            purpose: 'erta til rivoji, ingliz tilining asosiy koʻnikmalari',
+            purpose:
+              "Qiziqarli va yoshga mos faoliyatlar orqali ingliz tilida mustahkam poydevor yaratish, kelajakdagi til o'rganish uchun asos yaratish.",
             effects: [
-              'ingliz tilini yaxshilash',
-              'soʻz boyligi va grammatikani yaxshilash',
-              'soʻzlashuv koʻnikmalarini oshirish',
-              'ingliz tilida ishonch orttirish',
+              "Lug'at va asosiy grammatika ko'nikmalarini oshirish.",
+              "Ingliz tilidan kundalik vaziyatlarda foydalanish ko'nikmalarini yaxshilash.",
+              "Ingliz tilini o'rganishga bo'lgan qiziqishni oshirish.",
             ],
           },
           {
-            name: 'Ingliz Grammatika Asoslari',
+            name: 'Korporativ Kurslar',
             description:
-              'Ingliz grammatikasiga bagʻishlangan kurs, feʼl zamonlari, jumla tuzilishi va punktuatsiya kabi asosiy mavzularni oʻz ichiga oladi. Grammatika koʻnikmalarini yaxshilashni xohlovchilar uchun ideal.',
+              "Ushbu maxsus kurslar korporativ muhitdagi mutaxassislarning til ehtiyojlariga moslashtirilgan. Kurs biznes muloqotiga e'tibor beradi, hisobotlar yozish, yig'ilishlar o'tkazish va professional muhokamalar olib borishni o'z ichiga oladi.",
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
-              'har qanday darajadagi oʻquvchilar uchun',
-              'grammatika boʻyicha eslatmalarga muhtojlar uchun',
-              'imtihonlarga tayyorlanayotgan shaxslar uchun',
+              'Biznes ingliz tilini yaxshilashni xohlagan korporativ jamoalar va shaxslar.',
+              "Xalqaro biznes uchun muloqot ko'nikmalarini oshirish zarurati bo'lgan mutaxassislar.",
+              'Xodimlarini samarali biznes muloqotida rivojlantirishni xohlagan kompaniyalar.',
             ],
-            cost: '$150',
-            duration: '6 hafta',
+            cost: '$ N/A',
+            duration:
+              "Kompaniya ehtiyojlari va dastur tuzilishiga qarab o'zgaradi",
             intensity: 3 / 4,
             purpose:
-              'grammatika koʻnikmalarini yaxshilash, imtihonga tayyorgarlik',
+              "Biznes muloqot ko'nikmalarini rivojlantirish, xodimlarni professional muhitda samarali muloqot qilishga tayyorlash va kompaniyaning muvaffaqiyatiga hissa qo'shish.",
             effects: [
-              'grammatika koʻnikmalarini oshirish',
-              'yozish va soʻzlashishdagi aniqlikni yaxshilash',
-              'ingliz tili qoidalarini yaxshiroq tushunish',
-              'ingliz tilidan foydalanishda ishonch orttirish',
+              'Biznes kontekstlarda samarali muloqot qilish qobiliyatini oshirish.',
+              "Professional yozish va gapirish ko'nikmalarini yaxshilash.",
+              'Global biznes aloqalariga yaxshiroq tayyorgarlik.',
+            ],
+          },
+          {
+            name: 'IELTS',
+            description:
+              "Ushbu intensiv kurs IELTS imtihoniga tayyorgarlik uchun mo'ljallangan, testning barcha komponentlariga e'tibor beradi: eshitish, o'qish, yozish va gapirish. Kurs imtihon strategiyalari, amaliy testlar va fikr-mulohazalarni o'z ichiga oladi, kerakli balni olishga yordam beradi.",
+            video:
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
+            forWhom: [
+              "Chet elda o'qishni yoki ingliz tilida so'zlashuvchilar mamlakatlariga ko'chishni maqsad qilgan talabalar.",
+              "Akademik yoki professional maqsadlar uchun yuqori IELTS ballari kerak bo'lgan shaxslar.",
+              'IELTS imtihoniga har tomonlama tayyorgarlik va amaliyot uchun izlayotgan test-oluvchilar.',
+            ],
+            cost: '$ N/A',
+            duration: '8 hafta',
+            intensity: 4 / 4,
+            purpose:
+              "IELTS imtihoniga chuqur tayyorgarlikni ta'minlash, o'rganuvchilarni maqsadli ballarni olish uchun yaxshi tayyorlash.",
+            effects: [
+              'IELTS testida ballarning oshishi.',
+              "Akademik va umumiy ingliz tilida ko'nikmalarni yaxshilash.",
+              "Imtihon olish ko'nikmalari va strategiyalarida yaxshilanish.",
             ],
           },
         ],
       },
       {
-        title: 'Koreys tili',
+        title: 'Koreys Tili',
         list: [
           {
-            name: 'Koreys tili (Individual darslar)',
+            name: 'Koreys Tilida Shaxsiy Darslar',
             description:
-              'Koreys tilini oʻrgatishga moʻljallangan shaxsiy darslar, soʻzlashuv, tinglash, oʻqish va yozish koʻnikmalariga eʼtibor qaratilgan.',
+              "Shaxsiy ehtiyojlaringiz va maqsadlaringizga moslashtirilgan koreys tili darslari. Ushbu shaxsiy darslar gapirish, eshitish, o'qish va yozish ko'nikmalariga e'tibor beradi, sizning tezlik va qiziqishlaringizga moslashadi.",
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
-              'yangi oʻrganuvchilardan ilgʻor oʻrganuvchilargacha',
-              'Koreys madaniyatiga qiziquvchilar uchun',
-              'shaxsiy oʻrgatishga muhtoj shaxslar uchun',
+              "Shaxsiy e'tibor va moslashtirilgan ta'limni afzal ko'rgan o'rganuvchilar.",
+              "Koreys tili ko'nikmalarini yaxshilashni xohlagan boshlang'ichlar va ilg'or talabalar.",
+              "Shaxsiy o'rganish tajribasi orqali koreys madaniyati va tiliga qiziqishi bor bo'lgan shaxslar.",
             ],
-            cost: '$50 oyiga',
-            duration: 'Moslashuvchan',
+            cost: '$ N/A',
+            duration: 'Talabga qarab moslashtirilgan jadval',
             intensity: 2 / 4,
-            purpose: 'tilni oʻzlashtirish, shaxsiy taʼlim',
+            purpose:
+              "Shaxsiy ta'limni taqdim etish, individual o'rganish maqsadlariga erishishni tezlashtirish va samarali til o'rganishni ta'minlash.",
             effects: [
-              'koreys tilini yaxshilash',
-              'shaxsiy oʻqitish tajribasi',
-              'Koreys madaniyatini yaxshiroq tushunish',
-              'koreys tilida soʻzlashishda ishonch orttirish',
+              'Moslashtirilgan darslar va fikr-mulohazalar.',
+              "Koreys tili ko'nikmalarida tezkor yaxshilanish.",
+              "Koreys tilini foydalanishdagi ishonch va ko'nikmalarni oshirish.",
             ],
           },
           {
-            name: 'Koreys Guruhi Darslari',
+            name: 'Koreys Tilida Guruh Darslari',
             description:
-              'Guruhda oʻqitishga qaratilgan darslar, koreys tili boʻyicha asosiydan ilgʻor darajagacha boʻlgan koʻnikmalarni rivojlantirish, muloqot va madaniyatni tushunishga qaratilgan.',
+              "Koreys tilini guruhli o'rganish orqali yaxshilashga qaratilgan interaktiv guruh darslari. Kurs suhbat amaliyoti, madaniyatni tushunish va til o'rganishni kuchaytiruvchi guruh faoliyatlariga e'tibor beradi.",
             video:
-              'https://player.vimeo.com/video/456789012?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
+              'https://player.vimeo.com/video/456789012?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
-              'guruhda oʻqishni istaganlar uchun',
-              'koreys tili va madaniyatiga qiziquvchi talabalar uchun',
-              'koreys tilidagi soʻzlashuvni yaxshilashni istovchilar uchun',
+              "Dinamik va ijtimoiy o'rganish muhitini izlayotgan shaxslar.",
+              "Guruhda koreys tilini o'rganishni xohlagan talabalar.",
+              'Suhbat koreys tilini yaxshilash va koreys madaniyatini tushunishni xohlaganlar.',
             ],
-            duration: '10 hafta (haftasiga 1 seans)',
-            cost: '$180',
+            cost: '$ N/A',
+            duration: '10 hafta (haftada 1 dars)',
+            intensity: 3 / 4,
             purpose:
-              'Guruhda koreys tilini oʻrganish, muloqot koʻnikmalarini yaxshilash',
+              "Guruh o'zaro ta'lim orqali til o'rganishni rivojlantirish, suhbat ko'nikmalarini va madaniyatni tushunishni kuchaytirish.",
             effects: [
-              'Koreys tilida soʻzlashish koʻnikmalarini yaxshilash',
-              'Koreys madaniyatini tushunishni oshirish',
-              'Muloqot orqali til koʻnikmalarini oshirish',
-            ],
-          },
-        ],
-      },
-      {
-        title: 'IT Kurslari',
-        list: [
-          {
-            name: 'Dasturlash Asoslari',
-            description:
-              'Turli tillar va vositalardan foydalanib, dasturlashning asosiy tushunchalarini oʻrgatadigan yangi boshlanuvchilar uchun mos kurs.',
-            video:
-              'https://player.vimeo.com/video/567890123?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
-            forWhom: [
-              'dasturlashga qiziqadigan yangi boshlanuvchilar uchun',
-              'IT sohasiga kirishni istaydigan talabalar uchun',
-              'oʻz malakasini oshirishni istaydigan mutaxassislar uchun',
-            ],
-            duration: '6 hafta (haftasiga 2 seans)',
-            cost: '$300',
-            purpose:
-              'Dasturlashning asosiy tushunchalarini tushunish, IT sohasida kariyerani boshlash',
-            effects: [
-              'Dasturlashning asosiy koʻnikmalari',
-              'Ilgʻor dasturlash kurslariga asos yaratish',
-              'IT sohasida kariyera imkoniyatlarini yaxshilash',
+              "Suhbat koreys tilidagi ko'nikmalarni yaxshilash.",
+              'Koreys madaniyati va urf-odatlarini yaxshiroq tushunish.',
+              "Guruhli o'rganish orqali yuqori motivatsiya va ishtirok.",
             ],
           },
           {
-            name: 'Advanced Data Analysis',
+            name: 'TOPIK',
             description:
-              'Maʼlumotlar tahlilining ilgʻor usullari, vositalari va metodologiyalariga qaratilgan kurs, tajribali oʻrganuvchilar uchun moʻljallangan.',
+              "TOPIK (Koreys Tilidagi Malaka Imtihoni) imtihoniga tayyorgarlik uchun mo'ljallangan maxsus kurs. O'qish, yozish, eshitish va gapirish kabi barcha test qismlarini qamrab oladi va imtihon uchun zarur ko'nikmalarni rivojlantirishga e'tibor beradi.",
             video:
-              'https://player.vimeo.com/video/678901234?autoplay=1&title=0&byline=0&portrait=0', // Haqiqiy video havolasi bilan almashtiring
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
-              'maʼlumotlar tahlilida tajribaga ega boʻlganlar uchun',
-              'IT boʻyicha bilimga ega boʻlgan talabalar uchun',
-              'ilgʻor maʼlumotlar koʻnikmalariga muhtoj mutaxassislar uchun',
+              'TOPIK imtihoniga tayyorlanayotgan shaxslar.',
+              "Koreys tilidagi malakasini baholash va yaxshilashni xohlagan o'rganuvchilar.",
+              'Akademik yoki professional maqsadlar uchun sertifikat olishni istaganlar.',
             ],
-            duration: '8 hafta (haftasiga 2 seans)',
-            cost: '$400',
+            cost: '$ N/A',
+            duration: "Tayyorlanish ehtiyojlariga qarab o'zgaradi",
+            intensity: 3 / 4,
             purpose:
-              'Maʼlumotlar tahlili texnikalarini egallash, kasbiy sohada maʼlumotlar koʻnikmalarini qoʻllash',
+              "TOPIK imtihoniga mukammal tayyorgarlikni ta'minlash, imtihonning barcha qismlarida koreys tili ko'nikmalarini oshirish.",
             effects: [
-              'Maʼlumotlar tahlilining ilgʻor koʻnikmalari',
-              'Murakkab maʼlumotlar vazifalarini bajarish qobiliyatini oshirish',
-              'Maʼlumotlar sohasidagi ish imkoniyatlarini yaxshilash',
+              'TOPIK imtihonida yaxshilangan natijalar.',
+              'Koreys tilidagi umumiy malakani oshirish.',
+              'Koreys tili va madaniyatini yaxshiroq tushunish.',
             ],
           },
         ],
@@ -325,7 +321,7 @@ export const data = {
         cityName: 'Toshkent',
         clubs: [
           {
-            name: 'Level Learning Center',
+            name: 'Level o‘quv markazi',
             address:
               'Sharof Rashidov ko‘chasi, 4-uy, Chirchiq, 111700, Toshkent viloyati, O‘zbekiston',
             latitude: 41.4725,
@@ -398,6 +394,17 @@ export const data = {
         'bizning takliflarimizni ko‘ring',
       ],
       btn: 'Batafsil ma’lumot oling',
+      managerContact: {
+        title: "Menejer bilan to'g'ridan-to'g'ri bog'laning",
+        description:
+          "Bizning xizmatlarimiz va takliflarimiz haqida qo'shimcha ma'lumot olish uchun menejer bilan 08:00 dan 20:00 gacha bog'laning.",
+        tel: '+998 99 005 37 47',
+        email: 'level.edu.uz.@gmail.com',
+        link: 'Telefon',
+        phone: 'Meni telefon orqali chaqiring',
+        mail: 'Email',
+        closeBtn: 'Yopish',
+      },
     },
     packages: {
       ielts: {
@@ -420,7 +427,7 @@ export const data = {
       title: "Ma'lumot",
       links: [
         {
-          title: "Level Ta'lim dargohi",
+          title: "Level o'quv markazi",
           href: '/',
         },
         {
@@ -572,7 +579,7 @@ export const data = {
         },
       ],
       description:
-        'Agar siz ham taʼlim va texnologiyalarga biz kabi ishtiyoq bilan yondashsangiz, toʻgʻri joyga keldingiz.',
+        'Agar siz ham taʻlim berishga biz kabi ishtiyoq bilan yondashmoqchi boʻlsangiz, toʻgʻri joyga keldingiz.',
     },
     openPositions: {
       title: 'Ochilgan Vakansiyalar',
@@ -605,22 +612,22 @@ export const data = {
       title: 'Imtiyozlar',
       cards: [
         {
-          icon: '',
+          icon: '/flexible_hours.svg',
           image: '',
           title: 'Moslashuvchan ish soatlari',
         },
         {
-          icon: '',
+          icon: '/Career_development.svg',
           image: '',
           title: 'Karyerani rivojlantirish',
         },
         {
-          icon: '',
+          icon: '/collaborative_environment.svg',
           image: '',
           title: 'Hamkorlik muhiti',
         },
         {
-          icon: '',
+          icon: '/high-competetive-offers.svg',
           image: '',
           title: 'Yuqori raqobatbardosh maosh',
         },

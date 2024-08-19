@@ -119,189 +119,187 @@ export const data = {
     },
     classList: [
       {
-        title: 'English Langugage',
+        title: 'English Language',
         list: [
           {
-            name: 'IELTS Preparation',
+            name: 'General English',
             description:
-              'A comprehensive course designed to prepare students for the IELTS exam with a focus on test strategies, academic writing, reading comprehension, and speaking skills.',
+              'This comprehensive course offers a robust foundation in English, covering key language skills such as reading, writing, listening, and speaking. The course emphasizes practical usage and communication, providing a solid basis for everyday and professional interactions.',
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
-              'for students aiming to study abroad',
-              'for those seeking immigration opportunities',
-              'for anyone needing a high IELTS score',
+              'Individuals seeking to improve their overall English proficiency.',
+              'Beginners looking to build confidence in using English in various contexts.',
+              'Non-native speakers who need to enhance their communication skills for personal or professional purposes.',
             ],
-            cost: '$300',
-            duration: '8 weeks',
-            intensity: 4 / 4,
-            purpose: 'exam preparation, language proficiency improvement',
-            effects: [
-              'improved IELTS score',
-              'enhanced academic English skills',
-              'better test-taking strategies',
-              'increased confidence in English',
-            ],
-          },
-          {
-            name: 'CEFR Language Courses',
-            description:
-              'Courses designed to improve language skills according to the CEFR standards, with levels ranging from A1 to C2. Focus on speaking, writing, reading, and listening.',
-            video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
-            forWhom: [
-              'for learners of all levels',
-              'for those needing structured language improvement',
-              'for individuals aiming for CEFR certification',
-            ],
-            cost: '$250',
+            cost: '$ N/A',
             duration: '12 weeks',
             intensity: 3 / 4,
-            purpose: 'language skill development, CEFR certification',
+            purpose:
+              'To develop a strong foundation in English, enabling learners to communicate effectively in both personal and professional settings.',
             effects: [
-              'better language proficiency',
-              'certification according to CEFR',
-              'improved communication skills',
-              'enhanced understanding of grammar',
+              'Improved fluency in English.',
+              'Enhanced ability to understand and produce spoken and written English.',
+              'Increased confidence in using English in daily interactions.',
             ],
           },
           {
-            name: 'Kids English Program',
+            name: 'English Individual Classes',
             description:
-              'Engaging English language courses for children, focusing on vocabulary, grammar, and conversational skills through interactive activities.',
+              'These personalized lessons are tailored to address your specific needs and learning goals. Whether you need to focus on business English, academic writing, or conversational skills, these one-on-one sessions provide targeted instruction and feedback.',
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
-              'for children aged 6-12',
-              'for parents seeking quality English education for their kids',
-              'for young learners interested in English',
+              'Learners seeking customized instruction based on their unique needs and goals.',
+              'Professionals needing to improve specific English skills relevant to their work.',
+              'Students requiring focused support to excel in their studies or exams.',
             ],
-            cost: '$200',
+            cost: '$ N/A',
+            duration: 'Flexible scheduling based on availability',
+            intensity: 2 / 4,
+            purpose:
+              'To offer individualized support and instruction, allowing learners to achieve their specific English language goals more efficiently.',
+            effects: [
+              'Personalized feedback and tailored lessons to meet specific needs.',
+              'Rapid improvement in targeted areas of English.',
+              'Increased proficiency and confidence in using English.',
+            ],
+          },
+          {
+            name: 'English for Kids',
+            description:
+              'Designed for young learners, this course makes English fun and engaging through interactive activities and games. The focus is on building essential language skills in a supportive environment that fosters early language development.',
+            video:
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
+            forWhom: [
+              'Children aged 6-12 years who are beginning to learn English.',
+              'Parents seeking a high-quality English education for their children.',
+              'Young learners who enjoy interactive and playful learning environments.',
+            ],
+            cost: '$ N/A',
             duration: '10 weeks',
             intensity: 2 / 4,
-            purpose: 'early language development, foundational English skills',
+            purpose:
+              'To provide a solid foundation in English through engaging and age-appropriate activities, setting the stage for continued language learning.',
             effects: [
-              'improved English language skills',
-              'better vocabulary and grammar',
-              'enhanced conversational abilities',
-              'increased confidence in English',
+              'Enhanced vocabulary and basic grammar skills.',
+              'Improved ability to use English in everyday situations.',
+              'Increased enthusiasm for learning English.',
             ],
           },
           {
-            name: 'English Grammar Essentials',
+            name: 'Corporate Courses',
             description:
-              'A focused course on English grammar covering key topics such as verb tenses, sentence structure, and punctuation. Ideal for learners seeking to improve their grammar skills.',
+              'These specialized courses cater to the language needs of professionals in corporate environments. The curriculum focuses on business communication, including writing reports, conducting meetings, and engaging in professional discussions.',
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
-              'for learners of all levels',
-              'for those needing a grammar refresher',
-              'for individuals preparing for exams',
+              'Corporate teams and individuals looking to improve their business English.',
+              'Professionals who need to enhance their communication skills for international business.',
+              'Companies seeking to upskill their employees in effective business communication.',
             ],
-            cost: '$150',
-            duration: '6 weeks',
+            cost: '$ N/A',
+            duration: 'Varies based on company needs and program structure',
             intensity: 3 / 4,
-            purpose: 'grammar improvement, exam preparation',
+            purpose:
+              'To enhance business communication skills, enabling employees to effectively interact in professional settings and contribute to the company’s success.',
             effects: [
-              'enhanced grammar skills',
-              'better writing and speaking accuracy',
-              'improved understanding of English rules',
-              'increased confidence in using English',
+              'Improved ability to communicate effectively in business contexts.',
+              'Enhanced professional writing and speaking skills.',
+              'Better preparation for global business interactions.',
+            ],
+          },
+          {
+            name: 'IELTS',
+            description:
+              'This intensive course is designed to prepare learners for the IELTS exam, focusing on all components of the test: listening, reading, writing, and speaking. The course includes test-taking strategies, practice tests, and feedback to help achieve the desired band score.',
+            video:
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
+            forWhom: [
+              'Students aiming to study abroad or migrate to English-speaking countries.',
+              'Individuals who need a high IELTS score for academic or professional purposes.',
+              'Test-takers seeking comprehensive preparation and practice for the IELTS exam.',
+            ],
+            cost: '$ N/A',
+            duration: '8 weeks',
+            intensity: 4 / 4,
+            purpose:
+              'To provide thorough preparation for the IELTS exam, ensuring learners are well-equipped to achieve their target band scores.',
+            effects: [
+              'Increased IELTS test scores.',
+              'Enhanced academic and general English proficiency.',
+              'Improved confidence in test-taking skills and strategies.',
             ],
           },
         ],
       },
       {
-        title: 'Korean Langugage',
+        title: 'Korean Language',
         list: [
           {
-            name: 'Korean Language (Individual Lessons)',
+            name: 'Korean Individual Classes',
             description:
-              'Personalized Korean language lessons tailored to individual learning needs, focusing on speaking, listening, reading, and writing skills.',
+              'Personalized Korean language lessons tailored to your specific learning needs and goals. These one-on-one sessions focus on speaking, listening, reading, and writing skills, adapting to your pace and interests.',
             video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
-              'for beginners to advanced learners',
-              'for those interested in Korean culture',
-              'for individuals seeking personalized instruction',
+              'Learners who prefer individualized attention and customized instruction.',
+              'Beginners and advanced students looking to improve their Korean language skills.',
+              'Individuals interested in Korean culture and language through personalized learning experiences.',
             ],
-            cost: '$50 per month',
-            duration: 'Flexible',
+            cost: '$ N/A',
+            duration: 'Flexible scheduling based on student availability',
             intensity: 2 / 4,
-            purpose: 'language acquisition, personalized learning',
+            purpose:
+              'To provide tailored language instruction that meets individual learning goals, facilitating faster and more effective language acquisition.',
             effects: [
-              'improved Korean language skills',
-              'personalized learning experience',
-              'better understanding of Korean culture',
-              'increased confidence in speaking Korean',
+              'Customized lessons and feedback.',
+              'Accelerated improvement in Korean language skills.',
+              'Increased confidence and proficiency in using Korean.',
             ],
           },
           {
             name: 'Korean Group Classes',
             description:
-              'Interactive group classes focusing on basic to advanced Korean language skills with a focus on communication and cultural understanding.',
+              'Interactive group classes designed to improve Korean language skills through collaborative learning. The course focuses on conversation practice, cultural understanding, and group activities that enhance language acquisition.',
             video:
-              'https://player.vimeo.com/video/456789012?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/456789012?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
-              'individuals looking for group learning environment',
-              'students interested in Korean language and culture',
-              'people seeking to improve conversational Korean',
+              'Individuals seeking a dynamic and social learning environment.',
+              'Students interested in learning Korean in a group setting.',
+              'Those who want to enhance their conversational Korean and understanding of Korean culture.',
             ],
-            duration: '10 weeks (1 session per week)',
-            cost: '$180',
+            cost: '$ N/A',
+            duration: '10 weeks (1 class per week)',
+            intensity: 3 / 4,
             purpose:
-              'Learning Korean in a group setting, improving conversational skills',
+              'To foster language learning through group interaction, promoting conversational skills and cultural understanding in a collaborative setting.',
             effects: [
-              'Better conversational Korean',
-              'Increased understanding of Korean culture',
-              'Enhanced language skills through interaction',
-            ],
-          },
-        ],
-      },
-      {
-        title: 'IT Courses',
-        list: [
-          {
-            name: 'Introduction to Programming',
-            description:
-              'A beginner-friendly course that introduces the fundamentals of programming using various languages and tools.',
-            video:
-              'https://player.vimeo.com/video/567890123?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
-            forWhom: [
-              'beginners interested in programming',
-              'students seeking to enter the IT field',
-              'professionals looking to upskill',
-            ],
-            duration: '6 weeks (2 sessions per week)',
-            cost: '$300',
-            purpose:
-              'Understanding basic programming concepts, starting a career in IT',
-            effects: [
-              'Basic programming skills',
-              'Foundation for advanced programming courses',
-              'Enhanced career opportunities in IT',
+              'Improved conversational Korean skills.',
+              'Enhanced understanding of Korean culture and customs.',
+              'Greater engagement and motivation through group learning.',
             ],
           },
           {
-            name: 'Advanced Data Analysis',
+            name: 'TOPIK',
             description:
-              'An advanced course focused on data analysis techniques, tools, and methodologies for experienced learners.',
+              'A focused course designed to prepare students for the TOPIK (Test of Proficiency in Korean). It covers all test sections including reading, writing, listening, and speaking, with a focus on developing skills needed to excel in the exam.',
             video:
-              'https://player.vimeo.com/video/678901234?autoplay=1&title=0&byline=0&portrait=0', // Replace with an actual video link
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
-              'experienced individuals in data analysis',
-              'students with a background in IT',
-              'professionals needing advanced data skills',
+              'Individuals preparing for the TOPIK test.',
+              'Learners seeking to assess and improve their Korean language proficiency.',
+              'Those looking to obtain certification for academic or professional purposes.',
             ],
-            duration: '8 weeks (2 sessions per week)',
-            cost: '$400',
+            cost: '$ N/A',
+            duration: 'Varies based on preparation needs',
+            intensity: 3 / 4,
             purpose:
-              'Mastering data analysis techniques, applying data skills in professional settings',
+              'To thoroughly prepare learners for the TOPIK exam, enhancing their Korean language skills across all test components.',
             effects: [
-              'Advanced data analysis skills',
-              'Enhanced ability to handle complex data tasks',
-              'Improved job prospects in data-related fields',
+              'Improved performance on the TOPIK test.',
+              'Enhanced overall Korean language proficiency.',
+              'Better understanding of Korean language and culture.',
             ],
           },
         ],
@@ -319,7 +317,8 @@ export const data = {
         clubs: [
           {
             name: 'Level Learning Center',
-            address: 'Furkat Street 4, 100021, Tashkent, Uzbekistan',
+            address:
+              'Sharof Rashidov 4 uy Chirchik 111700 Tashkent region Uzbekistan',
             latitude: 41.4725,
             longitude: 69.5906,
             image: '/logo.svg',
@@ -386,6 +385,17 @@ export const data = {
       title: 'for companies',
       desc: ['Check out our offers for', 'your teams and employees'],
       btn: 'Find out more',
+      managerContact: {
+        title: 'Directly contact with manager',
+        description:
+          'Please contact with manager for more information about our services and offers from 08:00 till 20:00.',
+        tel: '+998 99 005 37 47',
+        email: 'level.edu.uz.@gmail.com',
+        link: 'Phone',
+        phone: 'Phone me',
+        mail: 'Email',
+        closeBtn: 'Close',
+      },
     },
     packages: {
       ielts: {
@@ -407,7 +417,7 @@ export const data = {
       title: 'Information',
       links: [
         {
-          title: 'Level education',
+          title: 'Level learning center',
           href: '/',
         },
         {
@@ -554,7 +564,7 @@ export const data = {
         },
       ],
       description:
-        'If you’re as obsessed with teaching and tech as we are, you’ve come to the right place.',
+        'If you’re as obsessed with teaching as we are, you’ve come to the right place.',
     },
     openPositions: {
       title: 'Open Positions',
@@ -585,22 +595,22 @@ export const data = {
       title: 'Benefits',
       cards: [
         {
-          icon: '',
+          icon: '/flexible_hours.svg',
           image: '',
           title: 'Flexible working hours',
         },
         {
-          icon: '',
+          icon: '/Career_development.svg',
           image: '',
           title: 'Career Development',
         },
         {
-          icon: '',
+          icon: '/collaborative_environment.svg',
           image: '',
           title: 'Collaborative environment',
         },
         {
-          icon: '',
+          icon: '/high-competetive-offers.svg',
           image: '',
           title: 'High competetive salary',
         },
@@ -635,7 +645,7 @@ export const data = {
           stepTitle: 'The Offer',
           stepDescription:
             'After successfully completing the interview process, we carefully review your application and interview performance. If we believe you’re a great fit for our team, we’ll extend an offer to you. This offer will include all the details you need to make an informed decision about joining us. We look forward to welcoming passionate and talented individuals to our company. Please watch the video to learn more about the next steps.',
-          stepVideo: '/video/rec-5.mp4',
+          stepVideo: '/video/rec-4.mp4',
         },
       ],
     },
