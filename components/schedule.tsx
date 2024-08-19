@@ -50,45 +50,8 @@ const ClubItem: React.FC<ClubItemProps> = ({ city, clubs }) => {
             <div className="font-semibold text-[12px] mb-1 md:mb-0 col-span-12 md:col-span-3">
               {club.name}
             </div>
-            <div className="text-gray-600 dark:text-gray-400 text-[13px] mb-2 md:mb-0 col-span-12 md:col-span-4">
+            <div className="text-gray-600 dark:text-gray-400 text-[13px] mb-2 md:mb-0 col-span-12 md:col-span-9">
               {club.address}
-            </div>
-
-            <div className=" col-span-12 md:col-span-5 flex justify-start space-x-3">
-              {club.benefits.map((icon, idx) => (
-                <img
-                  key={idx}
-                  src={
-                    (icon == 'Gym' && 'fiticon1.svg') ||
-                    '' ||
-                    (icon == 'Fitness' && 'fiticon2.svg') ||
-                    '' ||
-                    (icon == 'Indoor Cycling' && 'fiticon3.svg') ||
-                    '' ||
-                    (icon == 'Sauna' && 'fiticon4.svg') ||
-                    '' ||
-                    (icon == 'Wifi' && 'fiticon5.svg') ||
-                    '' ||
-                    (icon == 'Parking' && 'fiticon6.svg') ||
-                    '' ||
-                    (icon == 'Bar' && 'fiticon7.svg') ||
-                    '' ||
-                    (icon == 'Lockers with Padlocks' && 'fiticon8.svg') ||
-                    '' ||
-                    (icon == 'Solarium' && 'fiticon9.svg') ||
-                    '' ||
-                    (icon == 'Fight Zone' && 'fiticon10.svg') ||
-                    '' ||
-                    (icon == 'Squash' && 'fiticon11.svg') ||
-                    '' ||
-                    (icon == 'SPA & Wellness' && 'fiticon12.svg') ||
-                    ''
-                  }
-                  alt=""
-                  className="w-4 h-4"
-                  title={icon}
-                />
-              ))}
             </div>
           </div>
         ))}
