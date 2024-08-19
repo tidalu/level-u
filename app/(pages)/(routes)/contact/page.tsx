@@ -179,7 +179,7 @@ const ContactPage = () => {
                 </div>
               </form>
 
-              <div>
+              {/* <div>
                 <Button
                   onClick={() => setShowReadmore(!showReadmore)}
                   className=" mt-5 bg-transparent hover:bg-transparent text-[#6cce40] font-semibold"
@@ -214,7 +214,7 @@ const ContactPage = () => {
                     </p>
                   </div>
                 )}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
