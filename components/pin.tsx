@@ -42,7 +42,7 @@ const MapPin = ({ item }: MapPinProps) => {
       {item.clubs.map((item: any) => (
         <Marker key={item.name} position={[item.latitude, item.longitude]}>
           <Popup>
-            <div className=" bg-white rounded-2xl p-1">
+            <div className=" bg-white rounded-2xl p-1 ">
               <div className="bg-[#b8df4b1a] rounded-md p-4">
                 <Image
                   src={item.image}
@@ -66,43 +66,8 @@ const MapPin = ({ item }: MapPinProps) => {
                     {item.phone}
                   </a>
                 </div>
-                <div className="flex gap-2 mt-2">
-                  {item.benefits.map((icon: any, idx: any) => (
-                    <img
-                      key={idx}
-                      src={
-                        (icon == 'Gym' && 'fiticon1.svg') ||
-                        '' ||
-                        (icon == 'Fitness' && 'fiticon2.svg') ||
-                        '' ||
-                        (icon == 'Indoor Cycling' && 'fiticon3.svg') ||
-                        '' ||
-                        (icon == 'Sauna' && 'fiticon4.svg') ||
-                        '' ||
-                        (icon == 'Wifi' && 'fiticon5.svg') ||
-                        '' ||
-                        (icon == 'Parking' && 'fiticon6.svg') ||
-                        '' ||
-                        (icon == 'Bar' && 'fiticon7.svg') ||
-                        '' ||
-                        (icon == 'Lockers with Padlocks' && 'fiticon8.svg') ||
-                        '' ||
-                        (icon == 'Solarium' && 'fiticon9.svg') ||
-                        '' ||
-                        (icon == 'Fight Zone' && 'fiticon10.svg') ||
-                        '' ||
-                        (icon == 'Squash' && 'fiticon11.svg') ||
-                        '' ||
-                        (icon == 'SPA & Wellness' && 'fiticon12.svg') ||
-                        ''
-                      }
-                      alt=""
-                      className="w-4 h-4"
-                      title={icon}
-                    />
-                  ))}
-                </div>
-                <div className="flex flex-col">
+
+                <div className="flex flex-col mt-4">
                   <button
                     className="text-[12px] text-[#1d75c7] font-semibold  flex justify-center items-center gap-1 border border-[#1d75c7] rounded-full py-1 px-2 mt-2"
                     onClick={() =>
