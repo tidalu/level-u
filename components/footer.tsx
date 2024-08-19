@@ -20,22 +20,16 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-6 ">
             <Link
-              href="/"
+              href="https://t.me/level_edu_uz"
               className="border border-gray-600 rounded-full block"
             >
               <FaTelegram size={20} className="m-2" />
             </Link>
             <Link
-              href="/"
+              href="https://www.instagram.com/level_edu_uz/"
               className="border border-gray-600 rounded-full block"
             >
               <FaInstagram size={20} className="m-2" />
-            </Link>
-            <Link
-              href="/"
-              className="border border-gray-600 rounded-full block"
-            >
-              <FaLink size={20} className="m-2" />
             </Link>
           </div>
         </div>
