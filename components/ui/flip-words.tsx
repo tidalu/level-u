@@ -59,11 +59,11 @@ export const FlipWords = ({
           position: 'absolute',
         }}
         className={cn(
-          'z-10 inline-block relative text-center text-neutral-900 dark:text-neutral-100 ',
+          ' inline-block relative text-start  text-neutral-900 dark:text-neutral-100 ',
           className
         )}
       >
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col  ">
           {words[currentWordIndex].split(' ').map((word, index) => (
             <motion.span
               key={`${words[currentWordIndex]}-${index}`}
@@ -73,7 +73,11 @@ export const FlipWords = ({
                 delay: index * 0.08,
                 duration: 0.4,
               }}
-              className="inline-block"
+              className={`inline-block   ${
+                index === 0
+                  ? 'flex-grow flex items-start -mb-[3px] justify-start '
+                  : 'flex-grow flex items-end justify-start -mt-[3px] '
+              }`}
             >
               {word}
             </motion.span>
