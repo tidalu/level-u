@@ -399,11 +399,10 @@ export function GlobeDemo({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex flex-row items-center justify-center pt-10 h-screen md:h-auto  w-full">
-      
-      <div className="absolute w-full bottom-40 h-72 md:h-full -z-5">
+      <div className="absolute w-full -inset-8 flex justify-center items-center top-10  mx-auto md:-top-24 h-72 md:h-full -z-5">
         <World data={sampleArcs} globeConfig={globeConfig} />
       </div>
-      <div className=" mx-auto w-full overflow-hidden h-full ">
+      <div className=" mx-auto w-full overflow-hidden mt-12 h-full ">
         <motion.div
           initial={{
             opacity: 0,
