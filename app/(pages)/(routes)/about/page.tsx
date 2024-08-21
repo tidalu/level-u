@@ -17,9 +17,7 @@ const AboutPage = () => {
     setColor(theme === 'dark' ? '#ffffff' : '#000000');
   }, [theme]);
 
-  useEffect(() => {
-    console.log(reasons);
-  }, [reasons]);
+
 
   return (
     <>
