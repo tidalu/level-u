@@ -14,13 +14,13 @@ export default function DockLive() {
         <DockIcon>
           <FaInstagram
             className="h-6 w-6"
-            onClick={() => window.open('https://t.me/level_edu_uz')}
+            onClick={() => window.open('https://instagram.com/level_edu_uz')}
           />
         </DockIcon>
         <DockIcon>
           <FaTelegram
             className="h-6 w-6"
-            onClick={() => window.open('https://instagram.com/level_edu_uz')}
+            onClick={() => window.open('https://t.me/level_edu_uz')}
           />
         </DockIcon>
       </Dock>
