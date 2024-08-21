@@ -136,7 +136,6 @@ function Accessibility() {
 
   useEffect(() => {
     document.documentElement!.style.fontSize = `${state.zoom}%`;
-    console.log(clicks, 'out');
 
     let filters = [];
     if (state.grayscale) filters.push('grayscale(100%)');
