@@ -1,4 +1,3 @@
-// context/LanguageContext.ts
 import { createContext, useContext, useState, ReactNode } from 'react';
 
 type LanguageContextType = {
