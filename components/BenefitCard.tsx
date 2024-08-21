@@ -11,7 +11,7 @@ function BenefitCard({
   hoverImage: string;
 }) {
   return (
-    <div className="relative reveal border-gray-800 border-box dark:border-gray-200 border rounded-xl w-auto h-auto mt-2 p-4 cursor-pointer">
+    <div className="relative reveal min-w-[30%]  border-gray-800 border-box dark:border-gray-200 border rounded-xl h-auto mt-2 p-4 cursor-pointer">
       <div className="absolute inset-0 transition-opacity duration-300 opacity-0 hover:opacity-100">
         <img
           src={hoverImage}
