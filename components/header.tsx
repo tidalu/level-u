@@ -26,7 +26,11 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const pathName = usePathname();
-  const [currentLang, setCurrentLang] = useState('uz');
+  let storedLanguage = '';
+  if (typeof window !== 'undefined') {
+    storedLanguage = localStorage?.getItem('selectedLanguage') || '';
+  }
+  const [currentLang, setCurrentLang] = useState(storedLanguage || 'uz');
 
   const { switchLanguage } = useLanguage();
   const data = useLocalizedData();
@@ -132,6 +136,13 @@ const Header = () => {
     }
 
     return '/figure-black.png';
+  };
+
+  const handleLanguageChange = (lang: string) => {
+    setCurrentLang(lang);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('selectedLanguage', lang); // Store language
+    }
   };
   return (
     <header
@@ -255,7 +266,7 @@ const Header = () => {
               >
                 <DropdownMenuItem
                   className="flex flex-row gap-[7px] cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720] rounded-xl"
-                  onClick={() => setCurrentLang('en')}
+                  onClick={() => handleLanguageChange('en')}
                 >
                   <Image
                     src={langs['en'].icon}
@@ -267,7 +278,7 @@ const Header = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   className="flex flex-row gap-[7px] cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720] rounded-xl"
-                  onClick={() => setCurrentLang('uz')}
+                  onClick={() => handleLanguageChange('uz')}
                 >
                   <Image
                     src={langs['uz'].icon}
@@ -279,7 +290,7 @@ const Header = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   className="flex flex-row gap-[7px] cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720] rounded-xl"
-                  onClick={() => setCurrentLang('ru')}
+                  onClick={() => handleLanguageChange('ru')}
                 >
                   <Image
                     src={langs['ru'].icon}
