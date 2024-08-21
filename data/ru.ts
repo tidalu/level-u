@@ -319,6 +319,15 @@ export const data = {
         ],
       },
     ],
+    classContainer: {
+      cost: 'Стоимость',
+      enrollBtn: 'Записаться на курс',
+      forWhom: 'Для кого',
+      duration: 'Длительность',
+      intensity: 'Интенсивность',
+      purpose: 'Цель курса',
+      effects: 'Эффекты',
+    },
   },
   schedule: {
     title: 'Места',

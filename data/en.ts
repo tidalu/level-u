@@ -307,6 +307,16 @@ export const data = {
         ],
       },
     ],
+
+    classContainer: {
+      cost: 'Cost',
+      enrollBtn: 'Enroll in the course',
+      forWhom: 'For whom',
+      duration: 'Duration',
+      intensity: 'Intensity',
+      purpose: 'The purpose of the course',
+      effects: 'Effects ',
+    },
   },
   schedule: {
     title: 'Places',

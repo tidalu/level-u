@@ -312,6 +312,15 @@ export const data = {
         ],
       },
     ],
+    classContainer: {
+      cost: 'Narxi',
+      enrollBtn: 'Kursga yozilish',
+      forWhom: 'Kimlar uchun',
+      duration: 'Davomiyligi',
+      intensity: 'Intensivligi',
+      purpose: 'Kursning maqsadi',
+      effects: 'Natijalari',
+    },
   },
   schedule: {
     title: 'Joylar',
