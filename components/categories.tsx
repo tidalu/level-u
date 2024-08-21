@@ -54,6 +54,7 @@ const Categories = () => {
                             <span className="font-bold group-hover:item:underline">
                               {item.name}
                             </span>
+                            {/* test comment*/}
                           </div>
                           <div className="flex justify-between relative z-10 text-[12px] text-gray-500">
                             {data.offers.packages.ielts.desc}
