@@ -10,7 +10,11 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState('uz');
+  let storedLanguage = '';
+  if (typeof window !== 'undefined') {
+    storedLanguage = localStorage.getItem('selectedLanguage') || '';
+  }
+  const [language, setLanguage] = useState(storedLanguage || 'uz');
 
   const switchLanguage = (lang: string) => {
     setLanguage(lang);
