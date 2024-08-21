@@ -27,7 +27,10 @@ interface ClassList {
 }
 
 const Categories = () => {
-  const { language } = useLanguage();
+  let language = '';
+  if (typeof window !== 'undefined') {
+    language = localStorage?.getItem('selectedLanguage') || 'uz';
+  }
   const data = useLocalizedData();
   return (
     <div>
