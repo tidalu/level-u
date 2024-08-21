@@ -84,7 +84,7 @@ const Offer = () => {
           </div>
         </div>
 
-        <div className="flex gap-5 mt-5 scrollMobile">
+        {/* <div className="flex gap-5 mt-5 scrollMobile">
           <div className="shadow-xl relative rounded-xl pt-32 md:pt-4 p-4 min-w-64 md:min-w-fit md:pl-32 flex-1 md:h-32 overflow-hidden dark:bg-[#0f1227]">
             <div className="cursor-pointer">
               <div className="absolute skew top-0 left-0 right-0 bottom-52 md:bottom-0 w-full h-full overflow-hidden">
@@ -168,7 +168,7 @@ const Offer = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
