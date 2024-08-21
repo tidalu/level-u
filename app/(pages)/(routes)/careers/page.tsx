@@ -179,7 +179,7 @@ function Careers() {
                         title={card.title}
                         hoverImage={
                           // card.image ||
-                          '/fit1.webp'
+                          '/offer1.webp'
                         }
                       />
                     );
