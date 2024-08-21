@@ -1,13 +1,12 @@
 import Hero from '@/components/hero';
 import React from 'react';
+import Globe from '@/components/magicui/globe';
 
 function StudyAbroad() {
   return (
     <div className=" mx-auto px-3 pt-36 mb-16  max-w-screen-lg">
-      <div className="relative flex  flex-col py-20 lg:py-0 md:py-0 sm:py-20">
-        <div className="flex-1">
-          <Hero />
-        </div>
+      <div className="  py-20 lg:py-0 md:py-0 sm:py-20">
+        <Hero />
       </div>
     </div>
   );

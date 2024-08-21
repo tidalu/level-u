@@ -5,6 +5,7 @@ import { Button } from './ui/button';
 import { grid } from 'ldrs';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import { toast } from 'react-toastify';
+import Globe from './magicui/globe';
 
 const Hero = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -57,7 +58,7 @@ const Hero = () => {
   return (
     <div className="relative flex h-full max-w-full items-center justify-center overflow-hidden rounded-lg bg-transparent p-5 sm:p-10 mt-5 sm:mt-20 ">
       <section className="flex flex-col items-center  justify-center space-y-5 sm:space-y-10">
-        <div className="w-full text-center px-4 sm:px-0 backdrop-blur-sm">
+        <div className="w-full text-center px-4 sm:px-0 ">
           <h1 className="text-2xl sm:text-4xl lg:text-6xl font-semibold leading-tight text-green-900 dark:text-neutral-100">
             {data.hero.title}
           </h1>
@@ -71,9 +72,9 @@ const Hero = () => {
               method="post"
               onSubmit={submitForm}
             >
-              <div className=" relative mt-9   ">
+              <div className=" relative mt-20  ">
                 <label
-                  className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]"
+                  className=" text-[10px] text-gray-800 p-1 absolute -top-3 left-6 rounded-xl bg-[#9dee8070]   dark:text-gray-400 "
                   htmlFor="name"
                 >
                   <span className=" text-red-400">*</span>
@@ -81,7 +82,7 @@ const Hero = () => {
                 </label>
                 <input
                   type="text"
-                  className=" w-full l lg:max-w-[400px] sm:w-[300px] md:w-[350px] lg:w-[400px]  dark:bg-[#020817] outline-none text-sm border-2 border-[#dbdbdb] rounded-xl py-4 px-6"
+                  className=" w-full l lg:max-w-[400px] sm:w-[300px]  md:w-[350px] lg:w-[400px] bg-transparent   outline-none text-sm border-2 border-[#2bbb15] rounded-xl py-4 px-6 placeholder:text-green-900 dark:text-gray-700"
                   placeholder={data.contactForm.namePlaceholder}
                   required
                   name="name"
@@ -92,7 +93,7 @@ const Hero = () => {
               </div>
               <div className=" relative mt-2   ">
                 <label
-                  className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]"
+                  className=" text-[10px] text-gray-800 p-1  absolute -top-3 left-6 rounded-xl bg-[#9dee8070]  dark:text-gray-400 "
                   htmlFor="phone"
                 >
                   <span className=" text-red-400">*</span>
@@ -100,7 +101,7 @@ const Hero = () => {
                 </label>
                 <input
                   type="tel"
-                  className=" w-full l lg:max-w-[400px] sm:w-[300px] md:w-[350px] lg:w-[400px]  dark:bg-[#020817] outline-none text-sm border-2 border-[#dbdbdb] rounded-xl py-4 px-6"
+                  className=" w-full l lg:max-w-[400px] sm:w-[300px] md:w-[350px] lg:w-[400px] bg-transparent placeholder:text-green-900 outline-none text-sm border-2 border-[#2bbb15] rounded-xl py-4 px-6 dark:text-gray-700"
                   placeholder={data.contactForm.phonePlaceholder}
                   required
                   name="phone"
@@ -122,7 +123,7 @@ const Hero = () => {
               <l-grid size={60} speed={1.5} color="rgba(23, 232, 124)"></l-grid>
             </div>
           ) : isSubmitted ? (
-            <div className="w-full flex flex-col items-center justify-center p-5 rounded-lg bg-green-100 dark:bg-green-800 mt-5">
+            <div className="w-full flex flex-col items-center justify-center p-5 rounded-lg bg-transparent mt-5">
               <h2 className="text-2xl sm:text-3xl font-semibold text-green-800 dark:text-green-200">
                 {data.hero.thankYou.title}
               </h2>
@@ -144,6 +145,8 @@ const Hero = () => {
           <DockLive />
         </div>
       </section>
+      <Globe className="bottom-14 md:0 lg:-bottom-8 -z-10 " />
+      <div className="absolute bottom-0 left-0 right-0 lg:h-[27.5%] md:h-[29%] h-[20%] bg-white dark:bg-background -z-10"></div>
     </div>
   );
 };
