@@ -9,10 +9,6 @@ body,
   scroll-behavior: smooth;
   font-size: 16px;
 }
-/* 
-* {
-  border: 0.2px solid red;
-} */
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 html::-webkit-scrollbar {
