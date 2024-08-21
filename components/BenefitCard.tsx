@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 
 function BenefitCard({
@@ -10,16 +10,38 @@ function BenefitCard({
   icon?: string;
   hoverImage: string;
 }) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
-    <div className="relative reveal min-w-[30%]  border-gray-800 border-box dark:border-gray-200 border rounded-xl h-auto mt-2 p-4 cursor-pointer">
-      <div className="absolute inset-0 transition-opacity duration-300 opacity-0 hover:opacity-100">
+    <div
+      className="relative reveal min-w-[30%] border-gray-800 border-box dark:border-gray-200 border rounded-xl h-auto mt-2 p-4 cursor-pointer"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div
+        className={`absolute inset-0 transition-opacity duration-300 ${
+          isHovered ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
         <img
-          src={hoverImage}
+          src={hoverImage || '/mobile_home-banner.webp'}
           alt=""
-          className="w-full h-full object-cover rounded-xl"
+          className="w-full h-full object-fill rounded-xl"
         />
       </div>
-      <div className="transition-opacity duration-300 hover:opacity-0 ">
+      <div
+        className={`transition-opacity duration-300 ${
+          isHovered ? 'opacity-0' : 'opacity-100'
+        } bg-transparent`}
+      >
         <div className="relative flex h-24 justify-center p-4 lg:h-32">
           <img src={icon} alt="" />
         </div>
