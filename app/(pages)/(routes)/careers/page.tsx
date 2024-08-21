@@ -162,7 +162,7 @@ function Careers() {
                 </h2>
                 <hr className="h-[3px] w-[80px] border-0 bg-gray-800 mx-auto" />
               </div>
-              <div className="container reveal  mx-auto px-16 mt-6 flex lg:mt-12 flex-wrap flex-row gap-4 justify-evenly">
+              <div className="container reveal  mx-auto px-16 mt-6 flex lg:mt-12 flex-wrap flex-row gap-4 justify-center">
                 {data.careers.benefits.cards.map(
                   (
                     card: {
