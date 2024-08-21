@@ -6,14 +6,25 @@ import { useLocalizedData } from '@/lib/useLocalizedData';
 import { cn } from '@/lib/utils';
 import { X } from 'lucide-react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
+import { useLanguage } from '@/components/LanguageContext';
+
+// ...
+
+import React, { use, useEffect, useState } from 'react';
 
 const ClassesDataPage = () => {
   const pathName = usePathname();
   const [showModal, setShowModal] = useState(false);
   const [videoUrl, setVideoUrl] = useState('');
   const data = useLocalizedData();
+  const searchParams = useSearchParams();
+  const { language, switchLanguage } = useLanguage();
+
+  const languageQuery = searchParams.get('lang') ?? '';
+  useEffect(() => {
+    switchLanguage(languageQuery || language);
+  }, [language, switchLanguage, languageQuery]);
 
   const handleModal = (url: string) => {
     setVideoUrl(url);
@@ -59,16 +70,7 @@ const ClassesDataPage = () => {
           <div className=" grid grid-cols-12 gap-5">
             <div className=" col-span-12 lg:col-span-5">
               <div className="bg-[#b8df4b1a] reveal dark:bg-[#86868517] rounded-2xl relative p-4 md:p-10">
-                <div className="mb-3 md:mb-0 md:absolute top-4 left-4 md:top-6 md:left-auto md:right-6 flex gap-1">
-                  <div className=" bg-white dark:bg-[#020817] rounded-xl p-2">
-                    <img
-                      src="/popularicon1.svg"
-                      width={16}
-                      className=""
-                      alt=""
-                    />
-                  </div>
-                </div>
+                <div className="mb-3 md:mb-0 md:absolute top-4 left-4 md:top-6 md:left-auto md:right-6 flex gap-1"></div>
                 <h3 className=" text-sm text-gray-500 dark:text-gray-400 font-semibold">
                   {classInfo?.title}
                 </h3>
