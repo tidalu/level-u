@@ -37,7 +37,7 @@ export const data = {
   },
 
   landingAdd: {
-    mainTitle: ['Pre-Registration', 'is open now'],
+    mainTitle: ['Registration is', 'open now'],
     subTitle:
       'SIGN UP IN TIME TO THE GROUP AND GET THE OPPORTUNITY TO STUDY ABROAD',
     buttonText: 'Fill the form',
@@ -103,20 +103,22 @@ export const data = {
     mainContent: {
       video: '',
       title:
-        'Discover Advanced Learning Opportunities in Level Learning Center!',
+        'Discover advanced learning opportunities at Level Learning Center!',
       description: [
-        'At our educational center, you will experience a comprehensive range of language and IT courses designed to enhance your skills and knowledge.',
-        'Choose from a variety of courses including:',
+        'At our educational center, you can enroll in a wide range of courses aimed at enhancing your skills and knowledge.',
+        'Choose from various courses, including:',
         [
           'Advanced language training for professional and personal development',
-          'Cutting-edge IT courses and certifications',
-          'Interactive workshops and hands-on projects',
-          'Specialized training in emerging technologies and languages',
+          'IELTS preparation courses',
+          'TOPIK preparation courses',
+          'Korean language courses',
+          'Corporate language training programs',
         ],
-        'Our curriculum also features renowned language programs and our own specialized IT training sessions, such as Data Science Bootcamps and Business English Workshops.',
+        'Our curriculum also includes renowned language programs and specialized training in English, IELTS, TOPIK, Korean, and corporate courses.',
       ],
-      button: 'All classes',
+      button: 'All Courses',
     },
+
     classList: [
       {
         title: 'English Language',

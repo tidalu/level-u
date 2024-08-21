@@ -4,7 +4,7 @@ export const data = {
     description: `LEVEL o’quv markaziga xush kelibsiz! Biz — har bir kishiga sifatli va arzon ta’lim, shuningdek, chet elda o’qish imkoniyatini taqdim etish maqsadida tashkil etilgan zamonaviy o’quv markazimiz. Bizning jamoamiz xorijda tahsil olgan va o’zlarining bebaho tajribasi va uslublarini siz uchun qo’llashga tayyor bo’lgan odamlardan iborat. O’quv va universitetlarga hujjat topshirishda yordam berishni o’z ichiga oladigan gibrid o’quv markazi yaratish g’oyasi yangilik emas va butun dunyo bo’ylab keng qo’llaniladi. Biroq, hozirgi vaqtda biz O’zbekistonda bu turdagi birinchi o’quv platformasimiz va o’xshashi yo’q. Bundan tashqari, biz ta’limni har bir kishi uchun ochiq qilib, zamonaviy o’quv uslublari va sifatli xizmat ko’rsatishni taklif etamiz. Agar siz yangi bilim olishga va dunyo miqyosidagi universitetlarda o’qishga tayyor bo’lsangiz, biz sizning maqsadlaringizga erishishda yordam beramiz.`,
     topText: 'Biz haqimizda',
     motto: 'Shior',
-    why: 'Nima uchun Level ta’lim markazida o‘qish kerak',
+    why: 'Nima uchun Level oʻquv markazida o‘qish kerak',
   },
 
   header: {
@@ -38,7 +38,7 @@ export const data = {
   },
 
   landingAdd: {
-    mainTitle: ['Oldindan ro‘yxatga olish', 'hozir ochiq'],
+    mainTitle: [' Ro‘yxatga olish', 'hozir ochiq'],
     subTitle:
       'GURUHGA O‘Z VAQТIDA RO‘YXATDAN O‘TING VA CHET ELDA TA’LIM OLISH IMKONIYATINI QO‘LGA KIRITING',
     buttonText: 'Formani to‘ldiring',
@@ -107,20 +107,22 @@ export const data = {
 
     mainContent: {
       video: '',
-      title: 'Level oʻquv markazida ilgʻor taʼlim imkoniyatlarini kashf eting!',
+      title: 'Level oʻquv markazida ilgʻor oʻquv imkoniyatlarini kashf eting!',
       description: [
-        'Bizning taʼlim markazimizda sizning bilim va koʻnikmalaringizni oshirish uchun moʻljallangan keng koʻlamli til va IT kurslarini boshdan kechirasiz.',
-        'Quyidagi kurslardan birini tanlang:',
+        'Bizning taʼlim markazimizda siz oʻz malakangiz va bilimlaringizni oshirish uchun keng ko‘lamli kurslarga yozilishingiz mumkin.',
+        'Turli kurslardan birini tanlang:',
         [
-          'Professional va shaxsiy rivojlanish uchun ilgʻor til oʻrgatish',
-          'Zamonaviy IT kurslar va sertifikatlar',
-          'Interaktiv seminarlar va amaliy loyihalar',
-          'Yangi texnologiyalar va tillarda ixtisoslashgan taʼlim',
+          'Kasbiy va shaxsiy rivojlanish uchun ilgʻor til oʻrganish',
+          'IELTS tayyorlov kurslari',
+          'TOPIK tayyorlov kurslari',
+          'Koreys tili kurslari',
+          'Korporativ til oʻqitish dasturlari',
         ],
-        'Bizning oʻquv dasturimizda mashhur til dasturlari va oʻzimizning maxsus IT treninglarimiz, masalan, Data Science Bootcamps va Business English Workshops ham mavjud.',
+        'Bizning o‘quv dasturimiz ingliz tili, IELTS, TOPIK, koreys tili va korporativ kurslar bo‘yicha maxsus tayyorlovlarni ham oʻz ichiga oladi.',
       ],
-      button: 'Barcha darslar',
+      button: 'Barcha Kurslar',
     },
+
     classList: [
       {
         title: 'Ingliz Tili',
@@ -475,7 +477,7 @@ export const data = {
       ],
     },
     copyright: {
-      name: "Level Ta'lim Dargohi",
+      name: 'Level oʻquv markazi',
     },
   },
 
