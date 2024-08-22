@@ -137,6 +137,25 @@ const Header = () => {
 
     return '/figure-black.png';
   };
+  const getCopyright = () => {
+    if (theme.theme === 'dark') {
+      return '/tm-dark.png';
+    }
+
+    if (theme.theme === 'light') {
+      if (pathName === '/' && !isVisible) {
+        return '/tm-dark.png';
+      }
+      if (pathName === '/classes' && !isVisible) {
+        return '/tm-dark.png';
+      }
+      if (isVisible) {
+        return '/tm-light.png';
+      }
+    }
+
+    return '/tm-light.png';
+  };
 
   const handleLanguageChange = (lang: string) => {
     setCurrentLang(lang);
@@ -167,15 +186,26 @@ const Header = () => {
         >
           <Link href="/" className=" flex-shrink-1">
             <div className="flex flex-row gap-[5px]   ">
-              <img
-                src={urls ? '/logo.svg' : isVisible ? '/logo.svg' : '/logo.svg'}
-                className=" w-auto h-8 md:h-10   lg:h-12 2xl:h-14 self-center shrink"
-                width={80}
-                height={40}
-                alt="logo"
-              />
+              <div className="relative self-center shrink">
+                <img
+                  src={
+                    urls ? '/logo.svg' : isVisible ? '/logo.svg' : '/logo.svg'
+                  }
+                  className=" w-auto h-8 md:h-10   lg:h-12 2xl:h-14 "
+                  width={80}
+                  height={40}
+                  alt="logo"
+                />
+                <Image
+                  src={getCopyright()}
+                  alt="copywriting sign"
+                  width={2}
+                  height={2}
+                  className="absolute top-0 -right-[9px] scale-200 object-contain w-3 h-auto"
+                />
+              </div>
               {/* <div className=" w-[3px] bg-black dark:bg-white rounded-lg "></div> */}
-              <div className="  rounded-lg w-[5px]  flex flex-col items-center  ">
+              <div className="  rounded-lg w-[5px] ml-[5px]  flex flex-col items-center  ">
                 <Image
                   src={getFigurePath()}
                   alt="stick figure"
