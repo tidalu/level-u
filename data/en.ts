@@ -1,10 +1,10 @@
 export const data = {
   about: {
     title: 'Who we are and what you get from our spaces',
-    description: `Welcome to LEVEL Learning Center! We are a cutting-edge learning center founded to provide everyone with high-quality and affordable education, as well as opportunities to study abroad. Our team comprises individuals who have studied abroad and are eager to apply their invaluable experience and methodologies for your benefit. The concept of a hybrid learning center that combines learning with assistance in selecting and applying to universities is not new and is widely practiced globally. However, we are currently the first of its kind in Uzbekistan, with no equivalents. Furthermore, we make education accessible to all and offer unlimited opportunities by providing modern teaching methods and top-notch service. If you are ready to acquire new knowledge and study at prestigious universities worldwide, we are here to help you achieve your goals. `,
+    description: `Welcome to LEVEL learning center! We are a cutting-edge learning center founded to provide everyone with high-quality and affordable education, as well as opportunities to study abroad. Our team comprises individuals who have studied abroad and are eager to apply their invaluable experience and methodologies for your benefit. The concept of a hybrid learning center that combines learning with assistance in selecting and applying to universities is not new and is widely practiced globally. However, we are currently the first of its kind in Uzbekistan, with no equivalents. Furthermore, we make education accessible to all and offer unlimited opportunities by providing modern teaching methods and top-notch service. If you are ready to acquire new knowledge and study at prestigious universities worldwide, we are here to help you achieve your goals. `,
     topText: 'About Us',
     motto: 'Motto',
-    why: 'Why you should study at Level learning center',
+    why: 'Why you should study at LEVEL learning center',
   },
   header: {
     header_logo1: 'Study',
@@ -325,12 +325,12 @@ export const data = {
     getDirections: 'Get directions with ',
     places: [
       {
-        cityName: 'Tashkent',
+        cityName: 'Chirchik',
         clubs: [
           {
-            name: 'Level Learning Center',
+            name: 'LEVEL learning center',
             address:
-              'Sharof Rashidov 4 uy Chirchik 111700 Tashkent region Uzbekistan',
+              'Sharof Rashidov street 4 house Chirchik 111700 Tashkent region Uzbekistan',
             latitude: 41.4725,
             longitude: 69.5906,
             image: '/logo.svg',
@@ -477,7 +477,7 @@ export const data = {
       ],
     },
     copyright: {
-      name: 'Level Learning Center',
+      name: 'LEVEL learning centerr',
     },
   },
   contactForm: {

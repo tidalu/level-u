@@ -1,4 +1,3 @@
-import { title } from 'process';
 
 export const data = {
   about: {
@@ -7,7 +6,7 @@ export const data = {
 `,
     topText: 'О нас',
     motto: 'Девиз',
-    why: 'Почему стоит учиться в учебном центре Level',
+    why: 'Почему стоит учиться в учебном центре LEVEL?',
   },
 
   header: {
@@ -336,12 +335,12 @@ export const data = {
     getDirections: 'Проложить маршрут с помощью ',
     places: [
       {
-        cityName: 'Ташкент',
+        cityName: 'Чирчик',
         clubs: [
           {
-            name: 'Level Учебном центре',
+            name: 'LEVEL учебный центр',
             address:
-              'Шарофа Рашидова 4 дом Чирчик 111700 Ташкентская область Узбекистан',
+              'улица Шарафа Рашидова  4 дом Чирчик 111700 Ташкентская область Узбекистан',
             latitude: 41.4725,
             longitude: 69.5906,
             image: '/logo.svg',
@@ -491,7 +490,7 @@ export const data = {
       ],
     },
     copyright: {
-      name: 'Level Учебном центре',
+      name: 'LEVEL учебный центр',
     },
   },
   contactForm: {

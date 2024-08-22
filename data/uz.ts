@@ -4,7 +4,7 @@ export const data = {
     description: `LEVEL o’quv markaziga xush kelibsiz! Biz — har bir kishiga sifatli va arzon ta’lim, shuningdek, chet elda o’qish imkoniyatini taqdim etish maqsadida tashkil etilgan zamonaviy o’quv markazimiz. Bizning jamoamiz xorijda tahsil olgan va o’zlarining bebaho tajribasi va uslublarini siz uchun qo’llashga tayyor bo’lgan odamlardan iborat. O’quv va universitetlarga hujjat topshirishda yordam berishni o’z ichiga oladigan gibrid o’quv markazi yaratish g’oyasi yangilik emas va butun dunyo bo’ylab keng qo’llaniladi. Biroq, hozirgi vaqtda biz O’zbekistonda bu turdagi birinchi o’quv platformasimiz va o’xshashi yo’q. Bundan tashqari, biz ta’limni har bir kishi uchun ochiq qilib, zamonaviy o’quv uslublari va sifatli xizmat ko’rsatishni taklif etamiz. Agar siz yangi bilim olishga va dunyo miqyosidagi universitetlarda o’qishga tayyor bo’lsangiz, biz sizning maqsadlaringizga erishishda yordam beramiz.`,
     topText: 'Biz haqimizda',
     motto: 'Shior',
-    why: 'Nima uchun Level oʻquv markazida o‘qish kerak',
+    why: 'Nima uchun LEVEL oʻquv markazida o‘qish kerak',
   },
 
   header: {
@@ -329,10 +329,10 @@ export const data = {
     getDirections: 'Yoʻnalish olish ',
     places: [
       {
-        cityName: 'Toshkent',
+        cityName: 'Chirchiq',
         clubs: [
           {
-            name: 'Level o‘quv markazi',
+            name: 'LEVEL o‘quv markazi',
             address:
               'Sharof Rashidov ko‘chasi, 4-uy, Chirchiq, 111700, Toshkent viloyati, O‘zbekiston',
             latitude: 41.4725,
@@ -486,7 +486,7 @@ export const data = {
       ],
     },
     copyright: {
-      name: 'Level oʻquv markazi',
+      name: 'LEVEL oʻquv markazi',
     },
   },
 
