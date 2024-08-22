@@ -34,6 +34,7 @@ export const data = {
       highContrast: 'Yuqori kontrast',
       negativeContrast: 'Salbiy kontrast',
       reset: 'Tiklash',
+      themeToggle: 'Temani almashtirish',
     },
   },
 
@@ -537,24 +538,22 @@ export const data = {
         title: 'IELTS GA TAYYORLASH',
         description:
           'IELTS imtihoniga tayyorgarlik darslarimiz sizning kerakli ballni olishga yordam berish uchun mo‘ljallangan. Biz to‘rt modul bo‘yicha keng qamrovli o‘qitish taklif etamiz: Tinglash, O‘qish, Yozish va Gapirish. Amaliy testlar, so‘z boyligini oshirish va shaxsiy maslahatlar orqali siz ko‘nikmalaringizni rivojlantirasiz va o‘z ishonchingizni oshirasiz.',
-        icons: ['/popularicon1.svg', '/popularicon2.svg', '/popularicon3.svg'],
-        href: '/classess/ielts%20tayyorgarligi',
+
+        href: '/classess/ielts?lang=uz',
       },
       {
         topText: 'TIL O‘RGANISH',
         title: 'KOREYS TILI DARSLARI',
         description:
           'Koreys tiliga bizning interaktiv darslarimiz orqali sho‘ng‘ing. Asosiy so‘z boyligi va grammatikadan tortib, murakkab muloqot ko‘nikmalarigacha, o‘quv dasturimiz sizga koreys tilini samarali o‘rganishga yordam beradi. Sayohatga tayyorlanayotgan bo‘lsangiz yoki tilni mukammal o‘rganishni maqsad qilgan bo‘lsangiz, kurslarimiz qiziqarli darslar va amaliy mashqlarni taklif etadi.',
-        icons: ['/popularicon4.svg'],
-        href: '/classess/koreys%20tili%20(individual%20darslar)',
+        href: '/classess/koreys%20tilida%20shaxsiy%20darslar?lang=uz',
       },
       {
         topText: 'BOSHLANG‘ICH TA’LIM',
         title: 'BOLALAR UCHUN INGLIZ TILI DARSLARI',
         description:
           'Bolalar uchun ingliz tili darslarimiz yosh o‘quvchilar uchun ta’limni qiziqarli va mazmunli qilish uchun mo‘ljallangan. Interaktiv o‘yinlar, hikoya qilish va ijodiy mashg‘ulotlar orqali bolalar qo‘llab-quvvatlovchi muhitda ingliz tilidagi ko‘nikmalarini rivojlantiradilar. Tilni o‘rganishni yoshligidan ishonch va qiziqish bilan boshlash uchun mukammal variant.',
-        icons: ['/popularicon5.svg'],
-        href: '/classess/bolalar%20uchun%20ingliz%20tili%20dasturi',
+        href: '/classess/bolalar%20uchun%20ingliz%20tili?lang=uz',
       },
     ],
   },

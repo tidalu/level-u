@@ -33,6 +33,7 @@ export const data = {
       highContrast: 'High Contrast',
       negativeContrast: 'Negative Contrast',
       reset: 'Reset',
+      themeToggle: 'Change theme',
     },
   },
 
@@ -524,7 +525,7 @@ export const data = {
         description:
           'Our IELTS preparation classes are designed to help you achieve your desired score. We offer comprehensive training in all four modules: Listening, Reading, Writing, and Speaking. Through practice tests, vocabulary building, and personalized feedback, you will enhance your skills and boost your confidence.',
         icons: ['/popularicon1.svg', '/popularicon2.svg', '/popularicon3.svg'],
-        href: '/classess/ielts%20preparation',
+        href: '/classess/ielts?lang=en',
       },
       {
         topText: 'LANGUAGE LEARNING',
@@ -532,7 +533,7 @@ export const data = {
         description:
           ' Dive into the Korean language with our interactive classes. From basic vocabulary and grammar to advanced conversational skills, our curriculum is designed to help you master Korean efficiently. Whether you&apos;re preparing for travel or aiming for fluency, our courses offer engaging lessons and practical exercises.',
         icons: ['/popularicon4.svg'],
-        href: '/classess/korean%20language%20(individual%20lessons)',
+        href: '/classess/korean%20individual%20classes?lang=en',
       },
       {
         topText: 'EARLY EDUCATION',
@@ -540,7 +541,7 @@ export const data = {
         description:
           'Our Kid&apos;s English classes are crafted to make learning fun and engaging for young learners. Through interactive games,  storytelling, and creative activities, children will develop  their English skills in a supportive environment. Perfect for building confidence and a love for the language from an early age.',
         icons: ['/popularicon5.svg'],
-        href: '/classess/kids%20english%20program',
+        href: '/classess/english%20for%20kids?lang=en',
       },
     ],
   },
