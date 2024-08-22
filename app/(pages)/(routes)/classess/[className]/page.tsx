@@ -10,7 +10,6 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import { useLanguage } from '@/components/LanguageContext';
 
 import React, { use, useEffect, useState } from 'react';
-
 const ClassesDataPage = () => {
   const pathName = usePathname();
   const [showModal, setShowModal] = useState(false);
@@ -29,9 +28,9 @@ const ClassesDataPage = () => {
     setShowModal(true);
   };
 
-  const str = pathName.split('/')[2].toLowerCase();
+  const str = decodeURIComponent(pathName.split('/')[2]).toLowerCase();
+  const result = str.replace(/%20/g, ' ');
 
-  let result = str.replace(/%20/g, ' ');
   const getClassByName = (className: string) => {
     for (const category of data.classPage.classList) {
       const match = category.list.find(
@@ -45,7 +44,7 @@ const ClassesDataPage = () => {
           purpose: string;
           effects: string[];
           video: string;
-        }) => item.name.toLocaleLowerCase() === className
+        }) => item.name.toLocaleLowerCase() === className.toLocaleLowerCase()
       );
       if (match) {
         return { match, title: category.title };
@@ -54,7 +53,7 @@ const ClassesDataPage = () => {
     return null;
   };
 
-  const classInfo = getClassByName(result.toLowerCase());
+  const classInfo = getClassByName(result);
 
   if (!getClassByName) {
     return <div>Class not found</div>;
