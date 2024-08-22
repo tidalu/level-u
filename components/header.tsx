@@ -184,7 +184,7 @@ const Header = () => {
             isVisible && ' text-black dark:text-white '
           )}
         >
-          <Link href="/" className=" flex-shrink-1">
+          <Link href="/" className=" flex-shrink-0">
             <div className="flex flex-row gap-[5px]   ">
               <div className="relative self-center shrink">
                 <img
@@ -277,7 +277,6 @@ const Header = () => {
           </ul>
 
           <div className="flex gap-x-2 items-center md:gap-x-4 ">
-            <ThemeToggle />
             <Accessibility />
 
             <DropdownMenu>
@@ -285,9 +284,9 @@ const Header = () => {
                 <Image
                   src={langs[currentLang].circleIcon}
                   alt={langs[currentLang].label}
-                  width={20}
-                  height={20}
-                  className="rounded-full w-[30px] h-[30px] sm:w-10 sm:h-10 2xl:w-12 2xl:h-12"
+                  width={40}
+                  height={40}
+                  className="rounded-full  2xl:w-12 2xl:h-12"
                 />
               </DropdownMenuTrigger>
               <DropdownMenuContent
@@ -335,9 +334,9 @@ const Header = () => {
 
             <Button
               onClick={() => setOpen(!open)}
-              className="bg-transparent p-0 m-0 text-[#6cce40] rounded-full w-[30px] h-[30px] sm:w-10 sm:h-10 2xl:w-12 2xl:h-12  border-2 xl:hidden border-[#6cce40] flex justify-center items-center hover-none"
+              className="bg-transparent p-0 m-0 text-[#6cce40] rounded-full w-[40px] [h-40px] border-2 xl:hidden border-[#6cce40] flex justify-center items-center hover-none"
             >
-              <RxTextAlignCenter className="w-[15px] sm:w-[25px] hover:-rotate-90 transition-all delay-75 ease-linear h-[25px]" />
+              <RxTextAlignCenter className="w-[25px] hover:-rotate-90 transition-all delay-75 ease-linear h-[25px]" />
             </Button>
           </div>
         </div>
