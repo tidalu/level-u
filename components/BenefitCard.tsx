@@ -22,7 +22,7 @@ function BenefitCard({
 
   return (
     <div
-      className="relative reveal min-w-[30%] border-gray-800 border-box dark:border-gray-200 border rounded-xl h-auto mt-2 p-4 cursor-pointer"
+      className="relative reveal w-[70%] md:w-[40%] lg:w-[30%] border-gray-800 border-box dark:border-gray-200 border rounded-xl h-auto mt-2 p-4 cursor-pointer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
