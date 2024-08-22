@@ -14,7 +14,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   if (typeof window !== 'undefined') {
     storedLanguage = localStorage.getItem('selectedLanguage') || '';
   }
-  const [language, setLanguage] = useState(storedLanguage || 'uz');
+  const [language, setLanguage] = useState(storedLanguage || '');
 
   const switchLanguage = (lang: string) => {
     setLanguage(lang);

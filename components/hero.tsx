@@ -145,8 +145,7 @@ const Hero = () => {
           <DockLive />
         </div>
       </section>
-      <Globe className="bottom-14 md:0 lg:-bottom-8 -z-10 " />
-      <div className="absolute bottom-0 left-0 right-0 lg:h-[27.5%] md:h-[29%] h-[20%] bg-white dark:bg-background -z-10"></div>
+      
     </div>
   );
 };

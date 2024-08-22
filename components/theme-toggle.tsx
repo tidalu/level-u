@@ -30,12 +30,12 @@ export function ThemeToggle() {
           variant="outline"
           size="icon"
           className={cn(
-            ' rounded-full w-[30px] h-[30px] sm:w-10 sm:h-10 2xl:w-12 2xl:h-12 bg-[#F8FFE5] dark:bg-gray-800',
+            'rounded-full 2xl:w-12 2xl:h-12 bg-[#F8FFE5] dark:bg-gray-800',
             urls && 'text-black dark:text-white '
           )}
         >
-          <Sun className="h-[1rem] w-[1rem] rotate-0 xl:h-[1.2rem] xl:w-[1.2rem] scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1rem] w-[1rem] xl:h-[1.2rem] xl:w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
