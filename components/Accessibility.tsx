@@ -14,6 +14,8 @@ import {
   Contrast,
   Eye,
   RotateCcw,
+  Moon,
+  Sun,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTheme } from 'next-themes';
@@ -21,7 +23,7 @@ import { useLocalizedData } from '@/lib/useLocalizedData';
 import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 
 function Accessibility() {
-  const { setTheme } = useTheme();
+  const { theme , setTheme } = useTheme();
   const [state, setState] = useState({
     zoom: 100, // default zoom level
     grayscale: false,
@@ -37,6 +39,8 @@ function Accessibility() {
     contrast: 0,
     negativeContrast: 0,
     reset: 0,
+
+    themeToggle: 0,
   });
   const data = useLocalizedData();
 
@@ -131,7 +135,16 @@ function Accessibility() {
       zoomIn: 0,
       zoomOut: 0,
       reset: 0,
+      themeToggle: 0,
     });
+  }
+
+  function toggleTheme() {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+    setClicks((prevState) => ({
+      ...prevState,
+      themeToggle: prevState.themeToggle + 1,
+    }));
   }
 
   useEffect(() => {
@@ -143,7 +156,7 @@ function Accessibility() {
     if (state.negativeContrast) filters.push('invert(100%)');
 
     document.documentElement!.style.filter = filters.join(' ');
-  }, [state.zoom, state.grayscale, state.contrast, state.negativeContrast]);
+  }, [state.zoom, state.grayscale, state.contrast, state.negativeContrast, theme]);
 
   const buttonStyle =
     'w-full flex px-2 py-1 text-left hover:bg-[#e7e9e7] dark:hover:bg-gray-700 rounded-lg text-sm dark:text-white dark:bg-gray-800 text-gray-900';
@@ -156,7 +169,10 @@ function Accessibility() {
         dark:bg-gray-800
         dark:text-white
         text-black
-        w-[30px] h-[30px] sm:w-10 sm:h-10 2xl:w-12 2xl:h-12
+         h-[40px]
+        2xl:h-[48px]
+        w-[40px]
+        2xl:w-[48px]
         rounded-full
         flex 
         justify-center
@@ -166,7 +182,7 @@ function Accessibility() {
     >
       <Popover>
         <PopoverTrigger className="flex justify-center items-center w-full h-full">
-          <PersonStanding className="w-[20px] h-[20px] sm:w[30px] sm:h-[30px]" />
+          <PersonStanding className="w-[30px] h-[30px]" />
         </PopoverTrigger>
         <PopoverContent className="mt-1 mr-1 w-[150px] lg:w-[200px] bg-[#F8FFE5] dark:bg-gray-800 dark:text-white text-gray-900 rounded-lg shadow-md py-2 pr-1 px-2">
           <div className="border-red-400 w-full h-full">
@@ -253,6 +269,25 @@ function Accessibility() {
                 >
                   <Eye className="w-5 h-5 mr-2" />
                   {data.header.accessibility.negativeContrast}
+                </button>
+              </li>
+
+              <li>
+                <button
+                  className={cn(
+                    buttonStyle,
+                    clicks.themeToggle !== 0
+                      ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
+                      : 'bg-[#313e0d] dark:bg-gray-800'
+                  )}
+                  onClick={toggleTheme}
+                >
+                  {theme === 'light' ? (
+                    <Moon className="w-5 h-5 mr-2" />
+                  ) : (
+                    <Sun className="w-5 h-5 mr-2" />
+                  )}
+                  {data.header.accessibility.themeToggle}
                 </button>
               </li>
 
