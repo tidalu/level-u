@@ -18,7 +18,7 @@ const LandingBanner = () => {
             <p className="text-4xl reveal text-left text-black xl:text-5xl 2xl:text-6xl font-extrabold leading-snug italic apply-font-o ">
               {data.landingAdd.mainTitle[0]}
             </p>
-            <p className="text-4xl reveal text-right lg:-mr-8 xl:text-5xl 2xl:text-6xl xl:-mr-11 text-black font-extrabold leading-snug italic apply-font-o ">
+            <p className="text-4xl reveal text-center md:text-right lg:-mr-8 xl:text-5xl 2xl:text-6xl xl:-mr-11 text-black  font-extrabold leading-snug italic apply-font-o ">
               {data.landingAdd.mainTitle[1]}
             </p>
           </div>

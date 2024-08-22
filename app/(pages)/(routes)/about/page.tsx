@@ -17,8 +17,6 @@ const AboutPage = () => {
     setColor(theme === 'dark' ? '#ffffff' : '#000000');
   }, [theme]);
 
-
-
   return (
     <>
       <div className="h-full max-w-[1900px] mx-auto">
@@ -71,13 +69,15 @@ const AboutPage = () => {
           </div>
         </ScrollAnimateWrapper>
       </div>
-      <InfiniteMovingCards
-        items={data.reasons}
-        direction="right"
-        speed="slow"
-        pauseOnHover={true}
-        className="w-full mx-auto"
-      />
+      <div className="mx-5">
+        <InfiniteMovingCards
+          items={data.reasons}
+          direction="right"
+          speed="slow"
+          pauseOnHover={true}
+          className="w-full mx-auto"
+        />
+      </div>
     </>
   );
 };
