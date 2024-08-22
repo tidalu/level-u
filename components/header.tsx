@@ -201,7 +201,7 @@ const Header = () => {
                   alt="copywriting sign"
                   width={2}
                   height={2}
-                  className="absolute top-0 -right-[9px] scale-200 object-contain w-3 h-auto"
+                  className="absolute top-[3px] -right-[9px] scale-200 object-contain w-2 h-auto"
                 />
               </div>
               {/* <div className=" w-[3px] bg-black dark:bg-white rounded-lg "></div> */}
