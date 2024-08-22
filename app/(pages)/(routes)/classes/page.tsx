@@ -24,12 +24,12 @@ const ClassesPage = () => {
       <ScrollAnimateWrapper>
         <div className="homeBanner pt-32 pb-12 rounded-b-3xl px-3 lg:px-16">
           <div className=" reveal relative rounded-2xl overflow-hidden lg:h-[450px] grid grid-cols-12 bg-white mx-auto dark:bg-[#020817]">
-            <div className="reveal relative col-span-12 lg:col-span-7 xl:col-span-8 rounded-2xl overflow-hidden">
+            <div className=" relative col-span-12 lg:col-span-7 xl:col-span-8 rounded-2xl overflow-hidden outline-none ">
               <video
                 ref={videoRef}
                 width="1120"
                 height="632"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover rounded-2xl"
                 autoPlay
                 muted={true}
                 loop
