@@ -1,12 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Button } from './ui/button';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
-import { ThemeToggle } from './theme-toggle';
 import Accessibility from '@/components/Accessibility';
 import { RxTextAlignCenter } from 'react-icons/rx';
 import { X } from 'lucide-react';
@@ -19,20 +18,36 @@ import {
 import { FlipWords } from './ui/flip-words';
 import { useLanguage } from './LanguageContext';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 import { useTheme } from 'next-themes';
+import { PreferenceDialogContext } from './PreferenceDialog';
 
 const Header = () => {
+  const { themeMode, language } = useContext(PreferenceDialogContext);
+
   const [open, setOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const pathName = usePathname();
   let storedLanguage = '';
   if (typeof window !== 'undefined') {
-    storedLanguage = localStorage?.getItem('selectedLanguage') || '';
+    storedLanguage = localStorage.getItem('selectedLanguage') || 'uz';
   }
   const [currentLang, setCurrentLang] = useState(storedLanguage || 'uz');
 
   const { switchLanguage } = useLanguage();
+
+  useEffect(() => {
+    if (storedLanguage) {
+      setCurrentLang(storedLanguage);
+    }
+  }, [storedLanguage]);
+
+  useEffect(() => {
+    if (themeMode && language) {
+      localStorage.setItem('themeUsed', themeMode);
+      localStorage.setItem('selectedLanguage', language);
+    }
+  }, [themeMode, language]);
+
   const data = useLocalizedData();
   const routes = [
     {
@@ -106,6 +121,9 @@ const Header = () => {
 
   useEffect(() => {
     switchLanguage(currentLang);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('selectedLanguage', currentLang);
+    }
   }, [currentLang]);
 
   const urls =
@@ -160,7 +178,7 @@ const Header = () => {
   const handleLanguageChange = (lang: string) => {
     setCurrentLang(lang);
     if (typeof window !== 'undefined') {
-      localStorage.setItem('selectedLanguage', lang); // Store language
+      localStorage.setItem('selectedLanguage', lang);
     }
   };
   return (
