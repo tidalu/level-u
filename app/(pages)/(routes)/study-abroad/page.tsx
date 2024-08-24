@@ -1,6 +1,5 @@
 import Hero from '@/components/hero';
 import React from 'react';
-import Globe from '@/components/magicui/globe';
 
 function StudyAbroad() {
   return (
