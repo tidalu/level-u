@@ -23,7 +23,7 @@ import { useLocalizedData } from '@/lib/useLocalizedData';
 import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 
 function Accessibility() {
-  const { theme , setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [state, setState] = useState({
     zoom: 100, // default zoom level
     grayscale: false,
@@ -156,7 +156,13 @@ function Accessibility() {
     if (state.negativeContrast) filters.push('invert(100%)');
 
     document.documentElement!.style.filter = filters.join(' ');
-  }, [state.zoom, state.grayscale, state.contrast, state.negativeContrast, theme]);
+  }, [
+    state.zoom,
+    state.grayscale,
+    state.contrast,
+    state.negativeContrast,
+    theme,
+  ]);
 
   const buttonStyle =
     'w-full flex px-2 py-1 text-left hover:bg-[#e7e9e7] dark:hover:bg-gray-700 rounded-lg text-sm dark:text-white dark:bg-gray-800 text-gray-900';
@@ -299,7 +305,7 @@ function Accessibility() {
                     buttonStyle,
                     clicks.reset !== 0
                       ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
-                      : 'bg-[#F8FFE5] dark:bg-gray-800'
+                      : 'bg-[#F8FFE5] dark:bg-[#00ff006a]'
                   )}
                   onClick={reset}
                 >
