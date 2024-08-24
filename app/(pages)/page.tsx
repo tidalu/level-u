@@ -6,7 +6,20 @@ import Offer from '@/components/offer';
 import PopulaActivities from '@/components/popula-activities';
 import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
 import { useLocalizedData } from '@/lib/useLocalizedData';
+import { PreferenceDialog } from '@/components/PreferenceDialog';
+import { useEffect, useState } from 'react';
 const LandingPage = () => {
+  let savedShow = false
+  if (typeof window !== 'undefined') {
+    savedShow = Boolean(localStorage.getItem('showPreference')) || false
+  }
+  const [show, setShow] = useState(
+     savedShow || false);
+
+
+  useEffect(() => {
+    setShow(savedShow)
+  },[savedShow])
   const data = useLocalizedData();
   return (
     <div className="h-full max-w-[1920px] max-w-sc  mx-auto ">
@@ -14,6 +27,10 @@ const LandingPage = () => {
         {/* landing banner */}
         <LandingBanner />
       </ScrollAnimateWrapper>
+      {
+        !show && 
+        <PreferenceDialog />
+      }
 
       <div className=" max-w-[1600px] mx-auto reveal">
         {/* offer */}
