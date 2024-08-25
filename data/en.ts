@@ -703,6 +703,7 @@ export const data = {
   contactPage: {
     workInfo: {
       customerServiceDepartment: 'Customer Service Department',
+      manager: 'Manager',
       workdays: 'Every day',
       start: 'from 8:00',
       end: 'to 20:00',

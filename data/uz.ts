@@ -717,6 +717,7 @@ export const data = {
   contactPage: {
     workInfo: {
       customerServiceDepartment: 'Mijozlarga xizmat ko‘rsatish bo‘limi',
+      manager: 'Manager', 
       workdays: 'Har kuni',
       start: 'soat 8:00 dan',
       end: ' 20:00 gacha',

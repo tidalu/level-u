@@ -716,6 +716,7 @@ export const data = {
   contactPage: {
     workInfo: {
       customerServiceDepartment: 'Отдел обслуживания клиентов',
+      manager: 'Менеджер',
       workdays: 'Каждый день',
       start: 'с 8:00',
       end: 'до 20:00',
