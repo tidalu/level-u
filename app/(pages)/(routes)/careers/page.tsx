@@ -119,36 +119,19 @@ function Careers() {
                 </p>
               </div>
             </section>
-            <section className=" my-10 h-auto w-full reveal md:my-16 lg:my-18 relative bg-gray-900">
-              <img
-                alt="company-banner"
-                loading="lazy"
-                decoding="async"
-                data-nimg="fill"
-                style={{
-                  position: 'relative',
-                  height: '100%',
-                  width: '100%',
-
-                  objectFit: 'cover',
-                  color: 'transparent',
-                }}
-                sizes="100vw"
-                src="/careers-img.webp"
-              />
-              <div className="absolute top-0 left-0 h-full w-full bg-gray-900 opacity-30"></div>
-              {/* <section className="container px-4 sm:px-10 m-auto relative py-24">
-                <p className="mb-4 max-w-2xl text-3xl font-semibold text-white md:mb-8 md:text-5xl">
-                  {data.careers.optionalRequision.cultureBook}
-                </p>
-                <button
-                  className="max-w-md md:text-lg flex items-center transition-all py-2 px-8 text-black bg-white hover:bg-gray-300 border-2 border-white hover:border-gray-300 rounded-full"
-                  type="button"
-                >
-                  {data.careers.optionalRequision.button}
-                </button>
-              </section> */}
+            <section className="relative my-10 h-auto w-full bg-gray-900">
+              <div className="relative w-full overflow-hidden h-auto">
+                <img
+                  alt="company-banner"
+                  loading="lazy"
+                  decoding="async"
+                  className="object-contain max-w-full w-auto h-full"
+                  src="/careers-img.webp"
+                />
+                <div className="absolute top-0 left-0 h-full w-full bg-gray-900 opacity-30"></div>
+              </div>
             </section>
+
             <section
               className="container px-4 sm:px-10 m-auto my-10 md:my-16 lg:my-18 scroll-mt-24"
               id="benefits"
