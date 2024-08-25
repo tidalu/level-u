@@ -478,7 +478,7 @@ export const data = {
       ],
     },
     copyright: {
-      name: 'LEVEL learning centerr',
+      name: 'LEVEL learning center',
     },
   },
   contactForm: {
