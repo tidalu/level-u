@@ -23,13 +23,13 @@ const ClassesPage = () => {
     <div className="h-full max-w-[1900px] mx-auto ">
       <ScrollAnimateWrapper>
         <div className="homeBanner pt-32 pb-12 rounded-b-3xl px-3 lg:px-16">
-          <div className=" reveal relative rounded-2xl overflow-hidden lg:h-[450px] grid grid-cols-12 bg-white mx-auto dark:bg-[#020817]">
-            <div className=" relative col-span-12 lg:col-span-7 xl:col-span-8 rounded-2xl overflow-hidden outline-none ">
+          <div className=" reveal relative rounded-2xl overflow-hidden lg:h-[450px] grid grid-cols-12  mx-auto dark:bg-[#020817]">
+            <div className=" relative col-span-12 lg:col-span-7 xl:col-span-8  overflow-hidden outline-none ">
               <video
                 ref={videoRef}
                 width="1120"
                 height="632"
-                className="h-full w-full object-cover rounded-2xl"
+                className="h-full w-full object-cover rounded-t-2xl lg:rounded-l-2xl lg:rounded-t-none "
                 autoPlay
                 muted={true}
                 loop
@@ -38,7 +38,7 @@ const ClassesPage = () => {
               </video>
             </div>
 
-            <div className=" text-gray-600 dark:text-gray-400 py-4 px-10 col-span-12 lg:col-span-5 xl:col-span-4 h-auto overflow-y-auto scrollbar-hide">
+            <div className=" text-gray-600 bg-white dark:text-gray-400 py-4 px-10 col-span-12 lg:col-span-5 xl:col-span-4 h-auto overflow-y-auto scrollbar-hide">
               <h1 className=" text-xl sm:text-2xl reveal text-wrap mt-1 mb-4 text-[#6cce40] font-extrabold">
                 {data.classPage.mainContent.title}
               </h1>
