@@ -106,7 +106,7 @@ export const data = {
       title:
         'Discover advanced learning opportunities at Level Learning Center!',
       description: [
-        'At our educational center, you can enroll in a wide range of courses aimed at enhancing your skills and knowledge.',
+        'At our learning center, you can enroll in a wide range of courses aimed at enhancing your skills and knowledge.',
         'Choose from various courses, including:',
         [
           'Advanced language training for professional and personal development',
@@ -126,6 +126,7 @@ export const data = {
         list: [
           {
             name: 'General English',
+            img: '/general-english.jpg',
             description:
               'This comprehensive course offers a robust foundation in English, covering key language skills such as reading, writing, listening, and speaking. The course emphasizes practical usage and communication, providing a solid basis for everyday and professional interactions.',
             video:
@@ -148,6 +149,7 @@ export const data = {
           },
           {
             name: 'English Individual Classes',
+            img: '/individual-courses.jpg',
             description:
               'These personalized lessons are tailored to address your specific needs and learning goals. Whether you need to focus on business English, academic writing, or conversational skills, these one-on-one sessions provide targeted instruction and feedback.',
             video:
@@ -170,6 +172,7 @@ export const data = {
           },
           {
             name: 'English for Kids',
+            img: '/english-for-kids.jpg',
             description:
               'Designed for young learners, this course makes English fun and engaging through interactive activities and games. The focus is on building essential language skills in a supportive environment that fosters early language development.',
             video:
@@ -192,6 +195,7 @@ export const data = {
           },
           {
             name: 'Corporate Courses',
+            img: '/corporative-courses.jpg',
             description:
               'These specialized courses cater to the language needs of professionals in corporate environments. The curriculum focuses on business communication, including writing reports, conducting meetings, and engaging in professional discussions.',
             video:
@@ -214,6 +218,7 @@ export const data = {
           },
           {
             name: 'IELTS/CEFR/TOEFL',
+            img: '/ielts-toefl-cefr.jpg',
             description:
               'Our comprehensive language preparation courses are designed to equip learners with the skills and strategies needed to excel in the IELTS, CEFR, and TOEFL exams. Each course focuses on developing all core language skills: reading, writing, listening, and speaking, with tailored content and strategies for each specific exam format.',
             video:
@@ -238,6 +243,7 @@ export const data = {
           },
           {
             name: 'Intensive Course',
+            img: '/individual-courses.jpg',
             description:
               'This intensive course is designed to provide fast-paced, immersive language training for learners who need to quickly improve their English skills. The course covers all aspects of language learning, including reading, writing, listening, and speaking, with a focus on rapid progression and practical application.',
             video:
@@ -262,6 +268,7 @@ export const data = {
       },
       {
         title: 'Korean Language',
+
         list: [
           {
             name: 'Korean Individual Classes',
