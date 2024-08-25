@@ -69,7 +69,7 @@ const AboutPage = () => {
           </div>
         </ScrollAnimateWrapper>
       </div>
-      <div className="mx-5">
+      <div className="mx-5 mb-10">
         <InfiniteMovingCards
           items={data.reasons}
           direction="right"
