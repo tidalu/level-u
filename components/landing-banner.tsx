@@ -18,7 +18,7 @@ const LandingBanner = () => {
             <p className="text-4xl reveal text-left text-black xl:text-5xl 2xl:text-6xl font-extrabold leading-snug italic apply-font-o ">
               {data.landingAdd.mainTitle[0]}
             </p>
-            <p className="text-4xl reveal text-center md:text-right lg:-mr-8 xl:text-5xl 2xl:text-6xl xl:-mr-11 text-black  font-extrabold leading-snug italic apply-font-o ">
+            <p className="text-4xl reveal text-start  lg:-mr-8 xl:text-5xl 2xl:text-6xl xl:-mr-11 text-black  font-extrabold leading-snug italic apply-font-o ">
               {data.landingAdd.mainTitle[1]}
             </p>
           </div>
@@ -90,8 +90,8 @@ const LandingBanner = () => {
             className=""
             alt="mobile banner"
           />
-          <div className="h-[60%] px-6 mt-4 w-full  absolute top-0 left-0 flex flex-col">
-            <p className="self-start text-black  text-center text-2xl apply-font-o">
+          <div className="h-[60%] px-3 mt-2 sm:px-6 sm:mt-4 w-full  absolute top-0 left-0 flex flex-col">
+            <p className="self-start text-black  text-center text-lg sm:text-2xl apply-font-o">
               {data.landingAdd.topPic.map((item: string, i: number) => {
                 return (
                   <React.Fragment key={i}>
@@ -101,7 +101,7 @@ const LandingBanner = () => {
                 );
               })}
             </p>
-            <p className="self-end mt-7 text-center text-black  text-2xl apply-font-o">
+            <p className="self-end sm:mt-7 text-center text-black sm:text-2xl mt-4 text-lg apply-font-o">
               {data.landingAdd.bottomPic.map((item: string, i: number) => {
                 return (
                   <React.Fragment key={i}>
