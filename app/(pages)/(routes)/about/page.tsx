@@ -19,10 +19,10 @@ const AboutPage = () => {
 
   return (
     <>
-      <div className="h-full max-w-[1900px] mx-auto">
+      <div className="h-auto max-w-[1900px] mx-auto ">
         <ScrollAnimateWrapper>
-          <div className="min-h-[800px] flex flex-col items-center  justify-center pt-32 pb-12 rounded-b-3xl px-3 lg:px-16 border-red-700">
-            <div className=" relative rounded-2xl overflow-hidden  lg:h-[450px] grid grid-cols-12 bg-white  dark:bg-[#020817]  my-4 lg:my-10">
+          <div className="min-h-[800px] h-auto flex flex-col items-center  justify-center pt-32 pb-12 rounded-b-3xl px-3 lg:px-16 ">
+            <div className=" relative rounded-2xl   lg:h-auto  grid grid-cols-12 bg-white  dark:bg-[#020817]  my-4 lg:my-10">
               <div className=" relative col-span-12 reveal lg:col-span-7 xl:col-span-8 h-[300px] lg:h-auto flex xl:justify-end justify-center items-center overflow-hidden bg-slate-200">
                 <ThreeDTextScene />
                 <span className="  absolute bottom-4 left-0 flex w-full justify-center items-center">
@@ -61,7 +61,7 @@ const AboutPage = () => {
             </div>
             <div className="  w-full h-auto px-10">
               <div className="w-full flex justify-center items-center my-4">
-                <h2 className=" text-black dark:text-white font-extrabold text-2xl text-center">
+                <h2 className=" text-black dark:text-white font-extrabold text-2xl text-center h-auto">
                   {data.about.why}
                 </h2>
               </div>
