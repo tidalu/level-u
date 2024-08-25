@@ -81,6 +81,7 @@ const ContactPage = () => {
             <div className=" bg-[#b8df4b1a] dark:bg-[#86868517] rounded-2xl py-10 px-6 text-center w-full flex flex-col gap-3 text-sm justify-center">
               <p>{data.contactPage.workInfo.customerServiceDepartment}</p>
               <div className=" text-gray-500">+998 55 903 37 47</div>
+              <p>{data.contactPage.workInfo.manager}</p>
               <div className=" text-gray-500">+998 99 005 37 47</div>
               <Link
                 href="mailto:level.edu.uz.@gmail.com"
