@@ -244,7 +244,7 @@ const Header = () => {
               "
               >
                 <FlipWords
-                  words={['Учебный центр', 'Study center', 'O❛quv markazi']}
+                  words={['Учебный центр', 'Learning center', 'O❛quv markazi']}
                   className="text-inherit"
                 />
               </span>
