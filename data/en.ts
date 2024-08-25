@@ -213,69 +213,49 @@ export const data = {
             ],
           },
           {
-            name: 'IELTS',
+            name: 'IELTS/CEFR/TOEFL',
             description:
-              'This intensive course is designed to prepare learners for the IELTS exam, focusing on all components of the test: listening, reading, writing, and speaking. The course includes test-taking strategies, practice tests, and feedback to help achieve the desired band score.',
+              'Our comprehensive language preparation courses are designed to equip learners with the skills and strategies needed to excel in the IELTS, CEFR, and TOEFL exams. Each course focuses on developing all core language skills: reading, writing, listening, and speaking, with tailored content and strategies for each specific exam format.',
             video:
               'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
               'Students aiming to study abroad or migrate to English-speaking countries.',
-              'Individuals who need a high IELTS score for academic or professional purposes.',
-              'Test-takers seeking comprehensive preparation and practice for the IELTS exam.',
+              'Individuals needing a high score in IELTS, CEFR, or TOEFL for academic or professional purposes.',
+              'Learners seeking comprehensive preparation and practice tailored to the IELTS, CEFR, or TOEFL exams.',
+              'Individuals aiming to assess or improve their English proficiency based on international standards.',
             ],
             cost: '$ N/A',
-            duration: '8 weeks',
+            duration:
+              '8 weeks (IELTS and TOEFL), varies based on desired proficiency level (CEFR)',
             intensity: 4 / 4,
             purpose:
-              'To provide thorough preparation for the IELTS exam, ensuring learners are well-equipped to achieve their target band scores.',
+              'To provide learners with targeted preparation for the IELTS, CEFR, and TOEFL exams, ensuring they are well-prepared to achieve their desired scores or proficiency levels.',
             effects: [
-              'Increased IELTS test scores.',
-              'Enhanced academic and general English proficiency.',
-              'Improved confidence in test-taking skills and strategies.',
+              'Improved test scores in IELTS, TOEFL, and accurate CEFR level assessment.',
+              'Enhanced proficiency in academic and general English.',
+              'Increased confidence in language use and test-taking strategies across different formats.',
             ],
           },
           {
-            name: 'CEFR',
+            name: 'Intensive Course',
             description:
-              'This comprehensive course prepares learners for the Common European Framework of Reference for Languages (CEFR) exams. It focuses on developing all language skills (reading, writing, listening, and speaking) at various proficiency levels (A1-C2).',
+              'This intensive course is designed to provide fast-paced, immersive language training for learners who need to quickly improve their English skills. The course covers all aspects of language learning, including reading, writing, listening, and speaking, with a focus on rapid progression and practical application.',
             video:
               'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
-              'Individuals seeking to gauge their current English language proficiency based on the CEFR framework.',
-              'Learners aiming to achieve a specific CEFR level for academic or professional purposes.',
-              'Students preparing for future studies or careers requiring a recognized language proficiency level.',
+              'Individuals seeking rapid improvement in their English language skills.',
+              'Students preparing for imminent exams or professional challenges requiring advanced language proficiency.',
+              'Learners who prefer a condensed, intensive format for fast-tracking their language development.',
             ],
             cost: '$ N/A',
-            duration: 'Varies based on desired proficiency level',
-            intensity: 3 / 4,
+            duration: '4 weeks',
+            intensity: 5 / 4,
             purpose:
-              'To equip learners with the necessary skills to function effectively at their target CEFR level in various contexts.',
+              'To offer an accelerated language learning experience that enables learners to achieve significant progress in a short period of time.',
             effects: [
-              'Accurate assessment of current English proficiency based on CEFR standards.',
-              'Development of language skills to reach the desired CEFR level.',
-              'Enhanced confidence in using English for academic, professional, or personal purposes.',
-            ],
-          },
-          {
-            name: 'TOEFL',
-            description:
-              'This intensive course prepares learners for the Test of English as a Foreign Language (TOEFL). It covers all sections of the test (reading, listening, speaking, and writing) and provides test-taking strategies, practice materials, and personalized feedback to maximize success.',
-            video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
-            forWhom: [
-              'Students planning to study abroad at universities requiring TOEFL scores.',
-              'Individuals seeking to demonstrate their English proficiency for immigration or professional purposes.',
-              'Test-takers who need comprehensive preparation and practice for the TOEFL exam.',
-            ],
-            cost: '$ N/A',
-            duration: '8 weeks',
-            intensity: 4 / 4,
-            purpose:
-              'To equip learners with the necessary skills and strategies to achieve their target scores on the TOEFL exam.',
-            effects: [
-              'Improved TOEFL test scores, increasing chances of admission to universities or achieving professional goals.',
-              'Enhanced academic and general English proficiency.',
-              'Increased confidence in test-taking skills and strategies.',
+              'Significant improvement in English language skills in a condensed timeframe.',
+              'Enhanced ability to use English effectively in academic or professional settings.',
+              'Increased confidence and competence in all areas of language use.',
             ],
           },
         ],

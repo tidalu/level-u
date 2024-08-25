@@ -218,69 +218,49 @@ export const data = {
             ],
           },
           {
-            name: 'IELTS',
+            name: 'IELTS/CEFR/TOEFL',
             description:
-              "Ushbu intensiv kurs IELTS imtihoniga tayyorgarlik uchun mo'ljallangan, testning barcha komponentlariga e'tibor beradi: eshitish, o'qish, yozish va gapirish. Kurs imtihon strategiyalari, amaliy testlar va fikr-mulohazalarni o'z ichiga oladi, kerakli balni olishga yordam beradi.",
+              'Bizning keng qamrovli til tayyorgarlik kurslarimiz IELTS, CEFR va TOEFL imtihonlarida muvaffaqiyat qozonish uchun kerakli ko‘nikmalar va strategiyalar bilan ta’minlash uchun mo‘ljallangan. Har bir kurs o‘qish, yozish, tinglash va gapirish kabi barcha asosiy til ko‘nikmalarini rivojlantirishga qaratilgan bo‘lib, har bir aniq imtihon formatiga moslashtirilgan mazmun va strategiyalarni o‘z ichiga oladi.',
             video:
               'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
-              "Chet elda o'qishni yoki ingliz tilida so'zlashuvchilar mamlakatlariga ko'chishni maqsad qilgan talabalar.",
-              "Akademik yoki professional maqsadlar uchun yuqori IELTS ballari kerak bo'lgan shaxslar.",
-              'IELTS imtihoniga har tomonlama tayyorgarlik va amaliyot uchun izlayotgan test-oluvchilar.',
+              'Chet elda o‘qish yoki ingliz tilida so‘zlashadigan mamlakatlarga ko‘chib o‘tishni maqsad qilgan talabalar.',
+              'Akademik yoki professional maqsadlar uchun IELTS, CEFR yoki TOEFL dan yuqori ball kerak bo‘lgan shaxslar.',
+              'IELTS, CEFR yoki TOEFL imtihonlariga kompleks tayyorgarlik va amaliyot izlayotgan o‘quvchilar.',
+              'Xalqaro standartlarga muvofiq ingliz tilini baholash yoki yaxshilashni maqsad qilgan shaxslar.',
             ],
             cost: '$ N/A',
-            duration: '8 hafta',
+            duration:
+              '8 hafta (IELTS va TOEFL), kerakli til bilimi darajasiga qarab (CEFR)',
             intensity: 4 / 4,
             purpose:
-              "IELTS imtihoniga chuqur tayyorgarlikni ta'minlash, o'rganuvchilarni maqsadli ballarni olish uchun yaxshi tayyorlash.",
+              'IELTS, CEFR va TOEFL imtihonlariga yo‘naltirilgan tayyorgarlikni ta’minlash, tinglovchilarga kerakli ball yoki til bilimi darajasiga erishishda yaxshi tayyorlanishini ta’minlash.',
             effects: [
-              'IELTS testida ballarning oshishi.',
-              "Akademik va umumiy ingliz tilida ko'nikmalarni yaxshilash.",
-              "Imtihon olish ko'nikmalari va strategiyalarida yaxshilanish.",
+              'IELTS, TOEFL testlarida yaxshilangan natijalar va CEFR darajasining aniq bahosi.',
+              'Akademik va umumiy ingliz tilida ko‘nikmalarning oshirilishi.',
+              'Turli formatlarda tilni qo‘llash va imtihon topshirish strategiyalarida ishonchni oshirish.',
             ],
           },
           {
-            name: 'TOEFL',
+            name: 'Intensiv Kurs',
             description:
-              "Ushbu intensiv kurs Chet Tili sifatida Ingliz Tili (TOEFL) testiga tayyorgarlik ko'rish uchun mo'ljallangan. Kurs testning barcha bo'limlarini (o'qish, eshitish, gapirish va yozish) qamrab oladi va muvaffaqiyatga erishish uchun test topshirish strategiyalari, amaliy materiallar va shaxsiylashtirilgan tavsiyalar beradi.",
+              'Bu intensiv kurs til bilimini tezda yaxshilashni istagan o‘quvchilar uchun mo‘ljallangan tezkor va immersiv til tayyorgarligi. Kurs o‘qish, yozish, tinglash va gapirish kabi til o‘rganishning barcha jihatlarini qamrab oladi, tezkor rivojlanishga va amaliy qo‘llashga e‘tibor qaratiladi.',
             video:
               'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
             forWhom: [
-              "TOEFL ballarini talab qiluvchi universitetlarda chet elda o'qishni rejalashtirayotgan talabalar.",
-              "Ingliz tili bilim darajasini immigratsiya yoki kasbiy maqsadlar uchun ko'rsatishni istagan shaxslar.",
-              "TOEFL imtihoniga puxta tayyorgarlik va amaliyotga muhtoj bo'lgan test topshiruvchilar.",
+              'O‘z ingliz tili ko‘nikmalarini tezda yaxshilashni istagan shaxslar.',
+              'Yaqin orada imtihon yoki professional muammolar uchun yuqori til bilimini talab qilayotgan talabalar.',
+              'Til rivojlanishini tezlashtiruvchi, qisqartirilgan intensiv formatni afzal ko‘radigan o‘quvchilar.',
             ],
             cost: '$ N/A',
-            duration: '8 hafta',
-            intensity: 4 / 4,
+            duration: '4 hafta',
+            intensity: 5 / 4,
             purpose:
-              "O'quvchilarni TOEFL imtihonida maqsadli ballariga erishish uchun zarur bo'lgan ko'nikmalar va strategiyalar bilan ta'minlash.",
+              'O‘quvchilarga qisqa vaqt ichida sezilarli rivojlanish imkonini beruvchi tezlashtirilgan til o‘rganish tajribasini taklif etish.',
             effects: [
-              'TOEFL test natijalarining yaxshilanishi, universitetlarga kirish yoki kasbiy maqsadlarga erishish imkoniyatlarini oshirish.',
-              'Akademik va umumiy ingliz tilidan foydalanish darajasining oshishi.',
-              "Test topshirish ko'nikmalari va strategiyalarida ishonchning ortishi.",
-            ],
-          },
-          {
-            name: 'CEFR',
-            description:
-              "Ushbu keng qamrovli kurs Yevropa tillari umumiy ta'riflari doirasidagi (CEFR) imtihonlarga tayyorgarlik ko‘rishga mo‘ljallangan. U har xil bilim darajalarida (A1-C2) barcha til ko‘nikmalarini (o‘qish, yozish, eshitish va gapirish) rivojlantirishga qaratilgan.",
-            video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
-            forWhom: [
-              'CEFR doirasiga asoslangan hozirgi ingliz tili bilimi darajasini aniqlashni istagan shaxslar.',
-              "Akademik yoki kasbiy maqsadlar uchun ma'lum bir CEFR darajasiga erishishni maqsad qilgan o‘quvchilar.",
-              'Kelajakdagi o‘qish yoki karyeraga tayyorlanayotgan va tan olingan til bilimi darajasini talab qiladigan talabalar.',
-            ],
-            cost: '$ N/A',
-            duration: 'Talab qilingan darajaga qarab o‘zgaradi',
-            intensity: 3 / 4,
-            purpose:
-              "O‘quvchilarga turli kontekstlarda maqsadli CEFR darajasida samarali ishlash uchun zarur bo‘lgan ko‘nikmalar bilan ta'minlash.",
-            effects: [
-              'CEFR standartlariga asoslangan hozirgi ingliz tili bilimini aniq baholash.',
-              'Istalgan CEFR darajasiga erishish uchun til ko‘nikmalarini rivojlantirish.',
-              'Akademik, kasbiy yoki shaxsiy maqsadlar uchun ingliz tilidan foydalanishda ishonchni oshirish.',
+              'Qisqa vaqt ichida ingliz tili ko‘nikmalarida sezilarli yaxshilanish.',
+              'Akademik yoki professional muhitda ingliz tilini samarali qo‘llash qobiliyatining oshishi.',
+              'Tilni barcha sohalarda ishonch va malakani oshirish.',
             ],
           },
         ],
