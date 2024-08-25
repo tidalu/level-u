@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ScrollAnimateWrapper from './ScrollAnimateWrapper';
-
+import { useLanguage } from './LanguageContext';
 function BenefitCard({
   title,
   icon,
@@ -11,7 +11,7 @@ function BenefitCard({
   hoverImage: string;
 }) {
   const [isHovered, setIsHovered] = useState(false);
-
+const { language} = useLanguage();
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -45,7 +45,7 @@ function BenefitCard({
         <div className="relative flex h-24 justify-center p-4 lg:h-32">
           <img src={icon} alt="" />
         </div>
-        <p className="mt-6 text-center text-sm text-wrap text-black dark:text-white lg:text-base">
+        <p lang={language} className="mt-6 text-center text-sm hyphens-auto text-wrap text-black dark:text-white lg:text-base">
           {title || 'Flexible working hours'}
         </p>
       </div>
