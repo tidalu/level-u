@@ -9,6 +9,7 @@ import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 import { useLanguage } from './LanguageContext';
 interface Class {
   name: string;
+  img: string;
   description: string;
   video: string;
   forWhom: string[];
@@ -50,8 +51,12 @@ const Categories = () => {
                         className="group/item shadow-xl relative rounded-xl pt-32 md:pt-4 p-4 min-w-64 md:min-w-fit md:pl-32 flex-1 h-auto overflow-hidden dark:bg-[#0f1227]"
                       >
                         <div className="cursor-pointer">
-                          <div className="absolute skew top-0 left-0 right-0 bottom-44 md:bottom-0 w-full h-full overflow-hidden">
-                            <img src="/offer4.webp" alt="" />
+                          <div className="absolute skew top-0 left-0 right-0  bottom-44  w-full md:w-[40%] h-[100%] ">
+                            <img
+                              src={item.img || '/offer4.webp'}
+                              alt=""
+                              className="object-cover "
+                            />
                           </div>
                           <div className="text-black dark:text-white relative z-10 mt-12 text-sm mb-2">
                             <span className="font-bold group-hover:item:underline">
