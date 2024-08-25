@@ -110,12 +110,12 @@ export const data = {
         'Choose from various courses, including:',
         [
           'Advanced language training for professional and personal development',
-          'IELTS preparation courses',
+          'IELTS, TOEFL and CEFR preparation courses',
           'TOPIK preparation courses',
           'Korean language courses',
           'Corporate language training programs',
         ],
-        'Our curriculum also includes renowned language programs and specialized training in English, IELTS, TOPIK, Korean, and corporate courses.',
+        'Our curriculum also includes renowned language programs and specialized training in English, IELTS, TOEFL, CEFR, TOPIK, Korean, and corporate courses.',
       ],
       button: 'All Courses',
     },
@@ -232,6 +232,50 @@ export const data = {
               'Increased IELTS test scores.',
               'Enhanced academic and general English proficiency.',
               'Improved confidence in test-taking skills and strategies.',
+            ],
+          },
+          {
+            name: 'CEFR',
+            description:
+              'This comprehensive course prepares learners for the Common European Framework of Reference for Languages (CEFR) exams. It focuses on developing all language skills (reading, writing, listening, and speaking) at various proficiency levels (A1-C2).',
+            video:
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
+            forWhom: [
+              'Individuals seeking to gauge their current English language proficiency based on the CEFR framework.',
+              'Learners aiming to achieve a specific CEFR level for academic or professional purposes.',
+              'Students preparing for future studies or careers requiring a recognized language proficiency level.',
+            ],
+            cost: '$ N/A',
+            duration: 'Varies based on desired proficiency level',
+            intensity: 3 / 4,
+            purpose:
+              'To equip learners with the necessary skills to function effectively at their target CEFR level in various contexts.',
+            effects: [
+              'Accurate assessment of current English proficiency based on CEFR standards.',
+              'Development of language skills to reach the desired CEFR level.',
+              'Enhanced confidence in using English for academic, professional, or personal purposes.',
+            ],
+          },
+          {
+            name: 'TOEFL',
+            description:
+              'This intensive course prepares learners for the Test of English as a Foreign Language (TOEFL). It covers all sections of the test (reading, listening, speaking, and writing) and provides test-taking strategies, practice materials, and personalized feedback to maximize success.',
+            video:
+              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
+            forWhom: [
+              'Students planning to study abroad at universities requiring TOEFL scores.',
+              'Individuals seeking to demonstrate their English proficiency for immigration or professional purposes.',
+              'Test-takers who need comprehensive preparation and practice for the TOEFL exam.',
+            ],
+            cost: '$ N/A',
+            duration: '8 weeks',
+            intensity: 4 / 4,
+            purpose:
+              'To equip learners with the necessary skills and strategies to achieve their target scores on the TOEFL exam.',
+            effects: [
+              'Improved TOEFL test scores, increasing chances of admission to universities or achieving professional goals.',
+              'Enhanced academic and general English proficiency.',
+              'Increased confidence in test-taking skills and strategies.',
             ],
           },
         ],
