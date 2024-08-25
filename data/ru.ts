@@ -441,7 +441,7 @@ export const data = {
       title: 'Информация',
       links: [
         {
-          title: 'Уровень образования',
+          title: 'LEVEL учебный центр',
           href: '/',
         },
 
