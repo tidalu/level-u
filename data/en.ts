@@ -234,7 +234,7 @@ export const data = {
             group: 'up to 10 people',
           },
           {
-            name: 'IELTS/CEFR/TOEFL',
+            name: 'IELTS CEFR TOEFL',
             img: '/ielts-toefl-cefr.jpg',
             description:
               'Our comprehensive language preparation courses are designed to equip learners with the skills and strategies needed to excel in the IELTS, CEFR, and TOEFL exams. Each course focuses on developing all core language skills: reading, writing, listening, and speaking, with tailored content and strategies for each specific exam format.',

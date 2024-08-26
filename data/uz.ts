@@ -239,7 +239,7 @@ export const data = {
             group: '10 kishigacha',
           },
           {
-            name: 'IELTS/CEFR/TOEFL',
+            name: 'IELTS CEFR TOEFL',
             img: '/ielts-toefl-cefr.jpg',
             description:
               'Kurslar ingliz tilidagi malakalarni turli maqsadlar uchun ko‘rsatishi kerak bo‘lgan shaxslar uchun moslashtirilgan. Ushbu kurslar turli maqsad va ehtiyojlarga ega bo‘lgan o‘rganuvchilar uchun foydalidir. Bundan tashqari, bu ingliz tili malakasi sertifikatlari ko‘plab universitetlarda va mahalliy institutlarda tahsil olish uchun talab qilinadi.',
