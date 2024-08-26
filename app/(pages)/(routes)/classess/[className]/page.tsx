@@ -6,7 +6,7 @@ import { useLocalizedData } from '@/lib/useLocalizedData';
 import { cn } from '@/lib/utils';
 import { X } from 'lucide-react';
 import Link from 'next/link';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/components/LanguageContext';
 
 import React, { useEffect, useState } from 'react';
@@ -15,13 +15,11 @@ const ClassesDataPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [videoUrl, setVideoUrl] = useState('');
   const data = useLocalizedData();
-  const searchParams = useSearchParams();
   const { language, switchLanguage } = useLanguage();
 
-  const languageQuery = searchParams.get('lang') ?? '';
   useEffect(() => {
-    switchLanguage(languageQuery || language);
-  }, [language, switchLanguage, languageQuery]);
+    switchLanguage(language);
+  }, [language]);
 
   const handleModal = (url: string) => {
     setVideoUrl(url);
