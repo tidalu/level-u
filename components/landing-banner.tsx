@@ -71,10 +71,14 @@ const LandingBanner = () => {
         </div>
 
         <div className="reveal relative col-span-12 md:hidden ">
-          <img
+          <Image
             src="/mobile_home-banner.webp"
-            className=""
+            className="w-full h-full object-cover"
             alt="mobile banner"
+            width={200}
+            height={200}
+            loading="lazy"
+            decoding="async"
           />
           <div className="h-[60%] px-3 mt-2 sm:px-6 sm:mt-4 w-full  absolute top-0 left-0 flex flex-col">
             <p className="self-start text-black  text-center text-lg sm:text-2xl apply-font-o">
