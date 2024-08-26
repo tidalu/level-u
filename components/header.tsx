@@ -18,10 +18,10 @@ import {
 import { FlipWords } from './ui/flip-words';
 import { useLanguage } from './LanguageContext';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-import { PreferenceDialogContext } from './PreferenceDialog';
+import { useTheme } from 'next-themes';
 
 const Header = () => {
-  const { themeMode, language } = useContext(PreferenceDialogContext);
+  const { theme, setTheme } = useTheme();
 
   const [open, setOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -39,13 +39,6 @@ const Header = () => {
       setCurrentLang(storedLanguage);
     }
   }, [storedLanguage]);
-
-  useEffect(() => {
-    if (themeMode && language) {
-      localStorage.setItem('themeUsed', themeMode);
-      localStorage.setItem('selectedLanguage', language);
-    }
-  }, [themeMode, language]);
 
   const data = useLocalizedData();
   const routes = [
@@ -135,11 +128,11 @@ const Header = () => {
     pathName === '/study-abroad';
 
   const getFigurePath = () => {
-    if (themeMode === 'dark') {
+    if (theme === 'dark') {
       return '/figure-white.png';
     }
 
-    if (themeMode === 'light') {
+    if (theme === 'light') {
       if (pathName === '/' && !isVisible) {
         return '/figure-white.png';
       }
@@ -154,11 +147,11 @@ const Header = () => {
     return '/figure-black.png';
   };
   const getCopyright = () => {
-    if (themeMode === 'dark') {
+    if (theme === 'dark') {
       return '/tm-dark.png';
     }
 
-    if (themeMode === 'light') {
+    if (theme === 'light') {
       if (pathName === '/' && !isVisible) {
         return '/tm-dark.png';
       }
