@@ -13,7 +13,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastPosition } from 'react-toastify';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import React, { useState, memo } from 'react';
-import { useLanguage } from './LanguageContext';
 function Form({ children }: { children: React.ReactNode }) {
   const [formData, setFormData] = useState({
     email: '',

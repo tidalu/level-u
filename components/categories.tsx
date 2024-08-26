@@ -5,6 +5,7 @@ import React from 'react';
 import { Button } from './ui/button';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import Image from 'next/image';
+import { useLanguage } from './LanguageContext';
 interface Class {
   name: string;
   img: string;
@@ -26,10 +27,8 @@ interface ClassList {
 }
 
 const Categories = () => {
-  let language = '';
-  if (typeof window !== 'undefined') {
-    language = localStorage?.getItem('selectedLanguage') || 'uz';
-  }
+  let { language } = useLanguage();
+ 
   const data = useLocalizedData();
   return (
     <div>
