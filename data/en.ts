@@ -177,7 +177,6 @@ export const data = {
             frequency: '3 times a week (flexible)',
             materials: 'included',
             group: '1',
-            ageLimit: ' no limit',
           },
           {
             name: 'English for Kids',
