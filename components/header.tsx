@@ -206,9 +206,8 @@ const Header = () => {
             <div className="flex flex-row gap-[5px]   ">
               <div className="relative self-center shrink">
                 <Image
-                  src={'/logo.svg'
-                  }
-                  className=" w-auto h-8 md:h-10   lg:h-12 2xl:h-14 "
+                  src={'/logo.svg'}
+                  className=" w-auto h-6 sm:h-8 md:h-10   lg:h-12 2xl:h-14 "
                   width={80}
                   height={40}
                   alt="logo"
@@ -309,8 +308,9 @@ const Header = () => {
                   alt={langs[currentLang].label}
                   width={40}
                   height={40}
-                  className="rounded-full  2xl:w-12 2xl:h-12"
-                  loading="lazy"
+                  className="rounded-full w-10 h-10 2xl:w-12 2xl:h-12"
+                  priority
+                  loading="eager"
                   decoding="async"
                 />
               </DropdownMenuTrigger>
