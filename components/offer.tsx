@@ -1,15 +1,10 @@
-// components/Offer.tsx
-import { ChevronRight } from 'lucide-react';
-import Link from 'next/link';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Button } from './ui/button';
-import ScrollAnimateWrapper from './ScrollAnimateWrapper';
-import ToolTipProv from './ToolTipProv';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-import { ManagerContact } from './ManagerContact';
-
+import ManagerContact from './ManagerContact';
+import Image from 'next/image';
 const Offer = () => {
-  const data = useLocalizedData();
+  const data = useLocalizedData()
   return (
     <section>
       <div className="my-16 px-3 lg:px-16 mx-auto">
@@ -21,7 +16,7 @@ const Offer = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-5 scroll-mt-16 mt-10"
           id="forYou"
         >
-          <div className="rounded-2xl bg-[#f8ffe5] dark:bg-[#86868517]">
+          <div className="rounded-2xl shadow-[#b9bfab] dark:shadow-[#35475c]  shadow-xl bg-[#f8ffe5] dark:bg-[#86868517]">
             <div className="grid grid-cols-1 sm:grid-cols-2">
               <div className="pl-10 py-10 md:py-5 flex flex-col justify-center text-sm 2xl:text-xl">
                 <div className="text-black dark:text-white font-bold mb-5">
@@ -40,17 +35,25 @@ const Offer = () => {
                 </Button>
               </div>
 
-              <div>
-                <img src="/offer1.webp" alt="" />
+              <div className="p-3">
+                <Image
+                  src="/for-you-img.jpg"
+                  alt="offer for you"
+                  className="rounded-2xl  shadow-xl object-cover w-full h-full"
+                  width={200}
+                  height={200}
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
           </div>
 
           <div
-            className="rounded-2xl bg-[#e7e9e7] scroll-mt-24"
+            className="rounded-2xl shadow-[#b9bfab] dark:shadow-[#35475c] shadow-xl bg-[#e7e9e7] scroll-mt-24"
             id="offersComp"
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
               <div className="pl-10 py-10 md:py-5 flex flex-col justify-center text-sm 2xl:text-xl">
                 <div className="text-black font-bold mb-5">
                   {data.offers.forCompanies.title}
@@ -77,8 +80,16 @@ const Offer = () => {
                 </ManagerContact>
               </div>
 
-              <div>
-                <img src="/offer2.webp" className="" alt="" />
+              <div className="p-3">
+                <Image
+                  src="/for-companies-img.jpg"
+                  className="rounded-2xl shadow-xl w-full h-full object-cover"
+                  alt="for companies"
+                  width={200}
+                  height={200}
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
           </div>
@@ -174,4 +185,4 @@ const Offer = () => {
   );
 };
 
-export default Offer;
+export default React.memo(Offer);

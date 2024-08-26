@@ -1,10 +1,8 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import googleMap from '../public/google-maps.svg';
 import yandexIcon from '../public/yandex.svg';
-import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 
 interface MapPinProps {
@@ -50,6 +48,8 @@ const MapPin = ({ item }: MapPinProps) => {
                   width={0}
                   height={0}
                   className="w-full h-40"
+                  loading='lazy'
+                  decoding='async'
                 />
                 <h3 className=" text-[13px] capitalize mb-1 font-bold">
                   {item.name}
@@ -84,6 +84,9 @@ const MapPin = ({ item }: MapPinProps) => {
                       src={googleMap}
                       alt="google map"
                       className="w-[30px] "
+                      decoding='async'
+                      loading='lazy'
+
                     />
                   </button>
                   <button
@@ -102,6 +105,9 @@ const MapPin = ({ item }: MapPinProps) => {
                       src={yandexIcon}
                       alt="yandex icon map"
                       className="w-[40px] "
+                      decoding='async'
+                      loading='lazy'
+
                     />
                   </button>
                 </div>
@@ -114,4 +120,4 @@ const MapPin = ({ item }: MapPinProps) => {
   );
 };
 
-export default MapPin;
+export default React.memo(MapPin);

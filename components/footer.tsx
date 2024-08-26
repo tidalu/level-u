@@ -2,7 +2,8 @@ import Link from 'next/link';
 import FooterLinks from './footer-links';
 import { FaTelegram, FaInstagram, FaLink } from 'react-icons/fa';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-
+import Image from 'next/image';
+import React from 'react';
 const Footer = () => {
   const data = useLocalizedData();
   const date = new Date();
@@ -10,7 +11,15 @@ const Footer = () => {
     <footer className=" bg-[#0d1c07] dark:bg-[#0d270273] rounded-t-3xl">
       <div className="max-w-[1900px] mx-auto px-3 lg:px-12 py-10 text-white">
         <div className=" flex md:justify-end ml-5 -mt-16 md:mr-64">
-          <img src="/footericon.webp" width={80} alt="footer" />
+          <Image
+            src="/footericon.webp"
+            width={80}
+            height={80}
+            alt="footer"
+            loading="lazy"
+            decoding="async"
+            className="w-auto h-auto"
+          />
         </div>
         <FooterLinks />
 
@@ -38,4 +47,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default React.memo(Footer);

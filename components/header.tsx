@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { Button } from './ui/button';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -137,11 +137,11 @@ const Header = () => {
     pathName === '/study-abroad';
 
   const getFigurePath = () => {
-    if (theme.theme === 'dark') {
+    if (themeMode === 'dark') {
       return '/figure-white.png';
     }
 
-    if (theme.theme === 'light') {
+    if (themeMode === 'light') {
       if (pathName === '/' && !isVisible) {
         return '/figure-white.png';
       }
@@ -156,11 +156,11 @@ const Header = () => {
     return '/figure-black.png';
   };
   const getCopyright = () => {
-    if (theme.theme === 'dark') {
+    if (themeMode === 'dark') {
       return '/tm-dark.png';
     }
 
-    if (theme.theme === 'light') {
+    if (themeMode === 'light') {
       if (pathName === '/' && !isVisible) {
         return '/tm-dark.png';
       }
@@ -205,20 +205,23 @@ const Header = () => {
           <Link href="/" className=" flex-shrink-0">
             <div className="flex flex-row gap-[5px]   ">
               <div className="relative self-center shrink">
-                <img
-                  src={
-                    urls ? '/logo.svg' : isVisible ? '/logo.svg' : '/logo.svg'
+                <Image
+                  src={'/logo.svg'
                   }
                   className=" w-auto h-8 md:h-10   lg:h-12 2xl:h-14 "
                   width={80}
                   height={40}
                   alt="logo"
+                  priority
+                  decoding="async"
                 />
                 <Image
                   src={getCopyright()}
                   alt="copywriting sign"
                   width={2}
                   height={2}
+                  loading="lazy"
+                  decoding="async"
                   className="absolute top-[3px] -right-[9px] scale-200 object-contain w-2 h-auto"
                 />
               </div>
@@ -230,6 +233,8 @@ const Header = () => {
                   width={0}
                   height={0}
                   className="h-full w-full text-white bg-transparent"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <span
@@ -305,6 +310,8 @@ const Header = () => {
                   width={40}
                   height={40}
                   className="rounded-full  2xl:w-12 2xl:h-12"
+                  loading="lazy"
+                  decoding="async"
                 />
               </DropdownMenuTrigger>
               <DropdownMenuContent
@@ -319,6 +326,8 @@ const Header = () => {
                     src={langs['en'].icon}
                     alt="English"
                     width={30}
+                    loading="lazy"
+                    decoding="async"
                     height={20}
                   />
                   {data.header.langs.eng}
@@ -331,6 +340,8 @@ const Header = () => {
                     src={langs['uz'].icon}
                     alt="Uzbek"
                     width={30}
+                    loading="lazy"
+                    decoding="async"
                     height={20}
                   />
                   {data.header.langs.uzb}
@@ -343,6 +354,8 @@ const Header = () => {
                     src={langs['ru'].icon}
                     alt="Russian"
                     width={30}
+                    loading="lazy"
+                    decoding="async"
                     height={20}
                   />
                   {data.header.langs.rus}
@@ -363,4 +376,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default React.memo(Header);

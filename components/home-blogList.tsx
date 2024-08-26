@@ -5,11 +5,14 @@ import { ChevronRight } from 'lucide-react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import Image from 'next/image';
 import { useLocalizedData } from '@/lib/useLocalizedData';
+import { memo} from 'react';
+import { useLanguage } from './LanguageContext';
 
 const HomeBlogList = () => {
-  const data = useLocalizedData();
+  const { language } = useLanguage();
+  const data = useLocalizedData()
   const settings = {
     dots: false,
     infinite: false,
@@ -76,10 +79,14 @@ const HomeBlogList = () => {
               <div className=" bg-white dark:bg-[#020817] rounded-2xl p-4 group/item mr-5">
                 <div className=" grid grid-cols-12 gap-4">
                   <div className=" col-span-6">
-                    <img
+                    <Image
                       src={item.img}
                       className=" rounded-2xl object-cover w-full h-32"
                       alt="fit1"
+                      width={200}
+                      height={200}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className=" col-span-6 flex flex-col justify-between">
@@ -106,4 +113,4 @@ const HomeBlogList = () => {
   );
 };
 
-export default HomeBlogList;
+export default memo(HomeBlogList);

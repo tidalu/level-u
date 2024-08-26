@@ -1,6 +1,6 @@
 'use client';
-import { useEffect, useState, useRef } from 'react';
-import ScrollAnimateWrapper from './ScrollAnimateWrapper';
+import React, { useEffect, useState, useRef } from 'react';
+import Image from 'next/image';
 
 const HorizontalScroll: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -28,11 +28,11 @@ const HorizontalScroll: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (!isAutoScrolling) return; // Skip auto-scrolling if user is manually scrolling
+    if (!isAutoScrolling) return;
 
     const intervalId = setInterval(() => {
       if (scrollContainerRef.current) {
-        scrollContainerRef.current.scrollLeft += 2;
+        scrollContainerRef.current.scrollLeft += 3;
       }
     }, 50);
 
@@ -43,15 +43,14 @@ const HorizontalScroll: React.FC = () => {
 
   const images = [
     'https://picsum.photos/id/237/300/600',
-    'https://picsum.photos/id/238/800/500',
     'https://picsum.photos/id/239/400/300',
     'https://picsum.photos/id/240/800/600',
     'https://picsum.photos/id/241/500/400',
+    'https://picsum.photos/id/241/500/400',
     'https://picsum.photos/id/242/700/600',
     'https://picsum.photos/id/243/800/300',
+    'https://picsum.photos/id/243/800/300',
     'https://picsum.photos/id/244/600/600',
-    'https://picsum.photos/id/245/800/500',
-    'https://picsum.photos/id/246/500/600',
   ];
 
   return (
@@ -62,10 +61,14 @@ const HorizontalScroll: React.FC = () => {
       >
         {images.map((image, index) => (
           <div key={index} className="flex-shrink-0 ">
-            <img
+            <Image
               src={image}
               alt={`Image ${index + 1}`}
-              className=" rounded-lg"
+              className=" rounded-lg w-auto h-auto"
+              width={400}
+              height={300}
+              priority
+              decoding="async"
             />
           </div>
         ))}
@@ -74,4 +77,4 @@ const HorizontalScroll: React.FC = () => {
   );
 };
 
-export default HorizontalScroll;
+export default React.memo(HorizontalScroll);

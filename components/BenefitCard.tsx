@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 import { useLanguage } from './LanguageContext';
+import Image from 'next/image';
 function BenefitCard({
   title,
   icon,
   hoverImage,
 }: {
-  title?: string;
-  icon?: string;
+  title: string;
+  icon: string;
   hoverImage: string;
 }) {
   const [isHovered, setIsHovered] = useState(false);
-const { language} = useLanguage();
+  const { language } = useLanguage();
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -32,7 +32,7 @@ const { language} = useLanguage();
         }`}
       >
         <img
-          src={hoverImage || '/mobile_home-banner.webp'}
+          src={hoverImage}
           alt=""
           className="w-full h-full object-fill rounded-xl"
         />
@@ -42,15 +42,29 @@ const { language} = useLanguage();
           isHovered ? 'opacity-0' : 'opacity-100'
         } bg-transparent`}
       >
-        <div className="relative flex h-24 justify-center p-4 lg:h-32">
-          <img src={icon} alt="" />
+        <div className="relative flex h-24 justify-center p-4 lg:h-32 w-auto">
+          <Image
+            src={icon}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            width={100}
+            height={100}
+            style={{
+              width: 'auto',
+              height: 'auto',
+            }}
+          />
         </div>
-        <p lang={language} className="mt-6 text-center text-sm hyphens-auto text-wrap text-black dark:text-white lg:text-base">
-          {title || 'Flexible working hours'}
+        <p
+          lang={language}
+          className="mt-6 text-center text-sm hyphens-auto text-wrap text-black dark:text-white lg:text-base"
+        >
+          {title}
         </p>
       </div>
     </div>
   );
 }
 
-export default BenefitCard;
+export default React.memo(BenefitCard);

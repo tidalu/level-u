@@ -1,12 +1,10 @@
 'use client';
 
 import { ChevronRight } from 'lucide-react';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Button } from './ui/button';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-import Link from 'next/link';
-import ScrollAnimateWrapper from './ScrollAnimateWrapper';
-import { useLanguage } from './LanguageContext';
+import Image from 'next/image';
 interface Class {
   name: string;
   img: string;
@@ -52,10 +50,14 @@ const Categories = () => {
                       >
                         <div className="cursor-pointer">
                           <div className="absolute skew top-0 left-0 right-0  bottom-44  w-full md:w-[40%] h-[100%] ">
-                            <img
+                            <Image
                               src={item.img || '/offer4.webp'}
                               alt=""
-                              className="object-cover "
+                              className="object-cover w-full h-full "
+                              width={100}
+                              height={100}
+                              loading="lazy"
+                              decoding="async"
                             />
                           </div>
                           <div className="text-black dark:text-white relative z-10 mt-12 text-sm mb-2">
@@ -76,11 +78,14 @@ const Categories = () => {
                               <ChevronRight size={14} className="text-black" />
                             </Button>
                           </div>
-                          <img
+                          <Image
                             className="absolute z-10 top-0 right-3"
                             width={50}
+                            height={50}
+                            loading="lazy"
+                            decoding="async"
                             src="/offericon-1.webp"
-                            alt=""
+                            alt="OFFER ICON"
                           />
                         </div>
                       </div>
@@ -96,4 +101,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default React.memo(Categories);
