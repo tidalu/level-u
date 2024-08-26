@@ -21,7 +21,6 @@ const nextConfig = {
       'typescript',
     ],
   },
-  
 };
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
