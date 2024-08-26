@@ -2,17 +2,17 @@
 
 import { lazy } from 'react';
 const Footer = lazy(() => import('@/components/footer'));
-const Header = lazy(() => import('@/components/header'));
+import Header from '@/components/header';
 import { ThemeProvider } from '@/components/theme-provider';
 import { LanguageProvider } from '@/components/LanguageContext';
 import { ComponentType } from 'react';
 
 const LazyToastContainer = lazy<ComponentType<any>>(() =>
-  import('react-toastify').then((module) => ({ default: module.ToastContainer }))
+  import('react-toastify').then((module) => ({
+    default: module.ToastContainer,
+  }))
 );
 const Call = lazy(() => import('@/components/Call'));
-
-
 
 const LandingLayout = ({ children }: { children: React.ReactNode }) => {
   return (
