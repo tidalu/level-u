@@ -9,12 +9,9 @@ const ThreeDTextScene: React.FC = () => {
   const rendererRef = useRef<THREE.WebGLRenderer>();
   let textMesh: THREE.Mesh;
   useEffect(() => {
-    // Avoid multiple renderer instances
     if (rendererRef.current) return;
 
-    // Scene setup
     const scene = new THREE.Scene();
-    // Sizes
     const sizes = {
       width: containerRef.current?.clientWidth || window.innerWidth,
       height: containerRef.current?.clientHeight || window.innerHeight,
@@ -185,8 +182,8 @@ const ThreeDTextScene: React.FC = () => {
       window.removeEventListener('resize', handleResize);
       renderer.dispose();
       scene.clear();
-      containerRef.current?.removeChild(renderer.domElement); // Remove the canvas on cleanup
-      rendererRef.current = undefined; // Clear the renderer reference
+      containerRef.current?.removeChild(renderer.domElement); 
+      rendererRef.current = undefined; 
     };
   }, []);
 
