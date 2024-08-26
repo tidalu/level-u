@@ -5,7 +5,6 @@ import React from 'react';
 import { Button } from './ui/button';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import Image from 'next/image';
-import { useLanguage } from './LanguageContext';
 interface Class {
   name: string;
   img: string;
@@ -27,8 +26,6 @@ interface ClassList {
 }
 
 const Categories = () => {
-  let { language } = useLanguage();
- 
   const data = useLocalizedData();
   return (
     <div>
@@ -70,7 +67,7 @@ const Categories = () => {
                               variant="primaryGreen"
                               className="rounded-full p-0 h-5 px-2"
                               onClick={() =>
-                                (window.location.href = `/classess/${item.name.toLowerCase()}?lang=${language}`)
+                                (window.location.href = `/classess/${item.name.toLowerCase()}`)
                               }
                             >
                               <ChevronRight size={14} className="text-black" />
