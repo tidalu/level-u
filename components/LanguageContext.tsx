@@ -1,5 +1,4 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
-import { PreferenceDialogContext } from './PreferenceDialog';
 
 type LanguageContextType = {
   language: string;
@@ -11,12 +10,11 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const prefered = useContext(PreferenceDialogContext);
-  let storedLanguage = prefered?.language || 'uz';
+  let storedLanguage = 'uz';
   if (typeof window !== 'undefined') {
     storedLanguage = localStorage.getItem('selectedLanguage') || 'uz';
   }
-  const [language, setLanguage] = useState(storedLanguage);
+  const [language, setLanguage] = useState(storedLanguage || 'uz');
 
   const switchLanguage = (lang: string) => {
     setLanguage(lang);
