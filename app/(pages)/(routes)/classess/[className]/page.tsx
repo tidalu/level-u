@@ -48,7 +48,7 @@ const ClassesDataPage = () => {
           frequency: string;
           materials: string;
           group: string;
-          ageLimit: string;
+          ageLimit?: string;
         }) => item.name.toLocaleLowerCase() === className.toLocaleLowerCase()
       );
       if (match) {
@@ -117,14 +117,16 @@ const ClassesDataPage = () => {
                 </div>
               </div>
               <div className="reveal bg-white dark:bg-[#020817] col-span-5 sm:col-span-4 p-4 md:p-8 ">
-                <div className="mb-3">
-                  <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                    {data.classPage.classContainer.ageLimit}
+                {classInfo?.match.ageLimit && (
+                  <div className="mb-3">
+                    <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
+                      {data.classPage.classContainer.ageLimit}
+                    </div>
+                    <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
+                      {classInfo?.match.ageLimit}
+                    </p>
                   </div>
-                  <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
-                    {classInfo?.match.ageLimit}
-                  </p>
-                </div>
+                )}
                 <div className="mb-3">
                   <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
                     {data.classPage.classContainer.groupTitle}
