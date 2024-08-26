@@ -32,7 +32,7 @@ export default function RootLayout({
         <link rel="preload" href="/logo.svg" as="image/svg+xml"></link>
         <link
           rel="preload"
-          href="//english-flag-icon-rect.svg'"
+          href="/english-flag-icon-rect.svg'"
           as="image/svg+xml"
         ></link>
         <link
