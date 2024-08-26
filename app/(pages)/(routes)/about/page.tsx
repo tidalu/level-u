@@ -1,21 +1,11 @@
 'use client';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-import React, { useEffect, useState } from 'react';
-
-import { InfiniteMovingCards } from '@/components/InfiniteMovingCards';
-import { useTheme } from 'next-themes';
+import InfiniteMovingCards from '@/components/InfiniteMovingCards';
 import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
 import ThreeDTextScene from '@/components/ThreeDTextScene';
 
 const AboutPage = () => {
   const data = useLocalizedData();
-  const { theme } = useTheme();
-  const [color, setColor] = useState('#ffffff');
-  const reasons = Object.values(data.reasons);
-
-  useEffect(() => {
-    setColor(theme === 'dark' ? '#ffffff' : '#000000');
-  }, [theme]);
 
   return (
     <>
@@ -71,7 +61,6 @@ const AboutPage = () => {
       </div>
       <div className="mx-5 mb-10">
         <InfiniteMovingCards
-          items={data.reasons}
           direction="right"
           speed="slow"
           pauseOnHover={true}
