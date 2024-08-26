@@ -64,7 +64,6 @@ const ThreeDTextScene: React.FC = () => {
 
     // Textures
     const textureLoader = new THREE.TextureLoader();
-    const matcapTexture = textureLoader.load('/textures/matcaps/11.png');
     const heartTexture = textureLoader.load('/textures/matcaps/12.png');
     const coneTexture = textureLoader.load('/textures/matcaps/8.png');
     const donutTexture = textureLoader.load('/textures/matcaps/1.png');
