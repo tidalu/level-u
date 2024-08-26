@@ -2,7 +2,6 @@ import type { Config } from 'tailwindcss';
 
 const defaultTheme = require('tailwindcss/defaultTheme');
 
-const colors = require('tailwindcss/colors');
 const {
   default: flattenColorPalette,
 } = require('tailwindcss/lib/util/flattenColorPalette');
@@ -15,6 +14,9 @@ const config = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
+  purge: {
+    enabled: true,
+  },
   prefix: '',
   theme: {
     container: {
