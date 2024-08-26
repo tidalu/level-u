@@ -5,7 +5,7 @@ import HorizontalScroll from '@/components/ScrollHorizontal';
 import Value from '@/components/Value';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import RecruitmentProcess from '@/components/RecruitmentProcess';
-import Image from 'next/image'; // Importing the Image component
+import Image from 'next/image';
 
 function Careers() {
   const data = useLocalizedData();

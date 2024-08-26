@@ -1,7 +1,7 @@
 'use client';
 
 import { ChevronRight } from 'lucide-react';
-import React, { useMemo } from 'react';
+import React from 'react';
 import { Button } from './ui/button';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import Image from 'next/image';
@@ -64,7 +64,6 @@ const Categories = () => {
                             <span className="font-bold group-hover:item:underline">
                               {item.name}
                             </span>
-                            {/* test comment*/}
                           </div>
                           <div className="flex justify-between relative z-10 text-[12px] text-gray-500">
                             {data.offers.packages.ielts.desc}

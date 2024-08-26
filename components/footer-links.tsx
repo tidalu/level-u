@@ -4,12 +4,10 @@ import { useLocalizedData } from '@/lib/useLocalizedData';
 import { cn } from '@/lib/utils';
 import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
-import React, { useEffect, useMemo, useState } from 'react';
-import { useLanguage } from './LanguageContext';
+import React, { useEffect, useState } from 'react';
 const FooterLinks = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [openSection, setOpenSection] = useState(null);
-  const { language } = useLanguage();
  const data = useLocalizedData();
 
   useEffect(() => {

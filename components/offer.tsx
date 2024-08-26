@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { Button } from './ui/button';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import ManagerContact from './ManagerContact';
@@ -94,92 +94,6 @@ const Offer = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="flex gap-5 mt-5 scrollMobile">
-          <div className="shadow-xl relative rounded-xl pt-32 md:pt-4 p-4 min-w-64 md:min-w-fit md:pl-32 flex-1 md:h-32 overflow-hidden dark:bg-[#0f1227]">
-            <div className="cursor-pointer">
-              <div className="absolute skew top-0 left-0 right-0 bottom-52 md:bottom-0 w-full h-full overflow-hidden">
-                <img src="/offer3.webp" className="rounded-2xl" alt="" />
-              </div>
-              <div className="text-black dark:text-white relative z-10 mt-12 text-sm mb-2">
-                <span className="font-bold">
-                  {data.offers.packages.ielts.title}
-                </span>
-              </div>
-              <div className="flex justify-between relative z-10 text-[12px] text-gray-500">
-                {data.offers.packages.ielts.desc}
-                <Button
-                  variant="primaryGreen"
-                  className="rounded-full p-0 h-5 px-2"
-                >
-                  <ChevronRight size={14} className="text-black" />
-                </Button>
-              </div>
-              <img
-                className="absolute z-10 top-0 right-3"
-                width={50}
-                src="/offericon-3.webp"
-                alt=""
-              />
-            </div>
-          </div>
-
-          <div className="group/item shadow-xl relative rounded-xl pt-32 md:pt-4 p-4 min-w-64 md:min-w-fit md:pl-32 flex-1 md:h-32 overflow-hidden dark:bg-[#0f1227]">
-            <div className="cursor-pointer">
-              <div className="absolute skew top-0 left-0 right-0 bottom-44 md:bottom-0 w-full h-full overflow-hidden">
-                <img src="/offer4.webp" alt="" />
-              </div>
-              <div className="text-black dark:text-white relative z-10 mt-12 text-sm mb-2">
-                <span className="font-bold group-hover:item:underline">
-                  {data.offers.packages.korean.title}
-                </span>
-              </div>
-              <div className="flex justify-between relative z-10 text-[12px] text-gray-500">
-                {data.offers.packages.ielts.desc}
-                <Button
-                  variant="primaryGreen"
-                  className="rounded-full p-0 h-5 px-2"
-                >
-                  <ChevronRight size={14} className="text-black" />
-                </Button>
-              </div>
-              <img
-                className="absolute z-10 top-0 right-3"
-                width={50}
-                src="/offericon-1.webp"
-                alt=""
-              />
-            </div>
-          </div>
-
-          <div className="group/item shadow-xl relative rounded-xl pt-32 md:pt-4 p-4 min-w-64 md:min-w-fit md:pl-32 flex-1 md:h-32 overflow-hidden dark:bg-[#0f1227]">
-            <div className="cursor-pointer">
-              <div className="absolute skew top-0 left-0 right-0 bottom-0 w-full h-full overflow-hidden">
-                <img src="/offer5.webp" alt="" />
-              </div>
-              <div className="text-black dark:text-white relative z-10 mt-12 text-sm mb-2">
-                <span className="font-bold group-hover:item:underline">
-                  {data.offers.packages.kids.title}
-                </span>
-              </div>
-              <div className="flex justify-between relative z-10 text-[12px] text-gray-500">
-                {data.offers.packages.kids.desc}
-                <Button
-                  variant="primaryGreen"
-                  className="rounded-full p-0 h-5 px-2"
-                >
-                  <ChevronRight size={14} className="text-black" />
-                </Button>
-              </div>
-              <img
-                className="absolute z-10 top-0 right-3"
-                width={50}
-                src="/offericon-2.webp"
-                alt=""
-              />
-            </div>
-          </div>
-        </div> */}
       </div>
     </section>
   );

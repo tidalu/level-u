@@ -18,7 +18,6 @@ import {
 import { FlipWords } from './ui/flip-words';
 import { useLanguage } from './LanguageContext';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-import { useTheme } from 'next-themes';
 import { PreferenceDialogContext } from './PreferenceDialog';
 
 const Header = () => {
@@ -79,7 +78,6 @@ const Header = () => {
       circleIcon: string;
     };
   };
-  const theme = useTheme();
 
   const langs: Langs = {
     en: {

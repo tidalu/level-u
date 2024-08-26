@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import FooterLinks from './footer-links';
-import { FaTelegram, FaInstagram, FaLink } from 'react-icons/fa';
+import { FaTelegram, FaInstagram} from 'react-icons/fa';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import Image from 'next/image';
 import React from 'react';

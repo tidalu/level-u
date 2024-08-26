@@ -2,9 +2,7 @@
 
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import Categories from '@/components/categories';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
 
 const ClassesPage = () => {

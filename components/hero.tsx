@@ -17,7 +17,6 @@ const Hero = () => {
   const data = useLocalizedData();
 
   useEffect(() => {
-    // Register the grid only on the client side
     if (typeof window !== 'undefined') {
       grid.register();
     }

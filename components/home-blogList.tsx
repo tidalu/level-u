@@ -7,11 +7,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-import { memo} from 'react';
-import { useLanguage } from './LanguageContext';
+import { memo } from 'react';
 
 const HomeBlogList = () => {
-  const { language } = useLanguage();
   const data = useLocalizedData()
   const settings = {
     dots: false,

@@ -1,6 +1,5 @@
 'use client';
 import Categories from '@/components/categories';
-import YesMove from '@/components/yes-move';
 import LandingBanner from '@/components/landing-banner';
 import Offer from '@/components/offer';
 import PopulaActivities from '@/components/popula-activities';
@@ -35,7 +34,7 @@ const LandingPage = () => {
       <div className=" max-w-[1600px] mx-auto reveal">
         {/* offer */}
         <Offer />
-        {/* available clubs */}
+        {/* availability */}
         <section>
           <div className="my-16 px-3 lg:px-16 mx-auto reveal">
             <h2 className="reveal text-black dark:text-white font-bold text-2xl 2xl:text-3xl text-center">
@@ -50,8 +49,6 @@ const LandingPage = () => {
         </section>
         {/* popular activities */}
         <PopulaActivities />
-        {/* yes2move */}
-        {/* <YesMove /> */}
       </div>
     </div>
   );

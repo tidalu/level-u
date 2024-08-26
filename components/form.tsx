@@ -4,7 +4,6 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -13,7 +12,7 @@ import { Bounce, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastPosition } from 'react-toastify';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-import React, { useState, useMemo, memo } from 'react';
+import React, { useState, memo } from 'react';
 import { useLanguage } from './LanguageContext';
 function Form({ children }: { children: React.ReactNode }) {
   const [formData, setFormData] = useState({
@@ -22,7 +21,6 @@ function Form({ children }: { children: React.ReactNode }) {
     phone: '',
     message: '',
   });
-  const { language } = useLanguage();
  const data = useLocalizedData();
 
   async function formHandler(e: React.FormEvent<HTMLFormElement>) {

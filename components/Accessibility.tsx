@@ -18,11 +18,9 @@ import {
 import { cn } from '@/lib/utils';
 import { useTheme } from 'next-themes';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-import { useLanguage } from './LanguageContext';
 
 function Accessibility() {
   const { theme, setTheme } = useTheme();
-  const { language } = useLanguage();
   const [state, setState] = useState({
     zoom: 100, // default zoom level
     grayscale: false,

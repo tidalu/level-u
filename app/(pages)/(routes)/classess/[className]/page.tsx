@@ -9,7 +9,7 @@ import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useLanguage } from '@/components/LanguageContext';
 
-import React, { use, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 const ClassesDataPage = () => {
   const pathName = usePathname();
   const [showModal, setShowModal] = useState(false);
@@ -94,19 +94,6 @@ const ClassesDataPage = () => {
                 </div>
 
                 <div className=" flex flex-col sm:flex-row flex-wrap gap-4 items-center mt-5">
-                  {/* <Button
-                    variant="primaryGreen"
-                    className="dark:text-black w-full sm:w-auto rounded-full px-6 text-sm"
-                  >
-                    <img
-                      src="/play.svg"
-                      width={16}
-                      height={16}
-                      className=" rounded-xl mr-2"
-                      alt=""
-                    />
-                    See Introductory Video
-                  </Button> */}
                   <Link href="/contact" className="w-full sm:w-auto">
                     <Button className="dark:text-white w-full sm:w-auto rounded-full px-6 bg-transparent hover:bg-transparent text-black border-2 border-[#6cce40] text-sm">
                       {data.classPage.classContainer.enrollBtn}

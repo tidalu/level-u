@@ -174,43 +174,6 @@ const ContactPage = () => {
                   {data.contactForm.required}
                 </div>
               </form>
-
-              {/* <div>
-                <Button
-                  onClick={() => setShowReadmore(!showReadmore)}
-                  className=" mt-5 bg-transparent hover:bg-transparent text-[#6cce40] font-semibold"
-                >
-                  {data.contactPage.readMore.title}
-                  {showReadmore ? (
-                    <ChevronUp className=" ml-1" size={18} />
-                  ) : (
-                    <ChevronDown className=" ml-1" size={18} />
-                  )}
-                </Button>
-
-                {showReadmore && (
-                  <div>
-                    <p className=" text-[13px] text-gray-500 dark:text-gray-400 leading-6">
-                      <span className=" font-semibold text-[#0d1c07] dark:text-white">
-                        {data.contactPage.readMore.processingPurposes.title}{' '}
-                      </span>
-                      {data.contactPage.readMore.processingPurposes.description}
-                    </p>
-                    <p className="mt-4 text-[13px] text-gray-500 dark:text-gray-400 leading-6">
-                      <span className=" font-semibold text-[#0d1c07] dark:text-white">
-                        {
-                          data.contactPage.readMore.processingOfPersonalData
-                            .title
-                        }
-                      </span>{' '}
-                      {
-                        data.contactPage.readMore.processingOfPersonalData
-                          .description
-                      }
-                    </p>
-                  </div>
-                )}
-              </div> */}
             </div>
           </div>
         </div>

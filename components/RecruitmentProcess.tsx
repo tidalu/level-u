@@ -17,7 +17,6 @@ function RecruitmentProcess({
   const [isAnimating, setIsAnimating] = useState(false);
   const [selectedStepIndex, setSelectedStepIndex] = useState(0);
 
-  // Update the currentOnScreen when the data changes (e.g., on language change)
   useEffect(() => {
     setCurrentOnScreen(data[0]);
   }, [data]);

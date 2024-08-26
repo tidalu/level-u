@@ -38,7 +38,7 @@ const AboutPage = () => {
 
                 <p
                   style={{
-                    maxHeight: '400px', // Adjust height as needed
+                    maxHeight: '400px', 
                     overflowY: 'scroll',
                     scrollbarWidth: 'none',
                     msOverflowStyle: 'none',

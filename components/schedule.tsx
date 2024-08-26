@@ -7,7 +7,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ListChecks, MapPin } from 'lucide-react';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import ClientOnly from './ClientOnly';
-import { ScrollDownButton } from '@radix-ui/react-select';
 import ScrollAnimateWrapper from './ScrollAnimateWrapper';
 const MapComponent = dynamic(() => import('@/components/MapComponent'), {
   ssr: false,

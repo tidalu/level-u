@@ -43,4 +43,4 @@ const ScrollAnimateWrapper = ({
   );
 };
 
-export default React.memo(ScrollAnimateWrapper);
+export default ScrollAnimateWrapper;
