@@ -14,9 +14,6 @@ const config = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
-  purge: {
-    enabled: true,
-  },
   prefix: '',
   theme: {
     container: {
