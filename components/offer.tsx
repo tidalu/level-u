@@ -4,7 +4,7 @@ import { useLocalizedData } from '@/lib/useLocalizedData';
 import ManagerContact from './ManagerContact';
 import Image from 'next/image';
 const Offer = () => {
-  const data = useLocalizedData()
+  const data = useLocalizedData();
   return (
     <section>
       <div className="my-16 px-3 lg:px-16 mx-auto">
@@ -35,7 +35,7 @@ const Offer = () => {
                 </Button>
               </div>
 
-              <div className="p-3">
+              <div className="p-3 border">
                 <Image
                   src="/for-you-img.jpg"
                   alt="offer for you"
@@ -53,7 +53,7 @@ const Offer = () => {
             className="rounded-2xl shadow-[#b9bfab] dark:shadow-[#35475c] shadow-xl bg-[#e7e9e7] scroll-mt-24"
             id="offersComp"
           >
-            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 h-full">
               <div className="pl-10 py-10 md:py-5 flex flex-col justify-center text-sm 2xl:text-xl">
                 <div className="text-black font-bold mb-5">
                   {data.offers.forCompanies.title}
@@ -80,7 +80,7 @@ const Offer = () => {
                 </ManagerContact>
               </div>
 
-              <div className="p-3">
+              <div className="p-3 border h-full">
                 <Image
                   src="/for-companies-img.jpg"
                   className="rounded-2xl shadow-xl w-full h-full object-cover"
