@@ -1,20 +1,15 @@
 'use client';
-
-import MapComponent from '@/components/MapComponent';
 import { Button } from '@/components/ui/button';
-import { ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import Schedule from '@/components/schedule';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-
 import ClientOnly from '@/components/ClientOnly';
 import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
-import { ToastPosition, Bounce, toast, ToastContainer } from 'react-toastify';
+import { ToastPosition, Bounce, toast} from 'react-toastify';
 import DockLive from '@/components/magicui/dock-live';
 
 const ContactPage = () => {
-  const [showReadmore, setShowReadmore] = useState(false);
   const [userData, setUserData] = useState({
     email: '',
     name: '',
