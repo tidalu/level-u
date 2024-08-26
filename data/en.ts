@@ -59,7 +59,7 @@ export const data = {
     },
     {
       question:
-        'All our teachers are certified and are either students or graduates of world-renowned universities',
+        'All our teachers are certified and are either students or graduates of world-renowned universities.',
       answer:
         'Members of our team hold official certificates that confirm their level of foreign language proficiency, issued by government institutions and consulates. The knowledge they gained abroad is applied in their teaching methods, which positively impacts the quality of education',
     },
@@ -574,7 +574,7 @@ export const data = {
     success:
       'Your message has been sent successfully, please wait for our response!',
     error:
-      'Error submitting form better to send an email: sampleEmail@level-edu.uz',
+      'Error submitting form better to send an email: level.edu.uz.@gmail.com',
   },
   hero: {
     title: 'Join Our Waitlist: Be Among the First to Explore the World!',

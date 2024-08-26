@@ -584,7 +584,7 @@ export const data = {
     success:
       'Ваше сообщение успешно отправлено, пожалуйста, ожидайте нашего ответа!',
     error:
-      'Ошибка при отправке формы, лучше отправить электронное письмо: sampleEmail@level-edu.uz',
+      'Ошибка при отправке формы, лучше отправить электронное письмо: level.edu.uz.@gmail.com',
   },
   hero: {
     title:
@@ -700,7 +700,7 @@ export const data = {
         {
           icon: '/Career_development.svg',
           image: '',
-          title: 'Развитие карьеры',
+          title: 'Карьерный рост',
         },
         {
           icon: '/collaborative_environment.svg',

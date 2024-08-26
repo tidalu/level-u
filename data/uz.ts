@@ -583,7 +583,7 @@ export const data = {
     success:
       'Xabaringiz muvaffaqiyatli yuborildi, iltimos, bizning javobimizni kuting!',
     error:
-      'Formani yuborishda xatolik yuz berdi, yaxshisi elektron pochta orqali yuboring: sampleEmail@level-edu.uz',
+      'Formani yuborishda xatolik yuz berdi, yaxshisi elektron pochta orqali yuboring: level.edu.uz.@gmail.com',
   },
 
   hero: {
