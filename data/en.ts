@@ -176,7 +176,6 @@ export const data = {
             lengthOfClasses: '1 hour',
             frequency: '3 times a week (flexible)',
             materials: 'included',
-            group: '1',
           },
           {
             name: 'English for Kids',

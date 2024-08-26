@@ -185,7 +185,6 @@ export const data = {
             lengthOfClasses: '1 час',
             frequency: '3 раза в неделю (гибкий график)',
             materials: 'включены',
-            group: '1',
           },
           {
             name: 'Английский для детей',

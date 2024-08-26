@@ -180,7 +180,6 @@ export const data = {
             lengthOfClasses: '1 soat',
             frequency: 'Haftada 3 marta (moslashuvchan)',
             materials: 'ta‘minlanadi',
-            group: '1',
           },
           {
             name: 'Bolalar uchun Ingliz Tili',
