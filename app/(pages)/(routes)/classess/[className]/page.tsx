@@ -44,6 +44,11 @@ const ClassesDataPage = () => {
           purpose: string;
           effects: string[];
           video: string;
+          lengthOfClasses: string;
+          frequency: string;
+          materials: string;
+          group: string;
+          ageLimit: string;
         }) => item.name.toLocaleLowerCase() === className.toLocaleLowerCase()
       );
       if (match) {
@@ -124,38 +129,85 @@ const ClassesDataPage = () => {
                   ))}
                 </div>
               </div>
-              <div className="reveal bg-white dark:bg-[#020817] col-span-5 sm:col-span-4 p-4 md:p-8">
-                <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                  {data.classPage.classContainer.duration}
+              <div className="reveal bg-white dark:bg-[#020817] col-span-5 sm:col-span-4 p-4 md:p-8 ">
+                <div className="mb-3">
+                  <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
+                    {data.classPage.classContainer.ageLimit}
+                  </div>
+                  <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
+                    {classInfo?.match.ageLimit}
+                  </p>
                 </div>
-                <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
-                  {classInfo?.match.duration}
-                </p>
+                <div className="mb-3">
+                  <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
+                    {data.classPage.classContainer.groupTitle}
+                  </div>
+                  <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
+                    {classInfo?.match.group}
+                  </p>
+                </div>
+                <div className="mb-3">
+                  <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
+                    {data.classPage.classContainer.materialsTitle}
+                  </div>
+                  <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
+                    {classInfo?.match.materials}
+                  </p>
+                </div>
               </div>
-              <div className="reveal bg-white dark:bg-[#020817] col-span-12 sm:col-span-4 p-4 md:p-8">
-                <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                  {data.classPage.classContainer.intensity}
+              <div className="reveal bg-white dark:bg-[#020817] col-span-12  sm:col-span-4 p-4 md:p-8">
+                <div className="mb-4">
+                  <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
+                    {data.classPage.classContainer.intensity}
+                  </div>
+                  <div className="flex gap-1 mt-3">
+                    <div
+                      className={cn(' h-1 w-9 bg-[#9dff3b] rounded-sm')}
+                    ></div>
+                    <div
+                      className={cn(
+                        ' h-1 w-9 bg-gray-200 rounded-sm',
+                        intensityValue >= 0.5 && ' bg-[#ffdf39]'
+                      )}
+                    ></div>
+                    <div
+                      className={cn(
+                        ' h-1 w-9 bg-gray-200 rounded-sm',
+                        intensityValue >= 0.75 && ' bg-orange-400'
+                      )}
+                    ></div>
+                    <div
+                      className={cn(
+                        ' h-1 w-9 bg-gray-200 rounded-sm',
+                        intensityValue >= 1 && ' bg-red-500'
+                      )}
+                    ></div>
+                  </div>
                 </div>
-                <div className="flex gap-1 mt-3">
-                  <div className={cn(' h-1 w-9 bg-[#9dff3b] rounded-sm')}></div>
-                  <div
-                    className={cn(
-                      ' h-1 w-9 bg-gray-200 rounded-sm',
-                      intensityValue >= 0.5 && ' bg-[#ffdf39]'
-                    )}
-                  ></div>
-                  <div
-                    className={cn(
-                      ' h-1 w-9 bg-gray-200 rounded-sm',
-                      intensityValue >= 0.75 && ' bg-orange-400'
-                    )}
-                  ></div>
-                  <div
-                    className={cn(
-                      ' h-1 w-9 bg-gray-200 rounded-sm',
-                      intensityValue >= 1 && ' bg-red-500'
-                    )}
-                  ></div>
+
+                <div className="mb-4">
+                  <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
+                    {data.classPage.classContainer.duration}
+                  </div>
+                  <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
+                    {classInfo?.match.duration}
+                  </p>
+                </div>
+                <div className="mb-4">
+                  <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
+                    {data.classPage.classContainer.lengthOfClassesTitle}
+                  </div>
+                  <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
+                    {classInfo?.match.lengthOfClasses}
+                  </p>
+                </div>
+                <div className="mb-4">
+                  <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
+                    {data.classPage.classContainer.frequencyTitle}
+                  </div>
+                  <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
+                    {classInfo?.match.frequency}
+                  </p>
                 </div>
               </div>
               <div className="reveal bg-white dark:bg-[#020817] col-span-12 sm:col-span-6 p-4 md:p-8">
