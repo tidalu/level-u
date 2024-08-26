@@ -34,4 +34,4 @@ function Value({
   );
 }
 
-export default Value;
+export default React.memo(Value);

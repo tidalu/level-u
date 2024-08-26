@@ -32,7 +32,6 @@ interface ClubItemProps {
 }
 
 const ClubItem: React.FC<ClubItemProps> = ({ city, clubs }) => {
-  const data = useLocalizedData();
   return (
     <div className=" relative">
       <h2 className="text-sm mb-2 sm:mt-0 sm:absolute sm:left-5 sm:top-5 sm:h-10 flex items-center sm:w-40 font-bold">
@@ -131,4 +130,4 @@ const Schedule = () => {
   );
 };
 
-export default Schedule;
+export default React.memo(Schedule);

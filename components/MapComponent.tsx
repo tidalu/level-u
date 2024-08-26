@@ -3,6 +3,7 @@
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import MapPin from './pin';
+import React from 'react';
 
 interface MapComponentProps {
   items: any;
@@ -28,4 +29,4 @@ const MapComponent = ({ items }: MapComponentProps) => {
   );
 };
 
-export default MapComponent;
+export default React.memo(MapComponent);

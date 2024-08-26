@@ -1,6 +1,4 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   Popover,
   PopoverContent,
@@ -20,10 +18,11 @@ import {
 import { cn } from '@/lib/utils';
 import { useTheme } from 'next-themes';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-import ScrollAnimateWrapper from './ScrollAnimateWrapper';
+import { useLanguage } from './LanguageContext';
 
 function Accessibility() {
   const { theme, setTheme } = useTheme();
+  const { language } = useLanguage();
   const [state, setState] = useState({
     zoom: 100, // default zoom level
     grayscale: false,
@@ -42,7 +41,7 @@ function Accessibility() {
 
     themeToggle: 0,
   });
-  const data = useLocalizedData();
+  const data = useLocalizedData()
 
   // text zoom in
   function textZoomIn() {
@@ -188,7 +187,7 @@ function Accessibility() {
     >
       <Popover>
         <PopoverTrigger className="flex justify-center items-center w-full h-full">
-          <PersonStanding className="w-[30px] h-[30px]" />
+          <PersonStanding className="w-[30px] h-[30px] "/>
         </PopoverTrigger>
         <PopoverContent className="mt-1 mr-1 w-[150px] lg:w-[200px] bg-[#F8FFE5] dark:bg-gray-800 dark:text-white text-gray-900 rounded-lg shadow-md py-2 pr-1 px-2">
           <div className="border-red-400 w-full h-full">
@@ -321,4 +320,4 @@ function Accessibility() {
   );
 }
 
-export default Accessibility;
+export default React.memo(Accessibility);

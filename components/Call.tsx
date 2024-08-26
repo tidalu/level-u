@@ -15,7 +15,7 @@ function Call() {
 
       scrollTimeoutRef.current = setTimeout(() => {
         setScrollActive(true);
-      }, 3000); // Changed to 3 seconds for visibility
+      }, 3000); 
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -42,4 +42,4 @@ function Call() {
   );
 }
 
-export default Call;
+export default React.memo(Call);

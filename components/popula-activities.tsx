@@ -65,4 +65,4 @@ const PopulaActivities = () => {
   );
 };
 
-export default PopulaActivities;
+export default React.memo(PopulaActivities);

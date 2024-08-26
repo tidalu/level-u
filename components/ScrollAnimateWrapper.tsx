@@ -1,5 +1,6 @@
 // components/ScrollAnimateWrapper.tsx
 import { motion, useAnimation } from 'framer-motion';
+import React from 'react';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -19,7 +20,7 @@ const ScrollAnimateWrapper = ({
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: 0.1, // Adjust based on when you want to trigger the animation (0.1 = 10% of the element is visible)
+    threshold: 0.1,
   });
 
   useEffect(() => {
@@ -42,4 +43,4 @@ const ScrollAnimateWrapper = ({
   );
 };
 
-export default ScrollAnimateWrapper;
+export default React.memo(ScrollAnimateWrapper);

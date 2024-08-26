@@ -9,21 +9,21 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import Link from 'next/link';
 import { Bounce, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastPosition } from 'react-toastify';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-import { useState } from 'react';
-
-export function Form({ children }: { children: React.ReactNode }) {
+import React, { useState, useMemo, memo } from 'react';
+import { useLanguage } from './LanguageContext';
+function Form({ children }: { children: React.ReactNode }) {
   const [formData, setFormData] = useState({
     email: '',
     name: '',
     phone: '',
     message: '',
   });
-  const data = useLocalizedData();
+  const { language } = useLanguage();
+ const data = useLocalizedData();
 
   async function formHandler(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -159,3 +159,5 @@ export function Form({ children }: { children: React.ReactNode }) {
     </Dialog>
   );
 }
+
+export default memo(Form);

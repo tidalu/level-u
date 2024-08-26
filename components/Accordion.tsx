@@ -1,9 +1,11 @@
+
 import {
   Accordion as UIAccordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import React from 'react';
 
 function AccordionComponent({
   content,
@@ -31,4 +33,4 @@ function AccordionComponent({
   );
 }
 
-export default AccordionComponent;
+export default React.memo(AccordionComponent);

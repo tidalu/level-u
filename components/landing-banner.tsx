@@ -2,11 +2,8 @@ import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import HomeBlogList from './home-blogList';
-import { Button } from './ui/button';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-import { TextGenerateEffect } from './ui/text-generate-effect';
-import { Form } from './form';
-import ScrollAnimateWrapper from './ScrollAnimateWrapper';
+import Form from './form';
 import { useLanguage } from './LanguageContext';
 import Image from 'next/image';
 const LandingBanner = () => {
@@ -17,10 +14,10 @@ const LandingBanner = () => {
       <div className=" relative rounded-2xl overflow-hidden   md:min-h-[450px] grid grid-cols-12 bg-[#6cce40] mx-auto">
         <div className=" text-white p-6 lg:py-12 lg:pl-16 col-span-12 md:col-span-5 flex flex-col items-center gap-0 ">
           <div className="w-full ">
-            <p className="text-4xl reveal text-left text-black xl:text-5xl 2xl:text-6xl font-extrabold leading-snug italic apply-font-o ">
+            <p className="text-3xl sm:text-4xl reveal text-left text-black xl:text-5xl 2xl:text-6xl font-extrabold leading-snug italic apply-font-o ">
               {data.landingAdd.mainTitle[0]}
             </p>
-            <p className="text-4xl reveal text-start  lg:-mr-8 xl:text-5xl 2xl:text-6xl xl:-mr-11 text-black  font-extrabold leading-snug italic apply-font-o ">
+            <p className="text-3xl sm:text-4xl reveal text-start  lg:-mr-8 xl:text-5xl 2xl:text-6xl xl:-mr-11 text-black  font-extrabold leading-snug italic apply-font-o ">
               {data.landingAdd.mainTitle[1]}
             </p>
           </div>
@@ -36,7 +33,7 @@ const LandingBanner = () => {
             alt=""
             height={100}
             width={100}
-            className="object-cover mx-auto md:scale-125 xl:scale-100    m-7 w-[80%] h-auto     lg:m-0 2xl:self-right"
+            className="object-cover mx-auto scale-150 sm:scale-100 md:scale-125 xl:scale-100    m-7 w-[80%] h-auto     lg:m-0 2xl:self-right"
           />
           <Form>
             <div className="self-end  scale-110 hover:scale-105 transition-all delay-75 shadow-lg inline-flex items-center justify-center whitespace-nowrap  text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 radial_bg_red text-white h-10 px-4 py-2 rounded-xl cursor-pointer">

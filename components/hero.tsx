@@ -1,11 +1,11 @@
 'use client';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DockLive from './magicui/dock-live';
 import { Button } from './ui/button';
 import { grid } from 'ldrs';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import { toast } from 'react-toastify';
-import Globe from './magicui/globe';
+
 
 const Hero = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -74,7 +74,7 @@ const Hero = () => {
             >
               <div className=" relative mt-20  ">
                 <label
-                  className=" text-[10px] text-gray-800 p-1 absolute -top-3 left-6 rounded-xl bg-[#9dee8070]   dark:text-gray-400 "
+                  className=" text-[10px] text-gray-800 p-1 absolute -top-3 left-6 rounded-xl bg-white dark:bg-background  dark:text-gray-400 "
                   htmlFor="name"
                 >
                   <span className=" text-red-400">*</span>
@@ -93,7 +93,7 @@ const Hero = () => {
               </div>
               <div className=" relative mt-2   ">
                 <label
-                  className=" text-[10px] text-gray-800 p-1  absolute -top-3 left-6 rounded-xl bg-[#9dee8070]  dark:text-gray-400 "
+                  className=" text-[10px] text-gray-800 p-1  absolute -top-3 left-6 rounded-xl bg-white dark:bg-background  dark:text-gray-400 "
                   htmlFor="phone"
                 >
                   <span className=" text-red-400">*</span>
@@ -145,9 +145,8 @@ const Hero = () => {
           <DockLive />
         </div>
       </section>
-      
     </div>
   );
 };
 
-export default Hero;
+export default React.memo(Hero);

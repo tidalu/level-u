@@ -4,12 +4,13 @@ import { useLocalizedData } from '@/lib/useLocalizedData';
 import { cn } from '@/lib/utils';
 import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useMemo, useState } from 'react';
+import { useLanguage } from './LanguageContext';
 const FooterLinks = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [openSection, setOpenSection] = useState(null);
-  const data = useLocalizedData();
+  const { language } = useLanguage();
+ const data = useLocalizedData();
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -120,4 +121,4 @@ const FooterLinks = () => {
   );
 };
 
-export default FooterLinks;
+export default React.memo(FooterLinks);

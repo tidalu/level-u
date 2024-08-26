@@ -1,16 +1,14 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import React, { useEffect, useState } from 'react';
-
-export const InfiniteMovingCards = ({
-  items,
+import React, { memo, useEffect, useState } from 'react';
+import { useLocalizedData } from '@/lib/useLocalizedData';
+const InfiniteMovingCards = ({
   direction = 'left',
   speed = 'fast',
   pauseOnHover = true,
   className,
 }: {
-  items: { answer: string; question: string }[];
   direction?: 'left' | 'right';
   speed?: 'fast' | 'normal' | 'slow';
   pauseOnHover?: boolean;
@@ -19,7 +17,7 @@ export const InfiniteMovingCards = ({
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
   const [start, setStart] = useState(false);
-
+  const data = useLocalizedData();
   useEffect(() => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
@@ -59,7 +57,7 @@ export const InfiniteMovingCards = ({
           pauseOnHover && 'hover:[animation-play-state:paused]'
         )}
       >
-        {items.map((item) => (
+        {data.reasons.map((item: { question: string; answer: string }) => (
           <li
             key={item.question}
             className="w-[250px] md:w-[300px] flex-shrink-0 rounded-2xl border dark:border-slate-700 border-[#edf8ce] shadow-sm px-6 py-4 bg-[#F8FFE5] dark:bg-slate-800"
@@ -78,3 +76,5 @@ export const InfiniteMovingCards = ({
     </div>
   );
 };
+
+export default memo(InfiniteMovingCards);

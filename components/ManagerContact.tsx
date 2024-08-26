@@ -14,9 +14,10 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useLocalizedData } from '@/lib/useLocalizedData';
+import React from 'react';
 
-export function ManagerContact({ children }: { children: React.ReactNode }) {
-  const data = useLocalizedData();
+function ManagerContact({ children }: { children: React.ReactNode }) {
+  const data =  useLocalizedData()
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
@@ -78,3 +79,5 @@ export function ManagerContact({ children }: { children: React.ReactNode }) {
     </Dialog>
   );
 }
+
+export default React.memo(ManagerContact);
