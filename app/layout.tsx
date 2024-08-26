@@ -38,7 +38,7 @@ export default function RootLayout({
       <head>
         <title>{String(metadata.title)}</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
         <link rel="apple-touch-icon" href="/favicon.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
