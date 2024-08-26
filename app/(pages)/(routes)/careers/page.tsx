@@ -3,8 +3,9 @@ import BenefitCard from '@/components/BenefitCard';
 import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
 import HorizontalScroll from '@/components/ScrollHorizontal';
 import Value from '@/components/Value';
-import { useEffect, useState } from 'react';
 import { useLocalizedData } from '@/lib/useLocalizedData';
+import RecruitmentProcess from '@/components/RecruitmentProcess';
+import Image from 'next/image'; // Importing the Image component
 
 function Careers() {
   const data = useLocalizedData();
@@ -96,9 +97,9 @@ function Careers() {
                             <path
                               d="M2 23.135 25 2m0 0H4m21 0v21.135"
                               stroke="#717174"
-                              stroke-width="4"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth="4"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             ></path>
                           </svg>
                         </a>
@@ -121,12 +122,14 @@ function Careers() {
             </section>
             <section className="relative my-10 h-auto w-full bg-gray-900">
               <div className="relative w-full overflow-hidden h-auto">
-                <img
+                <Image
                   alt="company-banner"
-                  loading="lazy"
                   decoding="async"
                   className="object-contain max-w-full w-auto h-full"
                   src="/careers-img.webp"
+                  width={1920}
+                  height={1080}
+                  priority
                 />
                 <div className="absolute top-0 left-0 h-full w-full bg-gray-900 opacity-30"></div>
               </div>
@@ -231,82 +234,3 @@ function Careers() {
 }
 
 export default Careers;
-
-function RecruitmentProcess({
-  data,
-  title,
-}: {
-  data: {
-    stepIndex: number;
-    stepTitle: string;
-    stepDescription: string;
-    stepVideo: string;
-  }[];
-  title: string;
-}) {
-  const [currentOnScreen, setCurrentOnScreen] = useState(data[0]);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [selectedStepIndex, setSelectedStepIndex] = useState(0);
-
-  // Update the currentOnScreen when the data changes (e.g., on language change)
-  useEffect(() => {
-    setCurrentOnScreen(data[0]);
-  }, [data]);
-
-  const handleClick = (index: number) => {
-    setSelectedStepIndex(index);
-    setCurrentOnScreen(data[index]);
-    setIsAnimating(true);
-  };
-  useEffect(() => {
-    const timeoutId = setTimeout(() => setIsAnimating(false), 500);
-    return () => clearTimeout(timeoutId);
-  }, [currentOnScreen]);
-
-  return (
-    <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-4 mx-auto px-5">
-      <div
-        className={` rounded-xl reveal flex flex-col basis-1/2 mx-5 border-gray-900 dark:border-gray-200 border ${
-          isAnimating ? 'slide-in-elliptic-top-fwd' : 'animation-done'
-        }`}
-      >
-        <div className="basis-1/2">
-          <video
-            src={currentOnScreen.stepVideo}
-            autoPlay
-            className="h-inherit w-inherit rounded-t-xl"
-            loop
-          ></video>
-        </div>
-        <div className="p-16 basis-1/2">
-          <h3 className="text-2xl pb-4 font-bold ">
-            {currentOnScreen.stepTitle}
-          </h3>
-          <p>{currentOnScreen.stepDescription}</p>
-        </div>
-      </div>
-      <div className="basis-1/2 flex flex-col gap-6 justify-center">
-        <h1 className="text-6xl reveal md:text-[60px] my-6 align-start text-wrap">
-          {title}
-        </h1>
-        <div className="flex flex-col gap-3">
-          {data.map((step, index) => {
-            return (
-              <div
-                key={index}
-                onClick={() => handleClick(index)}
-                className={`px-10 py-6 rounded-full hover:bg-gray-800 hover:text-white focus:bg-gray-800 focus:text-white text-gray-800 dark:text-white dark:hover:bg-white dark:hover:text-gray-800 cursor-pointer border border-gray-800 dark:border-white flex gap-4 ${
-                  selectedStepIndex === index ? 'bg-gray-800 text-white' : ''
-                }
-  dark:focus:bg-white dark:focus:text-gray-800 reveal`}
-              >
-                <p className="text-xl font-bold">0{step.stepIndex}</p>
-                <p className="text-xl ">{step.stepTitle}</p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </div>
-  );
-}
