@@ -1,7 +1,6 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-import React, { useEffect } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const BlogPage = () => {
