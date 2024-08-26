@@ -1,25 +1,17 @@
 import type { Metadata } from 'next';
-import { Montserrat, Londrina_Outline } from 'next/font/google';
 import './globals.css';
 import localFont from 'next/font/local';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 
-const londriaSketch = Londrina_Outline({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-londrina-sketch',
-});
+
 
 const helvetica = localFont({
   src: './fonts/helveticaneue-medium.woff2',
   display: 'swap',
   variable: '--font-helvetica',
 });
-const inter = Montserrat({
-  subsets: ['latin', 'cyrillic'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-});
+
 
 export const metadata: Metadata = {
   title: 'Level Learning Center',
@@ -47,6 +39,22 @@ export default function RootLayout({
           rel="stylesheet"
           as="style"
         />
+        <link rel="preload" href="/logo.svg" as="image/svg+xml"></link>
+        <link
+          rel="preload"
+          href="//english-flag-icon-rect.svg'"
+          as="image/svg+xml"
+        ></link>
+        <link
+          rel="preload"
+          href="/uzbekistan-flag-rect-circle-icon.svg"
+          as="image/svg+xml"
+        ></link>
+        <link
+          rel="preload"
+          href="/russia-flag-icon-rect.svg"
+          as="image/svg+xml"
+        ></link>
       </head>
       <body className={helvetica.className}>
         {process.env.NODE_ENV === 'production' && (
