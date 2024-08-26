@@ -45,7 +45,7 @@ const ClassesDataPage = () => {
           lengthOfClasses: string;
           frequency: string;
           materials: string;
-          group: string;
+          group?: string;
           ageLimit?: string;
         }) => item.name.toLocaleLowerCase() === className.toLocaleLowerCase()
       );
@@ -125,14 +125,16 @@ const ClassesDataPage = () => {
                     </p>
                   </div>
                 )}
-                <div className="mb-3">
-                  <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                    {data.classPage.classContainer.groupTitle}
+                {classInfo?.match.group && (
+                  <div className="mb-3">
+                    <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
+                      {data.classPage.classContainer.groupTitle}
+                    </div>
+                    <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
+                      {classInfo?.match.group}
+                    </p>
                   </div>
-                  <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
-                    {classInfo?.match.group}
-                  </p>
-                </div>
+                )}
                 <div className="mb-3">
                   <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
                     {data.classPage.classContainer.materialsTitle}
