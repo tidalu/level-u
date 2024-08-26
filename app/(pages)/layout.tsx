@@ -5,12 +5,12 @@ const Footer = lazy(() => import('@/components/footer'));
 import Header from '@/components/header';
 import { ThemeProvider } from '@/components/theme-provider';
 import { LanguageProvider } from '@/components/LanguageContext';
-import { ComponentType } from 'react';
-
-const LazyToastContainer = lazy<ComponentType<any>>(() =>
-  import('react-toastify').then((module) => ({
-    default: module.ToastContainer,
-  }))
+import dynamic from 'next/dynamic';
+const LazyToastContainer = dynamic(
+  () => import('react-toastify').then((module) => module.ToastContainer),
+  {
+    ssr: false,
+  }
 );
 const Call = lazy(() => import('@/components/Call'));
 
