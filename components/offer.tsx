@@ -35,7 +35,7 @@ const Offer = () => {
                 </Button>
               </div>
 
-              <div className="p-3 border">
+              <div className="p-3 ">
                 <Image
                   src="/for-you-img.jpg"
                   alt="offer for you"
@@ -80,7 +80,7 @@ const Offer = () => {
                 </ManagerContact>
               </div>
 
-              <div className="p-3 border h-full">
+              <div className="p-3  h-full">
                 <Image
                   src="/for-companies-img.jpg"
                   className="rounded-2xl shadow-xl w-full h-full object-cover"
