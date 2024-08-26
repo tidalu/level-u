@@ -61,8 +61,8 @@ const Categories = () => {
                               {item.name}
                             </span>
                           </div>
-                          <div className="flex justify-between relative z-10 text-[12px] text-gray-500">
-                            {data.offers.packages.ielts.desc}
+                          <div className="flex justify-end relative z-10 text-[12px] text-gray-500">
+                            {' '}
                             <Button
                               variant="primaryGreen"
                               className="rounded-full p-0 h-5 px-2"
