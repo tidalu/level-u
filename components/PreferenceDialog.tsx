@@ -29,7 +29,7 @@ export function PreferenceDialog() {
     storedTheme = localStorage.getItem('themeUsed');
   }
 
-  const [themeMode, setThemeMode] = useState(storedTheme || 'dark');
+  const [themeMode, setThemeMode] = useState(storedTheme || 'light');
   const [language, setLanguage] = useState(storedLanguage || 'uz');
 
   const [open, setOpen] = useState(false);
