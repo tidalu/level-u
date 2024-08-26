@@ -1,22 +1,29 @@
 'use client';
 
-import Footer from '@/components/footer';
-import Header from '@/components/header';
+import { lazy } from 'react';
+const Footer = lazy(() => import('@/components/footer'));
+const Header = lazy(() => import('@/components/header'));
 import { ThemeProvider } from '@/components/theme-provider';
 import { LanguageProvider } from '@/components/LanguageContext';
-import { ToastContainer } from 'react-toastify';
-import Call from '@/components/Call';
+import { ComponentType } from 'react';
+
+const LazyToastContainer = lazy<ComponentType<any>>(() =>
+  import('react-toastify').then((module) => ({ default: module.ToastContainer }))
+);
+const Call = lazy(() => import('@/components/Call'));
+
+
 
 const LandingLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main>
       <div>
         <div className="mx-auto h-full w-full">
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="light">
             <LanguageProvider>
               <Header />
               {children}
-              <ToastContainer
+              <LazyToastContainer
                 position="bottom-right"
                 autoClose={5000}
                 hideProgressBar={false}
