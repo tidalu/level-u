@@ -19,6 +19,7 @@ import { FlipWords } from './ui/flip-words';
 import { useLanguage } from './LanguageContext';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import { useTheme } from 'next-themes';
+import BetaNotification from './BetaMode';
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -175,15 +176,16 @@ const Header = () => {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 w-full z-30 header-main',
+        'fixed top-0 left-0 w-full z-30 header-main ',
         isVisible &&
           'bg-white dark:bg-[#020817] shadow-xl dark:shadow-slate-900  rounded-b-2xl'
       )}
     >
+      <BetaNotification />
       <div
         className={cn(
-          ' max-w-[1600px] mx-auto transition-all duration-500 pb-5 pt-16 md:pt-10 lg:py-10 px-3 lg:px-16 relative',
-          isVisible && '!py-3'
+          ' max-w-[1600px] mx-auto  transition-all duration-500 pb-5 pt-16 md:pt-10 lg:py-10 px-3 lg:px-16 relative',
+          isVisible && '!py-3 !pt-[28px]'
         )}
       >
         <div
