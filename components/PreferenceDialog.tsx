@@ -14,6 +14,7 @@ import {
 import { useState, useEffect, createContext } from 'react';
 import { useTheme } from 'next-themes';
 import { useLanguage } from './LanguageContext';
+import { useLocalizedData } from '@/lib/useLocalizedData';
 
 export const PreferenceDialogContext = createContext({
   themeMode: '',
@@ -33,6 +34,8 @@ export function PreferenceDialog() {
   const [language, setLanguage] = useState(storedLanguage || 'uz');
 
   const [open, setOpen] = useState(false);
+
+  const data = useLocalizedData();
 
   useEffect(() => {
     if (!storedLanguage || !storedTheme) {
@@ -64,55 +67,69 @@ export function PreferenceDialog() {
       <Dialog open={open}>
         <DialogOverlay className="backdrop-blur-sm" />
 
-        <DialogContent className="sm:max-w-md">
+        <DialogContent className=" rounded-2xl">
           <DialogHeader>
-            <DialogTitle>Choose your preferences</DialogTitle>
+            <DialogTitle>{data.userPreferencesModule.title}</DialogTitle>
             <DialogDescription>
-              Please choose given options to see the page as you like.
+              {data.userPreferencesModule.description}
             </DialogDescription>
           </DialogHeader>
-          <div className="flex items-center space-x-2 flex-col">
+          <div className="flex items-start  flex-col">
             {/* Theme Mode */}
-            <div className="flex items-center space-x-2">
-              <p className="text-right mr-2">Choose theme mode:</p>
+            <div className="flex items-center flex-wrap  w-full justify-evenly">
+              <p className="text-left mr-2 basis-[100%] mb-2">
+                {data.userPreferencesModule.theme.title}:
+              </p>
               <Button
                 variant={themeMode === 'light' ? 'primaryGreen' : 'secondary'}
                 onClick={() => handleThemeModeChange('light')}
-                className={`${themeMode === 'light' && 'dark:text-slate-700'} `}
+                className={`${
+                  themeMode === 'light' && 'dark:text-slate-700'
+                } basis-[40%] `}
               >
-                Light
+                {data.userPreferencesModule.theme.light}
               </Button>
               <Button
                 variant={themeMode === 'dark' ? 'primaryGreen' : 'secondary'}
                 onClick={() => handleThemeModeChange('dark')}
-                className={`${themeMode === 'dark' && 'dark:text-slate-700'} `}
+                className={`${
+                  themeMode === 'dark' && 'dark:text-slate-700'
+                } basis-[40%]`}
               >
-                Dark
+                {data.userPreferencesModule.theme.dark}
               </Button>
             </div>
             {/* Language */}
-            <div className="flex items-center space-x-2 mt-4">
-              <p className="text-right mr-2">Choose your language:</p>
+            <div className="flex items-center flex-wrap  w-full justify-evenly mt-4">
+              <p className="text-left mr-2 basis-[100%] mb-2">
+                {data.userPreferencesModule.language.title}:
+              </p>
               <Button
                 variant={language === 'uz' ? 'primaryGreen' : 'secondary'}
                 onClick={() => handleLanguageChange('uz')}
-                className={`${language === 'uz' && 'dark:text-slate-700'} `}
+                className={`${language === 'uz' && 'dark:text-slate-700'} ${
+                  language === 'ru' && 'basis-[45%] sm:basis-[28%]'
+                } basis-[28%] `}
               >
-                Uzbek
+                {data.userPreferencesModule.language.uzb}
               </Button>
               <Button
                 variant={language === 'ru' ? 'primaryGreen' : 'secondary'}
                 onClick={() => handleLanguageChange('ru')}
-                className={`${language === 'ru' && 'dark:text-slate-700'} `}
+                className={`${language === 'ru' && 'dark:text-slate-700 '} ${
+                  language === 'ru' && 'basis-[45% sm:basis-[28%]]'
+                } basis-[28%]`}
               >
-                Russian
+                {data.userPreferencesModule.language.rus}
               </Button>
               <Button
                 variant={language === 'en' ? 'primaryGreen' : 'secondary'}
                 onClick={() => handleLanguageChange('en')}
-                className={`${language === 'en' && 'dark:text-slate-700'} `}
+                className={`${language === 'en' && 'dark:text-slate-700'} ${
+                  language === 'ru' && 'basis-[45%] sm:basis-[28%] mt-2'
+                } basis-[28%]`}
               >
-                English
+                {data.userPreferencesModule.language.eng}
               </Button>
             </div>
           </div>
@@ -129,7 +146,7 @@ export function PreferenceDialog() {
                   }
                 }}
               >
-                Submit
+                {data.userPreferencesModule.button}
               </Button>
             </DialogClose>
           </DialogFooter>
