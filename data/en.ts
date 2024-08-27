@@ -795,4 +795,21 @@ export const data = {
       },
     },
   },
+
+  userPreferencesModule: {
+    title: 'Choose your preferences',
+    description: 'Please choose given options to see the page as you like',
+    theme: {
+      title: 'Choose theme mode',
+      light: 'Light',
+      dark: 'Dark',
+    },
+    language: {
+      title: 'Choose your language',
+      uzb: 'Uzbek',
+      rus: 'Russian',
+      eng: 'English',
+    },
+    button: 'Save',
+  }
 };

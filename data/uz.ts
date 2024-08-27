@@ -808,4 +808,21 @@ export const data = {
       },
     },
   },
+  userPreferencesModule: {
+    title: 'Tanlovlaringizni tanlang',
+    description:
+      'Sahifani o‘zingiz xohlagandek ko‘rish uchun berilgan variantlardan tanlang',
+    theme: {
+      title: 'Mavzuni tanlang',
+      light: 'Yorug‘',
+      dark: 'Qorong‘u',
+    },
+    language: {
+      title: 'Tilni tanlang',
+      uzb: "O'zbek",
+      rus: 'Ruscha',
+      eng: 'Inglizcha',
+    },
+    button: 'Saqlash',
+  },
 };
