@@ -811,5 +811,6 @@ export const data = {
       eng: 'English',
     },
     button: 'Save',
-  }
+  },
+  testMode: 'The website is operating in test mode.',
 };

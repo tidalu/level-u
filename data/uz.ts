@@ -825,4 +825,5 @@ export const data = {
     },
     button: 'Saqlash',
   },
+  testMode: 'Sayt sinov rejimida ishlamoqda.',
 };
