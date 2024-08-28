@@ -11,5 +11,6 @@ const languages: { [key: string]: any } = {
 
 export const useLocalizedData = () => {
   const { language } = useLanguage();
-  return languages[language];
+  const data = languages[language];
+  return data;
 };
