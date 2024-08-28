@@ -17,13 +17,13 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  let storedLanguage = String(Cookies.get('selectedLanguage'));
+  let storedLanguage = String(Cookies.get('selectedLanguage')) || 'en';
 
   const [language, setLanguage] = useState(storedLanguage);
 
   const switchLanguage = (lang: string) => {
     setLanguage(lang);
-    Cookies.set('selectedLanguage', lang, { expires: 365, path: '/' }); // 1 year
+    Cookies.set('selectedLanguage', lang, { expires: 365, path: '/' }); 
   };
 
   return (

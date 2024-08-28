@@ -15,6 +15,7 @@ import { useState, useEffect, createContext } from 'react';
 import { useTheme } from 'next-themes';
 import { useLanguage } from './LanguageContext';
 import { useLocalizedData } from '@/lib/useLocalizedData';
+import Cookies from 'js-cookie';
 
 export const PreferenceDialogContext = createContext({
   themeMode: '',
@@ -22,16 +23,13 @@ export const PreferenceDialogContext = createContext({
 });
 
 export function PreferenceDialog() {
-  let storedLanguage: null | string = null;
-  let storedTheme: null | string = null;
-
-  if (typeof window !== 'undefined') {
-    storedLanguage = localStorage.getItem('selectedlanguage');
-    storedTheme = localStorage.getItem('themeUsed');
-  }
+  let storedLanguage: undefined | string = String(
+    Cookies.get('selectedLanguage')
+  );
+  let storedTheme: undefined | string = String(Cookies.get('themeUsed'));
 
   const [themeMode, setThemeMode] = useState(storedTheme || 'light');
-  const [language, setLanguage] = useState(storedLanguage || 'uz');
+  const [language, setLanguage] = useState(storedLanguage || 'en');
 
   const [open, setOpen] = useState(false);
 
@@ -49,17 +47,14 @@ export function PreferenceDialog() {
   const handleThemeModeChange = (mode: string) => {
     setThemeMode(mode);
     setTheme(mode);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('themeUsed', mode);
-    }
+
+    Cookies.set('themeUsed', mode, { expires: 365 });
   };
 
   const handleLanguageChange = (lang: string) => {
     setLanguage(lang);
     switchLanguage(lang);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('selectedLanguage', lang);
-    }
+    Cookies.set('selectedLanguage', lang, { expires: 365 });
   };
 
   return (
@@ -141,9 +136,7 @@ export function PreferenceDialog() {
                 className="radial_bg_red text-white"
                 onClick={() => {
                   setOpen(false);
-                  if (typeof window !== 'undefined') {
-                    localStorage.setItem('showPreference', 'true');
-                  }
+                  Cookies.set('showPreference', 'true', { expires: 365 });
                 }}
               >
                 {data.userPreferencesModule.button}

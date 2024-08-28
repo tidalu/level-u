@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Button } from './ui/button';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -20,26 +20,57 @@ import { useLanguage } from './LanguageContext';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import { useTheme } from 'next-themes';
 import BetaNotification from './BetaMode';
+import Cookies from 'js-cookie';
 
 const Header = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   const [open, setOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const pathName = usePathname();
-  let storedLanguage = '';
-  if (typeof window !== 'undefined') {
-    storedLanguage = localStorage.getItem('selectedLanguage') || 'uz';
-  }
-  const [currentLang, setCurrentLang] = useState(storedLanguage || 'uz');
+
+  let storedLanguage = String(Cookies.get('selectedLanguage')) || 'en';
+
+  const [currentLang, setCurrentLang] = useState(storedLanguage);
 
   const { switchLanguage } = useLanguage();
 
   useEffect(() => {
     if (storedLanguage) {
       setCurrentLang(storedLanguage);
+      console.log('cookiedata', Cookies.get('selectedLanguage'));
     }
   }, [storedLanguage]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    // Initial check when component mounts
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    switchLanguage(currentLang);
+    Cookies.set('selectedLanguage', currentLang, { expires: 365, path: '/' });
+  }, [currentLang]);
+
+  const handleLanguageChange = (lang: string) => {
+    setCurrentLang(lang);
+    Cookies.set('selectedLanguage', lang, { expires: 365, path: '/' });
+  };
 
   const data = useLocalizedData();
   const routes = [
@@ -65,15 +96,9 @@ const Header = () => {
     },
   ];
 
-  type Langs = {
-    [key: string]: {
-      label: string;
-      icon: string;
-      circleIcon: string;
-    };
-  };
-
-  const langs: Langs = {
+  const langs: {
+    [key: string]: { label: string; icon: string; circleIcon: string };
+  } = {
     en: {
       label: 'English',
       icon: '/english-flag-icon-rect.svg',
@@ -91,40 +116,11 @@ const Header = () => {
     },
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    // Initial check when component mounts
-    handleScroll();
-
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    switchLanguage(currentLang);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('selectedLanguage', currentLang);
-    }
-  }, [currentLang]);
-
   const urls =
-    pathName === '/cluby-fitness' ||
     pathName === '/contact' ||
     pathName === '/about' ||
-    pathName.startsWith('/blogs') ||
+    // pathName.startsWith('/blogs') ||
     pathName.startsWith('/classess') ||
-    pathName === '/files-to-download' ||
     pathName === '/careers' ||
     pathName === '/study-abroad';
 
@@ -147,6 +143,7 @@ const Header = () => {
 
     return '/figure-black.png';
   };
+
   const getCopyright = () => {
     if (theme === 'dark') {
       return '/tm-dark.png';
@@ -167,12 +164,6 @@ const Header = () => {
     return '/tm-light.png';
   };
 
-  const handleLanguageChange = (lang: string) => {
-    setCurrentLang(lang);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('selectedLanguage', lang);
-    }
-  };
   return (
     <header
       className={cn(
@@ -247,18 +238,6 @@ const Header = () => {
               </span>
             </div>
           </Link>
-
-          {/* <Link
-            href="/cluby-fitness"
-            className={cn(
-              ' absolute md:relative top-2 md:top-auto right-10 md:right-auto left-10 md:left-auto md:w-auto border-2 border-[#6cce4033] text-sm 2xl:text-lg rounded-full py-2 px-6 flex gap-1 justify-center items-center hover:underline',
-              isVisible && ' hidden md:flex border-[#6cce40]',
-              urls && 'border-[#6cce40]'
-            )}
-          >
-            Choose a center
-            <ChevronDown size={16} className="text-[#6cce40]" />
-          </Link> */}
 
           <ul
             className={cn(
