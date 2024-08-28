@@ -18,7 +18,7 @@ function RecruitmentProcess({
   const [selectedStepIndex, setSelectedStepIndex] = useState(0);
 
   useEffect(() => {
-    setCurrentOnScreen(data[0]);
+    setCurrentOnScreen(data?.[0]);
   }, [data]);
 
   const handleClick = (index: number) => {

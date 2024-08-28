@@ -70,7 +70,7 @@ const Schedule = () => {
     ? data.schedule.places.filter(
         (item: placeInterface) => item.cityName === selectedCity
       )
-    : data.schedule.places;
+    : data?.schedule?.places;
 
   return (
     <ScrollAnimateWrapper>
@@ -120,7 +120,7 @@ const Schedule = () => {
           </ClientOnly>
         </TabsContent>
         <TabsContent value="list">
-          {filteredPlaces.map((item: placeInterface, index: number) => (
+          {filteredPlaces?.map((item: placeInterface, index: number) => (
             <ClubItem key={index} city={item.cityName} clubs={item.clubs} />
           ))}
         </TabsContent>
