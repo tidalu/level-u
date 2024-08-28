@@ -8,7 +8,7 @@ import { useLanguage } from './LanguageContext';
 import Image from 'next/image';
 const LandingBanner = () => {
   const data = useLocalizedData();
-  const { language } = useLanguage();
+  let { language } = useLanguage();
   return (
     <div className=" reveal homeBanner pt-32 pb-12 rounded-b-3xl px-5 lg:px-16 relative overflow-hidden 3xl:mx-32  ">
       <div className=" relative rounded-2xl overflow-hidden   md:min-h-[450px] grid grid-cols-12 bg-[#6cce40] mx-auto">
@@ -44,10 +44,10 @@ const LandingBanner = () => {
 
         <div className="reveal bg-[url('/desk_home-banner.webp')] md:h-[100%]    bg-no-repeat bg-cover relative    hidden md:block md:col-span-7 ">
           <div
-            className="md:h-full md:ml-6  md:w-[300px]  -skew-x-[10deg] flex flex-col h-[60%] my-auto gap-6 pb-20 2xl:pb-20 min-[1685px]:pb-8    
+            className="md:h-full md:ml-6  md:w-[300px]  -skew-x-[10deg] flex flex-col h-[60%] my-auto gap-6 pb-20 2xl:pb-16 min-[1685px]:pb-8    
           justify-center"
           >
-            <p className="text-gray-800  text-3xl md:text-4xl lg:text-5xl 2xl:-mt-20  text-wrap apply-font-o text-center">
+            <p className="text-gray-800  text-3xl md:text-4xl lg:text-5xl 2xl:-mt-6   2xl:text-red-400  text-wrap apply-font-o text-center min-[1680px]:-mt-16 ">
               {data?.landingAdd?.topPic?.map((item: string, i: number) => {
                 return (
                   <React.Fragment key={i}>
