@@ -6,6 +6,7 @@ import { Button } from './ui/button';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import Image from 'next/image';
 interface Class {
+  href: string;
   name: string;
   img: string;
   description: string;
@@ -67,7 +68,7 @@ const Categories = () => {
                               variant="primaryGreen"
                               className="rounded-full p-0 h-5 px-2"
                               onClick={() =>
-                                (window.location.href = `/classess/${item.name.toLowerCase()}`)
+                                (window.location.href = `/classess/${item.href.toLowerCase()}`)
                               }
                             >
                               <ChevronRight size={14} className="text-black" />
