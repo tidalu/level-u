@@ -5,14 +5,8 @@ const Footer = lazy(() => import('@/components/footer'));
 import Header from '@/components/header';
 import { ThemeProvider } from '@/components/theme-provider';
 import { LanguageProvider } from '@/components/LanguageContext';
-import dynamic from 'next/dynamic';
-const LazyToastContainer = dynamic(
-  () => import('react-toastify').then((module) => module.ToastContainer),
-  {
-    ssr: false,
-  }
-);
-const Call = lazy(() => import('@/components/Call'));
+import { ToastContainer } from 'react-toastify';
+import Call from '@/components/Call';
 
 const LandingLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -23,7 +17,7 @@ const LandingLayout = ({ children }: { children: React.ReactNode }) => {
             <LanguageProvider>
               <Header />
               {children}
-              <LazyToastContainer
+              <ToastContainer
                 position="bottom-right"
                 autoClose={5000}
                 hideProgressBar={false}
