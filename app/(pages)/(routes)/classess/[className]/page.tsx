@@ -33,6 +33,7 @@ const ClassesDataPage = () => {
     for (const category of data.classPage.classList) {
       const match = category.list.find(
         (item: {
+          href: string;
           name: string;
           description: string;
           intensity: number;
@@ -47,7 +48,7 @@ const ClassesDataPage = () => {
           materials: string;
           group?: string;
           ageLimit?: string;
-        }) => item.name.toLocaleLowerCase() === className.toLocaleLowerCase()
+        }) => item.href.toLocaleLowerCase() === className.toLocaleLowerCase()
       );
       if (match) {
         return { match, title: category.title };
