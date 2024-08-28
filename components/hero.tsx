@@ -59,10 +59,10 @@ const Hero = () => {
       <section className="flex flex-col items-center  justify-center space-y-5 sm:space-y-10">
         <div className="w-full text-center px-4 sm:px-0 ">
           <h1 className="text-2xl sm:text-4xl lg:text-6xl font-semibold leading-tight text-green-900 dark:text-neutral-100">
-            {data.hero.title}
+            {data?.hero?.title}
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-wrap text-neutral-600 dark:text-neutral-300">
-            {data.hero.description}
+            {data?.hero?.description}
           </p>
           {!isSubmitted && !isLoading ? (
             <form
@@ -77,12 +77,12 @@ const Hero = () => {
                   htmlFor="name"
                 >
                   <span className=" text-red-400">*</span>
-                  {data.contactForm.name}
+                  {data?.contactForm?.name}
                 </label>
                 <input
                   type="text"
                   className=" w-full l lg:max-w-[400px] sm:w-[300px]  md:w-[350px] lg:w-[400px] bg-transparent   outline-none text-sm border-2 border-[#2bbb15] rounded-xl py-4 px-6 placeholder:text-green-900 dark:text-gray-700"
-                  placeholder={data.contactForm.namePlaceholder}
+                  placeholder={data?.contactForm?.namePlaceholder}
                   required
                   name="name"
                   onChange={(e) =>
@@ -96,12 +96,12 @@ const Hero = () => {
                   htmlFor="phone"
                 >
                   <span className=" text-red-400">*</span>
-                  {data.contactForm.phone}
+                  {data?.contactForm?.phone}
                 </label>
                 <input
                   type="tel"
                   className=" w-full l lg:max-w-[400px] sm:w-[300px] md:w-[350px] lg:w-[400px] bg-transparent placeholder:text-green-900 outline-none text-sm border-2 border-[#2bbb15] rounded-xl py-4 px-6 dark:text-gray-700"
-                  placeholder={data.contactForm.phonePlaceholder}
+                  placeholder={data?.contactForm?.phonePlaceholder}
                   required
                   name="phone"
                   onChange={(e) =>
@@ -114,7 +114,7 @@ const Hero = () => {
                 className="w-full lg:max-w-[400px] sm:w-[300px] md:w-[350px] lg:w-[400px]"
                 size="lg"
               >
-                {data.hero.button}
+                {data?.hero?.button}
               </Button>
             </form>
           ) : isLoading && !isSubmitted ? (
@@ -124,13 +124,13 @@ const Hero = () => {
           ) : isSubmitted ? (
             <div className="w-full flex flex-col items-center justify-center p-5 rounded-lg bg-transparent mt-5">
               <h2 className="text-2xl sm:text-3xl font-semibold text-green-800 dark:text-green-200">
-                {data.hero.thankYou.title}
+                {data?.hero?.thankYou?.title}
               </h2>
               <p className="mt-2 text-lg text-green-700 dark:text-green-300">
-                {data.hero.thankYou.description}
+                {data?.hero?.thankYou?.description}
               </p>
               <p className="mt-4 text-sm text-neutral-600 dark:text-neutral-300">
-                {data.hero.thankYou.stayTuned}
+                {data?.hero?.thankYou?.stayTuned}
               </p>
             </div>
           ) : (
@@ -139,7 +139,7 @@ const Hero = () => {
         </div>
         <div className="flex flex-col items-center justify-center gap-4 w-full mx-auto py-2 max-w-full">
           <p className=" text-sm sm:text-lg text-neutral-600 dark:text-neutral-300">
-            {data.hero.checkUs} ⚡️
+            {data?.hero?.checkUs} ⚡️
           </p>
           <DockLive />
         </div>

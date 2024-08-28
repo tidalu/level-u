@@ -79,7 +79,7 @@ const MapPin = ({ item }: MapPinProps) => {
                     }
                     formTarget="_blank"
                   >
-                    {data.schedule.getDirections}{' '}
+                    {data?.schedule?.getDirections}{' '}
                     <Image
                       src={googleMap}
                       alt="google map"
@@ -100,7 +100,7 @@ const MapPin = ({ item }: MapPinProps) => {
                     }
                     formTarget="_blank"
                   >
-                    {data.schedule.getDirections}
+                    {data?.schedule?.getDirections}
                     <Image
                       src={yandexIcon}
                       alt="yandex icon map"

@@ -38,14 +38,14 @@ const ClassesPage = () => {
 
             <div className=" text-gray-600 bg-white dark:text-gray-400 py-4 px-10 col-span-12 lg:col-span-5 xl:col-span-4 h-auto overflow-y-auto scrollbar-hide">
               <h1 className=" text-xl sm:text-2xl reveal text-wrap mt-1 mb-4 text-[#6cce40] font-extrabold">
-                {data.classPage.mainContent.title}
+                {data?.classPage?.mainContent?.title}
               </h1>
               <p className=" text-[13px] reveal xl:text-[14px] 2xl:text-[15px] ">
-                {data.classPage.mainContent.description[0]}
+                {data?.classPage?.mainContent?.description[0]}
               </p>
               <ul className="text-[13px] reveal xl:text-[14px] 2xl:text-[15px]  my-3">
-                {Array.isArray(data.classPage.mainContent.description[2]) &&
-                  data.classPage.mainContent.description[2].map(
+                {Array.isArray(data?.classPage?.mainContent?.description?.[2]) &&
+                  data?.classPage?.mainContent?.description?.[2].map(
                     (item: string, index: number) => (
                       <li className="mb-1.5" key={index}>
                         {' '}
@@ -56,7 +56,7 @@ const ClassesPage = () => {
               </ul>
 
               <p className=" text-[13px] reveal xl:text-[14px] 2xl:text-[15px] ">
-                {data.classPage.mainContent.description[3]}
+                {data?.classPage?.mainContent?.description?.[3]}
               </p>
             </div>
           </div>

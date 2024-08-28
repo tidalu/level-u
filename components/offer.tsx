@@ -9,7 +9,7 @@ const Offer = () => {
     <section>
       <div className="my-16 px-3 lg:px-16 mx-auto">
         <h2 className="text-black dark:text-white font-extrabold text-2xl text-center">
-          {data.offers.title}
+          {data?.offers?.title}
         </h2>
 
         <div
@@ -20,10 +20,10 @@ const Offer = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2">
               <div className="pl-10 py-10 md:py-5 flex flex-col justify-center text-sm 2xl:text-xl">
                 <div className="text-black dark:text-white font-bold mb-5">
-                  {data.offers.forYou.title}
+                  {data?.offers?.forYou?.title}
                 </div>
                 <p className="text-[12px] 2xl:text-lg leading-7 text-gray-500">
-                  {data.offers.forYou.desc}
+                  {data?.offers?.forYou?.desc}
                 </p>
 
                 <Button
@@ -31,7 +31,7 @@ const Offer = () => {
                   className="mt-12 dark:text-black shadow-xl w-fit rounded-full text-sm 2xl:text-lg"
                   onClick={() => (window.location.href = '/classes')}
                 >
-                  {data.offers.forYou.btn}
+                  {data?.offers?.forYou?.btn}
                 </Button>
               </div>
 
@@ -56,10 +56,10 @@ const Offer = () => {
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 h-full">
               <div className="pl-10 py-10 md:py-5 flex flex-col justify-center text-sm 2xl:text-xl">
                 <div className="text-black font-bold mb-5">
-                  {data.offers.forCompanies.title}
+                  {data?.offers?.forCompanies?.title}
                 </div>
                 <p className="text-[12px] 2xl:text-lg leading-7 text-gray-500">
-                  {data.offers.forCompanies.desc.map(
+                  {data?.offers?.forCompanies?.desc?.map(
                     (item: string, index: number) => (
                       <React.Fragment key={index}>
                         {item}
@@ -74,7 +74,7 @@ const Offer = () => {
                       variant="primaryGreen"
                       className=" w-fit rounded-full text-sm 2xl:text-lg shadow-xl"
                     >
-                      {data.offers.forCompanies.btn}
+                      {data?.offers?.forCompanies?.btn}
                     </Button>
                   </div>
                 </ManagerContact>
