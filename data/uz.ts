@@ -241,6 +241,7 @@ export const data = {
             frequency: 'Haftada 3 marta',
             materials: 'ta‘minlanadi',
             group: '10 kishigacha',
+            comingSoon: true,
           },
           {
             href: 'IELTS CEFR TOEFL',
@@ -330,6 +331,7 @@ export const data = {
             frequency: 'noaniq',
             materials: 'noaniq',
             group: 'noaniq',
+            comingSoon: true,
           },
           {
             href: 'Korean Group Classes',
@@ -357,6 +359,7 @@ export const data = {
             frequency: 'noaniq',
             materials: 'noaniq',
             group: 'noaniq',
+            comingSoon: true,
           },
           {
             href: 'TOPIK',
@@ -384,6 +387,7 @@ export const data = {
             frequency: 'noaniq',
             materials: 'noaniq',
             group: 'noaniq',
+            comingSoon: true,
           },
         ],
       },

@@ -245,6 +245,7 @@ export const data = {
             frequency: '3 раза в неделю',
             materials: 'включены',
             group: 'до 10 человек',
+            comingSoon: true,
           },
           {
             href: 'IELTS CEFR TOEFL',
@@ -335,6 +336,7 @@ export const data = {
             frequency: 'n/a',
             materials: 'n/a',
             group: 'n/a',
+            comingSoon: true,
           },
           {
             href: 'Korean Group Classes',
@@ -362,6 +364,7 @@ export const data = {
             frequency: 'n/a',
             materials: 'n/a',
             group: 'n/a',
+            comingSoon: true,
           },
           {
             href: 'TOPIK',
@@ -389,6 +392,7 @@ export const data = {
             frequency: 'n/a',
             materials: 'n/a',
             group: 'n/a',
+            comingSoon: true,
           },
         ],
       },

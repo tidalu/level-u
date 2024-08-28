@@ -5,6 +5,7 @@ import React from 'react';
 import { Button } from './ui/button';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import Image from 'next/image';
+import { Tooltip } from '@nextui-org/tooltip';
 interface Class {
   href: string;
   name: string;
@@ -17,6 +18,7 @@ interface Class {
   intersity: string;
   purpose: string;
   effects: string[];
+  comingSoon?: boolean;
 }
 interface ClassList {
   title: string;
@@ -64,15 +66,36 @@ const Categories = () => {
                           </div>
                           <div className="flex justify-end relative z-10 text-[12px] text-gray-500">
                             {' '}
-                            <Button
-                              variant="primaryGreen"
-                              className="rounded-full p-0 h-5 px-2"
-                              onClick={() =>
-                                (window.location.href = `/classess/${item.href.toLowerCase()}`)
-                              }
-                            >
-                              <ChevronRight size={14} className="text-black" />
-                            </Button>
+                            {item.comingSoon ? (
+                              <Tooltip
+                                content={'coming soon'}
+                                color="warning"
+                                placement="left"
+                              >
+                                <Button
+                                  variant="primaryGreen"
+                                  className="rounded-full p-0 h-5 px-2"
+                                >
+                                  <ChevronRight
+                                    size={14}
+                                    className="text-black"
+                                  />
+                                </Button>
+                              </Tooltip>
+                            ) : (
+                              <Button
+                                variant="primaryGreen"
+                                className="rounded-full p-0 h-5 px-2"
+                                onClick={() =>
+                                  (window.location.href = `/classess/${item.href.toLowerCase()}`)
+                                }
+                              >
+                                <ChevronRight
+                                  size={14}
+                                  className="text-black"
+                                />
+                              </Button>
+                            )}
                           </div>
                           <Image
                             className="absolute z-10 top-0 right-3"
