@@ -481,7 +481,7 @@ export const data = {
     forYou: {
       title: 'siz uchun',
       desc: 'Markazni tanlang va biz bilan sarguzashtni boshlang!',
-      btn: 'Markazni tanlang',
+      btn: 'Kursni tanlash',
     },
     forCompanies: {
       title: 'kompaniyalar uchun',

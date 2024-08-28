@@ -477,7 +477,7 @@ export const data = {
     forYou: {
       title: 'for you',
       desc: 'Choose a center and start your adventure with us!',
-      btn: 'Choose a center',
+      btn: 'Choose  course',
     },
     forCompanies: {
       title: 'for companies',
