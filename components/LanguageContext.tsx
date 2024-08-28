@@ -1,4 +1,11 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from 'react';
+import Cookies from 'js-cookie';
 
 type LanguageContextType = {
   language: string;
@@ -10,14 +17,13 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  let storedLanguage = 'uz';
-  if (typeof window !== 'undefined') {
-    storedLanguage = localStorage.getItem('selectedLanguage') || 'uz';
-  }
-  const [language, setLanguage] = useState(storedLanguage || 'uz');
+  let storedLanguage = String(Cookies.get('selectedLanguage'));
+
+  const [language, setLanguage] = useState(storedLanguage);
 
   const switchLanguage = (lang: string) => {
     setLanguage(lang);
+    Cookies.set('selectedLanguage', lang, { expires: 365, path: '/' }); // 1 year
   };
 
   return (
