@@ -77,23 +77,23 @@ const Header = () => {
   const data = useLocalizedData();
   const routes = [
     {
-      label: data.header.tabs.studyAbroad,
+      label: data?.header?.tabs?.studyAbroad,
       href: '/study-abroad',
     },
     {
-      label: data.header.tabs.courses,
+      label: data?.header?.tabs?.courses,
       href: '/classes',
     },
     {
-      label: data.header.tabs.careers,
+      label: data?.header?.tabs?.careers,
       href: '/careers',
     },
     {
-      label: data.header.tabs.contact,
+      label: data?.header?.tabs?.contact,
       href: '/contact',
     },
     {
-      label: data.header.tabs.about,
+      label: data?.header?.tabs?.about,
       href: '/about',
     },
   ];
@@ -304,7 +304,7 @@ const Header = () => {
                     decoding="async"
                     height={20}
                   />
-                  {data.header.langs.eng}
+                  {data?.header?.langs?.eng}
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   className="flex flex-row gap-[7px] cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720] rounded-xl"
@@ -318,7 +318,7 @@ const Header = () => {
                     decoding="async"
                     height={20}
                   />
-                  {data.header.langs.uzb}
+                  {data?.header?.langs?.uzb}
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   className="flex flex-row gap-[7px] cursor-pointer hover:bg-[#e7e9e720] dark:hover:bg-[#e7e9e720] rounded-xl"
@@ -332,7 +332,7 @@ const Header = () => {
                     decoding="async"
                     height={20}
                   />
-                  {data.header.langs.rus}
+                  {data?.header?.langs?.rus}
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

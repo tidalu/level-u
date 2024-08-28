@@ -77,12 +77,12 @@ const Hero = () => {
                   htmlFor="name"
                 >
                   <span className=" text-red-400">*</span>
-                  {data.contactForm.name}
+                  {data?.contactForm?.name}
                 </label>
                 <input
                   type="text"
                   className=" w-full l lg:max-w-[400px] sm:w-[300px]  md:w-[350px] lg:w-[400px] bg-transparent   outline-none text-sm border-2 border-[#2bbb15] rounded-xl py-4 px-6 placeholder:text-green-900 dark:text-gray-700"
-                  placeholder={data.contactForm.namePlaceholder}
+                  placeholder={data?.contactForm?.namePlaceholder}
                   required
                   name="name"
                   onChange={(e) =>
@@ -96,12 +96,12 @@ const Hero = () => {
                   htmlFor="phone"
                 >
                   <span className=" text-red-400">*</span>
-                  {data.contactForm.phone}
+                  {data?.contactForm?.phone}
                 </label>
                 <input
                   type="tel"
                   className=" w-full l lg:max-w-[400px] sm:w-[300px] md:w-[350px] lg:w-[400px] bg-transparent placeholder:text-green-900 outline-none text-sm border-2 border-[#2bbb15] rounded-xl py-4 px-6 dark:text-gray-700"
-                  placeholder={data.contactForm.phonePlaceholder}
+                  placeholder={data?.contactForm?.phonePlaceholder}
                   required
                   name="phone"
                   onChange={(e) =>

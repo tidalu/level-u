@@ -30,7 +30,7 @@ const ClassesDataPage = () => {
   const result = str.replace(/%20/g, ' ');
 
   const getClassByName = (className: string) => {
-    for (const category of data.classPage.classList) {
+    for (const category of data?.classPage?.classList) {
       const match = category.list.find(
         (item: {
           href: string;
@@ -85,7 +85,7 @@ const ClassesDataPage = () => {
                 {/* cost  */}
                 <div className="flex items-center justify-between mt-5 p-6 border-2 rounded-xl ">
                   <div className=" text-gray-600 dark:text-gray-300 text-md lg:text-xl font-semibold">
-                    {data.classPage.classContainer.cost}
+                    {data?.classPage?.classContainer?.cost}
                   </div>
                   <div className=" text-[#6cce40] dark:text-[#6cce40] text-md lg:text-xl font-semibold ml-2">
                     {classInfo?.match.cost}
@@ -95,7 +95,7 @@ const ClassesDataPage = () => {
                 <div className=" flex flex-col sm:flex-row flex-wrap gap-4 items-center mt-5">
                   <Link href="/contact" className="w-full sm:w-auto">
                     <Button className="dark:text-white w-full sm:w-auto rounded-full px-6 bg-transparent hover:bg-transparent text-black border-2 border-[#6cce40] text-sm">
-                      {data.classPage.classContainer.enrollBtn}
+                      {data?.classPage?.classContainer?.enrollBtn}
                     </Button>
                   </Link>
                 </div>
@@ -105,7 +105,7 @@ const ClassesDataPage = () => {
             <div className="  col-span-12 lg:col-span-7 shadow-2xl dark:shadow-slate-900 grid grid-cols-12 bg-[#a9aca41a] rounded-2xl overflow-hidden gap-0.5">
               <div className=" bg-white reveal dark:bg-[#020817] col-span-7 sm:col-span-4 p-4 md:p-8">
                 <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                  {data.classPage.classContainer.forWhom}
+                  {data?.classPage?.classContainer?.forWhom}
                 </div>
                 <div className=" leading-6 text-gray-500 dark:text-gray-400 mt-1 text-[12px]">
                   {classInfo?.match.forWhom.map((f: string[], i: number) => (
@@ -119,7 +119,7 @@ const ClassesDataPage = () => {
                 {classInfo?.match.ageLimit && (
                   <div className="mb-3">
                     <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                      {data.classPage.classContainer.ageLimit}
+                      {data?.classPage?.classContainer?.ageLimit}
                     </div>
                     <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
                       {classInfo?.match.ageLimit}
@@ -129,7 +129,7 @@ const ClassesDataPage = () => {
                 {classInfo?.match.group && (
                   <div className="mb-3">
                     <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                      {data.classPage.classContainer.groupTitle}
+                      {data?.classPage?.classContainer?.groupTitle}
                     </div>
                     <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
                       {classInfo?.match.group}
@@ -138,7 +138,7 @@ const ClassesDataPage = () => {
                 )}
                 <div className="mb-3">
                   <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                    {data.classPage.classContainer.materialsTitle}
+                    {data?.classPage?.classContainer?.materialsTitle}
                   </div>
                   <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
                     {classInfo?.match.materials}
@@ -148,7 +148,7 @@ const ClassesDataPage = () => {
               <div className="reveal bg-white dark:bg-[#020817] col-span-12  sm:col-span-4 p-4 md:p-8">
                 <div className="mb-4">
                   <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                    {data.classPage.classContainer.intensity}
+                    {data?.classPage?.classContainer?.intensity}
                   </div>
                   <div className="flex gap-1 mt-3">
                     <div
@@ -177,7 +177,7 @@ const ClassesDataPage = () => {
 
                 <div className="mb-4">
                   <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                    {data.classPage.classContainer.duration}
+                    {data?.classPage?.classContainer?.duration}
                   </div>
                   <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
                     {classInfo?.match.duration}
@@ -185,7 +185,7 @@ const ClassesDataPage = () => {
                 </div>
                 <div className="mb-4">
                   <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                    {data.classPage.classContainer.lengthOfClassesTitle}
+                    {data?.classPage?.classContainer?.lengthOfClassesTitle}
                   </div>
                   <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
                     {classInfo?.match.lengthOfClasses}
@@ -193,7 +193,7 @@ const ClassesDataPage = () => {
                 </div>
                 <div className="mb-4">
                   <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                    {data.classPage.classContainer.frequencyTitle}
+                    {data?.classPage?.classContainer?.frequencyTitle}
                   </div>
                   <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
                     {classInfo?.match.frequency}
@@ -202,7 +202,7 @@ const ClassesDataPage = () => {
               </div>
               <div className="reveal bg-white dark:bg-[#020817] col-span-12 sm:col-span-6 p-4 md:p-8">
                 <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                  {data.classPage.classContainer.purpose}
+                  {data?.classPage?.classContainer?.purpose}
                 </div>
                 <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
                   {classInfo?.match.purpose}
@@ -210,7 +210,7 @@ const ClassesDataPage = () => {
               </div>
               <div className="reveal bg-white dark:bg-[#020817] col-span-12 sm:col-span-6 p-4 md:p-8">
                 <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                  {data.classPage.classContainer.effects}
+                  {data?.classPage?.classContainer?.effects}
                 </div>
                 <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
                   {classInfo?.match.effects.map((e: string[], i: number) => (

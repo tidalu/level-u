@@ -33,7 +33,7 @@ const Categories = () => {
   return (
     <div>
       <div className="flex flex-col items-start gap-4 w-full mt-6 md:flex-row flex-wrap justify-between">
-        {Object.values(data.classPage.classList as ClassList[]).map(
+        {data?.classPage?.classList && Object.values(data?.classPage?.classList as ClassList[]).map(
           (item: ClassList, index: number) => {
             return (
               <div className="flex-1 w-full" key={index}>

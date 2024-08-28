@@ -64,16 +64,16 @@ export function PreferenceDialog() {
 
         <DialogContent className=" rounded-2xl">
           <DialogHeader>
-            <DialogTitle>{data.userPreferencesModule.title}</DialogTitle>
+            <DialogTitle>{data?.userPreferencesModule?.title}</DialogTitle>
             <DialogDescription>
-              {data.userPreferencesModule.description}
+              {data?.userPreferencesModule?.description}
             </DialogDescription>
           </DialogHeader>
           <div className="flex items-start  flex-col">
             {/* Theme Mode */}
             <div className="flex items-center flex-wrap  w-full justify-evenly">
               <p className="text-left mr-2 basis-[100%] mb-2">
-                {data.userPreferencesModule.theme.title}:
+                {data?.userPreferencesModule?.theme?.title}:
               </p>
               <Button
                 variant={themeMode === 'light' ? 'primaryGreen' : 'secondary'}
@@ -82,7 +82,7 @@ export function PreferenceDialog() {
                   themeMode === 'light' && 'dark:text-slate-700'
                 } basis-[40%] `}
               >
-                {data.userPreferencesModule.theme.light}
+                {data?.userPreferencesModule?.theme?.light}
               </Button>
               <Button
                 variant={themeMode === 'dark' ? 'primaryGreen' : 'secondary'}
@@ -91,13 +91,13 @@ export function PreferenceDialog() {
                   themeMode === 'dark' && 'dark:text-slate-700'
                 } basis-[40%]`}
               >
-                {data.userPreferencesModule.theme.dark}
+                {data?.userPreferencesModule?.theme?.dark}
               </Button>
             </div>
             {/* Language */}
             <div className="flex items-center flex-wrap  w-full justify-evenly mt-4">
               <p className="text-left mr-2 basis-[100%] mb-2">
-                {data.userPreferencesModule.language.title}:
+                {data?.userPreferencesModule?.language?.title}:
               </p>
               <Button
                 variant={language === 'uz' ? 'primaryGreen' : 'secondary'}
@@ -106,7 +106,7 @@ export function PreferenceDialog() {
                   language === 'ru' && 'basis-[45%] sm:basis-[28%]'
                 } basis-[28%] `}
               >
-                {data.userPreferencesModule.language.uzb}
+                {data?.userPreferencesModule?.language?.uzb}
               </Button>
               <Button
                 variant={language === 'ru' ? 'primaryGreen' : 'secondary'}
@@ -115,7 +115,7 @@ export function PreferenceDialog() {
                   language === 'ru' && 'basis-[45% sm:basis-[28%]]'
                 } basis-[28%]`}
               >
-                {data.userPreferencesModule.language.rus}
+                {data?.userPreferencesModule?.language?.rus}
               </Button>
               <Button
                 variant={language === 'en' ? 'primaryGreen' : 'secondary'}
@@ -124,7 +124,7 @@ export function PreferenceDialog() {
                   language === 'ru' && 'basis-[45%] sm:basis-[28%] mt-2'
                 } basis-[28%]`}
               >
-                {data.userPreferencesModule.language.eng}
+                {data?.userPreferencesModule?.language?.eng}
               </Button>
             </div>
           </div>
@@ -139,7 +139,7 @@ export function PreferenceDialog() {
                   Cookies.set('showPreference', 'true', { expires: 365 });
                 }}
               >
-                {data.userPreferencesModule.button}
+                {data?.userPreferencesModule?.button}
               </Button>
             </DialogClose>
           </DialogFooter>

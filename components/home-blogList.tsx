@@ -66,7 +66,7 @@ const HomeBlogList = () => {
   return (
     <div className=" mt-4  reveal">
       <Slider {...settings} className=" ">
-        {data.blogs.map(
+        {data?.blogs?.map(
           (item: {
             id: number;
             img: string;
