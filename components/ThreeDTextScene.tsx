@@ -182,16 +182,21 @@ const ThreeDTextScene: React.FC = () => {
       window.removeEventListener('resize', handleResize);
       renderer.dispose();
       scene.clear();
-      containerRef.current?.removeChild(renderer.domElement); 
-      rendererRef.current = undefined; 
+      containerRef.current?.removeChild(renderer.domElement);
+      rendererRef.current = undefined;
     };
   }, []);
 
   return (
     <div
-      className=""
+      className=" w-full h-full flex justify-center items-center"
       ref={containerRef}
-      style={{ width: '100%', height: '100%' }}
+      style={{
+        width: '100%',
+        height: '100%',
+        minHeight: '300px',
+        minWidth: '500px',
+      }}
     ></div>
   );
 };
