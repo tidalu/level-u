@@ -129,6 +129,7 @@ export const data = {
         title: 'Ingliz Tili',
         list: [
           {
+            href: 'General English',
             name: 'Umumiy Ingliz Tili',
             img: '/general-english.jpg',
             description:
@@ -156,6 +157,7 @@ export const data = {
             group: '10 kishigacha',
           },
           {
+            href: 'English Individual Classes',
             name: 'Ingliz tili Individual Darslar',
             img: '/individual-courses.jpg',
             description:
@@ -182,6 +184,7 @@ export const data = {
             materials: 'ta‘minlanadi',
           },
           {
+            href: 'English for Kids',
             name: 'Bolalar uchun Ingliz Tili',
             img: '/english-for-kids.jpg',
             description:
@@ -211,6 +214,7 @@ export const data = {
             ageLimit: '7 - 12',
           },
           {
+            href: 'Corporate Courses',
             name: 'Korporativ Kurslar',
             img: '/corporative-courses.jpg',
             description:
@@ -239,6 +243,7 @@ export const data = {
             group: '10 kishigacha',
           },
           {
+            href: 'IELTS CEFR TOEFL',
             name: 'IELTS CEFR TOEFL',
             img: '/ielts-toefl-cefr.jpg',
             description:
@@ -267,6 +272,7 @@ export const data = {
             group: '10 kishigacha',
           },
           {
+            href: 'Intensive Course',
             name: 'Intensiv Kurs',
             img: '/individual-courses.jpg',
             description:
@@ -299,6 +305,7 @@ export const data = {
         title: 'Koreys Tili',
         list: [
           {
+            href: 'Korean Individual Classes',
             name: 'Koreys Tilida Shaxsiy Darslar',
             description:
               "Shaxsiy ehtiyojlaringiz va maqsadlaringizga moslashtirilgan koreys tili darslari. Ushbu shaxsiy darslar gapirish, eshitish, o'qish va yozish ko'nikmalariga e'tibor beradi, sizning tezlik va qiziqishlaringizga moslashadi.",
@@ -325,6 +332,7 @@ export const data = {
             group: 'noaniq',
           },
           {
+            href: 'Korean Group Classes',
             name: 'Koreys Tilida Guruh Darslari',
             description:
               "Koreys tilini guruhli o'rganish orqali yaxshilashga qaratilgan interaktiv guruh darslari. Kurs suhbat amaliyoti, madaniyatni tushunish va til o'rganishni kuchaytiruvchi guruh faoliyatlariga e'tibor beradi.",
@@ -351,6 +359,7 @@ export const data = {
             group: 'noaniq',
           },
           {
+            href: 'TOPIK',
             name: 'TOPIK',
             description:
               "TOPIK (Koreys Tilidagi Malaka Imtihoni) imtihoniga tayyorgarlik uchun mo'ljallangan maxsus kurs. O'qish, yozish, eshitish va gapirish kabi barcha test qismlarini qamrab oladi va imtihon uchun zarur ko'nikmalarni rivojlantirishga e'tibor beradi.",

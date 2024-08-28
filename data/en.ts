@@ -125,6 +125,7 @@ export const data = {
         title: 'English Language',
         list: [
           {
+            href: 'General English',
             name: 'General English',
             img: '/general-english.jpg',
             description:
@@ -152,6 +153,7 @@ export const data = {
             group: 'up to 10 people',
           },
           {
+            href: 'English Individual Classes',
             name: 'English Individual Classes',
             img: '/individual-courses.jpg',
             description:
@@ -178,6 +180,7 @@ export const data = {
             materials: 'included',
           },
           {
+            href: 'English for Kids',
             name: 'English for Kids',
             img: '/english-for-kids.jpg',
             description:
@@ -207,6 +210,7 @@ export const data = {
             ageLimit: '7 - 12',
           },
           {
+            href: 'Corporate Courses',
             name: 'Corporate Courses',
             img: '/corporative-courses.jpg',
             description:
@@ -234,6 +238,7 @@ export const data = {
             group: 'up to 10 people',
           },
           {
+            href: 'IELTS CEFR TOEFL',
             name: 'IELTS CEFR TOEFL',
             img: '/ielts-toefl-cefr.jpg',
             description:
@@ -262,6 +267,7 @@ export const data = {
             group: 'up to 10 people',
           },
           {
+            href: 'Intensive Course',
             name: 'Intensive Course',
             img: '/individual-courses.jpg',
             description:
@@ -295,6 +301,7 @@ export const data = {
 
         list: [
           {
+            href: 'Korean Individual Classes',
             name: 'Korean Individual Classes',
             description:
               'Personalized Korean language lessons tailored to your specific learning needs and goals. These one-on-one sessions focus on speaking, listening, reading, and writing skills, adapting to your pace and interests.',
@@ -321,6 +328,7 @@ export const data = {
             group: 'not specified',
           },
           {
+            href: 'Korean Group Classes',
             name: 'Korean Group Classes',
             description:
               'Interactive group classes designed to improve Korean language skills through collaborative learning. The course focuses on conversation practice, cultural understanding, and group activities that enhance language acquisition.',
@@ -347,6 +355,7 @@ export const data = {
             group: 'not specified',
           },
           {
+            href: 'TOPIK',
             name: 'TOPIK',
             description:
               'A focused course designed to prepare students for the TOPIK (Test of Proficiency in Korean). It covers all test sections including reading, writing, listening, and speaking, with a focus on developing skills needed to excel in the exam.',

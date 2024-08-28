@@ -134,6 +134,7 @@ export const data = {
         title: 'Английский Язык',
         list: [
           {
+            href: 'General English',
             name: 'Общий английский',
             img: '/general-english.jpg',
             description:
@@ -161,6 +162,7 @@ export const data = {
             group: 'до 10 человек',
           },
           {
+            href: 'English Individual Classes',
             name: 'Индивидуальные занятия по английскому',
             img: '/individual-courses.jpg',
             description:
@@ -187,6 +189,7 @@ export const data = {
             materials: 'включены',
           },
           {
+            href: 'English for Kids',
             name: 'Английский для детей',
             img: '/english-for-kids.jpg',
             description:
@@ -216,6 +219,7 @@ export const data = {
             ageLimit: '7 - 12',
           },
           {
+            href: 'Corporate Courses',
             name: 'Корпоративные курсы',
             img: '/corporative-courses.jpg',
             description:
@@ -243,6 +247,7 @@ export const data = {
             group: 'до 10 человек',
           },
           {
+            href: 'IELTS CEFR TOEFL',
             name: 'IELTS CEFR TOEFL',
             img: '/ielts-toefl-cefr.jpg',
             description:
@@ -271,6 +276,7 @@ export const data = {
             group: 'до 10 человек',
           },
           {
+            href: 'Intensive Course',
             name: 'Интенсивный курс',
             img: '/individual-courses.jpg',
             description:
@@ -303,6 +309,7 @@ export const data = {
         title: 'Корейский Язык',
         list: [
           {
+            href: 'Korean Individual Classes',
             name: 'Индивидуальные Занятия по Корейскому',
             description:
               'Персонализированные занятия корейским языком, адаптированные под ваши конкретные потребности и цели обучения. Эти индивидуальные занятия сосредоточены на навыках говорения, слушания, чтения и письма, адаптируясь к вашему темпу и интересам.',
@@ -330,6 +337,7 @@ export const data = {
             group: 'n/a',
           },
           {
+            href: 'Korean Group Classes',
             name: 'Групповые Занятия по Корейскому',
             description:
               'Интерактивные групповые занятия, предназначенные для улучшения навыков корейского языка через совместное обучение. Курс фокусируется на практике разговорной речи, понимании культуры и групповых активностях, способствующих освоению языка.',
@@ -356,6 +364,7 @@ export const data = {
             group: 'n/a',
           },
           {
+            href: 'TOPIK',
             name: 'TOPIK',
             description:
               'Специализированный курс, предназначенный для подготовки студентов к TOPIK (Тест на уровень владения корейским). Он охватывает все разделы теста, включая чтение, письмо, восприятие на слух и говорение, с акцентом на развитие навыков, необходимых для успешной сдачи экзамена.',
