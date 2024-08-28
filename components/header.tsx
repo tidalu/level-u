@@ -29,7 +29,7 @@ const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
   const pathName = usePathname();
 
-  let storedLanguage = String(Cookies.get('selectedLanguage')) || 'en';
+  let storedLanguage = Cookies.get('selectedLanguage') || 'en';
 
   const [currentLang, setCurrentLang] = useState(storedLanguage);
 
@@ -39,6 +39,8 @@ const Header = () => {
     if (storedLanguage) {
       setCurrentLang(storedLanguage);
       console.log('cookiedata', Cookies.get('selectedLanguage'));
+    } else {
+      setCurrentLang('en');
     }
   }, [storedLanguage]);
 
