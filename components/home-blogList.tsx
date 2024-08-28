@@ -65,7 +65,7 @@ const HomeBlogList = () => {
 
   return (
     <div className=" mt-4  reveal">
-      <Slider {...settings} className=" ">
+      {data?.blogs && data?.blogs?.length > 0 &&  <Slider {...settings} className=" ">
         {data?.blogs?.map(
           (item: {
             id: number;
@@ -106,7 +106,8 @@ const HomeBlogList = () => {
             </div>
           )
         )}
-      </Slider>
+      </Slider>}
+     
     </div>
   );
 };
