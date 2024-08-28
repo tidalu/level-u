@@ -30,7 +30,11 @@ const ClassesDataPage = () => {
   const result = str.replace(/%20/g, ' ');
 
   const getClassByName = (className: string) => {
-    for (const category of data?.classPage?.classList) {
+    if (!data?.classPage?.classList) {
+      return null;
+    }
+  
+    for (const category of data.classPage.classList) {
       const match = category.list.find(
         (item: {
           href: string;
@@ -50,12 +54,15 @@ const ClassesDataPage = () => {
           ageLimit?: string;
         }) => item.href.toLocaleLowerCase() === className.toLocaleLowerCase()
       );
+      
       if (match) {
         return { match, title: category.title };
       }
     }
-    return null;
+  
+    return null; // If no match is found
   };
+  
 
   const classInfo = getClassByName(result);
 
