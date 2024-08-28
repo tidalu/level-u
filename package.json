@@ -28,6 +28,7 @@
     "cobe": "^0.6.3",
     "embla-carousel-react": "^8.1.8",
     "framer-motion": "^11.3.24",
+    "js-cookie": "^3.0.5",
     "ldrs": "^1.0.2",
     "lucide-react": "^0.408.0",
     "next": "^14.2.5",
@@ -47,6 +48,7 @@
     "three": "^0.167.1"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
     "@types/leaflet": "^1.9.12",
     "@types/node": "^20",
     "@types/react": "^18.3.4",
