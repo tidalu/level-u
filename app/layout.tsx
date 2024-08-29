@@ -3,6 +3,7 @@ import './globals.css';
 import localFont from 'next/font/local';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
+import AnimatedTitle from '@/components/AnimatedTitle';
 
 const helvetica = localFont({
   src: './fonts/helveticaneue-medium.woff2',
@@ -58,6 +59,7 @@ export default function RootLayout({
             <Analytics />
           </>
         )}
+        <AnimatedTitle />
         {children}
       </body>
     </html>
