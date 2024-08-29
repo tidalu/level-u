@@ -623,7 +623,7 @@ export const data = {
         description:
           'IELTS imtihoniga tayyorgarlik darslarimiz sizning kerakli ballni olishga yordam berish uchun mo‘ljallangan. Biz to‘rt modul bo‘yicha keng qamrovli o‘qitish taklif etamiz: Tinglash, O‘qish, Yozish va Gapirish. Amaliy testlar, so‘z boyligini oshirish va shaxsiy maslahatlar orqali siz ko‘nikmalaringizni rivojlantirasiz va o‘z ishonchingizni oshirasiz.',
 
-        href: '/classess/ielts?lang=uz',
+        href: '/classess/ielts%20cefr%20toefl',
       },
       {
         topText: 'TIL O‘RGANISH',
@@ -631,13 +631,14 @@ export const data = {
         description:
           'Koreys tiliga bizning interaktiv darslarimiz orqali sho‘ng‘ing. Asosiy so‘z boyligi va grammatikadan tortib, murakkab muloqot ko‘nikmalarigacha, o‘quv dasturimiz sizga koreys tilini samarali o‘rganishga yordam beradi. Sayohatga tayyorlanayotgan bo‘lsangiz yoki tilni mukammal o‘rganishni maqsad qilgan bo‘lsangiz, kurslarimiz qiziqarli darslar va amaliy mashqlarni taklif etadi.',
         href: '/classess/koreys%20tilida%20shaxsiy%20darslar?lang=uz',
+        comingSoon: true,
       },
       {
         topText: 'BOSHLANG‘ICH TA’LIM',
         title: 'BOLALAR UCHUN INGLIZ TILI DARSLARI',
         description:
           'Bolalar uchun ingliz tili darslarimiz yosh o‘quvchilar uchun ta’limni qiziqarli va mazmunli qilish uchun mo‘ljallangan. Interaktiv o‘yinlar, hikoya qilish va ijodiy mashg‘ulotlar orqali bolalar qo‘llab-quvvatlovchi muhitda ingliz tilidagi ko‘nikmalarini rivojlantiradilar. Tilni o‘rganishni yoshligidan ishonch va qiziqish bilan boshlash uchun mukammal variant.',
-        href: '/classess/bolalar%20uchun%20ingliz%20tili?lang=uz',
+        href: '/classess/english%20for%20kids',
       },
     ],
   },
