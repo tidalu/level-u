@@ -775,9 +775,9 @@ export const data = {
     },
     language: {
       title: 'Выберите язык',
-      uzb: 'Узбекский',
+      uzb: 'Uzbek',
       rus: 'Русский',
-      eng: 'Английский',
+      eng: 'English',
     },
     button: 'Сохранить',
   },

@@ -780,8 +780,8 @@ export const data = {
     language: {
       title: 'Tilni tanlang',
       uzb: "O'zbek",
-      rus: 'Ruscha',
-      eng: 'Inglizcha',
+      rus: 'Русский',
+      eng: 'English',
     },
     button: 'Saqlash',
   },

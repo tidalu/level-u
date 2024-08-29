@@ -763,8 +763,8 @@ export const data = {
     },
     language: {
       title: 'Choose your language',
-      uzb: 'Uzbek',
-      rus: 'Russian',
+      uzb: 'O‘zbek',
+      rus: 'Русский',
       eng: 'English',
     },
     button: 'Save',
