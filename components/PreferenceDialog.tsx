@@ -36,7 +36,7 @@ export function PreferenceDialog() {
   const data = useLocalizedData();
 
   useEffect(() => {
-    if (!storedLanguage || !storedTheme) {
+    if (!storedLanguage || !storedTheme || storedTheme==="undefined" || storedLanguage==="undefined") {
       setOpen(true);
     }
   }, []);
