@@ -21,7 +21,7 @@ const useAnimatedTitle = (title: string, delay = 200) => {
 export default function AnimatedTitle() {
   const title = "LEVEL ™ O'quv Markazi | Учебный Центр | Learning Center";
 
-  useAnimatedTitle(title, 600);
+  useAnimatedTitle(title, 500);
 
   return null;
 }
