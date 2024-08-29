@@ -8,21 +8,21 @@ import { useLanguage } from './LanguageContext';
 import Image from 'next/image';
 const LandingBanner = () => {
   const data = useLocalizedData();
-  
+
   const [imageSrc, setImageSrc] = useState('/quote-replacement-en.svg');
-  
+
   const { language } = useLanguage();
   useEffect(() => {
     const src =
       language === 'uz'
         ? '/quote-replacement-uz.svg'
         : language === 'ru'
-        ? '/quote-replacement-ru.svg'
-        : '/quote-replacement-en.svg';
+          ? '/quote-replacement-ru.svg'
+          : '/quote-replacement-en.svg';
 
     setImageSrc(src);
   }, [language]);
-  
+
   return (
     <div className=" reveal homeBanner pt-32 pb-12 rounded-b-3xl px-5 lg:px-16 relative overflow-hidden 3xl:mx-32  ">
       <div className=" relative rounded-2xl overflow-hidden   md:min-h-[450px] grid grid-cols-12 bg-[#6cce40] mx-auto">
@@ -37,12 +37,12 @@ const LandingBanner = () => {
           </div>
 
           <Image
-      src={imageSrc}
-      alt=""
-      height={100}
-      width={100}
-      className="object-cover mx-auto scale-150 sm:scale-100 md:scale-125 xl:scale-100 m-7 w-[80%] h-auto lg:m-0 2xl:self-right"
-    />
+            src={imageSrc}
+            alt=""
+            height={100}
+            width={100}
+            className="object-cover mx-auto scale-150 sm:scale-100 md:scale-125 xl:scale-100 m-7 w-[80%] h-auto lg:m-0 2xl:self-right"
+          />
           <Form>
             <div className="self-end  scale-110 hover:scale-105 transition-all delay-75 shadow-lg inline-flex items-center justify-center whitespace-nowrap  text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 radial_bg_red text-white h-10 px-4 py-2 rounded-xl cursor-pointer">
               {data?.landingAdd?.buttonText}
@@ -52,7 +52,7 @@ const LandingBanner = () => {
 
         <div className="reveal bg-[url('/desk_home-banner.webp')] md:h-[100%]    bg-no-repeat bg-cover relative    hidden md:block md:col-span-7 ">
           <div
-            className="md:h-full md:ml-6  md:w-[300px]  -skew-x-[10deg] flex flex-col h-[60%] my-auto gap-6 pb-20 2xl:pb-20 min-[1685px]:pb-8    
+            className="md:h-full md:ml-6  md:w-[300px]  -skew-x-[10deg] flex flex-col h-[60%] my-auto gap-6 pb-20 2xl:pb-16 min-[1685px]:pb-8    
           justify-center"
           >
             <p className="text-gray-800  text-3xl md:text-4xl lg:text-5xl 2xl:-mt-20  text-wrap apply-font-o text-center">

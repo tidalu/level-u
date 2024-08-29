@@ -15,7 +15,7 @@ function Call() {
 
       scrollTimeoutRef.current = setTimeout(() => {
         setScrollActive(true);
-      }, 3000); 
+      }, 3000);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -34,10 +34,10 @@ function Call() {
         scrollActive ? 'opacity-100' : 'opacity-0'
       } ${
         scrollActive ? 'translate-x-0' : 'translate-x-32'
-      } w-10 h-10  lg:w-12 lg:h-12 xl:w-14 xl:h-14`}
+      } w-[44px] h-[44px]  lg:w-12 lg:h-12 xl:w-14 xl:h-14`}
       onClick={() => window.open('tel:+998559033747')}
     >
-      <Phone size={0} className="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8 " />
+      <Phone size={0} className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 " />
     </div>
   );
 }
