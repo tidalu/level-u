@@ -194,7 +194,7 @@ function Accessibility() {
             </h2>
             <ul className="w-full flex flex-col gap-1 p-1">
               {/* text zoom in */}
-              <li>
+              <li key='1aa'>
                 <button
                   className={cn(
                     buttonStyle,
@@ -211,7 +211,7 @@ function Accessibility() {
               </li>
 
               {/* text zoom out */}
-              <li>
+              <li key='1as'>
                 <button
                   className={cn(
                     buttonStyle,
@@ -228,7 +228,7 @@ function Accessibility() {
               </li>
 
               {/* Grayscale */}
-              <li>
+              <li key='1ad'>
                 <button
                   className={cn(
                     buttonStyle,
@@ -244,7 +244,7 @@ function Accessibility() {
               </li>
 
               {/* Contrast */}
-              <li>
+              <li key='1af'>
                 <button
                   className={cn(
                     buttonStyle,
@@ -260,7 +260,7 @@ function Accessibility() {
               </li>
 
               {/* Negative contrast */}
-              <li>
+              <li key='1ag'>
                 <button
                   className={cn(
                     buttonStyle,
@@ -275,7 +275,7 @@ function Accessibility() {
                 </button>
               </li>
 
-              <li>
+              <li key='1ah'>
                 <button
                   className={cn(
                     buttonStyle,
@@ -296,7 +296,7 @@ function Accessibility() {
 
               {/* reset */}
               <hr className="h-[1px] w-full border-gray-500 dark:bg-slate-100 my-1" />
-              <li>
+              <li key='1aj'>
                 <button
                   className={cn(
                     buttonStyle,
