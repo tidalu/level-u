@@ -1,12 +1,12 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import Schedule from '@/components/schedule';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import ClientOnly from '@/components/ClientOnly';
 import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
-import { ToastPosition, Bounce, toast} from 'react-toastify';
+import { ToastPosition, Bounce, toast } from 'react-toastify';
 import DockLive from '@/components/magicui/dock-live';
 
 const ContactPage = () => {
@@ -45,7 +45,7 @@ const ContactPage = () => {
     try {
       await toast.promise(
         fetch(
-          'https://script.google.com/macros/s/AKfycbyWJ0ek3NvwFxLpfqeh2b3nbu_ixMC47zR5MR5S6MgAk5UKfbcEXNdlNt0LRO7yyLM3/exec',
+          'https://script.google.com/macros/s/AKfycbznBhIePnK82_p-gmFaSXzy9pdNYtjVR8aKjPQL-Xo6rBhCTD5MVlQ1X3ys2SA5GX-P9Q/exec',
           {
             method: 'POST',
             body: JSON.stringify(userData),

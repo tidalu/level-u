@@ -6,7 +6,6 @@ import { grid } from 'ldrs';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import { toast } from 'react-toastify';
 
-
 const Hero = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [userData, setUserData] = useState({
@@ -29,7 +28,7 @@ const Hero = () => {
 
     try {
       await fetch(
-        'https://script.google.com/macros/s/AKfycbxoksVSHKG3rqk99o8gR6ISDneYkuPZ0KPPi3W4VR-mC9IFmMSn6qVHgEdvEft1CBjr/exec',
+        'https://script.google.com/macros/s/AKfycbyr78DM3r0Cq_Vx2kPeB2y1ScZFSUDTxWRl7CYM-pYc29tUfRXDQGdJa51Au0GWc4oc/exec',
         {
           method: 'POST',
           body: JSON.stringify(userData),

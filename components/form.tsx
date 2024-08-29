@@ -40,7 +40,7 @@ function Form({ children }: { children: React.ReactNode }) {
     try {
       await toast.promise(
         fetch(
-          'https://script.google.com/macros/s/AKfycbyWJ0ek3NvwFxLpfqeh2b3nbu_ixMC47zR5MR5S6MgAk5UKfbcEXNdlNt0LRO7yyLM3/exec',
+          'https://script.google.com/macros/s/AKfycbznBhIePnK82_p-gmFaSXzy9pdNYtjVR8aKjPQL-Xo6rBhCTD5MVlQ1X3ys2SA5GX-P9Q/exec',
           {
             method: 'POST',
             body: JSON.stringify(formData),
