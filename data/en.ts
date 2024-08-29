@@ -329,7 +329,6 @@ export const data = {
             group: 'not specified',
             comingSoon: true,
           },
-          
         ],
       },
     ],
@@ -550,29 +549,28 @@ export const data = {
     title: 'Popular Classes',
     classes: [
       {
-        topText: 'TEST PREPARATION',
-        title: 'IELTS PREPARATION',
+        topText: 'Enlish Language',
+        title: 'General English',
         description:
-          'Our IELTS preparation classes are designed to help you achieve your desired score. We offer comprehensive training in all four modules: Listening, Reading, Writing, and Speaking. Through practice tests, vocabulary building, and personalized feedback, you will enhance your skills and boost your confidence.',
+          'This comprehensive course offers a robust foundation in English, covering key language skills such as reading, writing, listening, and speaking. The course emphasizes practical usage and communication, providing a solid basis for everyday and professional interactions.',
         icons: ['/popularicon1.svg', '/popularicon2.svg', '/popularicon3.svg'],
+        href: '/classess/general%20english',
+      },
+      {
+        topText: 'Certificate Preparation',
+        title: 'IELTS CEFR TOEFL',
+        description:
+          'Our comprehensive language preparation courses are designed to equip learners with the skills and strategies needed to excel in the IELTS, CEFR, and TOEFL exams. Each course focuses on developing all core language skills: reading, writing, listening, and speaking, with tailored content and strategies for each specific exam format.',
+        icons: ['/popularicon4.svg'],
         href: '/classess/ielts%20cefr%20toefl',
       },
       {
-        topText: 'LANGUAGE LEARNING',
-        title: 'KOREAN LANGUAGE CLASSES',
+        topText: 'Fast paced learning',
+        title: 'Intensive Course',
         description:
-          ' Dive into the Korean language with our interactive classes. From basic vocabulary and grammar to advanced conversational skills, our curriculum is designed to help you master Korean efficiently. Whether you&apos;re preparing for travel or aiming for fluency, our courses offer engaging lessons and practical exercises.',
-        icons: ['/popularicon4.svg'],
-        href: '/classess/korean%20individual%20classes?lang=en',
-        comingSoon: true,
-      },
-      {
-        topText: 'EARLY EDUCATION',
-        title: 'KIDS ENGLISH CLASSES',
-        description:
-          'Our Kid&apos;s English classes are crafted to make learning fun and engaging for young learners. Through interactive games,  storytelling, and creative activities, children will develop  their English skills in a supportive environment. Perfect for building confidence and a love for the language from an early age.',
+          'Course is designed for learners who need to achieve rapid progress in their English skills. These courses offer an immersive and focused approach, which is particularly beneficial for specific groups of people.',
         icons: ['/popularicon5.svg'],
-        href: '/classess/english%20for%20kids',
+        href: '/classess/intensive%20course',
       },
     ],
   },

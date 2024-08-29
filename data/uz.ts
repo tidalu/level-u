@@ -559,33 +559,35 @@ export const data = {
   },
 
   popularActivities: {
-    title: 'Ommabop darslar',
+    title: 'Mashhur Darslar',
     classes: [
       {
-        topText: 'IMTIHONLARGA TAYYORLASH',
-        title: 'IELTS GA TAYYORLASH',
+        topText: 'Ingliz tili',
+        title: 'Umumiy Ingliz Tili',
         description:
-          'IELTS imtihoniga tayyorgarlik darslarimiz sizning kerakli ballni olishga yordam berish uchun mo‘ljallangan. Biz to‘rt modul bo‘yicha keng qamrovli o‘qitish taklif etamiz: Tinglash, O‘qish, Yozish va Gapirish. Amaliy testlar, so‘z boyligini oshirish va shaxsiy maslahatlar orqali siz ko‘nikmalaringizni rivojlantirasiz va o‘z ishonchingizni oshirasiz.',
-
+          'Ushbu keng qamrovli kurs ingliz tilida kuchli asosni taklif qiladi, oʻqish, yozish, tinglash va gapirish kabi asosiy til koʻnikmalarini qamrab oladi. Kurs amaliy foydalanish va muloqotga urgʻu beradi, kundalik va professional aloqalar uchun mustahkam asos yaratadi.',
+        icons: ['/popularicon1.svg', '/popularicon2.svg', '/popularicon3.svg'],
+        href: '/classess/general%20english',
+      },
+      {
+        topText: 'Sertifikatga tayyorlanish',
+        title: 'IELTS CEFR TOEFL',
+        description:
+          'Bizning keng qamrovli til tayyorlash kurslarimiz oʻquvchilarga IELTS, CEFR va TOEFL imtihonlarida muvaffaqiyatga erishish uchun zarur boʻlgan koʻnikma va strategiyalarni taqdim etish uchun moʻljallangan. Har bir kurs asosiy til koʻnikmalarini rivojlantirishga qaratilgan: oʻqish, yozish, tinglash va gapirish, har bir imtihon formati uchun moslashtirilgan mazmun va strategiyalar bilan.',
+        icons: ['/popularicon4.svg'],
         href: '/classess/ielts%20cefr%20toefl',
       },
       {
-        topText: 'TIL O‘RGANISH',
-        title: 'KOREYS TILI DARSLARI',
+        topText: 'Tezkor oʻrganish',
+        title: 'Intensiv Kurs',
         description:
-          'Koreys tiliga bizning interaktiv darslarimiz orqali sho‘ng‘ing. Asosiy so‘z boyligi va grammatikadan tortib, murakkab muloqot ko‘nikmalarigacha, o‘quv dasturimiz sizga koreys tilini samarali o‘rganishga yordam beradi. Sayohatga tayyorlanayotgan bo‘lsangiz yoki tilni mukammal o‘rganishni maqsad qilgan bo‘lsangiz, kurslarimiz qiziqarli darslar va amaliy mashqlarni taklif etadi.',
-        href: '/classess/koreys%20tilida%20shaxsiy%20darslar?lang=uz',
-        comingSoon: true,
-      },
-      {
-        topText: 'BOSHLANG‘ICH TA’LIM',
-        title: 'BOLALAR UCHUN INGLIZ TILI DARSLARI',
-        description:
-          'Bolalar uchun ingliz tili darslarimiz yosh o‘quvchilar uchun ta’limni qiziqarli va mazmunli qilish uchun mo‘ljallangan. Interaktiv o‘yinlar, hikoya qilish va ijodiy mashg‘ulotlar orqali bolalar qo‘llab-quvvatlovchi muhitda ingliz tilidagi ko‘nikmalarini rivojlantiradilar. Tilni o‘rganishni yoshligidan ishonch va qiziqish bilan boshlash uchun mukammal variant.',
-        href: '/classess/english%20for%20kids',
+          'Kurs ingliz tilidagi koʻnikmalarini tezda oshirishi kerak boʻlgan oʻquvchilar uchun moʻljallangan. Ushbu kurslar oʻziga xos odamlar guruhlari uchun juda foydali boʻlgan keng qamrovli va qaratilgan yondashuvni taklif qiladi.',
+        icons: ['/popularicon5.svg'],
+        href: '/classess/intensive%20course',
       },
     ],
   },
+
   careers: {
     header: 'Karyera',
     imgGallery: [
