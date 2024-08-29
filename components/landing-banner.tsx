@@ -55,7 +55,7 @@ const LandingBanner = () => {
             className="md:h-full md:ml-6  md:w-[300px]  -skew-x-[10deg] flex flex-col h-[60%] my-auto gap-6 pb-20 2xl:pb-16 min-[1685px]:pb-8    
           justify-center"
           >
-            <p className="text-gray-800  text-3xl md:text-4xl lg:text-5xl 2xl:-mt-20 min-[1685px]:-mt-24  text-wrap apply-font-o text-center 2xl:text-red-300">
+            <p className="text-gray-800  text-3xl md:text-4xl lg:text-5xl 2xl:-mt-20 min-[1685px]:-mt-24  text-wrap apply-font-o text-center ">
               {data?.landingAdd?.topPic?.map((item: string, i: number) => {
                 return (
                   <React.Fragment key={i}>
