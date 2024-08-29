@@ -302,8 +302,8 @@ export const data = {
 
         list: [
           {
-            href: 'Korean Individual Classes',
-            name: 'Korean Individual Classes',
+            href: 'Korean Language Classes',
+            name: 'Korean Language Classes',
             description:
               'Personalized Korean language lessons tailored to your specific learning needs and goals. These one-on-one sessions focus on speaking, listening, reading, and writing skills, adapting to your pace and interests.',
             video:
@@ -329,62 +329,7 @@ export const data = {
             group: 'not specified',
             comingSoon: true,
           },
-          {
-            href: 'Korean Group Classes',
-            name: 'Korean Group Classes',
-            description:
-              'Interactive group classes designed to improve Korean language skills through collaborative learning. The course focuses on conversation practice, cultural understanding, and group activities that enhance language acquisition.',
-            video:
-              'https://player.vimeo.com/video/456789012?autoplay=1&title=0&byline=0&portrait=0',
-            forWhom: [
-              'Individuals seeking a dynamic and social learning environment.',
-              'Students interested in learning Korean in a group setting.',
-              'Those who want to enhance their conversational Korean and understanding of Korean culture.',
-            ],
-            cost: '$ N/A',
-            duration: '10 weeks (1 class per week)',
-            intensity: 3 / 4,
-            purpose:
-              'To foster language learning through group interaction, promoting conversational skills and cultural understanding in a collaborative setting.',
-            effects: [
-              'Improved conversational Korean skills.',
-              'Enhanced understanding of Korean culture and customs.',
-              'Greater engagement and motivation through group learning.',
-            ],
-            lengthOfClasses: 'not specified',
-            frequency: 'not specified',
-            materials: 'not specified',
-            group: 'not specified',
-            comingSoon: true,
-          },
-          {
-            href: 'TOPIK',
-            name: 'TOPIK',
-            description:
-              'A focused course designed to prepare students for the TOPIK (Test of Proficiency in Korean). It covers all test sections including reading, writing, listening, and speaking, with a focus on developing skills needed to excel in the exam.',
-            video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
-            forWhom: [
-              'Individuals preparing for the TOPIK test.',
-              'Learners seeking to assess and improve their Korean language proficiency.',
-              'Those looking to obtain certification for academic or professional purposes.',
-            ],
-            cost: '$ N/A',
-            duration: 'Varies based on preparation needs',
-            intensity: 3 / 4,
-            purpose:
-              'To thoroughly prepare learners for the TOPIK exam, enhancing their Korean language skills across all test components.',
-            effects: [
-              'Improved performance on the TOPIK test.',
-              'Enhanced overall Korean language proficiency.',
-              'Better understanding of Korean language and culture.',
-            ],
-            lengthOfClasses: 'not specified',
-            frequency: 'not specified',
-            materials: 'not specified',
-            group: 'not specified',
-            comingSoon: true,
-          },
+          
         ],
       },
     ],

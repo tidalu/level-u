@@ -306,8 +306,8 @@ export const data = {
         title: 'Koreys Tili',
         list: [
           {
-            href: 'Korean Individual Classes',
-            name: 'Koreys Tilida Shaxsiy Darslar',
+            href: 'Korean Language Classes',
+            name: 'Koreys Tili Darslari',
             description:
               "Shaxsiy ehtiyojlaringiz va maqsadlaringizga moslashtirilgan koreys tili darslari. Ushbu shaxsiy darslar gapirish, eshitish, o'qish va yozish ko'nikmalariga e'tibor beradi, sizning tezlik va qiziqishlaringizga moslashadi.",
             video:
@@ -326,62 +326,6 @@ export const data = {
               'Moslashtirilgan darslar va fikr-mulohazalar.',
               "Koreys tili ko'nikmalarida tezkor yaxshilanish.",
               "Koreys tilini foydalanishdagi ishonch va ko'nikmalarni oshirish.",
-            ],
-            lengthOfClasses: 'noaniq',
-            frequency: 'noaniq',
-            materials: 'noaniq',
-            group: 'noaniq',
-            comingSoon: true,
-          },
-          {
-            href: 'Korean Group Classes',
-            name: 'Koreys Tilida Guruh Darslari',
-            description:
-              "Koreys tilini guruhli o'rganish orqali yaxshilashga qaratilgan interaktiv guruh darslari. Kurs suhbat amaliyoti, madaniyatni tushunish va til o'rganishni kuchaytiruvchi guruh faoliyatlariga e'tibor beradi.",
-            video:
-              'https://player.vimeo.com/video/456789012?autoplay=1&title=0&byline=0&portrait=0',
-            forWhom: [
-              "Dinamik va ijtimoiy o'rganish muhitini izlayotgan shaxslar.",
-              "Guruhda koreys tilini o'rganishni xohlagan talabalar.",
-              'Suhbat koreys tilini yaxshilash va koreys madaniyatini tushunishni xohlaganlar.',
-            ],
-            cost: '$ N/A',
-            duration: '10 hafta (haftada 1 dars)',
-            intensity: 3 / 4,
-            purpose:
-              "Guruh o'zaro ta'lim orqali til o'rganishni rivojlantirish, suhbat ko'nikmalarini va madaniyatni tushunishni kuchaytirish.",
-            effects: [
-              "Suhbat koreys tilidagi ko'nikmalarni yaxshilash.",
-              'Koreys madaniyati va urf-odatlarini yaxshiroq tushunish.',
-              "Guruhli o'rganish orqali yuqori motivatsiya va ishtirok.",
-            ],
-            lengthOfClasses: 'noaniq',
-            frequency: 'noaniq',
-            materials: 'noaniq',
-            group: 'noaniq',
-            comingSoon: true,
-          },
-          {
-            href: 'TOPIK',
-            name: 'TOPIK',
-            description:
-              "TOPIK (Koreys Tilidagi Malaka Imtihoni) imtihoniga tayyorgarlik uchun mo'ljallangan maxsus kurs. O'qish, yozish, eshitish va gapirish kabi barcha test qismlarini qamrab oladi va imtihon uchun zarur ko'nikmalarni rivojlantirishga e'tibor beradi.",
-            video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
-            forWhom: [
-              'TOPIK imtihoniga tayyorlanayotgan shaxslar.',
-              "Koreys tilidagi malakasini baholash va yaxshilashni xohlagan o'rganuvchilar.",
-              'Akademik yoki professional maqsadlar uchun sertifikat olishni istaganlar.',
-            ],
-            cost: '$ N/A',
-            duration: "Tayyorlanish ehtiyojlariga qarab o'zgaradi",
-            intensity: 3 / 4,
-            purpose:
-              "TOPIK imtihoniga mukammal tayyorgarlikni ta'minlash, imtihonning barcha qismlarida koreys tili ko'nikmalarini oshirish.",
-            effects: [
-              'TOPIK imtihonida yaxshilangan natijalar.',
-              'Koreys tilidagi umumiy malakani oshirish.',
-              'Koreys tili va madaniyatini yaxshiroq tushunish.',
             ],
             lengthOfClasses: 'noaniq',
             frequency: 'noaniq',
