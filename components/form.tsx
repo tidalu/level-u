@@ -67,19 +67,19 @@ function Form({ children }: { children: React.ReactNode }) {
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>{data.contactForm.title}</DialogTitle>
-          <DialogDescription>{data.contactForm.description}</DialogDescription>
+          <DialogTitle>{data?.contactForm?.title}</DialogTitle>
+          <DialogDescription>{data?.contactForm?.description}</DialogDescription>
         </DialogHeader>
         <form action="" onSubmit={formHandler}>
           <div className=" relative mt-5">
             <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
               <span className=" text-red-400">*</span>
-              {data.contactForm.email}
+              {data?.contactForm?.email}
             </label>
             <input
               type="email"
               className=" w-full lg:w-80 dark:bg-[#020817] outline-none text-sm border-2 border-[#6cce40] rounded-full py-2 px-6"
-              placeholder={data.contactForm.emailPlaceholder}
+              placeholder={data?.contactForm?.emailPlaceholder}
               required
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
@@ -90,12 +90,12 @@ function Form({ children }: { children: React.ReactNode }) {
           <div className=" relative mt-9">
             <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
               <span className=" text-red-400">*</span>
-              {data.contactForm.name}
+              {data?.contactForm?.name}
             </label>
             <input
               type="text"
               className=" w-full lg:w-80 dark:bg-[#020817] outline-none text-sm border-2 border-[#6cce40] rounded-full py-2 px-6"
-              placeholder={data.contactForm.namePlaceholder}
+              placeholder={data?.contactForm?.namePlaceholder}
               required
               value={formData.name}
               name="name"
@@ -107,12 +107,12 @@ function Form({ children }: { children: React.ReactNode }) {
           <div className=" relative mt-9">
             <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
               <span className=" text-red-400">*</span>
-              {data.contactForm.phone}
+              {data?.contactForm?.phone}
             </label>
             <input
               type="tel"
               className=" w-full lg:w-80 dark:bg-[#020817] outline-none text-sm border-2 border-[#6cce40] rounded-full py-2 px-6"
-              placeholder={data.contactForm.phonePlaceholder}
+              placeholder={data?.contactForm?.phonePlaceholder}
               required
               value={formData.phone}
               name="phone"
@@ -125,11 +125,11 @@ function Form({ children }: { children: React.ReactNode }) {
           <div className=" relative mt-9">
             <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
               <span className=" text-red-400">*</span>
-              {data.contactForm.message}
+              {data?.contactForm?.message}
             </label>
             <textarea
               className=" w-full outline-none text-sm dark:bg-[#020817] border-2 border-[#6cce40] rounded-3xl py-5 px-5 resize-none h-28"
-              placeholder={data.contactForm.messagePlaceholder}
+              placeholder={data?.contactForm?.messagePlaceholder}
               required
               value={formData.message}
               name="message"
@@ -144,12 +144,12 @@ function Form({ children }: { children: React.ReactNode }) {
             type="submit"
             className="dark:text-black shadow-2xl text-sm rounded-full px-6 mt-5 "
           >
-            {data.contactForm.button}
+            {data?.contactForm?.button}
           </Button>
 
           <div className=" mt-3 text-[13px] text-gray-500 dark:text-gray-400">
             ( <span className=" text-red-400">*</span> ){' '}
-            {data.contactForm.required}
+            {data?.contactForm?.required}
           </div>
         </form>
       </DialogContent>

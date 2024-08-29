@@ -15,7 +15,7 @@ function Careers() {
         <div className="h-full max-w-[1900px] mx-auto mt-36">
           <section className="reveal container px-4 sm:px-10 m-auto my-10 md:my-16 lg:my-18">
             <h1 className="text-6xl md:text-[60px] my-6">
-              {data.careers.header}
+              {data?.careers?.header}
             </h1>
           </section>
         </div>
@@ -26,10 +26,10 @@ function Careers() {
               <div className="mt-8 flex flex-col md:flex-row justify-between">
                 <div className="order-2 md:order-1 reveal">
                   <div className="text-md text-gray-700 darl:text-gray-300">
-                    {data.careers.navSection.title}
+                    {data?.careers?.navSection?.title}
                   </div>
                   <div className="flex-col flex gap-1 ">
-                    {data.careers.navSection.links.map(
+                    {data?.careers?.navSection?.links?.map(
                       (
                         link: {
                           name: string;
@@ -50,7 +50,7 @@ function Careers() {
                   </div>
                 </div>
                 <div className="order-1 reveal md:order-2 mb-6 md:mb-0 text-lg md:text-2xl dark:text-white max-w-full w-[420px] text-gray-900">
-                  {data.careers.navSection.description}
+                  {data?.careers?.navSection?.description}
                 </div>
               </div>
             </section>
@@ -60,12 +60,12 @@ function Careers() {
             >
               <div className="mb-8 " style={{ opacity: 1, transform: 'none' }}>
                 <h2 className="text-3xl md:text-4xl mb-4 reveal">
-                  {data.careers.openPositions.title}
+                  {data?.careers?.openPositions?.title}
                 </h2>{' '}
                 <hr className="reveal h-[3px] w-[80px] border-0 bg-tdbGrey1 bg-black dark:bg-white" />
               </div>
               <div className="grid grid-cols-1 gap-4 md:mt-8 md:grid-cols-2 md:gap-12 lg:grid-cols-2">
-                {data.careers.openPositions.positions.map(
+                {data?.careers?.openPositions?.positions.map(
                   (
                     position: {
                       title: string;
@@ -110,10 +110,10 @@ function Careers() {
               </div>
               <div className="m-auto mt-12 max-w-6xl justify-center reveal">
                 <h2 className="text-center font-basic-sans text-2xl font-semibold">
-                  {data.careers.optionalRequision.title}
+                  {data?.careers?.optionalRequision?.title}
                 </h2>
                 <p className="mt-1 text-center text-base">
-                  {data.careers.optionalRequision.description}{' '}
+                  {data?.careers?.optionalRequision?.description}{' '}
                   <a href="mailto:level.edu.careers.uz@gmail.com">
                     level.edu.careers.uz@gmail.com
                   </a>
@@ -144,12 +144,12 @@ function Careers() {
                 style={{ opacity: 1, transform: 'none' }}
               >
                 <h2 className="text-3xl md:text-4xl text-center mb-4">
-                  {data.careers.benefits.title}
+                  {data?.careers?.benefits?.title}
                 </h2>
                 <hr className="h-[3px] w-[80px] border-0 bg-gray-800 mx-auto" />
               </div>
               <div className="container reveal  mx-auto px-16 mt-6 flex lg:mt-12 flex-wrap flex-row gap-4 justify-center">
-                {data.careers.benefits.cards.map(
+                {data?.careers?.benefits?.cards?.map(
                   (
                     card: {
                       icon: string;
@@ -181,8 +181,8 @@ function Careers() {
                 <hr className="h-[3px] w-[80px] border-0 bg-tdbGrey1 mx-auto bg-gray-800" />
               </div>
               <RecruitmentProcess
-                data={data.careers.recruitmentProcess.process}
-                title={data.careers.recruitmentProcess.title}
+                data={data?.careers?.recruitmentProcess?.process}
+                title={data?.careers?.recruitmentProcess?.title}
               />
             </section>
 
@@ -197,15 +197,15 @@ function Careers() {
                 style={{ opacity: 1, transform: 'none' }}
               >
                 <h2 className="text-3xl md:text-4xl text-center mb-4 text-gray-800 dark:text-white">
-                  {data.careers.values.title}
+                  {data?.careers?.values?.title}
                 </h2>
                 <hr className="h-[3px] w-[80px] border-0 bg-gray-800 mx-auto" />
               </div>
               <div className="mx-auto max-w-2xl reveal text-center text-base text-black lg:text-lg dark:text-white">
-                {data.careers.values.description}
+                {data?.careers?.values?.description}
               </div>
               <div className="mt-12 flex flex-col gap-14 md:gap-20 lg:mt-32">
-                {data.careers.values.valueList.map(
+                {data?.careers?.values?.valueList?.map(
                   (
                     value: {
                       id: number;

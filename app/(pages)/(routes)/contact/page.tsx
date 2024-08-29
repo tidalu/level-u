@@ -74,9 +74,9 @@ const ContactPage = () => {
         <div className=" grid grid-cols-1 reveal lg:grid-cols-2 gap-3 pt-[150px] pb-6 px-3 lg:px-16 mb-16">
           <div className=" flex  flex-col justify-center items-center h-auto w-full gap-4">
             <div className=" bg-[#b8df4b1a] dark:bg-[#86868517] rounded-2xl py-10 px-6 text-center w-full flex flex-col gap-3 text-sm justify-center">
-              <p>{data.contactPage.workInfo.customerServiceDepartment}</p>
+              <p>{data?.contactPage?.workInfo?.customerServiceDepartment}</p>
               <div className=" text-gray-500">+998 55 903 37 47</div>
-              <p>{data.contactPage.workInfo.manager}</p>
+              <p>{data?.contactPage?.workInfo?.manager}</p>
               <div className=" text-gray-500">+998 99 005 37 47</div>
               <Link
                 href="mailto:level.edu.uz.@gmail.com"
@@ -85,9 +85,9 @@ const ContactPage = () => {
                 level.edu.uz.@gmail.com
               </Link>
               <p className="  text-gray-500 leading-8">
-                {data.contactPage.workInfo.workdays} <br />
-                {data.contactPage.workInfo.start}{' '}
-                {data.contactPage.workInfo.end}.
+                {data?.contactPage?.workInfo?.workdays} <br />
+                {data?.contactPage?.workInfo?.start}{' '}
+                {data?.contactPage?.workInfo?.end}.
               </p>
             </div>
 
@@ -97,19 +97,19 @@ const ContactPage = () => {
           <div className=" mt-10 lg:mt-0">
             <div className=" max-w-md mx-auto marginInherit lg:ml-auto">
               <p className=" text-gray-500 text-[12px] font-semibold">
-                {data.contactForm.description}
+                {data?.contactForm?.description}
               </p>
 
               <form onSubmit={formHandler}>
                 <div className=" relative mt-5">
                   <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
                     <span className=" text-red-400">*</span>
-                    {data.contactForm.email}
+                    {data?.contactForm?.email}
                   </label>
                   <input
                     type="email"
                     className=" w-full lg:w-80 dark:bg-[#020817] outline-none text-sm border-2 border-[#6cce40] rounded-full py-2 px-6"
-                    placeholder={data.contactForm.emailPlaceholder}
+                    placeholder={data?.contactForm?.emailPlaceholder}
                     required
                     value={userData.email}
                     name="email"
@@ -119,12 +119,12 @@ const ContactPage = () => {
                 <div className=" relative mt-9">
                   <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
                     <span className=" text-red-400">*</span>
-                    {data.contactForm.name}
+                    {data?.contactForm?.name}
                   </label>
                   <input
                     type="text"
                     className=" w-full lg:w-80 dark:bg-[#020817] outline-none text-sm border-2 border-[#6cce40] rounded-full py-2 px-6"
-                    placeholder={data.contactForm.namePlaceholder}
+                    placeholder={data?.contactForm?.namePlaceholder}
                     required
                     value={userData.name}
                     name="name"
@@ -134,7 +134,7 @@ const ContactPage = () => {
                 <div className=" relative mt-9">
                   <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
                     <span className=" text-red-400">*</span>
-                    {data.contactForm.phone}
+                    {data?.contactForm?.phone}
                   </label>
                   <input
                     type="tel"
@@ -150,11 +150,11 @@ const ContactPage = () => {
                 <div className=" relative mt-9">
                   <label className=" text-[10px] text-gray-500 p-1 absolute -top-3 left-6  bg-white dark:text-gray-400 dark:bg-[#020817]">
                     <span className=" text-red-400">*</span>
-                    {data.contactForm.message}
+                    {data?.contactForm?.message}
                   </label>
                   <textarea
                     className=" w-full outline-none text-sm dark:bg-[#020817] border-2 border-[#6cce40] rounded-3xl py-5 px-5 resize-none h-28"
-                    placeholder={data.contactForm.messagePlaceholder}
+                    placeholder={data?.contactForm?.messagePlaceholder}
                     required
                     value={userData.message}
                     name="message"
@@ -166,12 +166,12 @@ const ContactPage = () => {
                   className="dark:text-black shadow-2xl text-sm rounded-full px-6 mt-5"
                   type="submit"
                 >
-                  {data.contactForm.button}
+                  {data?.contactForm?.button}
                 </Button>
 
                 <div className=" mt-3 text-[13px] text-gray-500 dark:text-gray-400">
                   ( <span className=" text-red-400">*</span> ){' '}
-                  {data.contactForm.required}
+                  {data?.contactForm?.required}
                 </div>
               </form>
             </div>

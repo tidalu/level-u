@@ -10,11 +10,11 @@ const PopulaActivities = () => {
     <section>
       <div className="my-16 px-3 lg:px-16 mx-auto">
         <h2 className="text-black dark:text-white reveal font-bold text-2xl text-center">
-          {data.popularActivities.title}
+          {data?.popularActivities?.title}
         </h2>
 
         <div className="flex reveal lg:grid lg:grid-cols-3 gap-5 mt-10 scrollMobile">
-          {data.popularActivities.classes.map(
+          {data?.popularActivities?.classes?.map(
             (
               item: {
                 topText: string;

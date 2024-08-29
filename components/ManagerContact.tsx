@@ -24,16 +24,16 @@ function ManagerContact({ children }: { children: React.ReactNode }) {
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>
-            {data.offers.forCompanies.managerContact.title}
+            {data?.offers?.forCompanies?.managerContact?.title}
           </DialogTitle>
           <DialogDescription>
-            {data.offers.forCompanies.managerContact.description}
+            {data?.offers?.forCompanies?.managerContact?.description}
           </DialogDescription>
         </DialogHeader>
         <div className="flex items-center space-x-2">
           <div className="grid flex-1 gap-2">
             <Label htmlFor="link" className="sr-only">
-              {data.offers.forCompanies.managerContact.link}
+              {data?.offers?.forCompanies?.managerContact?.link}
             </Label>
             <Input id="link" defaultValue="+998 99 005 37 47" readOnly />
           </div>
@@ -43,7 +43,7 @@ function ManagerContact({ children }: { children: React.ReactNode }) {
             onClick={() => window.location.assign('tel:+998990053747')}
           >
             <span className="sr-only">
-              {data.offers.forCompanies.managerContact.phone}
+              {data?.offers?.forCompanies?.managerContact?.phone}
             </span>
             <Phone className="h-4 w-4" />
           </Button>
@@ -51,7 +51,7 @@ function ManagerContact({ children }: { children: React.ReactNode }) {
         <div className="flex items-center space-x-2">
           <div className="grid flex-1 gap-2">
             <Label htmlFor="link" className="sr-only">
-              {data.offers.forCompanies.managerContact.mail}
+              {data?.offers?.forCompanies?.managerContact?.mail}
             </Label>
             <Input id="link" defaultValue="level.edu.uz.@gmail.com" readOnly />
           </div>
@@ -63,7 +63,7 @@ function ManagerContact({ children }: { children: React.ReactNode }) {
             }
           >
             <span className="sr-only">
-              {data.offers.forCompanies.managerContact.mail}
+              {data?.offers?.forCompanies?.managerContact?.mail}
             </span>
             <Mail className="h-4 w-4" />
           </Button>
@@ -71,7 +71,7 @@ function ManagerContact({ children }: { children: React.ReactNode }) {
         <DialogFooter className="sm:justify-start">
           <DialogClose asChild>
             <Button type="button" variant="secondary">
-              {data.offers.forCompanies.managerContact.closeBtn}
+              {data?.offers?.forCompanies?.managerContact?.closeBtn}
             </Button>
           </DialogClose>
         </DialogFooter>

@@ -57,7 +57,7 @@ const InfiniteMovingCards = ({
           pauseOnHover && 'hover:[animation-play-state:paused]'
         )}
       >
-        {data.reasons.map((item: { question: string; answer: string }) => (
+        {data?.reasons?.map((item: { question: string; answer: string }) => (
           <li
             key={item.question}
             className="w-[250px] md:w-[300px] flex-shrink-0 rounded-2xl border dark:border-slate-700 border-[#edf8ce] shadow-sm px-6 py-4 bg-[#F8FFE5] dark:bg-slate-800"

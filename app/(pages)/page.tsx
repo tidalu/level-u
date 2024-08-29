@@ -35,10 +35,10 @@ const LandingPage = () => {
         <section>
           <div className="my-16 px-3 lg:px-16 mx-auto reveal">
             <h2 className="reveal text-black dark:text-white font-bold text-2xl 2xl:text-3xl text-center">
-              {data.classPage.homeContent.title}
+              {data?.classPage?.homeContent?.title}
             </h2>
             <p className="reveal text-[12px] 2xl:text-lg text-center text-gray-500 mt-4">
-              {data.classPage.homeContent.subtitle}
+              {data?.classPage?.homeContent?.subtitle}
             </p>
 
             <Categories />

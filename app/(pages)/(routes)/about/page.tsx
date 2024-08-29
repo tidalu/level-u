@@ -17,7 +17,7 @@ const AboutPage = () => {
                 <ThreeDTextScene />
                 <span className="  absolute bottom-4 left-0 flex w-full justify-center items-center">
                   <p className=" text-center before:contents  mx-auto py-2 px-4 relative rounded-xl z-10 text-wrap w-auto text-with-blur">
-                    {data.about.motto}
+                    {data?.about?.motto}
                   </p>
                 </span>
               </div>{' '}
@@ -30,10 +30,10 @@ const AboutPage = () => {
                 }}
               >
                 <p className="apply-font-o dark:text-slate-200 text-gray-800 text-lg reveal">
-                  {data.about.topText}
+                  {data?.about?.topText}
                 </p>
                 <h1 className="reveal text-xl text-wrap sm:text-2xl mt-1 mb-4 text-[#69af49] font-extrabold">
-                  {data.about.title}
+                  {data?.about?.title}
                 </h1>
 
                 <p
@@ -45,14 +45,14 @@ const AboutPage = () => {
                   }}
                   className="text-sm reveal border-red-400 m-2 overflow-y-scroll py-5"
                 >
-                  {data.about.description}
+                  {data?.about?.description}
                 </p>
               </div>{' '}
             </div>
             <div className="  w-full h-auto px-10">
               <div className="w-full flex justify-center items-center my-4">
                 <h2 className=" text-black dark:text-white font-extrabold text-2xl text-center h-auto">
-                  {data.about.why}
+                  {data?.about?.why}
                 </h2>
               </div>
             </div>

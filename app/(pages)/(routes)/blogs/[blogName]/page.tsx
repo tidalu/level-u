@@ -11,10 +11,10 @@ const BlogPage = () => {
         <div className=" relative rounded-2xl overflow-hidden  md:h-[450px] grid grid-cols-12 bg-[#f1fbec] mx-auto">
           <div className=" text-black p-6 lg:py-12 max-w-md mx-auto col-span-12 md:col-span-6">
             <h1 className=" text-2xl mt-1 mb-4 font-extrabold reveal">
-              {data.blogs[0].description}
+              {data?.blogs?.[0]?.description}
             </h1>
             <ul className="text-[12px] reveal text-gray-600 my-3">
-              {data.blogs[0].bulletPoints.map((item: string, i: number) => (
+              {data?.blogs?.[0].bulletPoints.map((item: string, i: number) => (
                 <li key={i} className="mb-3">
                   {' '}
                   - {item}
@@ -95,10 +95,10 @@ const BlogPage = () => {
             <div className=" grid grid-cols-1 gap-5 md:grid-cols-2">
               <div className=" max-w-md mx-auto flex items-start reveal flex-col justify-center px-3 md:px-0">
                 <h3 className=" text-black font-bold dark:text-white text-sm 2xl:text-xl">
-                  {data.blogs[0].packs[0].title}
+                  {data?.blogs?.[0].packs?.[0]?.title}
                 </h3>
                 <p className=" text-gray-600 dark:text-gray-400 text-[12px] 2xl:text-lg mt-5">
-                  {data.blogs[0].packs[0].content.description}
+                  {data?.blogs?.[0].packs?.[0]?.content?.description}
                 </p>
                 <div className="flex flex-col md:flex-row gap-4 md:gap-x-4 mt-8">
                   <Button
@@ -131,10 +131,10 @@ const BlogPage = () => {
 
               <div className=" max-w-md reveal mx-auto flex items-start flex-col justify-center px-3 md:px-0 mb-10 md:mb-0">
                 <h3 className=" text-black font-bold dark:text-white text-sm 2xl:text-xl">
-                  {data.blogs[1].packs[1].title}
+                  {data?.blogs?.[1]?.packs?.[1]?.title}
                 </h3>
                 <p className=" text-gray-600 dark:text-gray-400 text-[12px] 2xl:text-lg mt-5">
-                  {data.blogs[1].packs[1].content.videoDescription}
+                  {data?.blogs?.[1]?.packs?.[1]?.content?.videoDescription}
                 </p>
                 <div className="flex flex-col md:flex-row gap-4 md:gap-x-4 mt-8">
                   <Button
@@ -151,10 +151,10 @@ const BlogPage = () => {
             <div className=" grid grid-cols-1 gap-5 md:grid-cols-2">
               <div className=" max-w-md mx-auto flex reveal items-start flex-col justify-center px-3 md:px-0 mb-10 md:mb-0">
                 <h3 className=" text-black font-bold dark:text-white text-sm 2xl:text-xl">
-                  {data.blogs[2].packs[2].title}
+                  {data?.blogs?.[2]?.packs?.[2]?.title}
                 </h3>
                 <p className=" text-gray-600 dark:text-gray-400 text-[12px] 2xl:text-lg mt-5">
-                  {data.blogs[2].packs[2].content.videoDescription}
+                  {data?.blogs?.[2].packs?.[2]?.content?.videoDescription}
                 </p>
                 <div className="flex flex-col md:flex-row gap-4 md:gap-x-4 mt-8">
                   <Button

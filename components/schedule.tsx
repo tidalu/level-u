@@ -67,10 +67,10 @@ const Schedule = () => {
   };
 
   const filteredPlaces = selectedCity
-    ? data.schedule.places.filter(
+    ? data?.schedule?.places?.filter(
         (item: placeInterface) => item.cityName === selectedCity
       )
-    : data.schedule.places;
+    : data?.schedule?.places;
 
   return (
     <ScrollAnimateWrapper>
@@ -82,8 +82,8 @@ const Schedule = () => {
             className="custom-select trunc pr-8 appearance-none w-44 outline-none border-2 border-[#6cce40] dark:bg-[#020817] rounded-full py-1.5 px-5 text-sm font-semibold"
             onChange={handleCityChange}
           >
-            <option value="">{data.schedule.title}</option>
-            {data.schedule.places.map(
+            <option value="">{data?.schedule?.title}</option>
+            {data?.schedule?.places?.map(
               (
                 item: {
                   cityName: string;
@@ -103,14 +103,14 @@ const Schedule = () => {
               value="map"
             >
               <MapPin size={18} className=" mr-1" />
-              {data.schedule.map}
+              {data?.schedule?.map}
             </TabsTrigger>
             <TabsTrigger
               className=" data-[state=active]:text-black rounded-full schedule"
               value="list"
             >
               <ListChecks size={18} className=" mr-1" />
-              {data.schedule.list}
+              {data?.schedule?.list}
             </TabsTrigger>
           </TabsList>
         </div>
@@ -120,7 +120,7 @@ const Schedule = () => {
           </ClientOnly>
         </TabsContent>
         <TabsContent value="list">
-          {filteredPlaces.map((item: placeInterface, index: number) => (
+          {filteredPlaces?.map((item: placeInterface, index: number) => (
             <ClubItem key={index} city={item.cityName} clubs={item.clubs} />
           ))}
         </TabsContent>

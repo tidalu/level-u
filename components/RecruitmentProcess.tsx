@@ -13,12 +13,12 @@ function RecruitmentProcess({
   }[];
   title: string;
 }) {
-  const [currentOnScreen, setCurrentOnScreen] = useState(data[0]);
+  const [currentOnScreen, setCurrentOnScreen] = useState(data?.[0]);
   const [isAnimating, setIsAnimating] = useState(false);
   const [selectedStepIndex, setSelectedStepIndex] = useState(0);
 
   useEffect(() => {
-    setCurrentOnScreen(data[0]);
+    setCurrentOnScreen(data?.[0]);
   }, [data]);
 
   const handleClick = (index: number) => {
@@ -40,7 +40,7 @@ function RecruitmentProcess({
       >
         <div className="basis-1/2">
           <video
-            src={currentOnScreen.stepVideo}
+            src={currentOnScreen?.stepVideo}
             autoPlay
             className="h-inherit w-inherit rounded-t-xl"
             loop
@@ -48,9 +48,9 @@ function RecruitmentProcess({
         </div>
         <div className="p-16 basis-1/2">
           <h3 className="text-2xl pb-4 font-bold ">
-            {currentOnScreen.stepTitle}
+            {currentOnScreen?.stepTitle}
           </h3>
-          <p>{currentOnScreen.stepDescription}</p>
+          <p>{currentOnScreen?.stepDescription}</p>
         </div>
       </div>
       <div className="basis-1/2 flex flex-col gap-6 justify-center">
@@ -58,7 +58,7 @@ function RecruitmentProcess({
           {title}
         </h1>
         <div className="flex flex-col gap-3">
-          {data.map((step, index) => {
+          {data?.map((step, index) => {
             return (
               <div
                 key={index}
