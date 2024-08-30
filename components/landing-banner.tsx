@@ -86,6 +86,7 @@ const LandingBanner = () => {
             width={200}
             height={200}
             priority
+            layout="responsive"
             decoding="async"
           />
           <div className="h-[60%] px-3 mt-2 sm:px-6 sm:mt-4 w-full  absolute top-0 left-0 flex flex-col">

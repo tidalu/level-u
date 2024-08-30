@@ -10,7 +10,7 @@ import { useLocalizedData } from '@/lib/useLocalizedData';
 import { memo } from 'react';
 
 const HomeBlogList = () => {
-  const data = useLocalizedData()
+  const data = useLocalizedData();
   const settings = {
     dots: false,
     infinite: false,
@@ -65,49 +65,51 @@ const HomeBlogList = () => {
 
   return (
     <div className=" mt-4  reveal">
-      {data?.blogs && data?.blogs?.length > 0 &&  <Slider {...settings} className=" ">
-        {data?.blogs?.map(
-          (item: {
-            id: number;
-            img: string;
-            title: string;
-            comingSoon: boolean;
-          }) => (
-            <div key={item.id} className=" h-full">
-              <div className=" bg-white dark:bg-[#020817] rounded-2xl p-4 group/item mr-5">
-                <div className=" grid grid-cols-12 gap-4">
-                  <div className=" col-span-6">
-                    <Image
-                      src={item.img}
-                      className=" rounded-2xl object-cover w-full h-32"
-                      alt="fit1"
-                      width={200}
-                      height={200}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div className=" col-span-6 flex flex-col justify-between">
-                    <div className=" text-[13px] 2xl:text-lg font-semibold leading-6 group-hover/item:underline">
-                      {item.title}
+      {data?.blogs && data?.blogs?.length > 0 && (
+        <Slider {...settings} className=" ">
+          {data?.blogs?.map(
+            (item: {
+              id: number;
+              img: string;
+              title: string;
+              comingSoon: boolean;
+            }) => (
+              <div key={item.id} className=" h-full">
+                <div className=" bg-white dark:bg-[#020817] rounded-2xl p-4 group/item mr-5">
+                  <div className=" grid grid-cols-12 gap-4">
+                    <div className=" col-span-6">
+                      <Image
+                        src={item.img}
+                        className=" rounded-2xl object-cover w-full !h-32"
+                        alt="fit1"
+                        width={500}
+                        height={500}
+                        loading="lazy"
+                        layout="responsive"
+                        decoding="async"
+                      />
                     </div>
+                    <div className=" col-span-6 flex flex-col justify-between">
+                      <div className=" text-[13px] 2xl:text-lg font-semibold leading-6 group-hover/item:underline">
+                        {item.title}
+                      </div>
 
-                    <div className=" text-right">
-                      <Button
-                        variant="primaryGreen"
-                        className=" rounded-full p-0 h-5 px-2"
-                      >
-                        <ChevronRight size={14} className="text-black" />
-                      </Button>
+                      <div className=" text-right">
+                        <Button
+                          variant="primaryGreen"
+                          className=" rounded-full p-0 h-5 px-2"
+                        >
+                          <ChevronRight size={14} className="text-black" />
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          )
-        )}
-      </Slider>}
-     
+            )
+          )}
+        </Slider>
+      )}
     </div>
   );
 };

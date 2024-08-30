@@ -17,8 +17,8 @@ const Offer = () => {
           id="forYou"
         >
           <div className="rounded-2xl shadow-[#b9bfab] dark:shadow-[#35475c]  shadow-xl bg-[#f8ffe5] dark:bg-[#86868517]">
-            <div className="grid grid-cols-1 sm:grid-cols-2">
-              <div className="pl-10 py-10 md:py-5 flex flex-col justify-center text-sm 2xl:text-xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 h-full">
+              <div className="pl-10 md:pl-6 py-10 md:py-5 flex flex-col justify-center text-sm 2xl:text-xl">
                 <div className="text-black dark:text-white font-bold mb-5">
                   {data?.offers?.forYou?.title}
                 </div>
@@ -35,13 +35,14 @@ const Offer = () => {
                 </Button>
               </div>
 
-              <div className="p-3 ">
+              <div className="p-3 h-full ">
                 <Image
                   src="/for-you-img.jpg"
                   alt="offer for you"
-                  className="rounded-2xl  shadow-xl object-cover w-full h-full"
-                  width={200}
-                  height={200}
+                  className="rounded-2xl  shadow-xl object-cover w-full !h-full"
+                  width={500}
+                  height={500}
+                  layout="responsive"
                   loading="lazy"
                   decoding="async"
                 />
@@ -50,11 +51,11 @@ const Offer = () => {
           </div>
 
           <div
-            className="rounded-2xl shadow-[#b9bfab] dark:shadow-[#35475c] shadow-xl bg-[#e7e9e7] scroll-mt-24"
+            className="rounded-2xl shadow-[#b9bfab]  dark:shadow-[#35475c] shadow-xl bg-[#e7e9e7] scroll-mt-24"
             id="offersComp"
           >
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 h-full">
-              <div className="pl-10 py-10 md:py-5 flex flex-col justify-center text-sm 2xl:text-xl">
+              <div className="pl-10 md:pl-6 py-10 md:py-5 flex flex-col justify-center  text-sm  2xl:text-xl">
                 <div className="text-black font-bold mb-5">
                   {data?.offers?.forCompanies?.title}
                 </div>
@@ -80,14 +81,15 @@ const Offer = () => {
                 </ManagerContact>
               </div>
 
-              <div className="p-3  h-full">
+              <div className="p-3  h-full  ">
                 <Image
                   src="/for-companies-img.jpg"
-                  className="rounded-2xl shadow-xl w-full h-full object-cover"
+                  className="rounded-2xl shadow-xl w-full !h-full object-cover "
                   alt="for companies"
-                  width={200}
-                  height={200}
+                  width={500}
+                  height={500}
                   loading="lazy"
+                  layout="responsive"
                   decoding="async"
                 />
               </div>
