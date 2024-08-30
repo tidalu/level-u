@@ -129,6 +129,7 @@ function Careers() {
                   src="/careers-img.webp"
                   width={1920}
                   height={1080}
+                  layout="responsive"
                   priority
                 />
                 <div className="absolute top-0 left-0 h-full w-full bg-gray-900 opacity-30"></div>
