@@ -45,7 +45,7 @@ const ContactPage = () => {
     try {
       await toast.promise(
         fetch(
-          'https://script.google.com/macros/s/AKfycbznBhIePnK82_p-gmFaSXzy9pdNYtjVR8aKjPQL-Xo6rBhCTD5MVlQ1X3ys2SA5GX-P9Q/exec',
+          'https://script.google.com/macros/s/AKfycbya-ev9dnrx_HZCCa72plkn3IMU4hay5pIGjJ52LaBtievZd2LKSc2oFztK-16acm0/exec',
           {
             method: 'POST',
             body: JSON.stringify(userData),
