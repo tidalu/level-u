@@ -23,7 +23,7 @@ const AboutPage = () => {
                   <source src="/video/about-page.mp4" type="video/mp4" />
                 </video>
                 <span className="  absolute top-4 -left-[25%] md:-left-[30%] xl:-left-[35%] flex w-full justify-center items-center">
-                  <p className=" text-center before:contents   mx-auto py-2 px-4 relative rounded-xl z-10 text-wrap w-auto text-with-blur">
+                  <p className=" text-center before:contents apply-font-o   mx-auto py-2 px-4 relative rounded-xl z-10 text-wrap w-auto text-with-blur">
                     {data?.about?.motto.split(',')[0]}
                     <br />
                     {data?.about?.motto.split(',')[1]}
