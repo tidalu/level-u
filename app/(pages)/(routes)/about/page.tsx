@@ -11,7 +11,7 @@ const AboutPage = () => {
       <div className="h-auto max-w-[1900px] mx-auto ">
         <ScrollAnimateWrapper>
           <div className="min-h-[800px] h-auto flex flex-col items-center  justify-center pt-32 pb-12 rounded-b-3xl px-3 lg:px-16 ">
-            <div className=" relative rounded-2xl   lg:h-auto  grid grid-cols-12 bg-white  dark:bg-[#020817]  my-4 lg:my-10">
+            <div className=" relative rounded-2xl   h-auto  grid grid-cols-12 bg-white  dark:bg-[#020817]  my-4 lg:my-10">
               <div className=" relative col-span-12 reveal rounded-xl lg:col-span-7 xl:col-span-8 h-[300px] lg:h-auto flex xl:justify-end justify-center items-center overflow-hidden bg-slate-200">
                 {/* video */}
                 <video
