@@ -32,44 +32,56 @@ const HorizontalScroll: React.FC = () => {
 
     const intervalId = setInterval(() => {
       if (scrollContainerRef.current) {
-        scrollContainerRef.current.scrollLeft += 3;
+        scrollContainerRef.current.scrollLeft += 2 + scrollSpeed;
       }
-    }, 50);
+    }, 5);
 
     return () => {
       clearInterval(intervalId);
     };
   }, [isAutoScrolling]);
 
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.onmouseleave = () => {
+        setIsAutoScrolling(true);
+      };
+    }
+  }, [
+    scrollContainerRef.current,
+    scrollContainerRef.current?.onmouseleave,
+    setIsAutoScrolling,
+  ]);
+
   const images = [
-    'https://picsum.photos/id/237/300/600',
-    'https://picsum.photos/id/239/400/300',
-    'https://picsum.photos/id/240/800/600',
-    'https://picsum.photos/id/241/500/400',
-    'https://picsum.photos/id/241/500/400',
-    'https://picsum.photos/id/242/700/600',
-    'https://picsum.photos/id/243/800/300',
-    'https://picsum.photos/id/243/800/300',
-    'https://picsum.photos/id/244/600/600',
+    '/gallery/pic1.jpg',
+    '/gallery/pic2.jpg',
+    '/gallery/pic3.jpg',
+    '/gallery/pic4.jpg',
+    '/gallery/pic5.jpg',
   ];
 
   return (
-    <div className="homeBanner overflow-hidden w-screen mt-6">
+    <div className="homeBanner overflow-hidden w-screen mt-6 ">
       <div
         ref={scrollContainerRef}
         className="flex space-x-8 reveal overflow-x-auto scrollbar-hide scroll-smooth w-full h-auto py-4 items-center "
       >
         {images.map((image, index) => (
-          <div key={index} className="flex-shrink-0 ">
+          <div key={index} className="relative flex-shrink-0 !h-full">
             <Image
               src={image}
               alt={`Image ${index + 1}`}
-              className=" rounded-lg w-auto h-auto"
-              width={400}
+              className=" rounded-lg w-auto h-auto object-cover"
+              width={200}
               height={300}
               priority
               decoding="async"
             />
+            <div
+              key={index}
+              className="absolute top-0 left-0 w-full h-full z-10 opacity-20 bg-gray-900"
+            ></div>
           </div>
         ))}
       </div>
