@@ -31,12 +31,8 @@ const AboutPage = () => {
                 </span>
               </div>{' '}
               <div
-                className=" text-gray-600 dark:text-gray-400  py-4 px-10 col-span-12 lg:col-span-5 xl:col-span-4 overflow-y-scroll self-start"
-                style={{
-                  // hide scrollbar
-                  scrollbarWidth: 'none',
-                  msOverflowStyle: 'none',
-                }}
+                className=" text-gray-600  dark:text-gray-400  py-4 px-10 col-span-12 h-auto lg:col-span-5 
+               overflow-y-clip xl:col-span-4  self-start"
               >
                 <p className="apply-font-o dark:text-slate-200 text-gray-800 text-lg reveal">
                   {data?.about?.topText}
@@ -47,12 +43,10 @@ const AboutPage = () => {
 
                 <p
                   style={{
-                    maxHeight: '400px',
-                    overflowY: 'scroll',
                     scrollbarWidth: 'none',
                     msOverflowStyle: 'none',
                   }}
-                  className="text-sm reveal border-red-400 m-2 overflow-y-scroll py-5"
+                  className="text-sm reveal  m-1  py-2"
                 >
                   {data?.about?.description}
                 </p>
