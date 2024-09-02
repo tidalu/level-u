@@ -59,7 +59,7 @@ export const data = {
     },
     {
       question:
-        'All our teachers are certified and are either students or graduates of world-renowned universities.',
+        'All our teachers are certified  students or graduates of world-renowned universities.',
       answer:
         'Members of our team hold official certificates that confirm their level of foreign language proficiency, issued by government institutions and consulates. The knowledge they gained abroad is applied in their teaching methods, which positively impacts the quality of education',
     },
