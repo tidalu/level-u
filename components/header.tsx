@@ -19,7 +19,6 @@ import { FlipWords } from './ui/flip-words';
 import { useLanguage } from './LanguageContext';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import { useTheme } from 'next-themes';
-import BetaNotification from './BetaMode';
 import Cookies from 'js-cookie';
 
 const Header = () => {
@@ -31,7 +30,7 @@ const Header = () => {
 
   let storedLanguage = Cookies.get('selectedLanguage') || 'en';
 
-  const [currentLang, setCurrentLang] = useState('en');  
+  const [currentLang, setCurrentLang] = useState('en');
 
   const { switchLanguage } = useLanguage();
 
@@ -70,7 +69,7 @@ const Header = () => {
     switchLanguage(storedLanguage);
   }, [switchLanguage]);
 
-  const handleLanguageChange = (lang:string) => {
+  const handleLanguageChange = (lang: string) => {
     setCurrentLang(lang);
     switchLanguage(lang);
     Cookies.set('selectedLanguage', lang, { expires: 365, path: '/' });
@@ -176,11 +175,10 @@ const Header = () => {
           'bg-white dark:bg-[#020817] shadow-xl dark:shadow-slate-900  rounded-b-2xl'
       )}
     >
-      <BetaNotification />
       <div
         className={cn(
-          ' max-w-[1600px] mx-auto  transition-all duration-500 pb-5 pt-16 md:pt-10 lg:py-10 px-3 lg:px-16 relative',
-          isVisible && '!py-3 !pt-[28px]'
+          ' max-w-[1600px] mx-auto  transition-all duration-500 pb-5 pt-10  lg:py-10 px-3 lg:px-16 relative',
+          isVisible && '!py-3 '
         )}
       >
         <div
