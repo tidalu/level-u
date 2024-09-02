@@ -39,7 +39,7 @@ function Accessibility() {
 
     themeToggle: 0,
   });
-  const data = useLocalizedData()
+  const data = useLocalizedData();
 
   // text zoom in
   function textZoomIn() {
@@ -185,7 +185,7 @@ function Accessibility() {
     >
       <Popover>
         <PopoverTrigger className="flex justify-center items-center w-full h-full">
-          <PersonStanding className="w-[30px] h-[30px] "/>
+          <PersonStanding className="w-[30px] h-[30px] " />
         </PopoverTrigger>
         <PopoverContent className="mt-1 mr-1 w-[150px] lg:w-[200px] bg-[#F8FFE5] dark:bg-gray-800 dark:text-white text-gray-900 rounded-lg shadow-md py-2 pr-1 px-2">
           <div className="border-red-400 w-full h-full">
@@ -194,7 +194,7 @@ function Accessibility() {
             </h2>
             <ul className="w-full flex flex-col gap-1 p-1">
               {/* text zoom in */}
-              <li key='1aa'>
+              <li key="1aa">
                 <button
                   className={cn(
                     buttonStyle,
@@ -211,7 +211,7 @@ function Accessibility() {
               </li>
 
               {/* text zoom out */}
-              <li key='1as'>
+              <li key="1as">
                 <button
                   className={cn(
                     buttonStyle,
@@ -228,7 +228,7 @@ function Accessibility() {
               </li>
 
               {/* Grayscale */}
-              <li key='1ad'>
+              <li key="1ad">
                 <button
                   className={cn(
                     buttonStyle,
@@ -244,7 +244,7 @@ function Accessibility() {
               </li>
 
               {/* Contrast */}
-              <li key='1af'>
+              <li key="1af">
                 <button
                   className={cn(
                     buttonStyle,
@@ -260,7 +260,7 @@ function Accessibility() {
               </li>
 
               {/* Negative contrast */}
-              <li key='1ag'>
+              <li key="1ag">
                 <button
                   className={cn(
                     buttonStyle,
@@ -275,13 +275,13 @@ function Accessibility() {
                 </button>
               </li>
 
-              <li key='1ah'>
+              <li key="1ah">
                 <button
                   className={cn(
                     buttonStyle,
                     clicks.themeToggle !== 0
                       ? 'bg-[#00ff006a] dark:bg-[#00ff006a]'
-                      : 'bg-[#313e0d] dark:bg-gray-800'
+                      : 'bg-[#F8FFE5] dark:bg-gray-800'
                   )}
                   onClick={toggleTheme}
                 >
@@ -296,7 +296,7 @@ function Accessibility() {
 
               {/* reset */}
               <hr className="h-[1px] w-full border-gray-500 dark:bg-slate-100 my-1" />
-              <li key='1aj'>
+              <li key="1aj">
                 <button
                   className={cn(
                     buttonStyle,
