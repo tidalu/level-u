@@ -32,9 +32,9 @@ const HorizontalScroll: React.FC = () => {
 
     const intervalId = setInterval(() => {
       if (scrollContainerRef.current) {
-        scrollContainerRef.current.scrollLeft += 2 + scrollSpeed;
+        scrollContainerRef.current.scrollLeft += 2;
       }
-    }, 5);
+    }, 50);
 
     return () => {
       clearInterval(intervalId);
