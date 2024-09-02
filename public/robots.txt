@@ -1,6 +1,9 @@
 User-agent: Googlebot
 Disallow: /nogooglebot/
 
+User-agent:* 
+Disallow: /schedule
+
 User-agent: *
 Allow: /
 
