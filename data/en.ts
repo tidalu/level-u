@@ -458,10 +458,7 @@ export const data = {
     information: {
       title: 'Information',
       links: [
-        {
-          title: 'Level learning center',
-          href: '/',
-        },
+        
         {
           title: 'Careers',
           href: '/careers',

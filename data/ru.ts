@@ -469,11 +469,6 @@ export const data = {
       title: 'Информация',
       links: [
         {
-          title: 'LEVEL учебный центр',
-          href: '/',
-        },
-
-        {
           title: 'Карьера',
           href: '/careers',
         },

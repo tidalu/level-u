@@ -466,10 +466,7 @@ export const data = {
     information: {
       title: "Ma'lumot",
       links: [
-        {
-          title: "Level o'quv markazi",
-          href: '/',
-        },
+        
         {
           title: 'Karyera',
           href: '/careers',
