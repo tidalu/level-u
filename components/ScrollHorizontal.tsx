@@ -32,7 +32,7 @@ const HorizontalScroll: React.FC = () => {
 
     const intervalId = setInterval(() => {
       if (scrollContainerRef.current) {
-        scrollContainerRef.current.scrollLeft += 2;
+        scrollContainerRef.current.scrollLeft += 3;
       }
     }, 50);
 
@@ -40,18 +40,6 @@ const HorizontalScroll: React.FC = () => {
       clearInterval(intervalId);
     };
   }, [isAutoScrolling]);
-
-  useEffect(() => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.onmouseleave = () => {
-        setIsAutoScrolling(true);
-      };
-    }
-  }, [
-    scrollContainerRef.current,
-    scrollContainerRef.current?.onmouseleave,
-    setIsAutoScrolling,
-  ]);
 
   const images = [
     '/gallery/pic1.jpg',
