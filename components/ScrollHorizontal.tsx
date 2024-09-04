@@ -42,11 +42,11 @@ const HorizontalScroll: React.FC = () => {
   }, [isAutoScrolling]);
 
   const images = [
-    '/gallery/pic1.jpg',
-    '/gallery/pic2.jpg',
-    '/gallery/pic3.jpg',
-    '/gallery/pic4.jpg',
-    '/gallery/pic5.jpg',
+    'https://i.ibb.co/vhZF9kq/pic1.jpg',
+    'https://i.ibb.co/H2Fqv7p/pic2.jpg',
+    'https://i.ibb.co/SRNVbgz/pic3.jpg',
+    'https://i.ibb.co/T4KbVLK/pic4.jpg',
+    'https://i.ibb.co/BtRp95w/pic5.jpg',
   ];
 
   return (
@@ -66,10 +66,6 @@ const HorizontalScroll: React.FC = () => {
               priority
               decoding="async"
             />
-            <div
-              key={index}
-              className="absolute top-0 left-0 w-full h-full z-10 opacity-20 bg-gray-900"
-            ></div>
           </div>
         ))}
       </div>
