@@ -26,12 +26,20 @@ const Hero = () => {
 
     setIsLoading(true);
 
+    const dataToSend = {
+      name: userData.name,
+      phone: userData.phone
+        .split('')
+        .filter((char) => char !== ' ')
+        .join(''),
+    };
+
     try {
       await fetch(
         'https://script.google.com/macros/s/AKfycbyr78DM3r0Cq_Vx2kPeB2y1ScZFSUDTxWRl7CYM-pYc29tUfRXDQGdJa51Au0GWc4oc/exec',
         {
           method: 'POST',
-          body: JSON.stringify(userData),
+          body: JSON.stringify(dataToSend),
         }
       );
       setIsSubmitted(true);

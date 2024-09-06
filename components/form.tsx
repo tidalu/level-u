@@ -12,7 +12,7 @@ import { Bounce, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastPosition } from 'react-toastify';
 import { useLocalizedData } from '@/lib/useLocalizedData';
-import React, { useState, memo } from 'react';
+import React, { useState, memo, useEffect } from 'react';
 function Form({ children }: { children: React.ReactNode }) {
   const [formData, setFormData] = useState({
     email: '',
@@ -20,7 +20,7 @@ function Form({ children }: { children: React.ReactNode }) {
     phone: '',
     message: '',
   });
- const data = useLocalizedData();
+  const data = useLocalizedData();
 
   async function formHandler(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -37,13 +37,23 @@ function Form({ children }: { children: React.ReactNode }) {
       transition: Bounce,
     };
 
+    const dataToSend = {
+      email: formData.email,
+      name: formData.name,
+      phone: formData.phone
+        .split('')
+        .filter((char) => char !== ' ')
+        .join(''),
+      message: formData.message,
+    };
+
     try {
       await toast.promise(
         fetch(
           'https://script.google.com/macros/s/AKfycbya-ev9dnrx_HZCCa72plkn3IMU4hay5pIGjJ52LaBtievZd2LKSc2oFztK-16acm0/exec',
           {
             method: 'POST',
-            body: JSON.stringify(formData),
+            body: JSON.stringify(dataToSend),
           }
         ),
         {
@@ -68,7 +78,9 @@ function Form({ children }: { children: React.ReactNode }) {
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>{data?.contactForm?.title}</DialogTitle>
-          <DialogDescription>{data?.contactForm?.description}</DialogDescription>
+          <DialogDescription>
+            {data?.contactForm?.description}
+          </DialogDescription>
         </DialogHeader>
         <form action="" onSubmit={formHandler}>
           <div className=" relative mt-5">

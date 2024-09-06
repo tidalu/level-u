@@ -41,6 +41,15 @@ const ContactPage = () => {
       theme: 'colored',
       transition: Bounce,
     };
+    const dataToSend = {
+      email: userData.email,
+      name: userData.name,
+      phone: userData.phone
+        .split('')
+        .filter((char) => char !== ' ')
+        .join(''),
+      message: userData.message,
+    };
 
     try {
       await toast.promise(
@@ -48,7 +57,7 @@ const ContactPage = () => {
           'https://script.google.com/macros/s/AKfycbya-ev9dnrx_HZCCa72plkn3IMU4hay5pIGjJ52LaBtievZd2LKSc2oFztK-16acm0/exec',
           {
             method: 'POST',
-            body: JSON.stringify(userData),
+            body: JSON.stringify(dataToSend),
           }
         ),
         {
