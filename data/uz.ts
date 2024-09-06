@@ -102,7 +102,7 @@ export const data = {
 
   classPage: {
     homeContent: {
-      title: 'Klublarimizda mavjud darslar',
+      title: 'Markazimizda mavjud darslar',
       subtitle: 'Sevimli darsingizni tanlang va biz bilan o‘qishni boshlang!',
     },
 

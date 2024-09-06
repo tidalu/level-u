@@ -98,7 +98,7 @@ export const data = {
   ],
   classPage: {
     homeContent: {
-      title: 'Classes available in our clubs',
+      title: 'Classes available in our centers',
       subtitle: 'Choose your favourite class and start learning with us!',
     },
     mainContent: {
@@ -458,7 +458,6 @@ export const data = {
     information: {
       title: 'Information',
       links: [
-        
         {
           title: 'Careers',
           href: '/careers',

@@ -107,7 +107,7 @@ export const data = {
 
   classPage: {
     homeContent: {
-      title: 'Доступные занятия в наших клубах',
+      title: 'Доступные занятия в наших центрах',
       subtitle: 'Выберите свой любимый курс и начните обучение с нами!',
     },
     mainContent: {
