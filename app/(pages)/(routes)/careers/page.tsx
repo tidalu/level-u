@@ -40,6 +40,7 @@ function Careers() {
                         <a
                           key={index}
                           href={`${link.href}`}
+                          rel={link.href === '/about' ? 'canonical' : ''}
                           className="lg:text-2xl text-gray-900 dark:text-white font-semibold text-left text-base md:text-xl hover:underline trasition-all duration-150 ease-linear hover:underline-offset-4 "
                           style={{ opacity: 1 }}
                         >

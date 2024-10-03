@@ -265,6 +265,7 @@ const Header = () => {
                   )}
                   onClick={() => setOpen(false)}
                   href={route.href}
+                  rel={ route.href === '/about' ? 'canonical' : ''}
                 >
                   {route.label}
                 </Link>

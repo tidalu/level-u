@@ -53,6 +53,7 @@ const FooterLinks = () => {
               <Link
                 href={link.href ? link.href : '/'}
                 className="hover:underline"
+                rel={link.href === '/about' ? 'canonical' : ''}
               >
                 {link.title}
               </Link>
