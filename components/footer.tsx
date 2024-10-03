@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-3">
             <Link
-              href="https://www.instagram.com/level_edu_uz/"
+              href="https://www.instagram.com/level_edu_uz"
               className="border border-gray-600 rounded-full block"
             >
               <FaInstagram size={20} className="m-2" />
