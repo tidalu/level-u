@@ -82,7 +82,7 @@ const LandingBanner = () => {
           <Image
             src="/mobile_home-banner.webp"
             className="w-full h-full object-cover"
-            alt="mobile banner"
+            alt="main page mobile home banner, image of a student to give a welcoming vibe"
             width={200}
             height={200}
             priority
