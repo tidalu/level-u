@@ -4,7 +4,7 @@ import localFont from 'next/font/local';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import AnimatedTitle from '@/components/AnimatedTitle';
-import Script from 'next/script';
+import Script from 'next/script'; // Importing Script for GA
 
 const helvetica = localFont({
   src: './fonts/helveticaneue-medium.woff2',
@@ -31,62 +31,43 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
         <link rel="apple-touch-icon" href="/favicon.svg" />
-        <link rel="preload" href="/logo.svg" as="image/svg+xml"></link>
-        <link
-          rel="preload"
-          href="/mobile_home-banner.webp"
-          as="image/webp"
-        ></link>
+        <link rel="preload" href="/logo.svg" as="image/svg+xml" />
+        <link rel="preload" href="/mobile_home-banner.webp" as="image/webp" />
         <link
           rel="preload"
           href="/english-flag-icon-rect.svg'"
           as="image/svg+xml"
-        ></link>
+        />
         <link
           rel="preload"
           href="/uzbekistan-flag-rect-circle-icon.svg"
           as="image/svg+xml"
-        ></link>
+        />
         <link
           rel="preload"
           href="/russia-flag-icon-rect.svg"
           as="image/svg+xml"
-        ></link>
+        />
 
-        {/* Google Tag Manager (GTM) */}
+        {/* Google Analytics */}
         <Script
-          id="gtm-script"
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-1DHN2YB2PL`}
+        />
+        <Script
+          id="google-analytics"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-NF2LBW2C');
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1DHN2YB2PL');
             `,
           }}
         />
       </head>
       <body className={helvetica.className}>
-        {/* Google Tag Manager (noscript fallback) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-NF2LBW2C"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          ></iframe>
-        </noscript>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-NF2LBW2C"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          ></iframe>
-        </noscript>
-
         {process.env.NODE_ENV === 'production' && (
           <>
             <SpeedInsights />
