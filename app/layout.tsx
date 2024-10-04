@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import React from 'react';
 import './globals.css';
 import localFont from 'next/font/local';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -69,10 +70,10 @@ export default function RootLayout({
       </head>
       <body className={helvetica.className}>
         {process.env.NODE_ENV === 'production' && (
-          <>
+          <React.Fragment> 
             <SpeedInsights />
             <Analytics />
-          </>
+          </React.Fragment>
         )}
         <AnimatedTitle />
         {children}
