@@ -1,13 +1,15 @@
 'use client';
+import React from 'react';
 import { useLocalizedData } from '@/lib/useLocalizedData';
 import InfiniteMovingCards from '@/components/InfiniteMovingCards';
 import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
+
 
 const AboutPage = () => {
   const data = useLocalizedData();
 
   return (
-    <>
+    <React.Fragment>
       <div className="h-auto max-w-[1900px] mx-auto ">
         <ScrollAnimateWrapper>
           <div className="min-h-[800px] h-auto flex flex-col items-center  justify-center pt-32 pb-12 rounded-b-3xl px-3 lg:px-16 ">
@@ -20,7 +22,9 @@ const AboutPage = () => {
                   loop
                   className="w-full h-full object-cover"
                 >
-                  <source src="/video/about-page.mp4" type="video/mp4" />
+                  <source src="/video/about-page.mp4" type="video/mp4"
+                  aria-description='Level learning center main content video'
+                  />
                 </video>
                 <span className="  absolute top-4 -left-[25%] md:-left-[30%] xl:-left-[35%] flex w-full justify-center items-center">
                   <p className=" text-center before:contents apply-font-o   mx-auto py-2 px-4 relative rounded-xl z-10 text-wrap w-auto text-with-blur">
@@ -70,7 +74,7 @@ const AboutPage = () => {
           className="w-full mx-auto"
         />
       </div>
-    </>
+    </React.Fragment>
   );
 };
 
