@@ -7,5 +7,4 @@ Disallow: /schedule
 User-agent: *
 Allow: /
 
-Sitemap: https://level-edu.uz/sitemap.xml
-Sitemap: https://level-edu.uz/sitemap.xml
+Sitemap: https://www.level-edu.uz/sitemap.xml
