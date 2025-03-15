@@ -90,6 +90,10 @@ const Header = () => {
       href: '/careers',
     },
     {
+      label: data?.header?.tabs?.merch,
+      href: '/merch',
+    },
+    {
       label: data?.header?.tabs?.contact,
       href: '/contact',
     },
@@ -122,10 +126,10 @@ const Header = () => {
   const urls =
     pathName === '/contact' ||
     pathName === '/about' ||
-    // pathName.startsWith('/blogs') ||
     pathName.startsWith('/classess') ||
     pathName === '/careers' ||
-    pathName === '/study-abroad';
+    pathName === '/study-abroad' ||
+    pathName === '/merch';
 
   const getFigurePath = () => {
     if (theme === 'dark') {
