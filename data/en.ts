@@ -14,6 +14,7 @@ export const data = {
       about: 'About Us',
       contact: 'Contact',
       careers: 'Careers',
+      merch: 'Merch',
     },
     langs: {
       uzb: 'Uzbek',

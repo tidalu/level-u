@@ -15,6 +15,7 @@ export const data = {
       about: 'Biz haqimizda',
       contact: "Bog'lanish",
       careers: 'Karyeralar',
+      merch: 'Merch',
     },
     langs: {
       uzb: 'Oʻzbek',

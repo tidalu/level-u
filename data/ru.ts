@@ -16,6 +16,7 @@ export const data = {
       studyAbroad: 'Обучение за рубежом',
       contact: 'Контакты',
       careers: 'Карьера',
+      merch: 'Мерч',
     },
     langs: {
       uzb: 'Узбекский',
