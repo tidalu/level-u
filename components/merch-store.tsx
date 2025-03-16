@@ -2,7 +2,7 @@
 import Image from "next/image"
 import type React from "react"
 
-import { Award, CheckCircle, Gift, HelpCircle, Star, ShoppingBag, TrendingUp, Frown, PartyPopper } from "lucide-react"
+import { Award, CheckCircle, Gift, HelpCircle, Star, ShoppingBag, Frown, PartyPopper } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {
@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/dialog"
 import { useState, useEffect } from "react"
 import ScrollAnimateWrapper from "@/components/ScrollAnimateWrapper"
+import StudentProfile from "@/components/StudentProfile"
 
 function MerchStore() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -25,6 +26,20 @@ function MerchStore() {
   const [studentId, setStudentId] = useState("")
   const [studentIdError, setStudentIdError] = useState(false)
   const [userPoints] = useState(200) // Mock user points
+
+  // Mock student data - in a real app, this would come from an API
+  const studentData = {
+    studentId: "LEVEL123456",
+    name: "Alex Johnson",
+    group: "Advanced English B2",
+    points: 200,
+    courses: [
+      { id: "ENG-101", name: "English Grammar", progress: 75 },
+      { id: "ENG-202", name: "Business English", progress: 45 },
+      { id: "MATH-101", name: "Basic Mathematics", progress: 90 },
+      { id: "SCI-303", name: "Environmental Science", progress: 60 },
+    ],
+  }
 
   // Available merchandise with their point costs
   const merchandise = [
@@ -583,34 +598,27 @@ function MerchStore() {
 
       {/* Points Check Modal */}
       <Dialog open={isPointsModalOpen} onOpenChange={setIsPointsModalOpen}>
-        <DialogContent className="sm:max-w-md">
+        <DialogContent className="sm:max-w-xl">
           <DialogHeader>
-            <DialogTitle>Your Current Points</DialogTitle>
+            <DialogTitle>Student Profile & Points</DialogTitle>
           </DialogHeader>
 
-          <div className="flex flex-col items-center justify-center py-6">
-            {/* Animated Points Display */}
-            <div
-              className={`relative transition-all duration-1000 ${pointsAnimated ? "scale-100" : "scale-50 opacity-0"}`}
-            >
-              <div className="absolute -inset-4 rounded-full bg-[#a9ff81] opacity-20 blur-lg animate-pulse"></div>
-              <div className="relative flex items-center justify-center h-32 w-32 rounded-full bg-[#a9ff81] mb-4">
-                <TrendingUp
-                  className={`absolute h-8 w-8 text-[#26913d] transition-all duration-700 ${pointsAnimated ? "opacity-100 top-2 right-2" : "opacity-0 top-16 right-16"}`}
-                />
-                <span className="text-5xl font-bold text-[#26913d]">{userPoints}</span>
-              </div>
+          <div className="py-4">
+            {/* Student Profile Component */}
+            <div className={`transition-all duration-1000 ${pointsAnimated ? "opacity-100" : "opacity-0"}`}>
+              <StudentProfile
+                studentId={studentData.studentId}
+                name={studentData.name}
+                group={studentData.group}
+                points={studentData.points}
+                courses={studentData.courses}
+              />
             </div>
 
-            <p className="text-lg font-medium mt-4 text-center">
-              {canAffordSomething
-                ? "Congratulations! You have enough points to redeem:"
-                : "Keep earning points to redeem merchandise!"}
-            </p>
-
-            {/* Conditional Content Based on Points */}
+            {/* Available Merchandise Section */}
             {canAffordSomething ? (
-              <div className="mt-6 w-full">
+              <div className="mt-6">
+                <h4 className="text-md font-semibold mb-3">Available for Redemption</h4>
                 <div
                   className={`grid gap-4 transition-all duration-1000 ${pointsAnimated ? "opacity-100" : "opacity-0"}`}
                 >
@@ -629,9 +637,6 @@ function MerchStore() {
                     </div>
                   ))}
                 </div>
-                <div className="flex justify-center mt-6">
-                  <Button onClick={() => setIsPointsModalOpen(false)}>View Merchandise</Button>
-                </div>
               </div>
             ) : (
               <div
@@ -642,13 +647,12 @@ function MerchStore() {
                   You need at least {Math.min(...merchandise.map((item) => item.points))} points to redeem our
                   lowest-priced item.
                 </p>
-                <div className="mt-6">
-                  <Button variant="outline" onClick={() => setIsPointsModalOpen(false)}>
-                    Keep Earning
-                  </Button>
-                </div>
               </div>
             )}
+
+            <div className="flex justify-center mt-6">
+              <Button onClick={() => setIsPointsModalOpen(false)}>Close</Button>
+            </div>
           </div>
         </DialogContent>
       </Dialog>
