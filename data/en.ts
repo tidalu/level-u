@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const data = {
   about: {
     title: 'Who we are and what you get from our spaces',
@@ -725,6 +727,178 @@ export const data = {
         },
       ],
     },
+  },
+  merch: {
+      "header": {
+        "title": "Welcome to LEVEL Learning Center Merch Store!",
+        "description": "Earn exclusive merchandise through your academic performance and achievements. Our merch isn't for sale - it's earned through your hard work and dedication!",
+        "viewMerchButton": "View Merchandise"
+      },
+      "howItWorks": {
+        "desc": "Our merit-based system rewards your academic achievements with points you can redeem for exclusive merchandise.",
+        "details": [
+          {
+            "key": "earnPoints",
+            "title": "Earn Points",
+            "description": "Accumulate points through academic excellence, attendance, and participation in LEVEL programs."
+          },
+          {
+            "key": "meritBasedSystem",
+            "title": "Merit-Based System",
+            "description": "Items can't be purchased with money - they must be earned through your performance and dedication."
+          },
+          {
+            "key": "redeemRewards",
+            "title": "Redeem Rewards",
+            "description": "Exchange your hard-earned points for exclusive LEVEL merchandise that showcases your achievements."
+          }
+        ]
+      },
+      "pointCalculator": {
+        "title": "Point Calculator",
+        "description": "Learn how to earn points through your academic achievements and participation.",
+        "howto": "How to Earn Points",
+        "button": "Check Your Points",
+        "rewards": [
+          {
+            "key": "highGrades",
+            "title": "High Grades",
+            "description": "For tests, exams, and quizzes:",
+            "points": "90-100% → 10 points"
+          },
+          {
+            "key": "perfectAttendance",
+            "title": "Perfect Attendance",
+            "description": "Attend all classes in a month:",
+            "points": "100% → 5 points"
+          },
+          {
+            "key": "participation",
+            "title": "Participation in Center Events",
+            "description": "Join and participate in LEVEL events:",
+            "points": "Active participation → 5 points"
+          },
+          {
+            "key": "promoting",
+            "title": "Promoting the Educational Center",
+            "description": "Reviews, reposts on social media, etc.:",
+            "points": "Promotion → 5 points"
+          }
+        ]
+      },
+      "redeem": {
+        "title": "Redeem Your Points",
+        "description": "Check out the exclusive merchandise available for redemption with your earned points.",
+        "button": "Redeem",
+        "points": "points",
+        "cap": "LEVEL Cap",
+        "tshirt": "LEVEL Sweatshirt",
+        "hoodie": "LEVEL Hoodie"
+      },
+      "howToRedeem": {
+        "title": "How to Redeem",
+        "desc": "Follow these simple steps to redeem your points for exclusive LEVEL merchandise.",
+        "steps": [
+          {
+            "key": "step1",
+            "title": "Check Your Points",
+            "description": "Log in to your LEVEL student portal to view your current point balance."
+          },
+          {
+            "key": "step2",
+            "title": "Browse Merchandise",
+            "description": "Explore the available merchandise and their point requirements."
+          },
+          {
+            "key": "step3",
+            "title": "Select Your Item",
+            "description": "Choose the item you want to redeem and click the \"Redeem\" button."
+          },
+          {
+            "key": "step4",
+            "title": "Confirm Redemption",
+            "description": "Review your selection and confirm the redemption."
+          },
+          {
+            "key": "step5",
+            "title": "Collect Your Merchandise",
+            "description": "Pick up your merchandise from the LEVEL Learning Center during designated distribution times."
+          }
+        ]
+      },
+      "whyChooseMerch": {
+        "title": "Why Choose LEVEL Merch?",
+        "description": "Our merchandise represents more than just clothing - it's a symbol of your achievements.",
+        "features": [
+          {
+            "key": "qualityMaterials",
+            "title": "Quality Materials",
+            "description": "All LEVEL merchandise is made with premium materials for comfort and durability."
+          },
+          {
+            "key": "exclusiveDesigns",
+            "title": "Exclusive Designs",
+            "description": "Our designs are exclusive to LEVEL students and cannot be purchased elsewhere."
+          },
+          {
+            "key": "symbolOfAchievement",
+            "title": "Symbol of Achievement",
+            "description": "Wearing LEVEL merchandise showcases your academic excellence and dedication to learning."
+          },
+          {
+            "key": "community",
+            "title": "Community Recognition",
+            "description": "Be recognized as part of the LEVEL community of high-achieving students."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "desc": "Find answers to common questions about the LEVEL Learning Center Merch Store.",
+        "questions": [
+          {
+            "question": "How can I earn points?",
+            "answer": "Points are earned through academic performance, attendance, participation in LEVEL programs, and other achievements recognized by your instructors."
+          },
+          {
+            "question": "Can I purchase merchandise with money?",
+            "answer": "No, LEVEL merchandise is exclusively available through our points-based redemption system. It cannot be purchased with money."
+          },
+          {
+            "question": "How often are new items added?",
+            "answer": "We regularly update our merchandise collection with new items each semester. Keep an eye on announcements for new additions!"
+          }
+        ]
+      },
+      "modals": {
+        "redemptionSuccess": {
+          "title": "Redemption Successful!",
+          "description": "You have successfully redeemed your points for the {item}.",
+          "collectMessage": "You may collect your {item} at the reception.",
+          "idMessage": "Please bring your student ID for verification.",
+          "closeButton": "Close"
+        },
+        "studentId": {
+          "title": "Enter Your Student ID",
+          "description": "Please enter your student ID to check your points balance.",
+          "label": "Student ID",
+          "placeholder": "e.g., 2025EN0001",
+          "cancelButton": "Cancel",
+          "submitButton": "Check Points",
+          "checking": "Checking..."
+        },
+        "pointsCheck": {
+          "title": "Student Profile & Points",
+          "availableTitle": "Available for Redemption",
+          "notEnoughPoints": "You need at least {minPoints} points to redeem our lowest-priced item.",
+          "closeButton": "Close"
+        }
+      },
+      "errors": {
+        "fetchFailed": "Failed to load student data. Please try again later.",
+        "studentIdNotFound": "Student ID not found. Please try again or contact reception.",
+        "serverError": "Error connecting to the server. Please try again later."
+      }
   },
   contactPage: {
     workInfo: {

@@ -766,6 +766,178 @@ export const data = {
       },
     },
   },
+  merch: {
+      "header": {
+        "title": "LEVEL O'quv markazi merch do'koniga xush kelibsiz!",
+        "description": "Akademik yutuqlaringiz va muvaffaqiyatlaringiz orqali eksklyuziv mahsulotlarni qo'lga kiriting. Bizning merch pulga sotilmaydi - u faqat sizning mehnatingiz va fidoyiligingiz bilan qo'lga kiritiladi!",
+        "viewMerchButton": "Mahsulotlarni ko'rish"
+      },
+      "howItWorks": {
+        "desc": "Bizning yutuqlarga asoslangan tizimimiz sizning akademik muvaffaqiyatlaringizni ballar bilan taqdirlaydi, va ularni eksklyuziv mahsulotlarga almashtirishingiz mumkin.",
+        "details": [
+          {
+            "key": "earnPoints",
+            "title": "Ball to'plang",
+            "description": "Akademik muvaffaqiyat, davomat va LEVEL dasturlarida ishtirok etish orqali ball to'plang."
+          },
+          {
+            "key": "meritBasedSystem",
+            "title": "Mukofot tizimi",
+            "description": "Mahsulotlarni pulga sotib olib bo'lmaydi - ularni faqat o'z mehnatingiz va fidoyiligingiz bilan qo'lga kiritishingiz mumkin."
+          },
+          {
+            "key": "redeemRewards",
+            "title": "Mukofotlarni almashtiring",
+            "description": "Mehnat bilan topgan ballaringizni LEVEL eksklyuziv mahsulotlariga almashtiring va yutuqlaringizni namoyish eting."
+          }
+        ]
+      },
+      "pointCalculator": {
+        "title": "Ball Kalkulyatori",
+        "description": "Akademik yutuqlaringiz va ishtirokingiz orqali qanday qilib ball to'plashni bilib oling.",
+        "howto": "Qanday qilib ball to'plash mumkin",
+        "button": "Ballaringizni tekshiring",
+        "rewards": [
+          {
+            "key": "highGrades",
+            "title": "Yuqori baholar",
+            "description": "Testlar, imtihonlar va viktorinalar uchun:",
+            "points": "90-100% → 10 ball"
+          },
+          {
+            "key": "perfectAttendance",
+            "title": "Mukammal davomad",
+            "description": "Oyning barcha darslarida qatnashing:",
+            "points": "5 ball"
+          },
+          {
+            "key": "participation",
+            "title": "Markaz tadbirlarida ishtirok etish",
+            "description": "LEVEL tadbirlarida qatnashing:",
+            "points": "5-10 ball"
+          },
+          {
+            "key": "promoting",
+            "title": "Ta'lim markazini targ'ib qilish",
+            "description": "Ijtimoiy tarmoqlarda sharhlar, repostlar va boshqalar:",
+            "points": "5 ball"
+          }
+        ]
+      },
+      "redeem": {
+        "title": "Ballaringizni almashtiring",
+        "description": "Toplagan ballaringizni eksklyuziv mahsulotlarga almashtiring.",
+        "button": "Almashtirish",
+        "points": "ball",
+        "cap": "LEVEL Cap",
+        "tshirt": "LEVEL Sweatshirt",
+        "hoodie": "LEVEL Hoodi"
+      },
+      "howToRedeem": {
+        "title": "Qanday qilib almashtirish mumkin",
+        "desc": "Ballaringizni eksklyuziv LEVEL mahsulotlariga almashtirish uchun quyidagi oddiy qadamlarni bajaring.",
+        "steps": [
+          {
+            "key": "step1",
+            "title": "Ballaringizni tekshiring",
+            "description": "LEVEL talaba portaliga kiring va joriy ballaringizni ko'ring."
+          },
+          {
+            "key": "step2",
+            "title": "Mahsulotlarni ko'rib chiqing",
+            "description": "Mavjud mahsulotlarni va ularning ball talablarini o'rganing."
+          },
+          {
+            "key": "step3",
+            "title": "Mahsulotingizni tanlang",
+            "description": "Almashtirmoqchi bo'lgan mahsulotni tanlang va \"Almashtirish\" tugmasini bosing."
+          },
+          {
+            "key": "step4",
+            "title": "Almashtirishni tasdiqlang",
+            "description": "Tanlovingizni ko'rib chiqing va almashtirishni tasdiqlang."
+          },
+          {
+            "key": "step5",
+            "title": "Mahsulotingizni oling",
+            "description": "Belgilangan tarqatish vaqtida LEVEL ta'lim markazidan mahsulotingizni olib keting."
+          }
+        ]
+      },
+      "whyChooseMerch": {
+        "title": "Nega LEVEL merch tanlash kerak?",
+        "description": "Bizning mahsulotlarimiz shunchaki kiyim emas - bu sizning yutuqlaringizning ramzi.",
+        "features": [
+          {
+            "key": "qualityMaterials",
+            "title": "Yuqori sifatli materiallar",
+            "description": "Barcha LEVEL mahsulotlari qulaylik va mustahkamlik uchun premium materiallardan tayyorlangan."
+          },
+          {
+            "key": "exclusiveDesigns",
+            "title": "Eksklyuziv dizaynlar",
+            "description": "Bizning dizaynlarimiz faqat LEVEL o'quvchilari uchun mo'ljallangan va boshqa joyda sotib olib bo'lmaydi."
+          },
+          {
+            "key": "symbolOfAchievement",
+            "title": "Yutuq ramzi",
+            "description": "LEVEL mahsulotlarini kiyish sizning akademik yutuqlaringiz va sadoqatingizni namoyish etadi."
+          },
+          {
+            "key": "community",
+            "title": "Hamjamiyat tomonidan e'tirof etilish",
+            "description": "Yuqori natijalarga erishgan LEVEL o'quvchilari hamjamiyatining bir qismi sifatida tan olinishingiz mumkin."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Ko'p beriladigan savollar",
+        "desc": "LEVEL Merch do'koni haqida eng ko'p so'raladigan savollarga javoblar toping.",
+        "questions": [
+          {
+            "question": "Qanday qilib ball yig'ishim mumkin?",
+            "answer": "Ballar akademik natijalar, davomat, LEVEL dasturlarida qatnashish va o'qituvchilaringiz tomonidan e'tirof etilgan boshqa yutuqlar orqali to'planadi."
+          },
+          {
+            "question": "Mahsulotlarni pulga sotib olish mumkinmi?",
+            "answer": "Yo'q, LEVEL mahsulotlari faqat ballarni ishlatish orqali olinadi. Ularni pulga sotib olib bo'lmaydi."
+          },
+          {
+            "question": "Yangi mahsulotlar qanchalik tez qo'shiladi?",
+            "answer": "Har semestrda mahsulot kolleksiyamizni yangilab boramiz. Yangiliklar haqida e'lonlarni kuzatib boring!"
+          }
+        ]
+      },
+      "modals": {
+        "redemptionSuccess": {
+          "title": "Almashtirish muvaffaqiyatli yakunlandi!", // No direct translation in OCR, translated based on context
+          "description": "Siz {item} uchun ballaringizni muvaffaqiyatli almashtirdingiz.", // No direct translation, translated based on context
+          "collectMessage": "{item} ni qabulxonadan olishingiz mumkin.", // No direct translation, translated based on context
+          "idMessage": "Iltimos, tekshirish uchun talaba guvohnomangizni olib keling.",
+          "closeButton": "Yopish" // No direct translation, translated based on context
+        },
+        "studentId": {
+          "title": "Talaba IDingizni kiriting",
+          "description": "Iltimos, ball balansingizni tekshirish uchun talaba IDingizni kiriting.",
+          "label": "Talaba ID",
+          "placeholder": "masalan, 2025EN0001",
+          "cancelButton": "Bekor qilish",
+          "submitButton": "Ballarni tekshirish",
+          "checking": "Tekshirilmoqda..."
+        },
+        "pointsCheck": {
+          "title": "Talaba profili va ballar",
+          "availableTitle": "Almashtirish uchun mavjud",
+          "notEnoughPoints": "Eng kam narxdagi mahsulotni almashtirish uchun sizga kamida {minPoints} ball kerak.",
+          "closeButton": "Yopish"
+        }
+      },
+      "errors": {
+        "fetchFailed": "Talaba ma'lumotlarini yuklash muvaffaqiyatsiz yakunlandi. Iltimos, keyinroq qayta urinib ko'ring.", // No direct translation, translated based on context
+        "studentIdNotFound": "Talaba ID topilmadi. Iltimos, qayta urinib ko'ring yoki qabulxonaga murojaat qiling.",
+        "serverError": "Serverga ulanishda xatolik yuz berdi. Iltimos, keyinroq qayta urinib ko'ring."
+      }
+  },
   userPreferencesModule: {
     title: 'Tanlovlaringizni tanlang',
     description:
