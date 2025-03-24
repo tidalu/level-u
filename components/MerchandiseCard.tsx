@@ -95,7 +95,7 @@ export default function MerchandiseCard({ item, onRedeem }: MerchandiseCardProps
                     src={src || "/placeholder.svg"}
                     alt={`${item.name} - Image ${index + 1}`}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                   <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
                     <ZoomIn className="h-8 w-8 text-white drop-shadow-lg" />
@@ -179,7 +179,7 @@ export default function MerchandiseCard({ item, onRedeem }: MerchandiseCardProps
                 src={item.images[galleryImageIndex] || "/placeholder.svg"}
                 alt={`${item.name} - Gallery Image ${galleryImageIndex + 1}`}
                 fill
-                className="object-contain"
+                className="object-contain "
                 priority
               />
             </div>
