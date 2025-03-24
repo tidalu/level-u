@@ -161,8 +161,8 @@ function MerchStore() {
                     Welcome to LEVEL Learning Center Merch Store!
                   </h1>
                   <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-300 text-sm sm:text-base md:text-lg">
-                    Earn exclusive merchandise through your academic performance and achievements. Our merch isn't
-                    for sale - it's earned through your hard work and dedication!
+                    Earn exclusive merchandise through your academic performance and achievements. Our merch isn&apos;t
+                    for sale - it&apos;s earned through your hard work and dedication!
                   </p>
                 </div>
                 <div className="space-x-2 sm:space-x-4">
@@ -221,7 +221,7 @@ function MerchStore() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-500 dark:text-gray-300 text-xs sm:text-sm">
-                      Items can't be purchased with money - they must be earned through your performance and
+                      Items can&apos;t be purchased with money - they must be earned through your performance and
                       dedication.
                     </p>
                   </CardContent>
@@ -388,7 +388,7 @@ function MerchStore() {
                         <div>
                           <h3 className="font-bold text-lg text-gray-900 dark:text-white">Select Your Item</h3>
                           <p className="text-gray-500 dark:text-gray-300 mt-1">
-                            Choose the item you want to redeem and click the "Redeem" button.
+                            Choose the item you want to redeem and click the &quot;Redeem&quot; button.
                           </p>
                         </div>
                       </li>
@@ -428,7 +428,7 @@ function MerchStore() {
                     Why Choose LEVEL Merch
                   </h2>
                   <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-300 md:text-xl">
-                    Our merchandise represents more than just clothing - it's a symbol of your achievements.
+                    Our merchandise represents more than just clothing - it&apos;s a symbol of your achievements.
                   </p>
                 </div>
               </div>
