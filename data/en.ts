@@ -141,7 +141,7 @@ export const data = {
             ],
             cost: '500.000 uzs',
             duration: '18 months',
-            intensity: 2 / 4,
+            intensity: 3 / 5,
             purpose:
               'To develop a strong foundation in English, enabling learners to communicate effectively in both personal and professional settings.',
             effects: [
@@ -169,7 +169,7 @@ export const data = {
             ],
             cost: '2.500.000 uzs',
             duration: '9 months',
-            intensity: 4 / 4,
+            intensity: 5 / 5,
             purpose:
               'To offer individualized support and instruction, allowing learners to achieve their specific English language goals more efficiently.',
             effects: [
@@ -196,7 +196,7 @@ export const data = {
             ],
             cost: '450.000 uzs',
             duration: 'flexible',
-            intensity: 1 / 4,
+            intensity: 2 / 5,
             purpose:
               'Course serves multiple purposes, tailored to the developmental stages and needs of young learners. Understanding the goals of these courses helps in appreciating their value in a child’s education',
             effects: [
@@ -226,7 +226,7 @@ export const data = {
             ],
             cost: '$ N/A',
             duration: 'Varies based on company needs and program structure',
-            intensity: 3 / 4,
+            intensity: 4 / 5,
             purpose:
               'To enhance business communication skills, enabling employees to effectively interact in professional settings and contribute to the company’s success.',
             effects: [
@@ -256,7 +256,7 @@ export const data = {
             ],
             cost: '700.000 uzs',
             duration: '4 months',
-            intensity: 3 / 4,
+            intensity: 4 / 5,
             purpose:
               'courses are designed to help learners prepare effectively for the test, which measures English proficiency across four key areas: Listening, Reading, Writing, and Speaking. The purpose of these courses extends beyond just test preparation to include several key objectives.',
             effects: [
@@ -272,7 +272,7 @@ export const data = {
           {
             href: 'Intensive Course',
             name: 'Intensive Course',
-            img: '/individual-courses.jpg',
+            img: '/intensive-course.jpeg',
             description:
               'Course is designed for learners who need to achieve rapid progress in their English skills. These courses offer an immersive and focused approach, which is particularly beneficial for specific groups of people.',
             video:
@@ -284,7 +284,7 @@ export const data = {
             ],
             cost: '1.000.000 uzs',
             duration: '12 months',
-            intensity: 3 / 4,
+            intensity: 4 / 5,
             purpose:
               'Course is structured to deliver rapid and effective language learning through an immersive and focused approach. These courses are designed to meet specific needs and achieve particular goals',
             effects: [

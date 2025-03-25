@@ -143,7 +143,7 @@ export const data = {
             ],
             cost: '500.000 so‘m',
             duration: '18 oy',
-            intensity: 2 / 4,
+            intensity: 3 / 5,
             purpose:
               'O‘rganuvchilarga shaxsiy va professional sharoitlarda samarali muloqot qilish imkoniyatini beruvchi ingliz tilida mustahkam poydevor yaratish.',
             effects: [
@@ -171,7 +171,7 @@ export const data = {
             ],
             cost: '2.500.000 so‘m',
             duration: '9 oy',
-            intensity: 4 / 4,
+            intensity: 5 / 5,
             purpose:
               'O‘rganuvchilarga aniq ingliz tili maqsadlariga samaraliroq erishish imkonini beruvchi individual qo‘llab-quvvatlash va yo‘riqnoma berish.',
             effects: [
@@ -198,7 +198,7 @@ export const data = {
             ],
             cost: '450.000 so‘m',
             duration: 'moslashuvchan',
-            intensity: 1 / 4,
+            intensity: 2 / 5,
             purpose:
               'IKurs bir nechta maqsadlarni amalga oshiradi, yosh o‘rganuvchilarning rivojlanish bosqichlari va ehtiyojlariga moslashtirilgan. Ushbu kurslarning maqsadlarini tushunish bolalarning ta‘limida ularning qiymatini anglashga yordam beradi.',
             effects: [
@@ -229,7 +229,7 @@ export const data = {
             cost: '$ N/A',
             duration:
               'Kompaniya ehtiyojlari va dastur tuzilishiga qarab o‘zgaradi',
-            intensity: 3 / 4,
+            intensity: 4 / 5,
             purpose:
               'Xodimlarga professional sharoitlarda samarali muloqot qilish va kompaniyaning muvaffaqiyatiga hissa qo‘shish imkoniyatini beruvchi biznes aloqalari ko‘nikmalarini oshirish.',
             effects: [
@@ -259,7 +259,7 @@ export const data = {
             ],
             cost: '700.000 so‘m',
             duration: '4 oy',
-            intensity: 3 / 4,
+            intensity: 4 / 5,
             purpose:
               'Kurslar o‘rganuvchilarga test uchun samarali tayyorlanishlariga yordam berish uchun mo‘ljallangan bo‘lib, test ingliz tilining to‘rtta asosiy sohasini o‘lchaydi: Tinglash, O‘qish, Yozish va Gapirish. Ushbu kurslarning maqsadi test tayyorgarligidan tashqari bir nechta asosiy maqsadlarni o‘z ichiga oladi.',
             effects: [
@@ -275,7 +275,7 @@ export const data = {
           {
             href: 'Intensive Course',
             name: 'Intensiv Kurs',
-            img: '/individual-courses.jpg',
+            iimg: '/intensive-course.jpeg',
             description:
               'Kurs tezda ingliz tilidagi ko‘nikmalarni rivojlantirishni talab qiladigan o‘rganuvchilar uchun mo‘ljallangan. Ushbu kurslar immersiv va diqqatga sazovor yondashuvni taklif qiladi, bu ayniqsa ma‘lum guruhlar uchun foydalidir.',
             video:
@@ -287,7 +287,7 @@ export const data = {
             ],
             cost: '1.000.000 so‘m',
             duration: '12 oy',
-            intensity: 3 / 4,
+            intensity: 4 / 5,
             purpose:
               'Kurs immersiv va diqqatga sazovor yondashuv orqali tez va samarali til o‘rganishni ta‘minlash uchun tuzilgan. Ushbu kurslar maxsus ehtiyojlarni qondirish va muayyan maqsadlarni amalga oshirish uchun mo‘ljallangan',
             effects: [
