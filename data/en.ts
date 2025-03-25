@@ -115,10 +115,9 @@ export const data = {
           'Advanced language training for professional and personal development',
           'IELTS, TOEFL and CEFR preparation courses',
           'TOPIK preparation courses',
-          'Korean language courses',
           'Corporate language training programs',
         ],
-        'Our curriculum also includes renowned language programs and specialized training in English, IELTS, TOEFL, CEFR, TOPIK, Korean, and corporate courses.',
+        'Our curriculum also includes renowned language programs and specialized training in English, IELTS, TOEFL, CEFR, TOPIK,  and corporate courses.',
       ],
       button: 'All Courses',
     },
@@ -300,40 +299,7 @@ export const data = {
           },
         ],
       },
-      {
-        title: 'Korean Language',
-
-        list: [
-          {
-            href: 'Korean Language Classes',
-            name: 'Korean Language Classes',
-            description:
-              'Personalized Korean language lessons tailored to your specific learning needs and goals. These one-on-one sessions focus on speaking, listening, reading, and writing skills, adapting to your pace and interests.',
-            video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
-            forWhom: [
-              'Learners who prefer individualized attention and customized instruction.',
-              'Beginners and advanced students looking to improve their Korean language skills.',
-              'Individuals interested in Korean culture and language through personalized learning experiences.',
-            ],
-            cost: '$ N/A',
-            duration: 'Flexible scheduling based on student availability',
-            intensity: 2 / 4,
-            purpose:
-              'To provide tailored language instruction that meets individual learning goals, facilitating faster and more effective language acquisition.',
-            effects: [
-              'Customized lessons and feedback.',
-              'Accelerated improvement in Korean language skills.',
-              'Increased confidence and proficiency in using Korean.',
-            ],
-            lengthOfClasses: 'not specified',
-            frequency: 'not specified',
-            materials: 'not specified',
-            group: 'not specified',
-            comingSoon: true,
-          },
-        ],
-      },
+      
     ],
 
     classContainer: {
@@ -447,10 +413,7 @@ export const data = {
         title: 'IELTS',
         desc: 'Online training ',
       },
-      korean: {
-        title: 'Korean language',
-        desc: 'Online training ',
-      },
+     
       kids: {
         title: 'Kids club ',
         desc: 'Online training ',
@@ -618,10 +581,7 @@ export const data = {
           title: 'Front-desk receptionist',
           location: 'Chirchik / On-site',
         },
-        {
-          title: 'Instructor (Korean Language)',
-          location: 'Chirchik / On-site',
-        },
+        
       ],
     },
     optionalRequision: {

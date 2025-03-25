@@ -117,10 +117,9 @@ export const data = {
           'Kasbiy va shaxsiy rivojlanish uchun ilgʻor til oʻrganish',
           'IELTS, TOEFL and CEFR tayyorlov kurslari',
           'TOPIK tayyorlov kurslari',
-          'Koreys tili kurslari',
           'Korporativ til oʻqitish dasturlari',
         ],
-        'Bizning o‘quv dasturimiz ingliz tili, IELTS, TOPIK, koreys tili va korporativ kurslar bo‘yicha maxsus tayyorlovlarni ham oʻz ichiga oladi.',
+        'Bizning o‘quv dasturimiz ingliz tili, IELTS, TOPIK va  korporativ kurslar bo‘yicha maxsus tayyorlovlarni ham oʻz ichiga oladi.',
       ],
       button: 'Barcha Kurslar',
     },
@@ -303,39 +302,7 @@ export const data = {
           },
         ],
       },
-      {
-        title: 'Koreys Tili',
-        list: [
-          {
-            href: 'Korean Language Classes',
-            name: 'Koreys Tili Darslari',
-            description:
-              "Shaxsiy ehtiyojlaringiz va maqsadlaringizga moslashtirilgan koreys tili darslari. Ushbu shaxsiy darslar gapirish, eshitish, o'qish va yozish ko'nikmalariga e'tibor beradi, sizning tezlik va qiziqishlaringizga moslashadi.",
-            video:
-              'https://player.vimeo.com/video/753901222?autoplay=1&title=0&byline=0&portrait=0',
-            forWhom: [
-              "Shaxsiy e'tibor va moslashtirilgan ta'limni afzal ko'rgan o'rganuvchilar.",
-              "Koreys tili ko'nikmalarini yaxshilashni xohlagan boshlang'ichlar va ilg'or talabalar.",
-              "Shaxsiy o'rganish tajribasi orqali koreys madaniyati va tiliga qiziqishi bor bo'lgan shaxslar.",
-            ],
-            cost: '$ N/A',
-            duration: 'Talabga qarab moslashtirilgan jadval',
-            intensity: 2 / 4,
-            purpose:
-              "Shaxsiy ta'limni taqdim etish, individual o'rganish maqsadlariga erishishni tezlashtirish va samarali til o'rganishni ta'minlash.",
-            effects: [
-              'Moslashtirilgan darslar va fikr-mulohazalar.',
-              "Koreys tili ko'nikmalarida tezkor yaxshilanish.",
-              "Koreys tilini foydalanishdagi ishonch va ko'nikmalarni oshirish.",
-            ],
-            lengthOfClasses: 'noaniq',
-            frequency: 'noaniq',
-            materials: 'noaniq',
-            group: 'noaniq',
-            comingSoon: true,
-          },
-        ],
-      },
+      
     ],
     classContainer: {
       cost: 'Narxi',
@@ -452,10 +419,7 @@ export const data = {
         title: 'IELTS',
         desc: 'Onlayn ta’lim',
       },
-      korean: {
-        title: 'Koreys tili',
-        desc: 'Onlayn ta’lim',
-      },
+      
       kids: {
         title: 'Bolalar klubi',
         desc: 'Onlayn ta’lim',
@@ -631,10 +595,7 @@ export const data = {
           title: 'Qabulxonachi',
           location: 'Chirchiq / Joyida',
         },
-        {
-          title: 'Oʻqituvchi (Koreys tili)',
-          location: 'Chirchiq / Joyida',
-        },
+        
       ],
     },
     optionalRequision: {
