@@ -7,8 +7,17 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { LanguageProvider } from '@/components/LanguageContext';
 import { ToastContainer } from 'react-toastify';
 import Call from '@/components/Call';
+import { FeedbackOwl } from '@/components/feedbackOwl';
 
 const LandingLayout = ({ children }: { children: React.ReactNode }) => {
+  function handleFeedback(liked: boolean): void {
+    if (liked) {
+      console.log('Thank you for your positive feedback!');
+    } else {
+      console.log('Thank you for your feedback! We will strive to improve.');
+    }
+  }
+
   return (
     <main>
       <div>
@@ -31,6 +40,8 @@ const LandingLayout = ({ children }: { children: React.ReactNode }) => {
               />
               <Call />
               <Footer />
+              {/* <FeedbackOwl delayInSeconds={10} onFeedbackSubmit={handleFeedback} /> */}
+
             </LanguageProvider>
           </ThemeProvider>
         </div>

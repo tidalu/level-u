@@ -8,6 +8,8 @@ import { useLocalizedData } from '@/lib/useLocalizedData';
 import { PreferenceDialog } from '@/components/PreferenceDialog';
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
+import { FeedbackOwl } from '@/components/feedbackOwl';
+import FeedbackOwlDemo from '@/components/feedbackOwlDemo';
 
 const LandingPage = () => {
   // Initialize savedShow using cookies instead of localStorage
@@ -20,6 +22,10 @@ const LandingPage = () => {
   }, [savedShow]);
 
   const data = useLocalizedData();
+
+  function handleFeedback(liked: boolean): void {
+   console.log('User feedback:', liked ? 'Liked' : 'Disliked');
+  }
 
   return (
     <div className="h-full max-w-[1920px] max-w-sc mx-auto">
@@ -46,6 +52,9 @@ const LandingPage = () => {
         </section>
         {/* popular activities */}
         <PopulaActivities />
+
+        {/* feedback */}
+        {/* <FeedbackOwlDemo /> */}
       </div>
     </div>
   );

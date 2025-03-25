@@ -67,12 +67,30 @@ export const IntensityIndicator = ({ intensity, className = "" }: IntensityIndic
   const intensityText = getIntensityText(intensityRatio)
 
   return (
-    
-      <div className={cn("flex items-center gap-1.5", className)}>
-        <div className="relative h-4 w-full max-w-[100px] bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+    <Tooltip
+      content={
+        <div className="px-2 py-1">
+          <p className="text-xs font-medium">Intensity: {intensityText}</p>
+          <p className="text-xs opacity-80">
+            {intensityRatio <= 0.5
+              ? "Suitable for beginners"
+              : intensityRatio <= 0.75
+                ? "Moderate challenge"
+                : "High intensity workout"}
+          </p>
+        </div>
+      }
+      placement="bottom"
+    >
+      <div className={cn("flex items-center gap-1.5 transition-all duration-500", className)}>
+        <div className="relative h-4 w-full max-w-[100px] bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden group-hover:shadow-sm">
+          {/* Animated progress bar with width transition */}
           <div
-            className={`absolute left-0 top-0 h-full rounded-full transition-all duration-500 ${mainColor}`}
-            style={{ width: `${intensityRatio * 100}%` }}
+            className={`absolute left-0 top-0 h-full rounded-full transition-all duration-700 ${mainColor} group-hover:brightness-110`}
+            style={{
+              width: "0%", // Start at 0 for animation
+              animation: "progressFill 1.2s forwards ease-out",
+            }}
           />
 
           {/* Intensity markers */}
@@ -81,18 +99,27 @@ export const IntensityIndicator = ({ intensity, className = "" }: IntensityIndic
               <div
                 key={i}
                 className={cn(
-                  "h-full w-0.5 bg-white/30 dark:bg-black/20",
+                  "h-full w-0.5 bg-white/30 dark:bg-black/20 transition-all duration-500",
                   i === 0 && "opacity-0", // Hide first divider
+                  "group-hover:bg-white/40 dark:group-hover:bg-black/30",
                 )}
               />
             ))}
           </div>
+
+          {/* Add keyframes for the progress animation */}
+          <style jsx>{`
+            @keyframes progressFill {
+              0% { width: 0%; }
+              100% { width: ${intensityRatio * 100}%; }
+            }
+          `}</style>
         </div>
 
-        <div className="flex items-center gap-0.5">
+        <div className="flex items-center gap-0.5 transition-all duration-500 group-hover:scale-110">
           <Flame
             className={cn(
-              "h-4 w-4 transition-all duration-300",
+              "h-4 w-4 transition-all duration-500",
               intensityRatio <= 0.25
                 ? "text-emerald-500"
                 : intensityRatio <= 0.5
@@ -102,15 +129,17 @@ export const IntensityIndicator = ({ intensity, className = "" }: IntensityIndic
                     : intensityRatio < 1
                       ? "text-orange-500"
                       : "text-red-500",
+              "group-hover:animate-pulse",
             )}
             fill={intensityRatio >= 0.5 ? "currentColor" : "none"}
             fillOpacity={intensityRatio >= 0.5 ? 0.3 : 0}
           />
-          <span className="text-xs font-medium">
+          <span className="text-xs font-medium transition-all duration-500 group-hover:font-semibold">
             {current}/{max}
           </span>
         </div>
       </div>
+    </Tooltip>
   )
 }
 
