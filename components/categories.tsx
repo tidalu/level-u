@@ -20,7 +20,7 @@ interface Class {
   forWhom: string[]
   cost: string
   duration: string
-  intensity: string
+  intensity: number | string
   purpose: string
   effects: string[]
   comingSoon?: boolean
@@ -117,7 +117,7 @@ const Categories = () => {
                           <div className="flex flex-col gap-1 pt-1">
                             <div className="flex items-center justify-between">
                               <span className="text-xs font-medium text-gray-700 dark:text-gray-300">Intensity</span>
-                              <span className="text-xs text-gray-500 dark:text-gray-400">{item.intensity}</span>
+                              {/* <span className="text-xs text-gray-500 dark:text-gray-400">{item.intensity}</span> */}
                             </div>
                             <IntensityIndicator intensity={item.intensity} />
                           </div>
