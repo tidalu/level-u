@@ -61,7 +61,7 @@ function MerchStore() {
 
   const merchandise = [
     { name: merchData?.redeem?.cap, points: 250, images: ["/cap-1.jpg"] },
-    { name: merchData?.redeem?.tshirt, points: 400, images: ["/sweatshirt-1.jpg", "/sweatshirt-2.jpg", "/sweatshirt-3.png"] },
+    { name: merchData?.redeem?.tshirt, points: 400, images: ["/sweatshirt-1.jpg", "/sweatshirt-2.jpg", "/sweatshirt-3.webp"] },
     { name: merchData?.redeem?.hoodie, points: 500, images: ["/hoodie-1.jpg", "/hoodie-2.jpg"] },
   ];
 
