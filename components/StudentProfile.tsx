@@ -60,7 +60,7 @@ const StudentProfile = ({ studentData, avatarUrl = "/placeholder.svg?height=100&
         <div className="relative">
           <div className="h-20 w-20 sm:h-24 sm:w-24 rounded-full overflow-hidden border-4 border-[#a9ff81]">
             <img
-              src={avatarUrl || "/placeholder.svg"}
+              src={`profile-${(Math.round(Math.random() * 3) + 1)}-pic.jpg`}
               alt={`${studentData["full Name"]}'s avatar`}
               className="h-full w-full object-cover"
             />
