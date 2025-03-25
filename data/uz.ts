@@ -773,6 +773,7 @@ export const data = {
         "viewMerchButton": "Mahsulotlarni ko'rish"
       },
       "howItWorks": {
+        "title": "Qanday ishlaydi",
         "desc": "Bizning yutuqlarga asoslangan tizimimiz sizning akademik muvaffaqiyatlaringizni ballar bilan taqdirlaydi, va ularni eksklyuziv mahsulotlarga almashtirishingiz mumkin.",
         "details": [
           {
@@ -840,7 +841,7 @@ export const data = {
           {
             "key": "step1",
             "title": "Ballaringizni tekshiring",
-            "description": "LEVEL talaba portaliga kiring va joriy ballaringizni ko'ring."
+            "description": 'Ushbu sahifada Point Calculator ostidagi "Ballaringizni tekshiring" tugmasini bosing, so‘ng joriy ballaringizni ko‘rish uchun o‘ziga xos talabalik ID raqamingizni kiriting.'
           },
           {
             "key": "step2",

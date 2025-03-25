@@ -802,7 +802,7 @@ export const data = {
           {
             "key": "step1",
             "title": "Check Your Points",
-            "description": "Log in to your LEVEL student portal to view your current point balance."
+            "description": 'Click the "Check Your Points" button below the Point Calculator on this page, then enter your unique student ID to view your current point balance.'
           },
           {
             "key": "step2",
