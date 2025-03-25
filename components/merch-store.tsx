@@ -163,7 +163,7 @@ function MerchStore() {
               <div className="flex flex-col items-center space-y-3 sm:space-y-4 text-center">
                 <div className="space-y-2">
                   <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold  text-gray-900 dark:text-white">
-                    How It Works
+                    {merchData?.howItWorks?.title}
                   </h2>
                   <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-300 text-sm sm:text-base md:text-lg">
                     {merchData?.howItWorks?.desc}
