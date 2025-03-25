@@ -38,26 +38,8 @@ function MerchStore() {
   const [currentStudent, setCurrentStudent] = useState<ApiStudentData | null>(null);
 
   const pageData = useLocalizedData();
-  const merchData = pageData?.merch
-  console.log(pageData)
-
-  useEffect(() => {
-    const fetchStudentData = async () => {
-      try {
-        setIsLoading(true);
-        const response = await fetch(API_URL);
-        if (!response.ok) throw new Error(merchData?.errors?.fetchFailed || "Failed to fetch student data");
-        const data = await response.json();
-        setAllStudents(data);
-      } catch (error) {
-        console.error("Error fetching student data:", error);
-        setFetchError(merchData?.errors?.fetchFailed || "Failed to load student data. Please try again later.");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchStudentData();
-  }, [merchData?.errors]);
+  const merchData = pageData?.merch;
+  console.log(pageData);
 
   const merchandise = [
     { name: merchData?.redeem?.cap, points: 250, images: ["/cap-1.jpg"] },
@@ -86,7 +68,14 @@ function MerchStore() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const student = allStudents.find((s) => s.studentID.toLowerCase() === studentId.trim().toLowerCase());
+      // Fetch student data only when the student ID is submitted
+      const response = await fetch(API_URL);
+      if (!response.ok) throw new Error(merchData?.errors?.fetchFailed || "Failed to fetch student data");
+      const data = await response.json();
+      setAllStudents(data);
+
+      // Find the student with the matching ID
+      const student = data.find((s: ApiStudentData) => s.studentID.toLowerCase() === studentId.trim().toLowerCase());
       if (student) {
         setCurrentStudent(student);
         setIsStudentIdModalOpen(false);
@@ -96,7 +85,7 @@ function MerchStore() {
         setStudentIdError(true);
       }
     } catch (error) {
-      console.error("Error validating student ID:", error);
+      console.error("Error fetching student data:", error);
       setStudentIdError(true);
       setErrorMessage(merchData?.errors?.serverError || "Error connecting to the server. Please try again later.");
     } finally {
@@ -111,22 +100,7 @@ function MerchStore() {
     }
   }, [isPointsModalOpen]);
 
-  if (fetchError) {
-    return (
-      <div className="flex min-h-screen items-center justify-center bg-white dark:bg-[#020817]">
-        <p className="text-red-500 dark:text-red-400">{fetchError}</p>
-      </div>
-    );
-  }
-
-  if (isLoading && allStudents.length === 0) {
-    return (
-      <div className="flex min-h-screen items-center justify-center bg-white dark:bg-[#020817]">
-        <Loader2 className="h-8 w-8 animate-spin text-gray-500 dark:text-gray-400" />
-      </div>
-    );
-  }
-
+  // No loading state for the entire page since we fetch data only on submission
   return (
     <div className="flex min-h-screen flex-col bg-transparent dark:bg-transparent">
       <main className="flex-1 bg-white dark:bg-[#020817]">
@@ -136,7 +110,7 @@ function MerchStore() {
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center space-y-3 sm:space-y-4 text-center">
                 <div className="space-y-2">
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold  text-gray-900 dark:text-white">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white">
                     {merchData?.header?.title}
                   </h1>
                   <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-300 text-sm sm:text-base md:text-lg">
@@ -162,7 +136,7 @@ function MerchStore() {
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center space-y-3 sm:space-y-4 text-center">
                 <div className="space-y-2">
-                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold  text-gray-900 dark:text-white">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 dark:text-white">
                     {merchData?.howItWorks?.title}
                   </h2>
                   <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-300 text-sm sm:text-base md:text-lg">
@@ -195,7 +169,7 @@ function MerchStore() {
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center space-y-4 text-center mb-12">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold  sm:text-4xl md:text-5xl text-gray-900 dark:text-white">
+                  <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl text-gray-900 dark:text-white">
                     {merchData?.pointCalculator?.title}
                   </h2>
                   <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-300 md:text-xl">
@@ -257,7 +231,7 @@ function MerchStore() {
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center space-y-4 text-center mb-12">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold  sm:text-4xl md:text-5xl text-gray-900 dark:text-white">
+                  <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl text-gray-900 dark:text-white">
                     {merchData?.redeem?.title}
                   </h2>
                   <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-300 md:text-xl">
@@ -278,7 +252,7 @@ function MerchStore() {
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center space-y-4 text-center mb-12">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold  sm:text-4xl md:text-5xl text-gray-900 dark:text-white">
+                  <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl text-gray-900 dark:text-white">
                     {merchData?.howToRedeem?.title}
                   </h2>
                   <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-300 md:text-xl">
@@ -313,7 +287,7 @@ function MerchStore() {
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center space-y-4 text-center mb-12">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold  sm:text-4xl md:text-5xl text-gray-900 dark:text-white">
+                  <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl text-gray-900 dark:text-white">
                     {merchData?.whyChooseMerch?.title}
                   </h2>
                   <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-300 md:text-xl">
@@ -344,7 +318,7 @@ function MerchStore() {
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center space-y-4 text-center mb-12">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold  sm:text-4xl md:text-5xl text-gray-900 dark:text-white">
+                  <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl text-gray-900 dark:text-white">
                     {merchData?.faq?.title}
                   </h2>
                   <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-300 md:text-xl">
