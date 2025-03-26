@@ -409,4 +409,22 @@ button[data-state="active"].schedule {
     animation: glow 2s infinite;
   }
   
+  @keyframes pulse-border {
+    0% {
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+  }
+  
+  .animate-pulse-border {
+    animation: pulse-border 1s cubic-bezier(0.4, 0, 0.6, 1) 2;
+    border-radius: 0.75rem;
+    border: 2px solid rgba(16, 185, 129, 0.7);
+  }
+  
   
