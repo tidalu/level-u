@@ -1,5 +1,5 @@
-import { button } from "@nextui-org/theme";
 import { title } from "process";
+
 
 export const data = {
   about: {
@@ -128,7 +128,7 @@ export const data = {
     },
   ],
   classPage: {
-    viewButton: 'View',
+    viewButton: "View",
     homeContent: {
       title: 'Classes available in our centers',
       subtitle: 'Choose your favourite class and start learning with us!',
@@ -546,6 +546,47 @@ export const data = {
         'We appreciate your interest in our programs. You will be among the first to receive updates on our new study abroad opportunities.',
       stayTuned:
         'Stay tuned for more information. Follow us on our social media channels for the latest news and updates.',
+    },
+    submitting: 'Submitting your information...',
+    checks: {
+      expert: 'Expert Guidance',
+      support: "Visa Support",
+      university: 'University Placement',
+      scholarship: 'Scholarship Assistance',
+    }, 
+    securedData: 'Your data is secured and will not be shared with third parties.',
+    popularDestinations: {
+      title: 'Popular Destinations',
+      desc: "Explore educational opportunities in these top destinations for international students", 
+      discover: 'Discover educational opportunities in these top universities for international students',
+      learnMore: 'Learn more',
+    }, 
+    whyStudyAbroad: {
+      title : 'Why Study Abroad?',
+      desc: 'Studying abroad offers numerous advantages that can transform your life and career',
+      reasons: [
+        {
+          title: 'World-Class Education',
+          description: 'Access to top-ranked universities and cutting-edge programs',
+        },
+        {
+          title: 'Cultural Experience',
+          description: 'Immerse yourself in new cultures and expand your worldview',
+        },
+        {
+          title: 'Career Opportunities',
+          description: 'Enhance your resume and open doors to international careers',
+        },
+        {
+          title: 'Career Opportunities',
+          description: 'Build connections with students and professionals from around the world',
+        },
+      ],
+    },
+    readyToBegin: {
+      title: 'Ready to Begin Your International Journey?',
+      desc: 'Our expert advisors are here to guide you through every step of your study abroad journey.',
+      button: 'Join the Waitlist',
     },
   },
   popularActivities: {

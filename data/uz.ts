@@ -563,6 +563,53 @@ export const data = {
       stayTuned:
         "Qo‘shimcha ma’lumotlar uchun biz bilan qoling. So‘nggi yangiliklar va yangilanishlar uchun ijtimoiy tarmoqlarimizga obuna bo‘ling.",
     },
+    submitting: "Ma’lumotlaringiz yuborilmoqda...",
+    checks: {
+      expert: "Mutaxassis Yo‘nalishi",
+      support: "Viza Yordami",
+      university: "Universitetga Joylashtirish",
+      scholarship: "Grant Yordami",
+    },
+    securedData:
+      "Ma’lumotlaringiz xavfsiz va uchinchi tomon bilan baham ko‘rilmaydi.",
+    popularDestinations: {
+      title: "Mashhur Yo‘nalishlar",
+      desc: "Xalqaro talabalar uchun eng yaxshi ta’lim imkoniyatlarini o‘rganing",
+      discover:
+        "Xalqaro talabalar uchun eng yaxshi universitetlardagi ta’lim imkoniyatlarini kashf eting",
+      learnMore: "Batafsil ma’lumot",
+    },
+    whyStudyAbroad: {
+      title: "Nega Chet Elda O‘qish Kerak?",
+      desc: "Chet elda o‘qish hayotingiz va karyerangizni o‘zgartirishi mumkin bo‘lgan ko‘plab afzalliklarga ega",
+      reasons: [
+        {
+          title: "Dunyo Darajasidagi Ta’lim",
+          description:
+            "Eng yuqori reytingli universitetlar va ilg‘or dasturlarga kirish",
+        },
+        {
+          title: "Madaniy Tajriba",
+          description:
+            "Yangi madaniyatlarni o‘rganish va dunyoqarashingizni kengaytirish",
+        },
+        {
+          title: "Karyera Imkoniyatlari",
+          description:
+            "Rezyumeingizni yaxshilang va xalqaro karyera eshiklarini oching",
+        },
+        {
+          title: "Tarmoq Yaratish",
+          description:
+            "Butun dunyo bo‘ylab talabalar va mutaxassislar bilan aloqalar o‘rnating",
+        },
+      ],
+    },
+    readyToBegin: {
+      title: "Xalqaro Sayohatingizni Boshlashga Tayyormisiz?",
+      desc: "Bizning tajribali maslahatchilarimiz chet elda o‘qish jarayoningizning har bir bosqichida sizga yo‘l-yo‘riq ko‘rsatishga tayyor.",
+      button: "Navbat Ro‘yxatiga Qo‘shiling",
+    },
   },
 
   popularActivities: {
