@@ -152,7 +152,7 @@ const ContactPage = () => {
         />
       ))}
 
-      <div className="relative max-w-[1900px] mt-10mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+      <div className="relative max-w-[1900px] mt-10 mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -160,7 +160,7 @@ const ContactPage = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 mt-16"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-green-400 dark:from-green-400 dark:to-green-300 mb-4">
+          <h1 className="text-4xl py-3 md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-green-400 dark:from-green-400 dark:to-green-300 mb-4">
             {data?.footer?.contact?.title || "Get in Touch"}
           </h1>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
