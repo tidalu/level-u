@@ -148,7 +148,7 @@ function Careers() {
         {floatingElements.map((el, index) => (
           <motion.div
             key={index}
-            className={`absolute ${el.color} rounded-full backdrop-blur-xl z-0`}
+            className={`absolute ${el.color} rounded-full backdrop-blur-xl z-0 hidden sm:block`}
             style={{
               width: el.size,
               height: el.size,
@@ -194,7 +194,7 @@ function Careers() {
         ))}
 
         {/* 3D Perspective container */}
-        <div className="absolute inset-0 flex items-center justify-center perspective-[1000px]">
+        <div className="absolute inset-0 flex flex-col items-center  justify-center gap-4 perspective-[1000px] px-4 sm:px-6">
           <motion.div
             initial={{ rotateX: 20, rotateY: -20, scale: 0.8, opacity: 0 }}
             animate={{ rotateX: 0, rotateY: 0, scale: 1, opacity: 1 }}
@@ -217,7 +217,7 @@ function Careers() {
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-16 p-8 md:p-16"
+              className="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-16 p-4 sm:p-8 md:p-16"
             >
               {/* Left side: Text content */}
               <div className="flex-1 space-y-6">
@@ -230,7 +230,7 @@ function Careers() {
                   <span className="absolute -top-3 -left-6 text-5xl text-green-200 dark:text-green-800 font-bold opacity-50">
                     &quot;
                   </span>
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 dark:text-white relative z-10">
+                  <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-800 dark:text-white relative z-10">
                     <motion.span
                       className="bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-600 dark:from-green-400 dark:to-emerald-400"
                       initial={{ backgroundPosition: "0% 50%" }}
@@ -258,36 +258,29 @@ function Careers() {
                   {data?.careers?.desc}
                 </motion.p>
 
-                <motion.div
-                  variants={itemVariants}
-                  className="pt-4"
-                  whileInView={{ scale: [0.95, 1] }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
+                <motion.a
+                  href="#open-positions"
+                  className="group relative inline-flex items-center overflow-hidden rounded-full bg-green-600 px-6 py-3 sm:px-8 sm:py-4 text-white transition-all duration-300 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <motion.a
-                    href="#open-positions"
-                    className="group relative inline-flex items-center overflow-hidden rounded-full bg-green-600 px-8 py-4 text-white transition-all duration-300 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span className="relative z-10 font-medium text-lg">
-                      {data?.careers?.joinUs?.button}
-                    </span>
-                    <ChevronRight className="relative z-10 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-                    <motion.span
-                      className="absolute inset-0 -translate-x-full rounded-full bg-gradient-to-r from-green-500 to-emerald-500 transition-transform duration-500 ease-out group-hover:translate-x-0"
-                      initial={{ x: "-100%" }}
-                      whileHover={{ x: "0%" }}
-                      transition={{ duration: 0.5 }}
-                    ></motion.span>
-                  </motion.a>
-                </motion.div>
+                  <span className="relative z-10 font-medium text-base sm:text-lg">
+                    {data?.careers?.joinUs?.button}
+                  </span>
+                  <ChevronRight className="relative z-10 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                  <motion.span
+                    className="absolute inset-0 -translate-x-full rounded-full bg-gradient-to-r from-green-500 to-emerald-500 transition-transform duration-500 ease-out group-hover:translate-x-0"
+                    initial={{ x: "-100%" }}
+                    whileHover={{ x: "0%" }}
+                    transition={{ duration: 0.5 }}
+                  ></motion.span>
+                </motion.a>
               </div>
 
               {/* Right side: Visual element */}
               <motion.div
                 variants={itemVariants}
-                className="relative flex-1 h-[300px] md:h-[400px] w-full max-w-md"
+                className="relative flex-1 h-[200px] sm:h-[300px] md:h-[400px] w-full max-w-md mt-6 md:mt-0"
                 whileInView={{ scale: [0.9, 1], opacity: [0.8, 1] }}
                 transition={{ duration: 0.7, delay: 0.2 }}
               >
@@ -339,13 +332,13 @@ function Careers() {
                           repeat: Number.POSITIVE_INFINITY,
                           ease: "easeInOut",
                         }}
-                        className="relative w-40 h-40 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center shadow-lg"
+                        className="relative w-28 h-28 sm:w-40 sm:h-40 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center shadow-lg"
                       >
                         <motion.span
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 0.8, duration: 0.5 }}
-                          className="text-white text-5xl font-bold"
+                          className="text-white text-3xl sm:text-5xl font-bold"
                         >
                           {"Level"}
                         </motion.span>
@@ -393,45 +386,43 @@ function Careers() {
               </motion.div>
             </motion.div>
           </motion.div>
+                  {/* Scroll indicator */}
+        <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.5, duration: 1 }}
+              className="mt-40 flex flex-col items-center justify-self-end"
+            >
+              <motion.span
+                animate={{ opacity: [0.5, 1, 0.5] }}
+                transition={{
+                  duration: 2,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                }}
+                className="text-sm text-gray-500 dark:text-gray-400 mb-2"
+              >
+                {data?.careers?.scrollToExplore || "Scroll to Explore"}
+              </motion.span>
+              <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
+                className="w-6 h-10 border-2 border-gray-300 dark:border-gray-600 rounded-full flex justify-center pt-2"
+              >
+                <motion.div
+                  animate={{ y: [0, 12, 0], opacity: [1, 0.5, 1] }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "easeInOut",
+                  }}
+                  className="w-1.5 h-1.5 bg-green-500 rounded-full"
+                />
+              </motion.div>
+            </motion.div>
         </div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center"
-        >
-          <motion.span
-            animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{
-              duration: 2,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
-            }}
-            className="text-sm text-gray-500 dark:text-gray-400 mb-2"
-          >
-            {data?.careers?.scrollToExplore}
-          </motion.span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
-            className="w-6 h-10 border-2 border-gray-300 dark:border-gray-600 rounded-full flex justify-center pt-2"
-          >
-            <motion.div
-              animate={{
-                y: [0, 12, 0],
-                opacity: [1, 0.5, 1],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-              }}
-              className="w-1.5 h-1.5 bg-green-500 rounded-full"
-            />
-          </motion.div>
-        </motion.div>
+
       </div>
 
       {/* Horizontal Scroll Section */}
