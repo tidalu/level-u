@@ -755,6 +755,7 @@ export const data = {
     },
   },
   contactPage: {
+    viewButton: "Посмотреть",
     workInfo: {
       customerServiceDepartment: "Отдел обслуживания клиентов",
       manager: "Менеджер",

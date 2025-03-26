@@ -128,6 +128,7 @@ export const data = {
     },
   ],
   classPage: {
+    viewButton: 'View',
     homeContent: {
       title: 'Classes available in our centers',
       subtitle: 'Choose your favourite class and start learning with us!',
