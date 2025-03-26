@@ -1,5 +1,6 @@
 import { title } from "process";
 
+
 export const data = {
   about: {
     title: 'Who we are and what you get from our spaces',
@@ -7,6 +8,33 @@ export const data = {
     topText: 'About Us',
     motto: 'Divided by language, united by thoughts',
     why: 'Why you should study at LEVEL learning center',
+    subdesc: "Transforming education through innovation and excellence", 
+    ourStory: 'Our Story',
+    ourValues: 'Our Values',
+    excellence: 'Excellence',
+    innovation: 'Innovation',
+    integrity: 'Integrity',
+    community: 'Community',
+    whyChooseUs: 'Why Choose Us',
+    whyChooseUsDesc: 'Discover what makes our approach to education unique and effective',
+    reasonCards: {
+      whyAnswer: "Discover what makes our approach to education unique and effective", 
+      expertinstr: "Expert Instructors",
+      expertinstrDesc: "Our team consists of experienced and certified instructors who are dedicated to helping you achieve your academic goals.",  
+      modernCurriculum: "Modern Curriculum",
+      modernCurriculumDesc: "Our curriculum is designed to provide you with the latest knowledge and skills needed to succeed in today's competitive world.",
+      personalizedLearning: "Personalized Learning",
+      personalizedLearningDesc: "We offer personalized learning experiences to help you reach your full potential and achieve your academic goals.",
+      globalPerspective: "Global Perspective",
+      globalPerspectiveDesc: "Our programs are designed to provide you with a global perspective and prepare you for success in an interconnected world.",
+      community: "Community",
+      communityDesc: "Join our vibrant community of learners and educators and engage in meaningful discussions and collaborations.",
+      careerSupport: "Career Support",
+      careerSupportDesc: "We provide career support and guidance to help you achieve your professional goals and succeed in your chosen field.",
+
+    }, 
+    testimonials: 'What our students say',
+    testimonialsSubtitle: "Hear from our community of learners",
   },
   header: {
     header_logo1: 'Study',
@@ -100,6 +128,7 @@ export const data = {
     },
   ],
   classPage: {
+    viewButton: "View",
     homeContent: {
       title: 'Classes available in our centers',
       subtitle: 'Choose your favourite class and start learning with us!',
@@ -421,6 +450,17 @@ export const data = {
     },
   },
   footer: {
+    about: {
+      title: "About Level Education Center",
+      desc: "We are dedicated to providing high-quality educational services and helping students achieve their academic goals through personalized learning experiences.",
+      contact: "Contact Us",
+      whyChooseLevel: "Why Choosesdfsdf Level",
+      expertTeachers: "Expert Teachers",
+      modernCurriculum: "Modern Curriculum",
+      smallClassSizes: "Small Class Sizes",
+      internationalStandards: "International Standards",
+      learnAboutUs: "Learn more about us",
+    },
     information: {
       title: 'Information',
       links: [
@@ -485,6 +525,7 @@ export const data = {
     messagePlaceholder: 'Your message here...',
     button: 'Send a message',
     required: 'required fields',
+      
   },
   toastMessages: {
     pending: 'Sending your message...',
@@ -505,6 +546,47 @@ export const data = {
         'We appreciate your interest in our programs. You will be among the first to receive updates on our new study abroad opportunities.',
       stayTuned:
         'Stay tuned for more information. Follow us on our social media channels for the latest news and updates.',
+    },
+    submitting: 'Submitting your information...',
+    checks: {
+      expert: 'Expert Guidance',
+      support: "Visa Support",
+      university: 'University Placement',
+      scholarship: 'Scholarship Assistance',
+    }, 
+    securedData: 'Your data is secured and will not be shared with third parties.',
+    popularDestinations: {
+      title: 'Popular Destinations',
+      desc: "Explore educational opportunities in these top destinations for international students", 
+      discover: 'Discover educational opportunities in these top universities for international students',
+      learnMore: 'Learn more',
+    }, 
+    whyStudyAbroad: {
+      title : 'Why Study Abroad?',
+      desc: 'Studying abroad offers numerous advantages that can transform your life and career',
+      reasons: [
+        {
+          title: 'World-Class Education',
+          description: 'Access to top-ranked universities and cutting-edge programs',
+        },
+        {
+          title: 'Cultural Experience',
+          description: 'Immerse yourself in new cultures and expand your worldview',
+        },
+        {
+          title: 'Career Opportunities',
+          description: 'Enhance your resume and open doors to international careers',
+        },
+        {
+          title: 'Career Opportunities',
+          description: 'Build connections with students and professionals from around the world',
+        },
+      ],
+    },
+    readyToBegin: {
+      title: 'Ready to Begin Your International Journey?',
+      desc: 'Our expert advisors are here to guide you through every step of your study abroad journey.',
+      button: 'Join the Waitlist',
     },
   },
   popularActivities: {
@@ -538,6 +620,9 @@ export const data = {
   },
   careers: {
     header: 'Careers',
+    desc: "Build your career with us and help shape the future of education technology.",
+    join: "Join",
+    scrollToExplore: "Scroll to explore",
     imgGallery: [
       '/gallery/image-1.png',
       '/gallery/image-2.png',
@@ -592,31 +677,41 @@ export const data = {
       buttonHref: '/careers',
       bgImage: '/careers-img.webp',
     },
-    benefits: {
-      title: 'Benefits',
-      cards: [
-        {
-          icon: '/flexible_hours.svg',
-          image: '',
-          title: 'Flexible working hours',
-        },
-        {
-          icon: '/Career_development.svg',
-          image: '',
-          title: 'Career Development',
-        },
-        {
-          icon: '/collaborative_environment.svg',
-          image: '',
-          title: 'Collaborative environment',
-        },
-        {
-          icon: '/high-competetive-offers.svg',
-          image: '',
-          title: 'High competetive salary',
-        },
-      ],
+    joisUs:{
+      readytoJoin: 'Ready to Join Our Team?',
+      desc: "Take the first step towards an exciting career with us. Check out our open positions or send us your resume.",
+      button: 'View Open Positions',
     },
+    "benefits": {
+    "title": "Benefits",
+    "desc": "We believe in taking care of our team members and providing them with the tools they need to succeed.",
+    "cards": [
+      {
+        "icon": "/flexible_hours.svg",
+        "image": "",
+        "title": "Flexible working hours",
+        "desc": "You can choose your working hours to fit your personal schedule."
+      },
+      {
+        "icon": "/Career_development.svg",
+        "image": "",
+        "title": "Career Development",
+        "desc": "We provide opportunities to support your professional growth."
+      },
+      {
+        "icon": "/collaborative_environment.svg",
+        "image": "",
+        "title": "Collaborative environment",
+        "desc": "A supportive setting for teamwork and creative problem-solving."
+      },
+      {
+        "icon": "/high-competetive-offers.svg",
+        "image": "",
+        "title": "High competitive salary",
+        "desc": "We offer a rewarding and market-competitive income for your efforts."
+      }
+    ]
+  },
     recruitmentProcess: {
       title: 'Recruitment process',
       process: [
@@ -867,6 +962,18 @@ export const data = {
       workdays: 'Every day',
       start: 'from 8:00',
       end: 'to 20:00',
+      getInTouchMessage: "We'd love to hear from you. Fill out the form below or use our contact information.",
+      contactInformation: 'Contact Information',
+      workingHours: 'Working Hours',
+      location: 'Location',
+      viewOntheMap: 'View on the map',
+      followUs: 'Follow us on social media',
+      sendAMessage: 'Send a message',
+      visitUs: 'Visit us',
+      visitInfo: "Find us at our office location. We're always happy to meet in person.", 
+      getDirections: 'Get directions',
+      openNow: 'Open now',
+      closed: 'Closed now',
     },
     readMore: {
       title: 'read more',

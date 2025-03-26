@@ -168,7 +168,7 @@ const Categories = () => {
                           className="rounded-full transition-all duration-300 group-hover:shadow-md group-hover:translate-x-1 group-hover:bg-primary/90"
                           onClick={() => (window.location.href = `/classess/${item.href.toLowerCase()}`)}
                         >
-                          <span className="mr-1">View</span>
+                          <span className="mr-1">{data?.classPage?.viewButton}</span>
                           <ChevronRight size={16} className="transition-transform duration-300 group-hover:translate-x-[2px]" />
                         </Button>
                       )}
