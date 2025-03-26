@@ -122,15 +122,15 @@ const Hero = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 sm:p-8"
+          className="bg-white formAb  dark:bg-gray-800 rounded-2xl shadow-xl p-6 sm:p-8"
         >
           {!isSubmitted && !isLoading ? (
-            <div>
+            <div className="">
               <h2 className="text-2xl font-semibold text-green-800 dark:text-green-200 mb-6">
                 {data?.contactForm?.title || "Get Started Today"}
               </h2>
 
-              <form className="space-y-6" action="#" method="post" onSubmit={submitForm}>
+              <form className="space-y-6 " action="#" method="post" onSubmit={submitForm}>
                 <div className="relative">
                   <label
                     className="text-xs font-medium text-gray-700 dark:text-gray-300 absolute -top-2.5 left-4 bg-white dark:bg-gray-800 px-1"

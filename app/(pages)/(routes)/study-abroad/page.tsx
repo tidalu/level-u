@@ -4,12 +4,17 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { useLocalizedData } from "@/lib/useLocalizedData"
 import { GraduationCap, Globe, Award, Users, ArrowRight, MapPin } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
+import FormModal from "@/components/form-modal"
+import ModalForm from "@/components/modal-form"
 
 function StudyAbroad() {
   const data = useLocalizedData()
   const [activeDestination, setActiveDestination] = useState<number | null>(null)
   const [isPageLoaded, setIsPageLoaded] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const formRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     // Set page as loaded after a small delay for entrance animations
@@ -46,25 +51,36 @@ function StudyAbroad() {
     {
       icon: <GraduationCap className="h-8 w-8 text-green-600" />,
       title: data?.hero?.whyStudyAbroad?.reasons[0].title || "World-Class Education",
-      description:  data?.hero?.whyStudyAbroad?.reasons[0].description || "Access to top-ranked universities and cutting-edge programs",
+      description:
+        data?.hero?.whyStudyAbroad?.reasons[0].description ||
+        "Access to top-ranked universities and cutting-edge programs",
     },
     {
       icon: <Globe className="h-8 w-8 text-green-600" />,
-      title: data?.hero?.whyStudyAbroad?.reasons[1].title  || "Cultural Experience",
-      description: data?.hero?.whyStudyAbroad?.reasons[1].description || "Immerse yourself in new cultures and expand your worldview",
+      title: data?.hero?.whyStudyAbroad?.reasons[1].title || "Cultural Experience",
+      description:
+        data?.hero?.whyStudyAbroad?.reasons[1].description ||
+        "Immerse yourself in new cultures and expand your worldview",
     },
     {
       icon: <Award className="h-8 w-8 text-green-600" />,
-      title: data?.hero?.whyStudyAbroad?.reasons[2].title  || "Career Opportunities",
-      description: data?.hero?.whyStudyAbroad?.reasons[2].description || "Enhance your resume and open doors to international careers",
+      title: data?.hero?.whyStudyAbroad?.reasons[2].title || "Career Opportunities",
+      description:
+        data?.hero?.whyStudyAbroad?.reasons[2].description ||
+        "Enhance your resume and open doors to international careers",
     },
     {
       icon: <Users className="h-8 w-8 text-green-600" />,
       title: data?.hero?.whyStudyAbroad?.reasons[3].title || "Global Network",
       description:
-      data?.hero?.whyStudyAbroad?.reasons[3].description || "Build connections with students and professionals from around the world",
+        data?.hero?.whyStudyAbroad?.reasons[3].description ||
+        "Build connections with students and professionals from around the world",
     },
   ]
+
+  const openFormModal = () => {
+    setIsModalOpen(true)
+  }
 
   // Animation variants
   const containerVariants = {
@@ -116,6 +132,11 @@ function StudyAbroad() {
       animate="animate"
       variants={pageVariants}
     >
+      {/* Form Modal */}
+      <FormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <ModalForm />
+      </FormModal>
+
       {/* Floating elements for visual interest */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[1, 2, 3, 4, 5].map((_, index) => (
@@ -168,6 +189,7 @@ function StudyAbroad() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+        ref={formRef}
       >
         <Hero />
       </motion.div>
@@ -288,6 +310,7 @@ function StudyAbroad() {
                   <motion.button
                     whileHover={{ x: 5 }}
                     className="text-green-600 dark:text-green-400 text-sm font-medium flex items-center"
+                    onClick={openFormModal}
                   >
                     {data?.hero?.popularDestinations?.learnMore}
                     <ArrowRight className="ml-1 w-4 h-4" />
@@ -400,7 +423,6 @@ function StudyAbroad() {
                 >
                   {benefit.description}
                 </motion.p>
-                
               </motion.div>
             ))}
           </div>
@@ -457,6 +479,7 @@ function StudyAbroad() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-full inline-flex items-center transition-all duration-300 relative z-10"
+            onClick={openFormModal}
           >
             {data?.hero?.readyToBegin?.button}
             <motion.div
@@ -486,76 +509,6 @@ function StudyAbroad() {
           />
         </motion.div>
       </motion.section>
-
-      {/* Testimonial Section - Commented out in original code
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="max-w-screen-xl mx-auto px-4 py-16"
-      >
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-green-900 dark:text-green-50 mb-4">
-            {data?.testimonials?.title || "Student Success Stories"}
-          </h2>
-          <p className="text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
-            {data?.testimonials?.description ||
-              "Hear from students who have transformed their lives through our study abroad programs"}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4 }}
-            className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md"
-          >
-            <div className="flex items-center mb-4">
-              <div className="relative w-14 h-14 rounded-full overflow-hidden mr-4">
-                <Image src="/profile-1-pic.jpg" alt="Student" fill className="object-cover" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-green-800 dark:text-green-200">
-                  {data?.testimonials?.student1?.name || "Sarah Johnson"}
-                </h3>
-                <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                  {data?.testimonials?.student1?.program || "MBA, University of Toronto"}
-                </p>
-              </div>
-            </div>
-            <p className="text-neutral-600 dark:text-neutral-300 italic">
-              {data?.testimonials?.student1?.quote ||
-                '"Studying abroad was the best decision I ever made. The experience broadened my horizons and opened up incredible career opportunities."'}
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md"
-          >
-            <div className="flex items-center mb-4">
-              <div className="relative w-14 h-14 rounded-full overflow-hidden mr-4">
-                <Image src="/profile-3-pic.jpg" alt="Student" fill className="object-cover" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-green-800 dark:text-green-200">
-                  {data?.testimonials?.student2?.name || "David Chen"}
-                </h3>
-                <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                  {data?.testimonials?.student2?.program || "Computer Science, University of Melbourne"}
-                </p>
-              </div>
-            </div>
-            <p className="text-neutral-600 dark:text-neutral-300 italic">
-              {data?.testimonials?.student2?.quote ||
-                '"The support I received throughout my application process was exceptional. Now I\'m working at my dream tech company thanks to my international degree."'}
-            </p>
-          </motion.div>
-        </div>
-      </motion.section> */}
     </motion.div>
   )
 }
