@@ -5,6 +5,32 @@ export const data = {
     topText: 'Biz haqimizda',
     motto: 'Divided by language, united by thoughts',
     why: 'Nima uchun LEVEL oʻquv markazida o‘qish kerak',
+    "subdesc": "Ta'limni innovatsiya va mukammallik orqali o'zgartirish",
+    "ourStory": "Bizning Hikoyamiz",
+    "ourValues": "Bizning Qadriyatlarimiz",
+    "excellence": "Mukammallik",
+    "innovation": "Innovatsiya",
+    "integrity": "Halollik",
+    "community": "Jamoa",
+    "whyChooseUs": "Nima Uchun Bizni Tanlashingiz Kerak",
+    "whyChooseUsDesc": "Bizning ta'limga yondashuvimizni noyob va samarali qiladigan jihatlarni kashf eting",
+    "reasonCards": {
+      "whyAnswer": "Bizning ta'limga yondashuvimizni noyob va samarali qiladigan jihatlarni kashf eting", 
+      "expertinstr": "Tajribali O'qituvchilar",
+      "expertinstrDesc": "Bizning jamoamiz tajribali va sertifikatlangan o'qituvchilardan iborat bo'lib, sizning akademik maqsadlaringizga erishishingizga yordam berishga bag'ishlangan.",  
+      "modernCurriculum": "Zamonaviy O'quv Dasturi",
+      "modernCurriculumDesc": "Bizning o'quv dasturimiz sizni bugungi raqobatbardosh dunyoda muvaffaqiyatga erishish uchun zarur bo'lgan so'nggi bilim va ko'nikmalar bilan ta'minlash uchun ishlab chiqilgan.",
+      "personalizedLearning": "Shaxsiylashtirilgan O'rganish",
+      "personalizedLearningDesc": "Biz sizning to'liq salohiyatingizga erishishingiz va akademik maqsadlaringizga yetishingizga yordam berish uchun shaxsiylashtirilgan ta’lim tajribalarini taklif qilamiz.",
+      "globalPerspective": "Global Nuqtai Nazar",
+      "globalPerspectiveDesc": "Bizning dasturlarimiz sizga global nuqtai nazarni taqdim etish va o'zaro bog'langan dunyoda muvaffaqiyatga tayyorlash uchun ishlab chiqilgan.",
+      "community": "Jamoa",
+      "communityDesc": "Bizning jonli ta'lim oluvchilar va o'qituvchilar jamoamizga qo'shiling va mazmunli muhokamalar va hamkorliklarga kirishing.",
+      "careerSupport": "Kasbiy Qo'llab-quvvatlash",
+      "careerSupportDesc": "Biz sizning kasbiy maqsadlaringizga erishishingiz va tanlangan sohangizda muvaffaqiyat qozonishingiz uchun kasbiy yo'l-yo'riq va qo'llab-quvvatlash xizmatlarini taqdim etamiz."
+    }, 
+    "testimonials": "Talabalarimiz Nima Deyishadi",
+    "testimonialsSubtitle": "Bizning ta'lim oluvchilar jamoamiz fikrlarini tinglang"
   },
 
   header: {
