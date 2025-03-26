@@ -1,3 +1,4 @@
+import { button } from "@nextui-org/theme";
 import { title } from "process";
 
 export const data = {
@@ -549,6 +550,9 @@ export const data = {
   },
   careers: {
     header: 'Careers',
+    desc: "Build your career with us and help shape the future of education technology.",
+    join: "Join",
+    scrollToExplore: "Scroll to explore",
     imgGallery: [
       '/gallery/image-1.png',
       '/gallery/image-2.png',
@@ -603,31 +607,41 @@ export const data = {
       buttonHref: '/careers',
       bgImage: '/careers-img.webp',
     },
-    benefits: {
-      title: 'Benefits',
-      cards: [
-        {
-          icon: '/flexible_hours.svg',
-          image: '',
-          title: 'Flexible working hours',
-        },
-        {
-          icon: '/Career_development.svg',
-          image: '',
-          title: 'Career Development',
-        },
-        {
-          icon: '/collaborative_environment.svg',
-          image: '',
-          title: 'Collaborative environment',
-        },
-        {
-          icon: '/high-competetive-offers.svg',
-          image: '',
-          title: 'High competetive salary',
-        },
-      ],
+    joisUs:{
+      readytoJoin: 'Ready to Join Our Team?',
+      desc: "Take the first step towards an exciting career with us. Check out our open positions or send us your resume.",
+      button: 'View Open Positions',
     },
+    "benefits": {
+    "title": "Benefits",
+    "desc": "We believe in taking care of our team members and providing them with the tools they need to succeed.",
+    "cards": [
+      {
+        "icon": "/flexible_hours.svg",
+        "image": "",
+        "title": "Flexible working hours",
+        "desc": "You can choose your working hours to fit your personal schedule."
+      },
+      {
+        "icon": "/Career_development.svg",
+        "image": "",
+        "title": "Career Development",
+        "desc": "We provide opportunities to support your professional growth."
+      },
+      {
+        "icon": "/collaborative_environment.svg",
+        "image": "",
+        "title": "Collaborative environment",
+        "desc": "A supportive setting for teamwork and creative problem-solving."
+      },
+      {
+        "icon": "/high-competetive-offers.svg",
+        "image": "",
+        "title": "High competitive salary",
+        "desc": "We offer a rewarding and market-competitive income for your efforts."
+      }
+    ]
+  },
     recruitmentProcess: {
       title: 'Recruitment process',
       process: [

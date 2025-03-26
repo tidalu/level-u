@@ -562,6 +562,9 @@ export const data = {
   },
 
   careers: {
+    "desc": "Biz bilan karyerangizni quring va ta'lim texnologiyalari kelajagini shakllantirishga yordam bering.",
+    "join": "Qo'shilish",
+    "scrollToExplore": "Kashf qilish uchun pastga suring",
     header: 'Karyera',
     imgGallery: [
       '/gallery/image-1.png',
@@ -619,31 +622,41 @@ export const data = {
       buttonHref: '/careers',
       bgImage: '/careers-img.webp',
     },
-    benefits: {
-      title: 'Imtiyozlar',
-      cards: [
-        {
-          icon: '/flexible_hours.svg',
-          image: '',
-          title: 'Moslashuvchan ish soatlari',
-        },
-        {
-          icon: '/Career_development.svg',
-          image: '',
-          title: 'Karyerani rivojlantirish',
-        },
-        {
-          icon: '/collaborative_environment.svg',
-          image: '',
-          title: 'Hamkorlik muhiti',
-        },
-        {
-          icon: '/high-competetive-offers.svg',
-          image: '',
-          title: 'Yuqori raqobatbardosh maosh',
-        },
-      ],
-    },
+    "joinUs": {
+    "readytoJoin": "Jamoamizga qo'shilishga tayyormisiz?",
+    "desc": "Biz bilan qiziqarli karyeraga birinchi qadamni qo'ying. Ochilgan lavozimlarni ko'ring yoki rezyumeni bizga yuboring.",
+    "button": "Ochilgan lavozimlarni ko'rish"
+  },
+    "benefits": {
+    "title": "Imtiyozlar",
+    "desc": "Biz jamoa a'zolarimizga g'amxo'rlik qilishga va ularga muvaffaqiyatga erishish uchun zarur vositalarni taqdim etishga ishonamiz.",
+    "cards": [
+      {
+        "icon": "/flexible_hours.svg",
+        "image": "",
+        "title": "Moslashuvchan ish soatlari",
+        "desc": "Siz o'zingizning jadvalingizga moslab ish vaqtingizni tanlashingiz mumkin."
+      },
+      {
+        "icon": "/Career_development.svg",
+        "image": "",
+        "title": "Karyerani rivojlantirish",
+        "desc": "Biz sizning professional rivojlanishingiz uchun imkoniyatlar yaratamiz."
+      },
+      {
+        "icon": "/collaborative_environment.svg",
+        "image": "",
+        "title": "Hamkorlik muhiti",
+        "desc": "Jamoaviy ish va yangi g'oyalar almashinuvi uchun qulay sharoitlar."
+      },
+      {
+        "icon": "/high-competetive-offers.svg",
+        "image": "",
+        "title": "Yuqori raqobatbardosh maosh",
+        "desc": "Mehnatingiz uchun munosib va bozorda raqobatbardosh daromad taklif etamiz."
+      }
+    ]
+  },
     recruitmentProcess: {
       title: 'Ishga qabul qilish jarayoni',
       process: [

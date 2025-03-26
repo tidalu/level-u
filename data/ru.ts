@@ -559,6 +559,9 @@ export const data = {
 
   careers: {
     header: 'Карьера',
+    "desc": "Стройте свою карьеру с нами и помогайте формировать будущее образовательных технологий.",
+    "join": "Присоединиться",
+    "scrollToExplore": "Прокрутите, чтобы узнать больше",
     imgGallery: [
       '/gallery/image-1.png',
       '/gallery/image-2.png',
@@ -613,31 +616,41 @@ export const data = {
       buttonHref: '/careers',
       bgImage: '/careers-img.webp',
     },
-    benefits: {
-      title: 'Преимущества',
-      cards: [
-        {
-          icon: '/flexible_hours.svg',
-          image: '',
-          title: 'Гибкий график работы',
-        },
-        {
-          icon: '/Career_development.svg',
-          image: '',
-          title: 'Карьерный рост',
-        },
-        {
-          icon: '/collaborative_environment.svg',
-          image: '',
-          title: 'Сотрудничество в коллективе',
-        },
-        {
-          icon: '/high-competetive-offers.svg',
-          image: '',
-          title: 'Высокая конкурентоспособная зарплата',
-        },
-      ],
-    },
+    "joinUs": {
+    "readytoJoin": "Готовы присоединиться к нашей команде?",
+    "desc": "Сделайте первый шаг к захватывающей карьере с нами. Ознакомьтесь с открытыми вакансиями или отправьте нам свое резюме.",
+    "button": "Посмотреть открытые вакансии"
+  },
+    "benefits": {
+    "title": "Преимущества",
+    "desc": "Мы верим в заботу о членах нашей команды и предоставление им инструментов, необходимых для успеха.",
+    "cards": [
+      {
+        "icon": "/flexible_hours.svg",
+        "image": "",
+        "title": "Гибкий график работы",
+        "desc": "Вы можете выбрать рабочее время, соответствующее вашему расписанию."
+      },
+      {
+        "icon": "/Career_development.svg",
+        "image": "",
+        "title": "Карьерный рост",
+        "desc": "Мы предоставляем возможности для вашего профессионального развития."
+      },
+      {
+        "icon": "/collaborative_environment.svg",
+        "image": "",
+        "title": "Сотрудничество в коллективе",
+        "desc": "Комфортная среда для совместной работы и обмена идеями."
+      },
+      {
+        "icon": "/high-competetive-offers.svg",
+        "image": "",
+        "title": "Высокая конкурентоспособная зарплата",
+        "desc": "Мы предлагаем достойную и конкурентоспособную зарплату за ваш труд."
+      }
+    ]
+  },
     recruitmentProcess: {
       title: 'Процесс набора персонала',
       process: [
