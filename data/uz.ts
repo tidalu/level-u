@@ -428,6 +428,17 @@ export const data = {
   },
 
   footer: {
+    about: {
+      "title": "Level Ta'lim Markazi Haqida",
+      "desc": "Biz yuqori sifatli ta'lim xizmatlarini taqdim etishga va talabalarga shaxsiy o'quv tajribalari orqali akademik maqsadlariga erishishda yordam berishga sodiqmiz.",
+      "contact": "Biz bilan Bog'laning",
+      "whyChooseLevel": "Nima uchun Levelni Tanlash Kerak",
+      "expertTeachers": "Mutaxassis O'qituvchilar",
+      "modernCurriculum": "Zamonaviy O'quv Dasturi",
+      "smallClassSizes": "Kichik Sinf Hajmlari",
+      "internationalStandards": "Xalqaro Standartlar",
+      "learnAboutUs": "Biz haqimizda ko'proq bilib oling"
+    },
     information: {
       title: "Ma'lumot",
       links: [

@@ -421,6 +421,17 @@ export const data = {
     },
   },
   footer: {
+    about: {
+      title: "About Level Education Center",
+      desc: "We are dedicated to providing high-quality educational services and helping students achieve their academic goals through personalized learning experiences.",
+      contact: "Contact Us",
+      whyChooseLevel: "Why Choosesdfsdf Level",
+      expertTeachers: "Expert Teachers",
+      modernCurriculum: "Modern Curriculum",
+      smallClassSizes: "Small Class Sizes",
+      internationalStandards: "International Standards",
+      learnAboutUs: "Learn more about us",
+    },
     information: {
       title: 'Information',
       links: [
