@@ -254,8 +254,8 @@ const MapPinMine = ({ item }: MapPinProps) => {
                         <div className={`w-2 h-2 rounded-full animate-pulse ${isOpenNow() ? 'bg-green-500' : 'bg-red-500'}`} />
                         <span className="text-xs font-medium text-gray-800 dark:text-gray-200">
                           {isOpenNow() 
-                            ? (data?.schedule?.openNow || "Open Now") 
-                            : (data?.schedule?.closedNow || "Closed Now")}
+                            ? (data?.contactPage?.workInfo?.openNow || "Open Now") 
+                            : (data?.contactPage?.workInfo?.closed || "Closed Now")}
                         </span>
                       </div>
                     </motion.div>
@@ -271,7 +271,7 @@ const MapPinMine = ({ item }: MapPinProps) => {
                         <div className="relative bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-100 dark:border-gray-700">
                           <h4 className="text-sm font-medium text-gray-800 dark:text-gray-200 mb-3 flex items-center gap-2">
                             <Navigation className="h-4 w-4 text-green-500" />
-                            {data?.schedule?.getDirectionsLabel ||
+                            {data?.contactPage?.workInfo?.getDirections ||
                               "Get directions"}
                           </h4>
 
