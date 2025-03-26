@@ -1,79 +1,119 @@
 "use client"
 
-import { Construction, ChevronDown, ChevronUp } from "lucide-react"
+import { Construction, ChevronLeft, ChevronRight, AlertTriangle } from "lucide-react"
 import { type ReactNode, useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 
 interface UnderConstructionWrapperProps {
   children: ReactNode
 }
 
 export default function UnderConstructionWrapper({ children }: UnderConstructionWrapperProps) {
-  const [isExpanded, setIsExpanded] = useState(true)
+  const [isExpanded, setIsExpanded] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
 
   // Animation entrance effect
   useEffect(() => {
-    setIsVisible(true)
+    // Delay the appearance slightly for a better effect
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 500)
+
+    return () => clearTimeout(timer)
   }, [])
 
   return (
     <div className="relative">
-      <div
-        className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-in-out ${
-          isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-        } ${isExpanded ? "w-auto" : "w-auto rounded-full"}`}
-        style={{ maxWidth: "90%" }}
-      >
-        <div
-          className={`
-          flex items-center bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 
-          shadow-lg rounded-b-lg overflow-hidden transition-all duration-300
-          ${isExpanded ? "px-6 py-2" : "px-4 py-1 rounded-full"}
-        `}
-        >
-          <div className="flex items-center">
-            <div className="relative mr-3">
-              <Construction className={`h-5 w-5 text-white ${isExpanded ? "animate-bounce" : ""}`} />
-              <span className="absolute -top-1 -right-1 h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
+      <AnimatePresence>
+        {isVisible && (
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: 100, opacity: 0 }}
+            transition={{ type: "spring", bounce: 0.4, duration: 0.6 }}
+            className="fixed right-0 top-1/3 z-50"
+          >
+            <div className="flex items-start">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setIsExpanded(!isExpanded)}
+                className={`
+                  flex items-center bg-gradient-to-r from-orange-500 to-amber-500
+                  shadow-lg rounded-l-lg overflow-hidden transition-all duration-300
+                  ${isExpanded ? "px-3 py-2" : "px-2 py-2"}
+                `}
+              >
+                <motion.div
+                  animate={{ rotate: isExpanded ? 0 : [0, -10, 0, 10, 0] }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: isExpanded ? 0 : Number.POSITIVE_INFINITY,
+                    repeatType: "loop",
+                    ease: "easeInOut",
+                    repeatDelay: 1,
+                  }}
+                  className="relative"
+                >
+                  <Construction className="h-5 w-5 text-white" />
+                  <span className="absolute -top-1 -right-1 h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
+                </motion.div>
+                <motion.div
+                  animate={{ rotate: [0, 0, 0, -5, 0, 5, 0] }}
+                  transition={{
+                    duration: 2,
+                    repeat: Number.POSITIVE_INFINITY,
+                    repeatType: "loop",
+                    ease: "easeInOut",
+                    times: [0, 0.3, 0.4, 0.5, 0.6, 0.7, 1],
+                    repeatDelay: 1,
+                  }}
+                >
+                  {isExpanded ? (
+                    <ChevronRight className="h-5 w-5 text-white ml-1" />
+                  ) : (
+                    <ChevronLeft className="h-5 w-5 text-white ml-1" />
+                  )}
+                </motion.div>
+              </motion.button>
+
+              <AnimatePresence>
+                {isExpanded && (
+                  <motion.div
+                    initial={{ width: 0, opacity: 0 }}
+                    animate={{ width: "auto", opacity: 1 }}
+                    exit={{ width: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="bg-gradient-to-r from-amber-500 to-yellow-400 py-2 pr-4 rounded-tr-lg rounded-br-lg shadow-lg"
+                  >
+                    <div className="flex items-center">
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.2 }}
+                        className="flex items-center"
+                      >
+                        <AlertTriangle className="h-5 w-5 text-white mx-2" />
+                        <p className="text-white font-medium text-sm whitespace-nowrap">Under Construction</p>
+                      </motion.div>
+                    </div>
+                    <motion.p
+                      initial={{ opacity: 0, y: 5 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3 }}
+                      className="text-white/90 text-xs mt-1 p-3 max-w-[200px]"
+                    >
+                      This page is currently being built. Some features may not work as expected.
+                    </motion.p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-            {isExpanded && (
-              <div className="text-white font-medium text-sm max-w-xs md:max-w-md overflow-hidden transition-all duration-300">
-                <div className="flex items-center">
-                  <span className="animate-marquee whitespace-nowrap">
-                    🚧 This page is currently under construction. Some features may not work as expected. 🚧
-                  </span>
-                </div>
-              </div>
-            )}
-
-            <button
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="ml-3 p-1 rounded-full hover:bg-white/20 transition-colors"
-              aria-label={isExpanded ? "Collapse warning" : "Expand warning"}
-            >
-              {isExpanded ? (
-                <ChevronUp className="h-4 w-4 text-white" />
-              ) : (
-                <ChevronDown className="h-4 w-4 text-white" />
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div className={`${isExpanded ? "pt-12" : "pt-10"} transition-all duration-300`}>{children}</div>
-
-      <style jsx global>{`
-        @keyframes marquee {
-          0% { transform: translateX(100%); }
-          100% { transform: translateX(-100%); }
-        }
-        .animate-marquee {
-          display: inline-block;
-          animation: marquee 15s linear infinite;
-        }
-      `}</style>
+      {children}
     </div>
   )
 }
