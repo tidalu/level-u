@@ -524,6 +524,7 @@ export const data = {
     messagePlaceholder: 'Your message here...',
     button: 'Send a message',
     required: 'required fields',
+      
   },
   toastMessages: {
     pending: 'Sending your message...',
@@ -919,6 +920,18 @@ export const data = {
       workdays: 'Every day',
       start: 'from 8:00',
       end: 'to 20:00',
+      getInTouchMessage: "We'd love to hear from you. Fill out the form below or use our contact information.",
+      contactInformation: 'Contact Information',
+      workingHours: 'Working Hours',
+      location: 'Location',
+      viewOntheMap: 'View on the map',
+      followUs: 'Follow us on social media',
+      sendAMessage: 'Send a message',
+      visitUs: 'Visit us',
+      visitInfo: "Find us at our office location. We're always happy to meet in person.", 
+      getDirections: 'Get directions',
+      openNow: 'Open now',
+      closed: 'Closed now',
     },
     readMore: {
       title: 'read more',
