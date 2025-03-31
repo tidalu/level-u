@@ -3,6 +3,7 @@
 import { Construction, ChevronLeft, ChevronRight, AlertTriangle } from "lucide-react"
 import { type ReactNode, useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { useLanguage } from "./LanguageContext"
 
 interface UnderConstructionWrapperProps {
   children: ReactNode
@@ -11,16 +12,29 @@ interface UnderConstructionWrapperProps {
 export default function UnderConstructionWrapper({ children }: UnderConstructionWrapperProps) {
   const [isExpanded, setIsExpanded] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
+  const { language } = useLanguage() // Get the current language from the context
 
   // Animation entrance effect
   useEffect(() => {
-    // Delay the appearance slightly for a better effect
     const timer = setTimeout(() => {
       setIsVisible(true)
     }, 500)
-
     return () => clearTimeout(timer)
   }, [])
+
+  // Static language-specific text based on language
+  const title =
+    language === "uz"
+      ? "Qurilish Jarayonida"
+      : language === "ru"
+        ? "В разработке"
+        : "Under Construction"
+  const message =
+    language === "uz"
+      ? "Ushbu sahifa hozirda qurilmoqda. Ba'zi funksiyalar kutilganidek ishlamasligi mumkin."
+      : language === "ru"
+        ? "Эта страница находится в стадии разработки. Некоторые функции могут не работать как ожидается."
+        : "This page is currently being built. Some features may not work as expected."
 
   return (
     <div className="relative">
@@ -94,7 +108,7 @@ export default function UnderConstructionWrapper({ children }: UnderConstruction
                         className="flex items-center"
                       >
                         <AlertTriangle className="h-5 w-5 text-white mx-2" />
-                        <p className="text-white font-medium text-sm whitespace-nowrap">Under Construction</p>
+                        <p className="text-white font-medium text-sm whitespace-nowrap">{title}</p>
                       </motion.div>
                     </div>
                     <motion.p
@@ -103,7 +117,7 @@ export default function UnderConstructionWrapper({ children }: UnderConstruction
                       transition={{ delay: 0.3 }}
                       className="text-white/90 text-xs mt-1 p-3 max-w-[200px]"
                     >
-                      This page is currently being built. Some features may not work as expected.
+                      {message}
                     </motion.p>
                   </motion.div>
                 )}
@@ -117,4 +131,3 @@ export default function UnderConstructionWrapper({ children }: UnderConstruction
     </div>
   )
 }
-

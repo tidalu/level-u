@@ -222,15 +222,7 @@ const Footer = () => {
           className="flex flex-col gap-5 mt-12 md:flex-row justify-between items-center px-6 md:px-3 border-t border-green-900/50 pt-6"
         >
           <motion.div variants={itemVariants} className="text-sm text-gray-400 flex items-center">
-            © Copyright {date.getFullYear()} {data?.footer?.copyright.name} | Made with
-            <motion.div
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="mx-1 text-red-500"
-            >
-              <Heart className="h-4 w-4 inline" />
-            </motion.div>
-            <Link href={"https://pl.linkedin.com/in/ulugbek-norbutaev"} target="_blank">by Ulugbek</Link>
+            © Copyright {date.getFullYear()} {data?.footer?.copyright.name} 
           </motion.div>
 
           <motion.div variants={itemVariants} className="flex items-center gap-4">

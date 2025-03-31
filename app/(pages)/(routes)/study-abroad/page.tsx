@@ -45,6 +45,28 @@ function StudyAbroad() {
       flag: "🇦🇺",
       image: "/australia-flag.jpg",
     },
+    {
+      name: "European Union",
+      flag: "🇪🇺",
+      image: "/eu-flag.jpg",
+    }, 
+    {
+      name: "China",
+      flag: "🇨🇳",
+      image: "/china-flag.jpg",
+    }, 
+    
+    {
+      name: "Japan",
+      flag: "🇯🇵",
+      image: "/japan-flag.png",
+    },
+    {
+      name: "South Korea",
+      flag: "🇰🇷",
+      image: "/south-korea-flag.png",
+    },
+    
   ]
 
   const benefits = [

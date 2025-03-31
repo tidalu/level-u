@@ -69,10 +69,11 @@ export const data = {
   },
 
   landingAdd: {
-    mainTitle: ['Registration is', 'open now'],
+    mainTitle: ['Registration is', 'open now', "Level up", "Your style!"],
     subTitle:
       'SIGN UP IN TIME TO THE GROUP AND GET THE OPPORTUNITY TO STUDY ABROAD',
     buttonText: 'Fill the form',
+    merchButton: "View Merch",
     topPic: ['NEW', 'STUDY', 'YEAR'],
     bottomPic: ['NEW', 'TARGETS'],
   },
@@ -454,7 +455,7 @@ export const data = {
       title: "About Level Education Center",
       desc: "We are dedicated to providing high-quality educational services and helping students achieve their academic goals through personalized learning experiences.",
       contact: "Contact Us",
-      whyChooseLevel: "Why Choosesdfsdf Level",
+      whyChooseLevel: "Why Choose Level",
       expertTeachers: "Expert Teachers",
       modernCurriculum: "Modern Curriculum",
       smallClassSizes: "Small Class Sizes",
