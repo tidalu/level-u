@@ -1,254 +1,282 @@
-'use client';
+"use client"
 
-import ScrollAnimateWrapper from '@/components/ScrollAnimateWrapper';
-import { Button } from '@/components/ui/button';
-import { useLocalizedData } from '@/lib/useLocalizedData';
-import { cn } from '@/lib/utils';
-import { X } from 'lucide-react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useLanguage } from '@/components/LanguageContext';
+import ScrollAnimateWrapper from "@/components/ScrollAnimateWrapper"
+import { Button } from "@/components/ui/button"
+import { useLocalizedData } from "@/lib/useLocalizedData"
+import { cn } from "@/lib/utils"
+import { X, Play, Users, Clock, Calendar, Target, Sparkles, Info } from "lucide-react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { useLanguage } from "@/components/LanguageContext"
+import { useEffect, useState } from "react"
 
-import React, { useEffect, useState } from 'react';
 const ClassesDataPage = () => {
-  const pathName = usePathname();
-  const [showModal, setShowModal] = useState(false);
-  const [videoUrl, setVideoUrl] = useState('');
-  const data = useLocalizedData();
-  const { language, switchLanguage } = useLanguage();
+  const pathName = usePathname()
+  const [showModal, setShowModal] = useState(false)
+  const [videoUrl, setVideoUrl] = useState("")
+  const data = useLocalizedData()
+  const { language, switchLanguage } = useLanguage()
 
   useEffect(() => {
-    switchLanguage(language);
-  }, [language]);
+    switchLanguage(language)
+  }, [language])
 
   const handleModal = (url: string) => {
-    setVideoUrl(url);
-    setShowModal(true);
-  };
+    setVideoUrl(url)
+    setShowModal(true)
+  }
 
-  const str = decodeURIComponent(pathName.split('/')[2]).toLowerCase();
-  const result = str.replace(/%20/g, ' ');
+  const str = decodeURIComponent(pathName.split("/")[2]).toLowerCase()
+  const result = str.replace(/%20/g, " ")
 
   const getClassByName = (className: string) => {
     if (!data?.classPage?.classList) {
-      return null;
+      return null
     }
-  
+
     for (const category of data.classPage.classList) {
       const match = category.list.find(
         (item: {
-          href: string;
-          name: string;
-          description: string;
-          intensity: number;
-          cost: string;
-          forWhom: string[];
-          duration: string;
-          purpose: string;
-          effects: string[];
-          video: string;
-          lengthOfClasses: string;
-          frequency: string;
-          materials: string;
-          group?: string;
-          ageLimit?: string;
-        }) => item.href.toLocaleLowerCase() === className.toLocaleLowerCase()
-      );
+          href: string
+          name: string
+          description: string
+          intensity: number
+          cost: string
+          forWhom: string[]
+          duration: string
+          purpose: string
+          effects: string[]
+          video: string
+          lengthOfClasses: string
+          frequency: string
+          materials: string
+          group?: string
+          ageLimit?: string
+        }) => item.href.toLocaleLowerCase() === className.toLocaleLowerCase(),
+      )
       if (match) {
-        return { match, title: category.title };
+        return { match, title: category.title }
       }
     }
-    return null;
-  };
-
-  const classInfo = getClassByName(result);
-
-  if (!getClassByName) {
-    return <div>Class not found</div>;
+    return null
   }
 
-  const intensityValue = classInfo?.match.intensity || 0.25;
+  const classInfo = getClassByName(result)
+
+  if (!getClassByName) {
+    return <div>Class not found</div>
+  }
+
+  const intensityValue = classInfo?.match.intensity || 0.25
+
   return (
-    <div className=" h-full max-w-[1900px] mx-auto">
+    <div className="min-h-screen max-w-[1900px] mx-auto mt-16 ">
       <ScrollAnimateWrapper>
-        <div className="pt-32 pb-12 px-3 lg:px-16 mb-20">
-          <div className=" grid grid-cols-12 gap-5">
-            <div className=" col-span-12 lg:col-span-5">
-              <div className="bg-[#b8df4b1a] reveal dark:bg-[#86868517] rounded-2xl relative p-4 md:p-10">
-                <div className="mb-3 md:mb-0 md:absolute top-4 left-4 md:top-6 md:left-auto md:right-6 flex gap-1"></div>
-                <h3 className=" text-sm text-gray-500 dark:text-gray-400 font-semibold">
-                  {classInfo?.title}
-                </h3>
+        {/* Hero Section */}
+        <div className="relative pt-24 pb-16 px-4 lg:px-16 bg-gradient-to-b from-[#6cce4010] to-transparent dark:from-[#6cce4008] dark:to-transparent">
+          <div className="max-w-4xl mx-auto text-center reveal">
+            <span className="inline-block px-4 py-1.5 text-sm font-medium bg-[#6cce4020] text-[#6cce40] dark:bg-[#6cce4030] rounded-full mb-4">
+              {classInfo?.title}
+            </span>
+            <h1 className="text-3xl md:text-5xl font-bold mb-6">{classInfo?.match.name}</h1>
+            <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg mb-8 max-w-2xl mx-auto">
+              {classInfo?.match.description}
+            </p>
 
-                <h2 className=" text-xl font-bold">{classInfo?.match.name}</h2>
-
-                <p className=" text-gray-500 dark:text-gray-400 mt-5 leading-6 text-[12px]">
-                  {classInfo?.match.description}
-                </p>
-
-                {/* cost  */}
-                <div className="flex items-center justify-between mt-5 p-6 border-2 rounded-xl ">
-                  <div className=" text-gray-600 dark:text-gray-300 text-md lg:text-xl font-semibold">
-                    {data?.classPage?.classContainer?.cost}
-                  </div>
-                  <div className=" text-[#6cce40] dark:text-[#6cce40] text-md lg:text-xl font-semibold ml-2">
-                    {classInfo?.match.cost}
-                  </div>
-                </div>
-
-                <div className=" flex flex-col sm:flex-row flex-wrap gap-4 items-center mt-5">
-                  <Link href="/contact" className="w-full sm:w-auto">
-                    <Button className="dark:text-white w-full sm:w-auto rounded-full px-6 bg-transparent hover:bg-transparent text-black border-2 border-[#6cce40] text-sm">
-                      {data?.classPage?.classContainer?.enrollBtn}
-                    </Button>
-                  </Link>
-                </div>
-              </div>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+              {/* {classInfo?.match.video && (
+                <Button
+                  onClick={() => handleModal(classInfo.match.video)}
+                  className="bg-[#6cce40] hover:bg-[#5bb936] text-white rounded-full py-6 px-8 font-medium transition-all duration-200 flex items-center gap-2"
+                >
+                  <Play size={18} />
+                  Watch Class Preview
+                </Button>
+              )} */}
+              <Link href="/contact">
+                <Button className="rounded-full py-6 px-8 bg-transparent hover:bg-[#6cce4020] text-black dark:text-white border-2 border-[#6cce40] font-medium transition-all duration-200">
+                  {data?.classPage?.classContainer?.enrollBtn}
+                </Button>
+              </Link>
             </div>
 
-            <div className="  col-span-12 lg:col-span-7 shadow-2xl dark:shadow-slate-900 grid grid-cols-12 bg-[#a9aca41a] rounded-2xl overflow-hidden gap-0.5">
-              <div className=" bg-white reveal dark:bg-[#020817] col-span-7 sm:col-span-4 p-4 md:p-8">
-                <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                  {data?.classPage?.classContainer?.forWhom}
-                </div>
-                <div className=" leading-6 text-gray-500 dark:text-gray-400 mt-1 text-[12px]">
-                  {classInfo?.match.forWhom.map((f: string[], i: number) => (
-                    <div className="" key={i}>
-                      {f} /
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="reveal bg-white dark:bg-[#020817] col-span-5 sm:col-span-4 p-4 md:p-8 ">
-                {classInfo?.match.ageLimit && (
-                  <div className="mb-3">
-                    <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                      {data?.classPage?.classContainer?.ageLimit}
-                    </div>
-                    <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
-                      {classInfo?.match.ageLimit}
-                    </p>
-                  </div>
-                )}
-                {classInfo?.match.group && (
-                  <div className="mb-3">
-                    <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                      {data?.classPage?.classContainer?.groupTitle}
-                    </div>
-                    <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
-                      {classInfo?.match.group}
-                    </p>
-                  </div>
-                )}
-                <div className="mb-3">
-                  <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                    {data?.classPage?.classContainer?.materialsTitle}
-                  </div>
-                  <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
-                    {classInfo?.match.materials}
-                  </p>
-                </div>
-              </div>
-              <div className="reveal bg-white dark:bg-[#020817] col-span-12  sm:col-span-4 p-4 md:p-8">
-                <div className="mb-4">
-                  <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                    {data?.classPage?.classContainer?.intensity}
-                  </div>
-                  <div className="flex gap-1 mt-3">
-                    <div
-                      className={cn(' h-1 w-9 bg-[#9dff3b] rounded-sm')}
-                    ></div>
-                    <div
-                      className={cn(
-                        ' h-1 w-9 bg-gray-200 rounded-sm',
-                        intensityValue >= 0.5 && ' bg-[#ffdf39]'
-                      )}
-                    ></div>
-                    <div
-                      className={cn(
-                        ' h-1 w-9 bg-gray-200 rounded-sm',
-                        intensityValue >= 0.75 && ' bg-orange-400'
-                      )}
-                    ></div>
-                    <div
-                      className={cn(
-                        ' h-1 w-9 bg-gray-200 rounded-sm',
-                        intensityValue >= 1 && ' bg-red-500'
-                      )}
-                    ></div>
-                  </div>
-                </div>
-
-                <div className="mb-4">
-                  <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                    {data?.classPage?.classContainer?.duration}
-                  </div>
-                  <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
-                    {classInfo?.match.duration}
-                  </p>
-                </div>
-                <div className="mb-4">
-                  <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                    {data?.classPage?.classContainer?.lengthOfClassesTitle}
-                  </div>
-                  <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
-                    {classInfo?.match.lengthOfClasses}
-                  </p>
-                </div>
-                <div className="mb-4">
-                  <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                    {data?.classPage?.classContainer?.frequencyTitle}
-                  </div>
-                  <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
-                    {classInfo?.match.frequency}
-                  </p>
-                </div>
-              </div>
-              <div className="reveal bg-white dark:bg-[#020817] col-span-12 sm:col-span-6 p-4 md:p-8">
-                <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                  {data?.classPage?.classContainer?.purpose}
-                </div>
-                <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
-                  {classInfo?.match.purpose}
-                </p>
-              </div>
-              <div className="reveal bg-white dark:bg-[#020817] col-span-12 sm:col-span-6 p-4 md:p-8">
-                <div className=" text-gray-600 dark:text-gray-300 text-[12px] font-semibold">
-                  {data?.classPage?.classContainer?.effects}
-                </div>
-                <p className=" leading-6 text-gray-500 dark:text-gray-400 text-[13px]">
-                  {classInfo?.match.effects.map((e: string[], i: number) => (
-                    <span key={i}>{e}, </span>
-                  ))}
-                </p>
-              </div>
+            {/* Price Tag */}
+            <div className="inline-flex items-center justify-center gap-3 px-6 py-3 bg-white dark:bg-[#020817] rounded-full shadow-lg border border-[#6cce4040]">
+              <span className="text-gray-700 dark:text-gray-200 font-medium">
+                {data?.classPage?.classContainer?.cost}
+              </span>
+              <span className="text-[#6cce40] text-xl font-bold">{classInfo?.match.cost}</span>
             </div>
           </div>
         </div>
 
+        {/* Main Content */}
+        <div className="px-4 lg:px-16 pb-20">
+          <div className="max-w-6xl mx-auto">
+            {/* Intensity Meter */}
+            <div className="bg-white dark:bg-[#020817] rounded-2xl p-6 shadow-md mb-8 reveal">
+              <div className="flex flex-col md:flex-row md:items-center justify-between">
+                <div className="mb-4 md:mb-0">
+                  <h3 className="text-lg font-semibold mb-2">{data?.classPage?.classContainer?.intensity}</h3>
+                  <div className="flex gap-2">
+                    <div className={cn("h-3 w-16 bg-[#9dff3b] rounded-full")}></div>
+                    <div
+                      className={cn("h-3 w-16 bg-gray-200 rounded-full", intensityValue >= 0.5 && "bg-[#ffdf39]")}
+                    ></div>
+                    <div
+                      className={cn("h-3 w-16 bg-gray-200 rounded-full", intensityValue >= 0.75 && "bg-orange-400")}
+                    ></div>
+                    <div className={cn("h-3 w-16 bg-gray-200 rounded-full", intensityValue >= 1 && "bg-red-500")}></div>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-4">
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-[#6cce40]" />
+                    <div>
+                      <div className="text-xs text-gray-500 dark:text-gray-400">
+                        {data?.classPage?.classContainer?.duration}
+                      </div>
+                      <div className="font-medium">{classInfo?.match.duration}</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-5 h-5 text-[#6cce40]" />
+                    <div>
+                      <div className="text-xs text-gray-500 dark:text-gray-400">
+                        {data?.classPage?.classContainer?.frequencyTitle}
+                      </div>
+                      <div className="font-medium">{classInfo?.match.frequency}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Info Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+              {/* For Whom */}
+              <div className="bg-white dark:bg-[#020817] rounded-2xl p-6 shadow-md h-full reveal hover:shadow-lg transition-all duration-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <Users className="w-5 h-5 text-[#6cce40]" />
+                  <h3 className="text-lg font-semibold">{data?.classPage?.classContainer?.forWhom}</h3>
+                </div>
+                <div className="space-y-2">
+                  {classInfo?.match.forWhom.map((f: string, i: number) => (
+                    <div className="flex items-start gap-2" key={i}>
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#6cce40] mt-2"></div>
+                      <p className="text-gray-600 dark:text-gray-300">{f}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Class Details */}
+              <div className="bg-white dark:bg-[#020817] rounded-2xl p-6 shadow-md h-full reveal hover:shadow-lg transition-all duration-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <Info className="w-5 h-5 text-[#6cce40]" />
+                  <h3 className="text-lg font-semibold">{data?.classPage?.classDetails}</h3>
+                </div>
+
+                <div className="space-y-4">
+                  {classInfo?.match.ageLimit && (
+                    <div>
+                      <div className="text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+                        {data?.classPage?.classContainer?.ageLimit}
+                      </div>
+                      <p className="text-gray-600 dark:text-gray-300">{classInfo?.match.ageLimit}</p>
+                    </div>
+                  )}
+
+                  {classInfo?.match.group && (
+                    <div>
+                      <div className="text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+                        {data?.classPage?.classContainer?.groupTitle}
+                      </div>
+                      <p className="text-gray-600 dark:text-gray-300">{classInfo?.match.group}</p>
+                    </div>
+                  )}
+
+                  <div>
+                    <div className="text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+                      {data?.classPage?.classContainer?.materialsTitle}
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-300">{classInfo?.match.materials}</p>
+                  </div>
+
+                  <div>
+                    <div className="text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+                      {data?.classPage?.classContainer?.lengthOfClassesTitle}
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-300">{classInfo?.match.lengthOfClasses}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Purpose */}
+              <div className="bg-white dark:bg-[#020817] rounded-2xl p-6 shadow-md h-full reveal hover:shadow-lg transition-all duration-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <Target className="w-5 h-5 text-[#6cce40]" />
+                  <h3 className="text-lg font-semibold">{data?.classPage?.classContainer?.purpose}</h3>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300">{classInfo?.match.purpose}</p>
+              </div>
+            </div>
+
+            {/* Effects Section */}
+            <div className="bg-white dark:bg-[#020817] rounded-2xl p-8 shadow-md reveal">
+              <div className="flex items-center gap-2 mb-6">
+                <Sparkles className="w-6 h-6 text-[#6cce40]" />
+                <h3 className="text-xl font-semibold">{data?.classPage?.classContainer?.effects}</h3>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {classInfo?.match.effects.map((e: string, i: number) => (
+                  <div className="flex items-start gap-3 bg-[#6cce4008] dark:bg-[#6cce4010] p-4 rounded-xl" key={i}>
+                    <div className="w-2 h-2 rounded-full bg-[#6cce40] mt-2"></div>
+                    <p className="text-gray-700 dark:text-gray-300">{e}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA Section */}
+            <div className="mt-12 text-center reveal">
+              <Link href="/contact">
+                <Button className="bg-[#6cce40] hover:bg-[#5bb936] text-white rounded-full py-6 px-10 font-medium transition-all duration-200 text-lg">
+                  {data?.classPage?.classContainer?.enrollBtn}
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Video Modal */}
         {showModal && (
-          <div className="fixed left-0 right-0 top-0 bottom-0 flex justify-center items-center backdrop-blur-md z-50">
-            <div className=" relative max-w-3xl 2xl:max-w-5xl w-full bg-white dark:bg-[#020817] rounded-3xl shadow-2xl md:p-6 h-full md:h-auto flex items-center">
+          <div className="fixed inset-0 flex justify-center items-center backdrop-blur-md bg-black/60 z-50 p-4">
+            <div className="relative max-w-4xl w-full bg-white dark:bg-[#020817] rounded-3xl shadow-2xl p-2 md:p-1 h-auto flex items-center">
               <iframe
                 width="100%"
                 src={videoUrl}
                 title="Video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="h-[315px] 2xl:h-[500px]"
+                className="h-[315px] md:h-[450px] 2xl:h-[600px] rounded-2xl"
               ></iframe>
               <Button
-                onClick={() => setShowModal(!showModal)}
-                className="radial-bg-green rounded-full   p-0 w-10 absolute top-5 right-5 border-0 shadow-xl"
+                onClick={() => setShowModal(false)}
+                className="absolute -top-4 -right-4 bg-white dark:bg-[#020817] hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-full p-0 w-12 h-12 shadow-xl flex items-center justify-center"
               >
-                <X size={30} className=" text-gray-700" />
+                <X size={24} />
               </Button>
             </div>
           </div>
         )}
       </ScrollAnimateWrapper>
     </div>
-  );
-};
+  )
+}
 
-export default ClassesDataPage;
+export default ClassesDataPage
+

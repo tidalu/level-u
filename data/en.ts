@@ -129,6 +129,7 @@ export const data = {
     },
   ],
   classPage: {
+    classDetails: 'Class Details',
     viewButton: "View",
     homeContent: {
       title: 'Classes available in our centers',

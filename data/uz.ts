@@ -138,6 +138,7 @@ export const data = {
   ],
 
   classPage: {
+    classDetails: "Kurs malumotlari",
     viewButton: "Ko‘rish",
     homeContent: {
       title: "Markazimizda mavjud darslar",
