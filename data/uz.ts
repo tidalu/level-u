@@ -75,10 +75,11 @@ export const data = {
   },
 
   landingAdd: {
-    mainTitle: [" Ro‘yxatga olish", "hozir ochiq"],
+    mainTitle: [" Ro‘yxatga olish", "hozir ochiq", "Uslubingizni ", "Yangilang!"],
     subTitle:
       "GURUHGA O‘Z VAQТIDA RO‘YXATDAN O‘TING VA CHET ELDA TA’LIM OLISH IMKONIYATINI QO‘LGA KIRITING",
     buttonText: "Formani to‘ldiring",
+  merchButton: "Merchni ko'rish",
     topPic: ["YANGI", "O‘QUV", "YILI"],
     bottomPic: ["YANGI", "MAQSAD"],
   },
