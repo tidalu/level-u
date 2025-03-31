@@ -455,7 +455,7 @@ export const data = {
       title: "About Level Education Center",
       desc: "We are dedicated to providing high-quality educational services and helping students achieve their academic goals through personalized learning experiences.",
       contact: "Contact Us",
-      whyChooseLevel: "Why Choosesdfsdf Level",
+      whyChooseLevel: "Why Choose Level",
       expertTeachers: "Expert Teachers",
       modernCurriculum: "Modern Curriculum",
       smallClassSizes: "Small Class Sizes",
