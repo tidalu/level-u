@@ -65,8 +65,8 @@ const AboutPage = () => {
               <Sparkles className="h-4 w-4 mr-2" />
               {data?.about?.topText || "Welcome to our story"}
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-green-400 dark:from-green-400 dark:to-green-300 mb-6">
-              {data?.about?.title || "About Level Education"}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold py-2 bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-green-400 dark:from-green-400 dark:to-green-300 mb-6">
+              {data?.about?.title  || "About Level Education"}
             </h1>
             <p className="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-300">
               {data?.about?.subtitle ||
