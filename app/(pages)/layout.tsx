@@ -290,7 +290,6 @@ const LandingLayout = ({ children }: { children: React.ReactNode }) => {
             className="relative z-10"
           >
             <div className="mx-auto h-full w-full">
-              <UnderConstructionWrapper>
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: showContent ? 0 : 20, opacity: showContent ? 1 : 0 }}
@@ -338,7 +337,6 @@ const LandingLayout = ({ children }: { children: React.ReactNode }) => {
                 </motion.div>
 
                 {/* <FeedbackOwl delayInSeconds={10} onFeedbackSubmit={handleFeedback} /> */}
-              </UnderConstructionWrapper>
             </div>
           </motion.div>
 
