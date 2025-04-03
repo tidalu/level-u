@@ -70,10 +70,9 @@ const ClassesDataPage = () => {
   const intensityValue = classInfo?.match.intensity || 0.25
 
   return (
-    <div className="min-h-screen max-w-[1900px] mx-auto mt-16 ">
-      <ScrollAnimateWrapper>
+    <div className="min-h-screen max-w-[1900px] mx-auto ">
         {/* Hero Section */}
-        <div className="relative pt-24 pb-16 px-4 lg:px-16 bg-gradient-to-b from-[#6cce4010] to-transparent dark:from-[#6cce4008] dark:to-transparent">
+        <div className="relative  pt-32 pb-16 px-4 lg:px-16 bg-gradient-to-b from-[#6cce4010] to-transparent dark:from-[#6cce4008] dark:to-transparent">
           <div className="max-w-4xl mx-auto text-center reveal">
             <span className="inline-block px-4 py-1.5 text-sm font-medium bg-[#6cce4020] text-[#6cce40] dark:bg-[#6cce4030] rounded-full mb-4">
               {classInfo?.title}
@@ -84,15 +83,6 @@ const ClassesDataPage = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-              {/* {classInfo?.match.video && (
-                <Button
-                  onClick={() => handleModal(classInfo.match.video)}
-                  className="bg-[#6cce40] hover:bg-[#5bb936] text-white rounded-full py-6 px-8 font-medium transition-all duration-200 flex items-center gap-2"
-                >
-                  <Play size={18} />
-                  Watch Class Preview
-                </Button>
-              )} */}
               <Link href="/contact">
                 <Button className="rounded-full py-6 px-8 bg-transparent hover:bg-[#6cce4020] text-black dark:text-white border-2 border-[#6cce40] font-medium transition-all duration-200">
                   {data?.classPage?.classContainer?.enrollBtn}
@@ -111,7 +101,7 @@ const ClassesDataPage = () => {
         </div>
 
         {/* Main Content */}
-        <div className="px-4 lg:px-16 pb-20">
+        <div className="px-4 lg:px-16 pb-20 ">
           <div className="max-w-6xl mx-auto">
             {/* Intensity Meter */}
             <div className="bg-white dark:bg-[#020817] rounded-2xl p-6 shadow-md mb-8 reveal">
@@ -273,7 +263,6 @@ const ClassesDataPage = () => {
             </div>
           </div>
         )}
-      </ScrollAnimateWrapper>
     </div>
   )
 }
