@@ -155,7 +155,7 @@ const LandingBanner = () => {
 
               {/* Text section for second slide: Only on mobile */}
               {index === 1 && (
-                <div className="text-white  justify-between col-span-12 flex flex-col items-center gap-0 lg:hidden">
+                <div onClick={index === 1 ? handleMerchClick : undefined} className="text-white  justify-between col-span-12 flex flex-col items-center gap-0 lg:hidden">
                   <Image
                     src={slide.quoteImage || "/placeholder.svg"}
                     alt="Merch store promotion"
