@@ -44,7 +44,7 @@ const Footer = () => {
     },
     {
       icon: <MapPin className="h-5 w-5" />,
-      text: "Tashkent, Uzbekistan",
+      text: data?.schedule?.places[0].address,
       href: "https://maps.google.com",
     },
   ]

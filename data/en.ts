@@ -356,6 +356,7 @@ export const data = {
     places: [
       {
         cityName: 'Chirchik',
+        address: "Chirchik, Uzbekistan",
         clubs: [
           {
             name: 'LEVEL learning center',

@@ -364,6 +364,7 @@ export const data = {
     places: [
       {
         cityName: "Chirchiq",
+        address: "Chirchiq, O'zbekiston",
         clubs: [
           {
             name: "LEVEL o‘quv markazi",

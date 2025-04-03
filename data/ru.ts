@@ -366,6 +366,7 @@ export const data = {
     places: [
       {
         cityName: "Чирчик",
+        address: "Чирчик, Узбекистан",
         clubs: [
           {
             name: "LEVEL учебный центр",
