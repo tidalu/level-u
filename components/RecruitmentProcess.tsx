@@ -32,7 +32,7 @@ function RecruitmentProcess({
   }, [currentOnScreen]);
 
   return (
-    <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-4 mx-auto px-5">
+    <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-4 mx-auto px-5 ">
       <div
         className={` rounded-xl reveal flex flex-col basis-1/2 mx-5 border-gray-900 dark:border-gray-200 border ${
           isAnimating ? 'slide-in-elliptic-top-fwd' : 'animation-done'

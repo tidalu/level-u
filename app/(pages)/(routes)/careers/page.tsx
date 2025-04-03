@@ -135,7 +135,7 @@ function Careers() {
     <>
       {/* <ScrollAnimateWrapper> */}
       {/* Hero Section with Animated Gradient */}
-      <div className="relative min-h-[90vh] w-full overflow-hidden bg-white dark:bg-gray-900">
+      <div className="relative min-h-[100vh] w-full  overflow-hidden bg-white dark:bg-gray-900">
         {/* Background pattern */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -194,7 +194,7 @@ function Careers() {
         ))}
 
         {/* 3D Perspective container */}
-        <div className="absolute inset-0 flex flex-col items-center  justify-center gap-4 perspective-[1000px] px-4 sm:px-6">
+        <div className="absolute inset-0 flex pt-14 flex-col items-center  justify-center gap-4 perspective-[1000px] px-4 sm:px-6">
           <motion.div
             initial={{ rotateX: 20, rotateY: -20, scale: 0.8, opacity: 0 }}
             animate={{ rotateX: 0, rotateY: 0, scale: 1, opacity: 1 }}
@@ -750,7 +750,7 @@ function Careers() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="my-20 scroll-mt-24 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 py-20"
+            className="my-20 scroll-mt-24  py-20 container"
             id="recruitment-process"
           >
             <motion.div
