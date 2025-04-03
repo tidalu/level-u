@@ -109,7 +109,7 @@ const LandingBanner = () => {
       bottomPic: data?.landingAdd?.bottomPic || [],
       desktopImage: slideImages[1].desktopImage,
       mobileImage: slideImages[1].mobileImage,
-      quoteImage: "/hoodie-2.jpg",
+      quoteImage: "/hoodie-1.jpg",
     },
   ];
 
@@ -155,16 +155,7 @@ const LandingBanner = () => {
 
               {/* Text section for second slide: Only on mobile */}
               {index === 1 && (
-                <div className="text-white p-6 justify-between col-span-12 flex flex-col items-center gap-0 lg:hidden">
-                  <div className="w-full">
-                    <p className="text-3xl sm:text-4xl reveal text-left text-black xl:text-5xl 2xl:text-6xl font-extrabold leading-snug italic apply-font-o">
-                      {slide.mainTitle[0]}
-                    </p>
-                    <p className="text-3xl sm:text-4xl reveal text-start lg:-mr-8 xl:text-5xl 2xl:text-6xl xl:-mr-11 text-black font-extrabold leading-snug italic apply-font-o">
-                      {slide.mainTitle[1]}
-                    </p>
-                  </div>
-
+                <div className="text-white  justify-between col-span-12 flex flex-col items-center gap-0 lg:hidden">
                   <Image
                     src={slide.quoteImage || "/placeholder.svg"}
                     alt="Merch store promotion"
@@ -172,16 +163,8 @@ const LandingBanner = () => {
                     height={400}
                     quality={100} // Ensure maximum quality
                     priority={Number(index) === 0}
-                    className="object-top mx-auto  my-9 w-full rounded-3xl h-auto lg:m-0 2xl:self-right"
+                    className="object-top mx-auto w-full rounded-t-2xl h-auto lg:m-0 2xl:self-right"
                   />
-                  {/* <Form> */}
-                  <div
-                    onClick={handleMerchClick}
-                    className="self-end scale-110 hover:scale-105 transition-all delay-75 shadow-lg inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 radial_bg_red text-white h-10 px-4 py-2 rounded-xl cursor-pointer"
-                  >
-                    {slide.buttonText}
-                  </div>
-                  {/* </Form> */}
                 </div>
               )}
 
@@ -209,7 +192,7 @@ const LandingBanner = () => {
               >
                 <Image
                   src={slide.mobileImage || "/placeholder.svg"}
-                  className="w-full h-full object-cover rounded-t-3xl"
+                  className="w-full h-full object-cover "
                   alt={`main page mobile home banner, image of a student to give a ${
                     index === 0 ? "welcoming" : "merch"
                   } vibe`}
