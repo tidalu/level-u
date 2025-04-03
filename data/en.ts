@@ -850,7 +850,8 @@ export const data = {
         "button": "Redeem",
         "points": "points",
         "cap": "LEVEL Cap",
-        "tshirt": "LEVEL Sweatshirt",
+        "tshirt": "LEVEL T-Shirt",
+        "sweatshirt": "LEVEL Sweatshirt",
         "hoodie": "LEVEL Hoodie"
       },
       "howToRedeem": {

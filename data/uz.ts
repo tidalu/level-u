@@ -919,7 +919,8 @@ export const data = {
       button: "Almashtirish",
       points: "ball",
       cap: "LEVEL Cap",
-      tshirt: "LEVEL Sweatshirt",
+      tshirt: "LEVEL Futbolka",
+      sweatshirt: "LEVEL Sviter",
       hoodie: "LEVEL Hoodi",
     },
     howToRedeem: {

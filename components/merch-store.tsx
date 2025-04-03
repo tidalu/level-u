@@ -46,7 +46,12 @@ function MerchStore() {
     {
       name: merchData?.redeem?.tshirt,
       points: 400,
-      images: ["/sweatshirt-1.jpg", "/sweatshirt-2.jpg", "/sweatshirt-3.webp"],
+      images: ["/sweatshirt-1.jpg", "/sweatshirt-2.jpg"],
+    },
+    {
+      name: merchData?.redeem?.sweatshirt,
+      points: 400,
+      images: ["/sweatshirt-3.webp",],
     },
     { name: merchData?.redeem?.hoodie, points: 500, images: ["/hoodie-1.jpg", "/hoodie-2.jpg"] },
   ]
@@ -441,7 +446,7 @@ function MerchStore() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto grid max-w-5xl grid-cols-1  gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {merchandise.map((item, index) => (
                 <motion.div
                   key={index}
