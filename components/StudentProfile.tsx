@@ -24,7 +24,7 @@ interface StudentProfileProps {
 
 const StudentProfile = ({ studentData, avatarUrl = "/placeholder.svg?height=100&width=100" }: StudentProfileProps) => {
   // Extract courses from student data, filtering out "no" values
-  const courses = Object.entries(studentData)
+  let courses = Object.entries(studentData)
     .filter(([key, value]) => {
       // Only include course fields (not metadata fields) and exclude "no" values
       const metadataFields = ["studentID", "full Name", "redemed", "points", "current level"]
@@ -52,8 +52,9 @@ const StudentProfile = ({ studentData, avatarUrl = "/placeholder.svg?height=100&
         progress: Math.min(100, Math.max(0, progressValue)), // Ensure between 0-100
       }
     })
-
-  return (
+    // cut the last item 
+    courses = courses.slice(0, -1)
+    return (
     <div className="w-full space-y-6">
       {/* Header with Avatar and Basic Info */}
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
