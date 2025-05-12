@@ -941,7 +941,7 @@ export const data = {
           "title": "Enter Your Student ID",
           "description": "Please enter your student ID to check your points balance.",
           "label": "Student ID",
-          "placeholder": "e.g., 2025EN0001",
+          "placeholder": "e.g., QzNpKtY547HlJ",
           "cancelButton": "Cancel",
           "submitButton": "Check Points",
           "checking": "Checking..."

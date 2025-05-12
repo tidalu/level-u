@@ -1012,7 +1012,7 @@ export const data = {
         description:
           "Пожалуйста, введите свой студенческий ID, чтобы проверить баланс баллов.",
         label: "Студенческий ID",
-        placeholder: "например, 2025EN0001",
+        placeholder: "например, QzNpKtY547HlJ",
         cancelButton: "Отмена",
         submitButton: "Проверить баллы",
         checking: "Проверка...",

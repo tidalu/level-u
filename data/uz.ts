@@ -1026,7 +1026,7 @@ export const data = {
         description:
           "Iltimos, ball balansingizni tekshirish uchun talaba IDingizni kiriting.",
         label: "Talaba ID",
-        placeholder: "masalan, 2025EN0001",
+        placeholder: "masalan, QzNpKtY547HlJ",
         cancelButton: "Bekor qilish",
         submitButton: "Ballarni tekshirish",
         checking: "Tekshirilmoqda...",
