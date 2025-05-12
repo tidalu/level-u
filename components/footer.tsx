@@ -34,8 +34,8 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: <Phone className="h-5 w-5" />,
-      text: "+998 99 123 45 67",
-      href: "tel:+998991234567",
+      text: "+998 99 005 37 47",
+      href: "tel:+998990053747",
     },
     {
       icon: <Mail className="h-5 w-5" />,
