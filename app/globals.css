@@ -20,39 +20,14 @@ html {
 }
 
 
-::-webkit-scrollbar {
-  width: 8px; 
-  background: transparent; 
+html::-webkit-scrollbar {
+  display: none;
 }
-
-::-webkit-scrollbar-track {
-  background: rgba(30, 30, 50, 0.7); 
-  border-radius: 12px; 
-  margin: 2px; 
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #b0b0bb, #f0f0f5); 
-  border-radius: 12px; 
-  box-shadow: 0 0 10px rgba(176, 176, 187, 0.6); 
-  transition: all 0.3s ease; 
-}
-
-::-webkit-scrollbar-thumb:hover {
-  box-shadow: 0 0 14px rgba(176, 176, 187, 0.9); 
-  background: linear-gradient(45deg, #f0f0f5, #b0b0bb); 
-}
-
+.scrollbar-hide,
 html {
-  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-
-/* Firefox scrollbar support */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #b0b0bb rgba(30, 30, 50, 0.7);
-}
-
 .apply-font-o {
   font-family: "Neometric Alt Heavy Italic";
 }
@@ -342,7 +317,9 @@ button[data-state="active"].schedule {
     transform: skew(5deg, 5deg);
   }
 }
-
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
 .text-with-blur {
   position: relative;
   display: inline-block;
