@@ -72,11 +72,11 @@ const LandingLayout = ({ children }: { children: React.ReactNode }) => {
   }
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="light">
+    <ThemeProvider attribute="class"  defaultTheme="light">
       <LanguageProvider>
         <main className="relative min-h-screen overflow-hidden">
           {/* Animated background elements */}
-          <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+          <div className="fixed inset-0  pointer-events-none z-0">
             {backgroundElements.map((el, index) => (
               <motion.div
                 key={index}
@@ -287,9 +287,9 @@ const LandingLayout = ({ children }: { children: React.ReactNode }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: showContent ? 1 : 0 }}
             transition={{ duration: 0.5 }}
-            className="relative z-10"
+            className="relative z-10  "
           >
-            <div className="mx-auto h-full w-full">
+            <div className="mx-auto h-full w-full overflow-y-auto ">
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: showContent ? 0 : 20, opacity: showContent ? 1 : 0 }}
