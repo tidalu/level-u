@@ -20,14 +20,7 @@ html {
 }
 
 
-html::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide,
-html {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+
 .apply-font-o {
   font-family: "Neometric Alt Heavy Italic";
 }
@@ -428,3 +421,29 @@ button[data-state="active"].schedule {
   }
   
   
+/* Slim green scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(72, 187, 120, 0.8); /* green theme */
+  border-radius: 3px;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(72, 187, 120, 1);
+}
+
+/* Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(72, 187, 120, 0.8) transparent;
+}
+.custom-scrollbar:hover {
+  scrollbar-color: rgba(72, 187, 120, 1) transparent;
+}
