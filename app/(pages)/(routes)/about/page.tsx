@@ -123,7 +123,7 @@ const AboutPage = () => {
                 >
                   <div className="bg-white/50 dark:bg-gray-900/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
                     <Quote className="h-8 w-8 text-green-500 mb-2 opacity-50" />
-                    <p className="text-xl md:text-2xl font-bold text-gray-800 dark:text-white">
+                    <p className="text-xl italic md:text-2xl font-medium text-gray-800 dark:text-white">
                       {mottoFirst}
                       {mottoSecond && (
                         <>
