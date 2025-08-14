@@ -609,7 +609,7 @@ export const data = {
       ],
     },
     readyToBegin: {
-      title: "Xalqaro Sayohatingizni Boshlashga Tayyormisiz?",
+      title: "Xalqaro sayohatingizni boshlashga tayyormisiz?",
       desc: "Bizning tajribali maslahatchilarimiz chet elda o‘qish jarayoningizning har bir bosqichida sizga yo‘l-yo‘riq ko‘rsatishga tayyor.",
       button: "Navbat Ro‘yxatiga Qo‘shiling",
     },

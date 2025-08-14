@@ -587,7 +587,7 @@ export const data = {
       ],
     },
     readyToBegin: {
-      title: 'Ready to Begin Your International Journey?',
+      title: 'Ready to begin your international journey?',
       desc: 'Our expert advisors are here to guide you through every step of your study abroad journey.',
       button: 'Join the Waitlist',
     },
